@@ -17,7 +17,7 @@ index, services, marble, website-design, about, contact (enquiry form), thank-yo
    - Until the keys are filled in, the portal runs in **DEMO mode**: data lives in browser localStorage, with a DEMO banner and sample rows.
 4. **Enquiry form:** works without a server. When a visitor submits it, their email app opens with a message to info@d3ddd.com already filled in, so it runs fine on GitHub Pages. The client portal links are hidden until Supabase is set up. Payments go through https://paypal.me/imshoi.
 5. **Images:** `assets/img/drawings/*.svg` are original hand-drawn SVG line drawings (sofa, chair, table, bed, kitchen, vanity, staircase, elevation, tiles, cladding). They are generic illustrations, not D3DDD project work.
-6. **Content to confirm:** business address or area, trade licence name, prices for the other services, and whether Mxhoaib0@gmail.com / "Shoaib Designer" should appear anywhere. It currently does not.
+6. **Content to confirm:** business address or area, trade licence name, prices for the other services.
 7. **Hosting/DNS:** see ../DEPLOY.md. Get approval before deploying or changing DNS.
 8. **Legal:** add a privacy policy, since the portal stores client data.
 
