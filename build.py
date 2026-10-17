@@ -1,7 +1,7 @@
 # D3DDD static site generator (English + Arabic). Edit content here, then run: python3 build.py
 import json, os
 D = "https://d3ddd.com/"
-EMAIL = "dxb3ddeaign@gmail.com"
+EMAIL = "info@d3ddd.com"
 BILINGUAL = ["index.html", "services.html", "marble.html", "website-design.html", "about.html", "contact.html"]
 AREAS = ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Umm Al Quwain", "Fujairah"]
 
@@ -24,7 +24,7 @@ def business_ld(lang):
             "areaServed": [{"@type": "City", "name": a} for a in ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah"]] + [{"@type": "Country", "name": "United Arab Emirates"}],
             "knowsLanguage": ["en", "ar"],
             "contactPoint": {"@type": "ContactPoint", "email": EMAIL, "contactType": "sales", "availableLanguage": ["English", "Arabic"]},
-            "sameAs": []}
+            "sameAs": [], "paymentAccepted": "PayPal"}
 
 def crumbs_ld(lang, items):
     return {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(items)]}
@@ -91,12 +91,12 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
     login_href = f"{P}login.html"
     S = {k: v for k, v in t.items()}
     fs = "".join(f'<a href="{h}">{n}</a>' for h, n in t["nav"][1:4])
-    fc = "".join(f'<a href="{h}">{n}</a>' for h, n in [t["nav"][4], t["nav"][5]]) + f'<a href="{login_href}">{t["portal"]}</a>'
+    fc = "".join(f'<a href="{h}">{n}</a>' for h, n in [t["nav"][4], t["nav"][5]])
     return head(lang, fn, title, desc, list(ld_nodes), noindex, bilingual, preload) + f'''<body>
 <a class="skip" href="#main">{t["skip"]}</a>
 <header class="site-header"><a class="logo" href="{"./" if lang=="en" or True else ""}" aria-label="D3DDD – Dubai 3D Design &amp; Draft"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></a>
 <button class="menu-toggle" aria-label="{t["menu"]}" aria-expanded="false" aria-controls="nav">☰</button>
-<nav class="nav" id="nav" aria-label="Main">{nav}<a class="lang" href="{sw_href}" hreflang="{other}" lang="{other}">{t["switch"]}</a><a class="pill" href="{login_href}">{t["login"]}</a></nav></header>
+<nav class="nav" id="nav" aria-label="Main">{nav}<a class="lang" href="{sw_href}" hreflang="{other}" lang="{other}">{t["switch"]}</a></nav></header>
 <main id="main">{body}</main>
 <footer><div class="grid"><div><div class="logo"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></div><p style="margin-top:16px;max-width:340px">{t["tagline"]}</p></div>
 <div><h2>{t["f_services"]}</h2>{fs}</div><div><h2>{t["f_company"]}</h2>{fc}</div>

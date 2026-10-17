@@ -15,7 +15,7 @@ index, services, marble, website-design, about, contact (enquiry form), thank-yo
    - Sign up on the site, then run the commented `update ... is_admin = true` line for your own email.
    - Add projects for clients from the Supabase Table Editor. Clients can only read their own rows, and only admins can write projects.
    - Until the keys are filled in, the portal runs in **DEMO mode**: data lives in browser localStorage, with a DEMO banner and sample rows.
-4. **Enquiry form.** It works out of the box with Netlify Forms (`data-netlify`). On another host, set `FORM_ENDPOINT` (for example Formspree) and send it to dxb3ddeaign@gmail.com. No phone numbers or WhatsApp links are shown anywhere (owner rule).
+4. **Enquiry form:** works without a server. When a visitor submits it, their email app opens with a message to info@d3ddd.com already filled in, so it runs fine on GitHub Pages. The client portal links are hidden until Supabase is set up. Payments go through https://paypal.me/imshoi.
 5. **Images:** `assets/img/drawings/*.svg` are original hand-drawn SVG line drawings (sofa, chair, table, bed, kitchen, vanity, staircase, elevation, tiles, cladding). They are generic illustrations, not D3DDD project work.
 6. **Content to confirm:** business address or area, trade licence name, prices for the other services, and whether Mxhoaib0@gmail.com / "Shoaib Designer" should appear anywhere. It currently does not.
 7. **Hosting/DNS:** see ../DEPLOY.md. Get approval before deploying or changing DNS.

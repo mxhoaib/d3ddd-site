@@ -3,6 +3,23 @@ def build_pages(g):
     shell, img, cta, page_hero, faq_html, faq_ld = g["shell"], g["img"], g["cta"], g["page_hero"], g["faq_html"], g["faq_ld"]
     crumbs_ld, service_ld, url, T, WA = g["crumbs_ld"], g["service_ld"], g["url"], g["T"], None
     out = {}
+    THEMES=[('carpentry-joinery', 'Carpentry & Joinery', 'النجارة والأعمال الخشبية'), ('marble-stone', 'Marble & Stone', 'الرخام والحجر'), ('fitout-interiors', 'Fit-out & Interiors', 'التشطيبات الداخلية'), ('contracting-construction', 'Contracting & Construction', 'المقاولات والبناء'), ('engineering-consultants', 'Engineering Consultants', 'الاستشارات الهندسية'), ('trading', 'Trading', 'التجارة'), ('interior-designers', 'Interior Designers', 'مصممو الديكور الداخلي')]
+    PP='https://paypal.me/imshoi'
+    def demos(lang):
+        en=lang=="en"
+        cards="".join(f'<a class="card" href="https://mxhoaib.github.io/d3ddd-demos/{k}/" target="_blank" rel="noopener"><div class="b"><span class="num">{"DEMO" if en else "نموذج"} {i+1:02d}</span><h3>{e if en else a}</h3><p>{"View live demo theme ↗" if en else "شاهد النموذج المباشر ↗"}</p></div></a>' for i,(k,e,a) in enumerate(THEMES))
+        h=("Demo themes","Website demo themes for UAE contractors","Live sample websites by trade — pick a theme and we tailor it to your brand.") if en else ("نماذج التصاميم","نماذج مواقع للمقاولين في الإمارات","مواقع تجريبية مباشرة حسب التخصص — اختر النموذج ونخصصه لعلامتك التجارية.")
+        return f'<section class="section" id="demos" aria-labelledby="demos-h"><div class="wrap"><p class="eyebrow">{h[0]}</p><h2 id="demos-h">{h[1]}</h2><p style="color:var(--muted);margin:10px 0 30px">{h[2]}</p><div class="grid g4">{cards}</div></div></section>'
+    def packages(lang):
+        if lang=="en":
+            return f'''<section class="section alt" id="packages" aria-labelledby="pkg-h"><div class="wrap"><p class="eyebrow">Packages</p><h2 id="pkg-h" style="margin-bottom:30px">Website, shop drawing &amp; 3D render packages</h2><div class="grid g2">
+<div class="card"><div class="b"><p class="eyebrow">Contractor Website</p><p class="price">AED 2,000 <small>approx. CAD 750</small></p><p>5-page mobile-friendly website, enquiry form and SEO basics. 50% (AED 1,000) upfront, balance on completion.</p><div class="actions" style="margin-top:18px"><a class="btn" href="{PP}" target="_blank" rel="noopener">Pay deposit via PayPal</a><a class="btn ghost" href="website-design.html">Package details</a></div></div></div>
+<div class="card"><div class="b"><p class="eyebrow">Shop drawings &amp; 3D renders</p><p class="price" style="font-size:30px">Quoted per project</p><p>Marble &amp; stone shop drawings, AutoCAD drafting, fit-out drawings and 3D renders, priced on scope. Send your drawings for a quote.</p><div class="actions" style="margin-top:18px"><a class="btn ghost" href="contact.html">Request a quote</a></div></div></div></div>
+<p style="color:var(--muted);font-size:13px;margin-top:16px">Payments are processed by PayPal. Please put your name or invoice reference in the PayPal note.</p></div></section>'''
+        return f'''<section class="section alt" id="packages" aria-labelledby="pkg-h"><div class="wrap"><p class="eyebrow">الباقات</p><h2 id="pkg-h" style="margin-bottom:30px">باقات المواقع والرسومات التنفيذية والتصميم ثلاثي الأبعاد</h2><div class="grid g2">
+<div class="card"><div class="b"><p class="eyebrow">باقة موقع المقاولين</p><p class="price">2,000 درهم <small dir="ltr">approx. CAD 750</small></p><p>موقع من 5 صفحات متوافق مع الجوال مع نموذج استفسار وأساسيات SEO. 50% (1,000 درهم) مقدماً والباقي عند التسليم.</p><div class="actions" style="margin-top:18px"><a class="btn" href="{PP}" target="_blank" rel="noopener">ادفع العربون عبر PayPal</a><a class="btn ghost" href="website-design.html">تفاصيل الباقة</a></div></div></div>
+<div class="card"><div class="b"><p class="eyebrow">الرسومات التنفيذية والتصميم ثلاثي الأبعاد</p><p class="price" style="font-size:30px">حسب المشروع</p><p>رسومات الرخام والحجر التنفيذية ومخططات أوتوكاد ورسومات التشطيبات والتصميم ثلاثي الأبعاد، بسعر حسب نطاق العمل. أرسل مخططاتك للحصول على عرض سعر.</p><div class="actions" style="margin-top:18px"><a class="btn ghost" href="contact.html">اطلب عرض سعر</a></div></div></div></div>
+<p style="color:var(--muted);font-size:13px;margin-top:16px">تتم المدفوعات عبر PayPal. يرجى كتابة اسمك أو رقم الفاتورة في ملاحظة الدفع.</p></div></section>'''
     def bc(lang, fn, name): return crumbs_ld(lang, [(T[lang]["home"], url(lang, "index.html")), (name, url(lang, fn))])
     WEB_OFFER = {"@type": "Offer", "price": "2000", "priceCurrency": "AED", "description": "Contractor Website – 5 pages, 50% upfront"}
 
@@ -12,7 +29,7 @@ def build_pages(g):
      ("What are marble shop drawings?", "Marble shop drawings are detailed fabrication and installation drawings for stone works — plans, elevations, sections, joint layouts, edge profiles, cut-outs, thickness and finish — prepared so fabricators and site teams in Dubai and the UAE can cut and install accurately."),
      ("Which areas of the UAE do you serve?", "We work with contractors, fabricators, consultants and designers in Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah and across the UAE. Most work is delivered digitally, so location is not a barrier."),
      ("What file formats do you deliver?", "AutoCAD DWG and PDF drawing sets as standard. 3D renderings are delivered as high-resolution images. Other formats can be discussed when you request a quote."),
-     ("What do I need to send for a quote?", "Architectural or interior drawings, sketches, site dimensions, photos or a short description of the scope and deadline. Send them through the enquiry form on our contact page or by email to dxb3ddeaign@gmail.com."),
+     ("What do I need to send for a quote?", "Architectural or interior drawings, sketches, site dimensions, photos or a short description of the scope and deadline. Send them through the enquiry form on our contact page or by email to info@d3ddd.com."),
      ("Do you provide drawings in Arabic?", "Yes. We communicate in English and Arabic, and drawing notes can be prepared in English, Arabic or both."),
      ("How much does a contractor website cost?", "Our Contractor Website package is AED 2,000 for a 5-page, mobile-friendly website with WhatsApp button and enquiry form. 50% is paid upfront and the balance on completion."),
     ]
@@ -36,9 +53,9 @@ def build_pages(g):
 <section class="section" aria-labelledby="why-h"><div class="wrap"><h2 id="why-h" style="margin-bottom:30px">Why contractors in the UAE choose D3DDD</h2><div class="grid g3">
 <div class="card"><div class="b"><h3>📐 UAE-standard workflow</h3><p>Drawing sets structured for contractor, consultant and fabricator coordination in the UAE.</p></div></div>
 <div class="card"><div class="b"><h3>🌐 English &amp; Arabic</h3><p>We communicate and annotate in English and Arabic. <span lang="ar">نتواصل بالعربية والإنجليزية.</span></p></div></div>
-<div class="card"><div class="b"><h3>🗂️ Client portal</h3><p>Track your projects and download your drawings in the secure client portal.</p></div></div></div>
+<div class="card"><div class="b"><h3>💳 Simple PayPal payments</h3><p>Pay your website deposit or project invoices securely through PayPal.</p></div></div></div>
 <p class="areas" style="margin-top:30px"><strong>Areas served:</strong> Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Umm Al Quwain, Fujairah — across the UAE.</p></div></section>
-{faq_html(faq_en,"Frequently asked questions","FAQ")}{cta(L)}'''
+{demos("en")}{packages("en")}{faq_html(faq_en,"Frequently asked questions","FAQ")}{cta(L)}'''
     out[(L,"index.html")] = shell(L,"index.html","Shop Drawings Dubai | Marble Shop Drawings, AutoCAD Drafting & 3D Rendering UAE – D3DDD",
         "D3DDD: marble & stone shop drawings, AutoCAD drafting, fit-out drawings and 3D rendering in Dubai, Abu Dhabi & Sharjah. Request a fast quote online.",
         body,[faq_ld(faq_en),{"@type":"WebSite","@id":url(L,"index.html")+"#website","url":url(L,"index.html"),"name":"D3DDD","inLanguage":"en-AE","publisher":{"@id":g["ORG_ID"]}}],preload="hero-marble-kitchen")
@@ -74,10 +91,11 @@ def build_pages(g):
 
     name="Website Design"
     body = page_hero(L,"Website design for contractors — UAE","Contractor website design in Dubai — <em>AED 2,000</em>","A professional 5-page website that turns visitors into WhatsApp enquiries. <span lang=\"ar\" class=\"ar-touch\">تصميم مواقع للمقاولين</span>",name) + f'''
-<section class="section"><div class="wrap split"><div class="card"><div class="b"><p class="eyebrow">Contractor Website</p><p class="price">AED 2,000</p><p>50% (AED 1,000) upfront to start, 50% balance on completion before go-live.</p>
-<ul class="check"><li>5 pages: Home, Services, Projects, About, Contact</li><li>Floating WhatsApp button &amp; click-to-call</li><li>Enquiry form</li><li>Mobile-responsive design</li><li>SEO basics: titles, descriptions, sitemap</li><li>Connect your existing domain</li></ul>
-<div class="actions" style="margin-top:20px"><a class="btn" href="contact.html">Start your website</a><a class="btn ghost" href="mailto:dxb3ddeaign@gmail.com?subject=Contractor%20Website%20package">Ask by email</a></div></div></div>
+<section class="section"><div class="wrap split"><div class="card"><div class="b"><p class="eyebrow">Contractor Website</p><p class="price">AED 2,000 <small>approx. CAD 750</small></p><p>50% (AED 1,000) upfront to start, 50% balance on completion before go-live.</p>
+<ul class="check"><li>5 pages: Home, Services, Projects, About, Contact</li><li>Contact buttons &amp; email links</li><li>Enquiry form</li><li>Mobile-responsive design</li><li>SEO basics: titles, descriptions, sitemap</li><li>Connect your existing domain</li></ul>
+<div class="actions" style="margin-top:20px"><a class="btn" href="https://paypal.me/imshoi" target="_blank" rel="noopener">Pay deposit via PayPal</a><a class="btn ghost" href="contact.html">Start your website</a><a class="btn ghost" href="mailto:info@d3ddd.com?subject=Contractor%20Website%20package">Ask by email</a></div></div></div>
 <div><figure>{img(P,"web-wireframe","Website wireframe: desktop browser layout, mobile screen and HTML code")}</figure><h3 style="margin-top:24px">How it works</h3><ol class="steps" style="margin-top:14px"><li>50% deposit</li><li>Send content</li><li>We build</li><li>You review</li><li>Balance &amp; go live</li></ol><p class="notice" style="margin-top:24px">Domain registration, hosting fees and paid stock imagery, if needed, are not included unless agreed in writing.</p></div></div></section>'''
+    body += demos(L)
     out[(L,"website-design.html")] = shell(L,"website-design.html","Contractor Website Design Dubai | 5-Page Website AED 2,000 – D3DDD",
         "Website design for contractors in Dubai & the UAE: 5 pages, WhatsApp button, enquiry form and SEO basics for AED 2,000 (50% upfront).",body,
         [bc(L,"website-design.html",name),service_ld("Contractor website design","5-page mobile-friendly contractor website with WhatsApp button and enquiry form.",url(L,"website-design.html"),WEB_OFFER)])
@@ -91,18 +109,18 @@ def build_pages(g):
     name="Contact"
     body = page_hero(L,"Get a quote — Dubai &amp; UAE","Contact D3DDD for shop drawings, drafting &amp; <em>3D rendering</em>","Send drawings, sketches, dimensions or requirements. We reply by email, in English or Arabic. <span lang=\"ar\" class=\"ar-touch\">تواصل معنا للحصول على عرض سعر</span>",name) + f'''
 <section class="section"><div class="wrap split" style="align-items:start"><div>
-<form class="enquiry card" style="padding:28px" name="enquiry" method="POST" action="thank-you.html" data-netlify="true" netlify-honeypot="company_website" enctype="multipart/form-data">
-<input type="hidden" name="form-name" value="enquiry"><p class="hp"><label>Leave empty <input name="company_website"></label></p>
+<form class="enquiry card" style="padding:28px" name="enquiry" method="post" action="mailto:info@d3ddd.com?subject=Website%20enquiry" enctype="text/plain">
+<p class="hp"><label>Leave empty <input name="company_website"></label></p>
 <div class="row"><div><label for="n">Name *</label><input id="n" name="name" required autocomplete="name"></div><div><label for="p">Phone (optional)</label><input id="p" name="phone" type="tel" autocomplete="tel"></div></div>
 <div class="row"><div><label for="e">Email *</label><input id="e" name="email" type="email" required autocomplete="email"></div><div><label for="s">Service</label><select id="s" name="service"><option>Marble / stone shop drawings</option><option>Cutting lists / fabrication drawings</option><option>Estimation / BOQ</option><option>AutoCAD drafting / fit-out drawings</option><option>3D rendering</option><option>Contractor Website (AED 2,000)</option><option>Other</option></select></div></div>
 <label for="m">Project details *</label><textarea id="m" name="message" required placeholder="Scope, location (e.g. Dubai, Abu Dhabi), deadline…"></textarea>
-<label for="f">Attach drawings (optional)</label><input id="f" name="file" type="file">
-<div class="actions" style="margin-top:18px"><button class="btn" type="submit">Send enquiry</button></div></form></div>
-<div><h2 style="font-size:26px">Direct contact</h2><ul class="check"><li><a href="mailto:dxb3ddeaign@gmail.com">dxb3ddeaign@gmail.com</a></li><li>Dubai, United Arab Emirates — serving the whole UAE</li></ul><p class="notice" style="margin-top:24px">Already a client? <a href="login.html"><u>Log in to the client portal</u></a> to view projects and files.</p></div></div></section>'''
+<p class="notice" style="margin-top:14px">Sending opens your email app with the details filled in. Attach drawings to that email before sending, or email us directly at <a href="mailto:info@d3ddd.com"><u>info@d3ddd.com</u></a>.</p>
+<div class="actions" style="margin-top:18px"><button class="btn" type="submit">Send enquiry by email</button></div></form></div>
+<div><h2 style="font-size:26px">Direct contact</h2><ul class="check"><li><a href="mailto:info@d3ddd.com">info@d3ddd.com</a></li><li>Dubai, United Arab Emirates — serving the whole UAE</li></ul></div></div></section>'''
     out[(L,"contact.html")] = shell(L,"contact.html","Contact D3DDD | Shop Drawings & 3D Rendering Quote Dubai & UAE",
         "Get a quote for marble shop drawings, AutoCAD drafting, fit-out drawings, 3D rendering or a contractor website in Dubai and the UAE.",body,[bc(L,"contact.html",name),{"@type":"ContactPage","url":url(L,"contact.html"),"about":{"@id":g["ORG_ID"]}}])
     out[(L,"thank-you.html")] = shell(L,"thank-you.html","Thank you | D3DDD","Your enquiry has been received.",
-        '<section class="page-hero" style="min-height:60vh"><p class="eyebrow">Received</p><h1>Thank you.</h1><p>We’ll reply shortly. You can also email us at dxb3ddeaign@gmail.com.</p><p style="margin-top:24px"><a class="btn" href="./">Back to home</a></p></section>',(),True,False)
+        '<section class="page-hero" style="min-height:60vh"><p class="eyebrow">Received</p><h1>Thank you.</h1><p>We’ll reply shortly. You can also email us at info@d3ddd.com.</p><p style="margin-top:24px"><a class="btn" href="./">Back to home</a></p></section>',(),True,False)
 
     # =============================== ARABIC ===============================
     L = "ar"; P = "../"
@@ -110,7 +128,7 @@ def build_pages(g):
      ("ما هي الرسومات التنفيذية للرخام؟", "الرسومات التنفيذية للرخام (Shop Drawings) هي مخططات تفصيلية للتصنيع والتركيب تشمل المساقط والواجهات والقطاعات وتوزيع الفواصل وتشطيب الحواف والفتحات والسماكات، ليتمكن المصنع وفريق الموقع في دبي والإمارات من القص والتركيب بدقة."),
      ("ما هي المناطق التي تخدمونها في الإمارات؟", "نعمل مع المقاولين ومصانع الرخام والاستشاريين والمصممين في دبي وأبوظبي والشارقة وعجمان ورأس الخيمة وجميع أنحاء الإمارات، ومعظم الأعمال تُسلَّم إلكترونياً."),
      ("ما صيغ الملفات التي تسلمونها؟", "نسلّم مخططات أوتوكاد بصيغة DWG وملفات PDF بشكل أساسي، والتصاميم ثلاثية الأبعاد كصور عالية الدقة. يمكن مناقشة صيغ أخرى عند طلب عرض السعر."),
-     ("ماذا أرسل للحصول على عرض سعر؟", "أرسل المخططات المعمارية أو الداخلية أو الرسومات الأولية أو مقاسات الموقع أو الصور مع وصف مختصر للمطلوب والموعد النهائي، عبر نموذج الاستفسار في صفحة التواصل أو البريد dxb3ddeaign@gmail.com."),
+     ("ماذا أرسل للحصول على عرض سعر؟", "أرسل المخططات المعمارية أو الداخلية أو الرسومات الأولية أو مقاسات الموقع أو الصور مع وصف مختصر للمطلوب والموعد النهائي، عبر نموذج الاستفسار في صفحة التواصل أو البريد info@d3ddd.com."),
      ("هل تقدمون الرسومات باللغة العربية؟", "نعم، نتواصل بالعربية والإنجليزية، ويمكن كتابة ملاحظات المخططات بالعربية أو الإنجليزية أو باللغتين."),
      ("كم تكلفة موقع إلكتروني للمقاول؟", "باقة موقع المقاولين بسعر 2,000 درهم إماراتي لموقع من 5 صفحات متوافق مع الجوال مع زر واتساب ونموذج استفسار، تُدفع 50% مقدماً والباقي عند التسليم."),
     ]
@@ -134,9 +152,9 @@ def build_pages(g):
 <section class="section" aria-labelledby="why-h"><div class="wrap"><h2 id="why-h" style="margin-bottom:30px">لماذا يختار المقاولون في الإمارات D3DDD</h2><div class="grid g3">
 <div class="card"><div class="b"><h3>📐 منهجية عمل وفق معايير الإمارات</h3><p>مجموعات مخططات منظمة للتنسيق بين المقاول والاستشاري والمصنع.</p></div></div>
 <div class="card"><div class="b"><h3>🌐 العربية والإنجليزية</h3><p>نتواصل ونكتب ملاحظات المخططات بالعربية والإنجليزية.</p></div></div>
-<div class="card"><div class="b"><h3>🗂️ بوابة العملاء</h3><p>تابع مشاريعك وحمّل مخططاتك من بوابة العملاء الآمنة.</p></div></div></div>
+<div class="card"><div class="b"><h3>💳 دفع سهل عبر PayPal</h3><p>ادفع عربون الموقع أو فواتير المشاريع بأمان عبر PayPal.</p></div></div></div>
 <p class="areas" style="margin-top:30px"><strong>المناطق التي نخدمها:</strong> دبي، أبوظبي، الشارقة، عجمان، رأس الخيمة، أم القيوين، الفجيرة — في جميع أنحاء الإمارات.</p></div></section>
-{faq_html(faq_ar,"الأسئلة الشائعة","أسئلة وأجوبة")}{cta(L)}'''
+{demos("ar")}{packages("ar")}{faq_html(faq_ar,"الأسئلة الشائعة","أسئلة وأجوبة")}{cta(L)}'''
     out[(L,"index.html")] = shell(L,"index.html","رسومات تنفيذية دبي | رسومات الرخام، مخططات أوتوكاد وتصميم ثلاثي الأبعاد في الإمارات – D3DDD",
         "D3DDD: رسومات تنفيذية للرخام والحجر، مخططات أوتوكاد، رسومات التشطيبات وتصميم ثلاثي الأبعاد في دبي وأبوظبي والشارقة. اطلب عرض سعر سريع عبر الإنترنت.",
         body,[faq_ld(faq_ar),{"@type":"WebSite","@id":url(L,"index.html")+"#website","url":url(L,"index.html"),"name":"D3DDD","inLanguage":"ar-AE","publisher":{"@id":g["ORG_ID"]}}],preload="hero-marble-kitchen")
@@ -172,10 +190,11 @@ def build_pages(g):
 
     name="تصميم المواقع"
     body = page_hero(L,"تصميم مواقع للمقاولين — الإمارات","تصميم مواقع للمقاولين في دبي — <em>2,000 درهم</em>","موقع احترافي من 5 صفحات يحوّل الزوار إلى استفسارات عبر واتساب.",name) + f'''
-<section class="section"><div class="wrap split"><div class="card"><div class="b"><p class="eyebrow">باقة موقع المقاولين</p><p class="price">2,000 درهم</p><p>50% (1,000 درهم) مقدماً للبدء، و50% عند الانتهاء وقبل إطلاق الموقع.</p>
-<ul class="check"><li>5 صفحات: الرئيسية، الخدمات، المشاريع، من نحن، تواصل معنا</li><li>زر واتساب ثابت وزر اتصال مباشر</li><li>نموذج استفسار</li><li>تصميم متوافق مع الجوال</li><li>أساسيات تحسين محركات البحث (SEO)</li><li>ربط النطاق (الدومين) الحالي</li></ul>
-<div class="actions" style="margin-top:20px"><a class="btn" href="contact.html">ابدأ موقعك</a><a class="btn ghost" href="mailto:dxb3ddeaign@gmail.com">اسأل عبر البريد</a></div></div></div>
+<section class="section"><div class="wrap split"><div class="card"><div class="b"><p class="eyebrow">باقة موقع المقاولين</p><p class="price">2,000 درهم <small dir="ltr">approx. CAD 750</small></p><p>50% (1,000 درهم) مقدماً للبدء، و50% عند الانتهاء وقبل إطلاق الموقع.</p>
+<ul class="check"><li>5 صفحات: الرئيسية، الخدمات، المشاريع، من نحن، تواصل معنا</li><li>أزرار تواصل وروابط بريد إلكتروني</li><li>نموذج استفسار</li><li>تصميم متوافق مع الجوال</li><li>أساسيات تحسين محركات البحث (SEO)</li><li>ربط النطاق (الدومين) الحالي</li></ul>
+<div class="actions" style="margin-top:20px"><a class="btn" href="https://paypal.me/imshoi" target="_blank" rel="noopener">ادفع العربون عبر PayPal</a><a class="btn ghost" href="contact.html">ابدأ موقعك</a><a class="btn ghost" href="mailto:info@d3ddd.com">اسأل عبر البريد</a></div></div></div>
 <div><figure>{img(P,"web-wireframe","رسم تخطيطي لموقع: متصفح وشاشة جوال وكود HTML")}</figure><h3 style="margin-top:24px">كيف نعمل</h3><ol class="steps" style="margin-top:14px"><li>دفعة 50%</li><li>أرسل المحتوى</li><li>نبني الموقع</li><li>تراجعه</li><li>الدفعة الثانية والإطلاق</li></ol><p class="notice" style="margin-top:24px">لا تشمل الباقة تسجيل النطاق ورسوم الاستضافة والصور المدفوعة إن لزمت، إلا إذا تم الاتفاق على ذلك كتابياً.</p></div></div></section>'''
+    body += demos(L)
     out[(L,"website-design.html")] = shell(L,"website-design.html","تصميم مواقع للمقاولين دبي | موقع 5 صفحات بسعر 2,000 درهم – D3DDD",
         "تصميم مواقع للمقاولين في دبي والإمارات: 5 صفحات، زر واتساب، نموذج استفسار وأساسيات SEO بسعر 2,000 درهم (50% مقدماً).",body,
         [bc(L,"website-design.html",name),service_ld("تصميم مواقع للمقاولين","موقع من 5 صفحات متوافق مع الجوال مع زر واتساب ونموذج استفسار.",url(L,"website-design.html"),WEB_OFFER)])
@@ -189,16 +208,16 @@ def build_pages(g):
     name="تواصل معنا"
     body = page_hero(L,"اطلب عرض سعر — دبي والإمارات","تواصل مع D3DDD للرسومات التنفيذية ومخططات أوتوكاد و<em>التصميم ثلاثي الأبعاد</em>","أرسل المخططات أو الرسومات الأولية أو المقاسات أو المتطلبات، وسنرد عبر البريد بالعربية أو الإنجليزية.",name) + f'''
 <section class="section"><div class="wrap split" style="align-items:start"><div>
-<form class="enquiry card" style="padding:28px" name="enquiry-ar" method="POST" action="thank-you.html" data-netlify="true" netlify-honeypot="company_website" enctype="multipart/form-data">
-<input type="hidden" name="form-name" value="enquiry-ar"><p class="hp"><label>اتركه فارغاً <input name="company_website"></label></p>
+<form class="enquiry card" style="padding:28px" name="enquiry-ar" method="post" action="mailto:info@d3ddd.com?subject=Website%20enquiry" enctype="text/plain">
+<p class="hp"><label>اتركه فارغاً <input name="company_website"></label></p>
 <div class="row"><div><label for="n">الاسم *</label><input id="n" name="name" required autocomplete="name"></div><div><label for="p">الهاتف (اختياري)</label><input id="p" name="phone" type="tel" autocomplete="tel" dir="ltr"></div></div>
 <div class="row"><div><label for="e">البريد الإلكتروني *</label><input id="e" name="email" type="email" required autocomplete="email" dir="ltr"></div><div><label for="s">الخدمة</label><select id="s" name="service"><option>رسومات الرخام والحجر التنفيذية</option><option>قوائم القص / رسومات التصنيع</option><option>حساب الكميات / BOQ</option><option>مخططات أوتوكاد / رسومات التشطيبات</option><option>تصميم ثلاثي الأبعاد</option><option>موقع للمقاولين (2,000 درهم)</option><option>أخرى</option></select></div></div>
 <label for="m">تفاصيل المشروع *</label><textarea id="m" name="message" required placeholder="نطاق العمل، الموقع (مثلاً دبي أو أبوظبي)، الموعد النهائي…"></textarea>
-<label for="f">إرفاق المخططات (اختياري)</label><input id="f" name="file" type="file">
-<div class="actions" style="margin-top:18px"><button class="btn" type="submit">أرسل الاستفسار</button></div></form></div>
-<div><h2 style="font-size:26px">تواصل مباشر</h2><ul class="check"><li><a href="mailto:dxb3ddeaign@gmail.com">dxb3ddeaign@gmail.com</a></li><li>دبي، الإمارات العربية المتحدة — نخدم جميع الإمارات</li></ul><p class="notice" style="margin-top:24px">عميل حالي؟ <a href="../login.html"><u>سجّل الدخول إلى بوابة العملاء</u></a> لمتابعة مشاريعك وملفاتك (باللغة الإنجليزية).</p></div></div></section>'''
+<p class="notice" style="margin-top:14px">عند الإرسال سيفتح تطبيق البريد لديك مع تعبئة التفاصيل. أرفق المخططات بالرسالة قبل إرسالها، أو راسلنا مباشرة على <a href="mailto:info@d3ddd.com"><u>info@d3ddd.com</u></a>.</p>
+<div class="actions" style="margin-top:18px"><button class="btn" type="submit">أرسل الاستفسار عبر البريد</button></div></form></div>
+<div><h2 style="font-size:26px">تواصل مباشر</h2><ul class="check"><li><a href="mailto:info@d3ddd.com">info@d3ddd.com</a></li><li>دبي، الإمارات العربية المتحدة — نخدم جميع الإمارات</li></ul></div></div></section>'''
     out[(L,"contact.html")] = shell(L,"contact.html","تواصل مع D3DDD | عرض سعر رسومات تنفيذية وتصميم ثلاثي الأبعاد دبي والإمارات",
         "اطلب عرض سعر لرسومات الرخام التنفيذية أو مخططات أوتوكاد أو رسومات التشطيبات أو التصميم ثلاثي الأبعاد أو موقع للمقاولين في دبي والإمارات.",body,[bc(L,"contact.html",name),{"@type":"ContactPage","url":url(L,"contact.html"),"about":{"@id":g["ORG_ID"]}}])
     out[(L,"thank-you.html")] = shell(L,"thank-you.html","شكراً لك | D3DDD","تم استلام استفسارك.",
-        '<section class="page-hero" style="min-height:60vh"><p class="eyebrow">تم الاستلام</p><h1>شكراً لك.</h1><p>سنرد عليك قريباً. يمكنك أيضاً مراسلتنا على dxb3ddeaign@gmail.com.</p><p style="margin-top:24px"><a class="btn" href="./">العودة للرئيسية</a></p></section>',(),True,False)
+        '<section class="page-hero" style="min-height:60vh"><p class="eyebrow">تم الاستلام</p><h1>شكراً لك.</h1><p>سنرد عليك قريباً. يمكنك أيضاً مراسلتنا على info@d3ddd.com.</p><p style="margin-top:24px"><a class="btn" href="./">العودة للرئيسية</a></p></section>',(),True,False)
     return out
