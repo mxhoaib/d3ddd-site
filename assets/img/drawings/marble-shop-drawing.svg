@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="#d9c6a0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><title>Marble countertop shop drawing – plan with cut-out, dimensions, veining and edge section</title>
+<g fill="#d9c6a0" stroke="none" font-family="Arial, sans-serif" font-size="9"><text x="30" y="22" letter-spacing="1.5">SHOP DRAWING — VANITY TOP</text><text x="30" y="34" font-size="7.5">MARBLE 20MM • POLISHED • EASED EDGE</text>
+<text x="160" y="64">2400</text><text x="353" y="152">600</text><text x="170" y="124" font-size="7.5">Ø SINK CUT-OUT 500×380</text><text x="285" y="238" font-size="7.5">SECTION A–A</text><text x="34" y="275" font-size="7.5">SCALE 1:20   DWG D3-MS-01</text></g>
+<path d="M40 56 H340 M40 51 V61 M340 51 V61" stroke-width=".7"/><path d="M36 56 L44 52 M336 60 L344 52" stroke-width=".7"/>
+<rect x="40" y="80" width="300" height="150"/><rect x="40" y="80" width="300" height="150" stroke-width=".5" transform="translate(4 4)" opacity=".4"/>
+<path d="M190 80 V230" stroke-dasharray="6 3 1 3" stroke-width=".7"/><text x="186" y="244" fill="#d9c6a0" stroke="none" font-family="Arial" font-size="7">JOINT</text>
+<rect x="135" y="130" width="110" height="70" rx="14"/><circle cx="190" cy="105" r="5"/><circle cx="190" cy="165" r="3" stroke-width=".7"/>
+<path d="M350 80 V230 M345 80 H355 M345 230 H355" stroke-width=".7"/>
+<g stroke-width=".5"><path d="M45 100 Q90 120 100 160 T150 225"/><path d="M60 82 Q120 110 135 130"/><path d="M335 95 Q290 120 280 160 T230 225"/><path d="M320 82 Q260 110 245 130"/><path d="M250 205 Q290 215 335 200"/></g>
+<path d="M30 248 H240 M30 252 H240" stroke-width=".4"/>
+<path d="M270 255 H360 V266 Q360 270 356 270 H270 Z"/><path d="M270 270 V285 M268 255 L272 251 M262 262 H268" stroke-width=".7"/><path d="M274 260 L282 266 M290 260 L298 266 M306 260 L314 266 M322 260 L330 266" stroke-width=".4"/>
+<path d="M120 95 L135 130" stroke-width=".5"/><path d="M190 105 L210 112" stroke-width=".4"/>
+</svg>

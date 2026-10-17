@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="#d9c6a0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><title>Bed – isometric</title>
+<path d="M70 170 L180 225 L330 150 L220 95 Z"/><path d="M70 170 V195 L180 250 L330 175 V150"/><path d="M180 225 V250"/>
+<path d="M220 95 V40 L330 95 V150"/><path d="M220 40 L230 35 L340 90 V145 L330 150"/><path d="M330 95 L340 90"/>
+<path d="M240 115 L280 95 L310 110 L270 130 Z"/><path d="M195 140 L235 120 L265 135 L225 155 Z"/>
+<path d="M95 165 L200 112 M95 165 L180 207 L290 152" stroke-width=".7"/><path d="M110 173 L215 120" stroke-width=".6" stroke-dasharray="4 3"/></svg>

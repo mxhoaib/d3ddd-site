@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" fill="none" stroke="#d9c6a0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><title>Marble kitchen island with pendant lights – isometric line drawing with dimensions</title>
+<!-- floor grid -->
+<g stroke-width=".5" opacity=".55"><path d="M40 330 L260 410 L480 330 L260 250 Z"/><path d="M95 310 L315 390 M150 290 L370 370 M205 270 L425 350 M95 350 L315 270 M150 370 L370 290 M205 390 L425 310"/></g>
+<!-- island: top slab -->
+<path d="M110 250 L270 308 L420 254 L260 196 Z"/><path d="M110 250 V262 L270 320 L420 266 V254"/><path d="M270 308 V320"/>
+<!-- waterfall end (left) -->
+<path d="M110 262 V340 L126 346 V268"/><path d="M126 346 L270 398"/>
+<!-- body -->
+<path d="M126 268 L270 320 V398"/><path d="M270 398 L405 349 V271"/><path d="M405 349 L420 343 V266"/>
+<!-- doors / drawers -->
+<path d="M175 286 V364 M222 303 V381" stroke-width=".9"/><path d="M290 312 L385 278 M290 340 L385 306 M290 368 L385 334" stroke-width=".9"/>
+<path d="M318 318 L338 311 M318 346 L338 339 M318 374 L338 367" stroke-width="1.6"/><path d="M199 320 V336 M246 337 V353" stroke-width="1.6"/>
+<!-- veining -->
+<g stroke-width=".55"><path d="M150 248 Q190 240 215 252 T290 268 Q330 262 380 250"/><path d="M180 232 Q220 236 240 226 T320 238"/><path d="M114 280 Q120 300 116 330"/><path d="M230 262 Q260 280 300 276"/></g>
+<!-- sink & tap -->
+<path d="M300 236 L340 250 L360 243 L320 229 Z" stroke-width=".9"/><path d="M335 230 V205 Q335 196 344 198 L352 202 V210" />
+<!-- stools -->
+<g stroke-width="1"><ellipse cx="160" cy="300" rx="22" ry="9" transform="translate(-30 40)"/><path d="M110 340 V385 M150 340 V385 M130 349 V392"/><path d="M114 368 L146 368" stroke-width=".6"/></g>
+<!-- pendants -->
+<g stroke-width="1"><path d="M210 0 V110 M300 0 V125 M390 0 V100"/><path d="M190 110 Q210 88 230 110 Z M280 125 Q300 103 320 125 Z M370 100 Q390 78 410 100 Z"/><path d="M205 116 Q210 122 215 116 M295 131 Q300 137 305 131 M385 106 Q390 112 395 106" stroke-width=".6"/></g>
+<!-- dimension lines -->
+<g stroke-width=".7"><path d="M100 268 L95 266 M88 255 L250 196 M100 248 L82 254 M250 196 L240 192" /><path d="M430 262 L470 247 M430 343 L470 328 M462 250 V331"/><path d="M458 254 L466 246 M458 335 L466 327"/></g>
+<g fill="#d9c6a0" stroke="none" font-family="Arial, sans-serif" font-size="11"><text x="150" y="216" transform="rotate(-20 150 216)">2400</text><text x="470" y="295">900</text><text x="20" y="40" font-size="10" letter-spacing="2">ISLAND — CALACATTA 20MM</text></g>
+</svg>

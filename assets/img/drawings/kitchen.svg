@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="#d9c6a0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><title>Kitchen cabinets – elevation</title>
+<path d="M30 270 H370" stroke-width=".8"/><rect x="50" y="160" width="300" height="100"/><path d="M45 160 H355 V152 H45 Z"/><path d="M50 250 H350" stroke-width=".7"/>
+<path d="M125 160 V250 M200 160 V250 M275 160 V250"/><path d="M200 185 H350 M200 215 H350" stroke-width=".9"/>
+<path d="M115 195 V215 M135 195 V215 M230 172 H245 M230 200 H245 M230 230 H245 M305 172 H320 M305 200 H320 M305 230 H320"/>
+<rect x="50" y="40" width="300" height="70"/><path d="M125 40 V110 M200 40 V110 M275 40 V110 M115 92 V104 M135 92 V104 M190 92 V104 M210 92 V104 M285 92 V104"/>
+<path d="M150 130 h20 M160 120 v32 M170 120 h-12" stroke-width=".8"/></svg>

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard.html
+Disallow: /login.html
+Disallow: /signup.html
+Disallow: /thank-you.html
+Disallow: /ar/thank-you.html
+Sitemap: https://d3ddd.com/sitemap.xml

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="#d9c6a0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><title>Stone wall cladding – bookmatched elevation</title>
+<path d="M20 270 H380" stroke-width="1.6"/><rect x="60" y="30" width="280" height="240"/><path d="M200 30 V270 M60 150 H340"/>
+<path d="M70 50 Q120 90 110 140 M90 40 Q150 110 190 145 M330 50 Q280 90 290 140 M310 40 Q250 110 210 145" stroke-width=".5"/>
+<path d="M70 160 Q130 200 120 260 M100 160 Q160 220 190 262 M330 160 Q270 200 280 260 M300 160 Q240 220 210 262" stroke-width=".5"/>
+<path d="M352 30 V270 M347 30 H357 M347 270 H357" stroke-width=".6"/></svg>

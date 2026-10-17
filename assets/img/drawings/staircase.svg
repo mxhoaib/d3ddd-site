@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 -50 360 340" fill="none" stroke="#d9c6a0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><title>Staircase – isometric</title>
+<g><path d="M60 250 L120 280 M60 250 V230 L120 260 V280"/>
+<path d="M60 230 L120 260 L150 245 L90 215 Z"/><path d="M120 260 V280"/><path d="M90 215 V195 M150 245 V225"/>
+<path d="M90 195 L150 225 L180 210 L120 180 Z"/><path d="M150 225 V245"/><path d="M120 180 V160 M180 210 V190"/>
+<path d="M120 160 L180 190 L210 175 L150 145 Z"/><path d="M180 190 V210"/><path d="M150 145 V125 M210 175 V155"/>
+<path d="M150 125 L210 155 L240 140 L180 110 Z"/><path d="M210 155 V175"/><path d="M180 110 V90 M240 140 V120"/>
+<path d="M180 90 L240 120 L270 105 L210 75 Z"/><path d="M240 120 V140"/><path d="M210 75 V55 M270 105 V85"/>
+<path d="M210 55 L270 85 L300 70 L240 40 Z"/><path d="M270 85 V105"/><path d="M240 40 V20 M300 70 V50"/>
+<path d="M240 20 L300 50 L330 35 L270 5 Z"/><path d="M300 50 V70"/><path d="M270 5 V-15 M330 35 V15"/>
+<path d="M120 280 L330 70" stroke-width=".8"/><path d="M75 205 L285 -5" /><path d="M95 213 V188 M155 143 V118 M215 73 V48" stroke-width=".7"/></g></svg>
