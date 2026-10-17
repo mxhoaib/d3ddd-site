@@ -11,15 +11,29 @@ def build_pages(g):
         h=("Demo themes","Website demo themes for UAE contractors","Live sample websites by trade — pick a theme and we tailor it to your brand.") if en else ("نماذج التصاميم","نماذج مواقع للمقاولين في الإمارات","مواقع تجريبية مباشرة حسب التخصص — اختر النموذج ونخصصه لعلامتك التجارية.")
         return f'<section class="section" id="demos" aria-labelledby="demos-h"><div class="wrap"><p class="eyebrow">{h[0]}</p><h2 id="demos-h">{h[1]}</h2><p style="color:var(--muted);margin:10px 0 30px">{h[2]}</p><div class="grid g4">{cards}</div></div></section>'
     def packages(lang):
-        if lang=="en":
-            return f'''<section class="section alt" id="packages" aria-labelledby="pkg-h"><div class="wrap"><p class="eyebrow">Packages</p><h2 id="pkg-h" style="margin-bottom:30px">Website, shop drawing &amp; 3D render packages</h2><div class="grid g2">
-<div class="card"><div class="b"><p class="eyebrow">Contractor Website</p><p class="price">AED 2,000 <small>approx. CAD 750</small></p><p>5-page mobile-friendly website, enquiry form and SEO basics. 50% (AED 1,000) upfront, balance on completion.</p><div class="actions" style="margin-top:18px"><a class="btn" href="{PP}" target="_blank" rel="noopener">Pay deposit via PayPal</a><a class="btn ghost" href="website-design.html">Package details</a></div></div></div>
-<div class="card"><div class="b"><p class="eyebrow">Shop drawings &amp; 3D renders</p><p class="price" style="font-size:30px">Quoted per project</p><p>Marble &amp; stone shop drawings, AutoCAD drafting, fit-out drawings and 3D renders, priced on scope. Send your drawings for a quote.</p><div class="actions" style="margin-top:18px"><a class="btn ghost" href="contact.html">Request a quote</a></div></div></div></div>
-<p style="color:var(--muted);font-size:13px;margin-top:16px">Payments are processed by PayPal. Please put your name or invoice reference in the PayPal note.</p></div></section>'''
-        return f'''<section class="section alt" id="packages" aria-labelledby="pkg-h"><div class="wrap"><p class="eyebrow">الباقات</p><h2 id="pkg-h" style="margin-bottom:30px">باقات المواقع والرسومات التنفيذية والتصميم ثلاثي الأبعاد</h2><div class="grid g2">
-<div class="card"><div class="b"><p class="eyebrow">باقة موقع المقاولين</p><p class="price">2,000 درهم <small dir="ltr">approx. CAD 750</small></p><p>موقع من 5 صفحات متوافق مع الجوال مع نموذج استفسار وأساسيات SEO. 50% (1,000 درهم) مقدماً والباقي عند التسليم.</p><div class="actions" style="margin-top:18px"><a class="btn" href="{PP}" target="_blank" rel="noopener">ادفع العربون عبر PayPal</a><a class="btn ghost" href="website-design.html">تفاصيل الباقة</a></div></div></div>
-<div class="card"><div class="b"><p class="eyebrow">الرسومات التنفيذية والتصميم ثلاثي الأبعاد</p><p class="price" style="font-size:30px">حسب المشروع</p><p>رسومات الرخام والحجر التنفيذية ومخططات أوتوكاد ورسومات التشطيبات والتصميم ثلاثي الأبعاد، بسعر حسب نطاق العمل. أرسل مخططاتك للحصول على عرض سعر.</p><div class="actions" style="margin-top:18px"><a class="btn ghost" href="contact.html">اطلب عرض سعر</a></div></div></div></div>
-<p style="color:var(--muted);font-size:13px;margin-top:16px">تتم المدفوعات عبر PayPal. يرجى كتابة اسمك أو رقم الفاتورة في ملاحظة الدفع.</p></div></section>'''
+        en=lang=="en"; cur_default="cad" if en else "aed"
+        tiers=[("Starter","البداية","599","1,200",["1-page website","Mobile-friendly","Contact form","SEO basics"],["موقع من صفحة واحدة","متوافق مع الجوال","نموذج تواصل","أساسيات SEO"],False),
+               ("Business","الأعمال","999","2,000",["Up to 5 pages","Mobile-friendly","Contact form","SEO basics"],["حتى 5 صفحات","متوافق مع الجوال","نموذج تواصل","أساسيات SEO"],True),
+               ("Premium","المميزة","1,799+","3,500+",["More pages & custom features","Mobile-friendly","Contact form","SEO basics"],["صفحات إضافية وميزات مخصصة","متوافق مع الجوال","نموذج تواصل","أساسيات SEO"],False)]
+        cards=""
+        for ne,na,cad,aed,fe,fa,pop in tiers:
+            badge=f'<span class="pop">{"Popular" if en else "الأكثر طلباً"}</span>' if pop else ""
+            li="".join(f"<li>{x}</li>" for x in (fe if en else fa))
+            cards+=f'<div class="card tier{" featured" if pop else ""}"><div class="b"><p class="eyebrow">{ne if en else na} {badge}</p><p class="price"><span class="p-cad" dir="ltr">CAD {cad}</span><span class="p-aed" dir="ltr">AED {aed}</span></p><ul class="check">{li}</ul></div></div>'
+        t=dict(eye="Packages" if en else "الباقات",h="Website packages, shop drawings &amp; 3D renders" if en else "باقات المواقع والرسومات التنفيذية والتصميم ثلاثي الأبعاد",
+               lab="Currency" if en else "العملة",cad="CAD (Canada)" if en else "CAD (كندا)",aed="AED (UAE)" if en else "AED (الإمارات)",
+               dep="50% deposit upfront, balance on completion." if en else "دفعة مقدمة 50%، والباقي عند التسليم.",
+               pay="Pay deposit via PayPal" if en else "ادفع العربون عبر PayPal",
+               sd="Shop drawings &amp; 3D renders" if en else "الرسومات التنفيذية والتصميم ثلاثي الأبعاد",q="Quoted per project" if en else "حسب المشروع",
+               sdp="Marble &amp; stone shop drawings, AutoCAD drafting, fit-out drawings and 3D renders, priced on scope." if en else "رسومات الرخام والحجر التنفيذية ومخططات أوتوكاد ورسومات التشطيبات والتصميم ثلاثي الأبعاد، بسعر حسب نطاق العمل.",
+               rq="Request a quote" if en else "اطلب عرض سعر",
+               note="Payments are processed by PayPal. Please put your name or invoice reference in the PayPal note." if en else "تتم المدفوعات عبر PayPal. يرجى كتابة اسمك أو رقم الفاتورة في ملاحظة الدفع.")
+        return f'''<section class="section alt" id="packages" aria-labelledby="pkg-h" data-cur="{cur_default}"><div class="wrap"><p class="eyebrow">{t["eye"]}</p><h2 id="pkg-h">{t["h"]}</h2>
+<div class="cur-toggle" role="group" aria-label="{t["lab"]}"><button type="button" data-set-cur="cad">{t["cad"]}</button><button type="button" data-set-cur="aed">{t["aed"]}</button></div>
+<div class="grid g3" style="margin-top:24px">{cards}</div>
+<div class="actions" style="margin-top:22px;align-items:center"><a class="btn" href="{PP}" target="_blank" rel="noopener">{t["pay"]}</a><span style="color:var(--muted)">{t["dep"]}</span></div>
+<div class="card" style="margin-top:28px"><div class="b"><p class="eyebrow">{t["sd"]}</p><p class="price" style="font-size:28px">{t["q"]}</p><p>{t["sdp"]}</p><div class="actions" style="margin-top:14px"><a class="btn ghost" href="contact.html">{t["rq"]}</a></div></div></div>
+<p style="color:var(--muted);font-size:13px;margin-top:16px">{t["note"]}</p></div></section>'''
     def bc(lang, fn, name): return crumbs_ld(lang, [(T[lang]["home"], url(lang, "index.html")), (name, url(lang, fn))])
     WEB_OFFER = {"@type": "Offer", "price": "2000", "priceCurrency": "AED", "description": "Contractor Website – 5 pages, 50% upfront"}
 
@@ -90,12 +104,12 @@ def build_pages(g):
         [bc(L,"marble.html",name),service_ld("Marble and stone shop drawings","Shop drawings, cutting lists, fabrication drawings and BOQ for marble and stone works in the UAE.",url(L,"marble.html"))])
 
     name="Website Design"
-    body = page_hero(L,"Website design for contractors — UAE","Contractor website design in Dubai — <em>AED 2,000</em>","A professional 5-page website that turns visitors into WhatsApp enquiries. <span lang=\"ar\" class=\"ar-touch\">تصميم مواقع للمقاولين</span>",name) + f'''
-<section class="section"><div class="wrap split"><div class="card"><div class="b"><p class="eyebrow">Contractor Website</p><p class="price">AED 2,000 <small>approx. CAD 750</small></p><p>50% (AED 1,000) upfront to start, 50% balance on completion before go-live.</p>
+    body = page_hero(L,"Website design for contractors — UAE","Contractor website design in Dubai — <em>AED 2,000</em>","A professional 5-page website that turns visitors into enquiries. <span lang=\"ar\" class=\"ar-touch\">تصميم مواقع للمقاولين</span>",name) + f'''
+<section class="section"><div class="wrap split"><div class="card"><div class="b"><p class="eyebrow">Contractor Website</p><p class="price">AED 2,000</p><p>50% (AED 1,000) upfront to start, 50% balance on completion before go-live.</p>
 <ul class="check"><li>5 pages: Home, Services, Projects, About, Contact</li><li>Contact buttons &amp; email links</li><li>Enquiry form</li><li>Mobile-responsive design</li><li>SEO basics: titles, descriptions, sitemap</li><li>Connect your existing domain</li></ul>
 <div class="actions" style="margin-top:20px"><a class="btn" href="https://paypal.me/imshoi" target="_blank" rel="noopener">Pay deposit via PayPal</a><a class="btn ghost" href="contact.html">Start your website</a><a class="btn ghost" href="mailto:info@d3ddd.com?subject=Contractor%20Website%20package">Ask by email</a></div></div></div>
 <div><figure>{img(P,"web-wireframe","Website wireframe: desktop browser layout, mobile screen and HTML code")}</figure><h3 style="margin-top:24px">How it works</h3><ol class="steps" style="margin-top:14px"><li>50% deposit</li><li>Send content</li><li>We build</li><li>You review</li><li>Balance &amp; go live</li></ol><p class="notice" style="margin-top:24px">Domain registration, hosting fees and paid stock imagery, if needed, are not included unless agreed in writing.</p></div></div></section>'''
-    body += demos(L)
+    body += packages(L) + demos(L)
     out[(L,"website-design.html")] = shell(L,"website-design.html","Contractor Website Design Dubai | 5-Page Website AED 2,000 – D3DDD",
         "Website design for contractors in Dubai & the UAE: 5 pages, WhatsApp button, enquiry form and SEO basics for AED 2,000 (50% upfront).",body,
         [bc(L,"website-design.html",name),service_ld("Contractor website design","5-page mobile-friendly contractor website with WhatsApp button and enquiry form.",url(L,"website-design.html"),WEB_OFFER)])
@@ -189,12 +203,12 @@ def build_pages(g):
         [bc(L,"marble.html",name),service_ld("رسومات الرخام والحجر التنفيذية","رسومات تنفيذية وقوائم قص ورسومات تصنيع وجداول كميات للرخام في الإمارات.",url(L,"marble.html"))])
 
     name="تصميم المواقع"
-    body = page_hero(L,"تصميم مواقع للمقاولين — الإمارات","تصميم مواقع للمقاولين في دبي — <em>2,000 درهم</em>","موقع احترافي من 5 صفحات يحوّل الزوار إلى استفسارات عبر واتساب.",name) + f'''
-<section class="section"><div class="wrap split"><div class="card"><div class="b"><p class="eyebrow">باقة موقع المقاولين</p><p class="price">2,000 درهم <small dir="ltr">approx. CAD 750</small></p><p>50% (1,000 درهم) مقدماً للبدء، و50% عند الانتهاء وقبل إطلاق الموقع.</p>
+    body = page_hero(L,"تصميم مواقع للمقاولين — الإمارات","تصميم مواقع للمقاولين في دبي — <em>2,000 درهم</em>","موقع احترافي من 5 صفحات يحوّل الزوار إلى استفسارات.",name) + f'''
+<section class="section"><div class="wrap split"><div class="card"><div class="b"><p class="eyebrow">باقة موقع المقاولين</p><p class="price">2,000 درهم</p><p>50% (1,000 درهم) مقدماً للبدء، و50% عند الانتهاء وقبل إطلاق الموقع.</p>
 <ul class="check"><li>5 صفحات: الرئيسية، الخدمات، المشاريع، من نحن، تواصل معنا</li><li>أزرار تواصل وروابط بريد إلكتروني</li><li>نموذج استفسار</li><li>تصميم متوافق مع الجوال</li><li>أساسيات تحسين محركات البحث (SEO)</li><li>ربط النطاق (الدومين) الحالي</li></ul>
 <div class="actions" style="margin-top:20px"><a class="btn" href="https://paypal.me/imshoi" target="_blank" rel="noopener">ادفع العربون عبر PayPal</a><a class="btn ghost" href="contact.html">ابدأ موقعك</a><a class="btn ghost" href="mailto:info@d3ddd.com">اسأل عبر البريد</a></div></div></div>
 <div><figure>{img(P,"web-wireframe","رسم تخطيطي لموقع: متصفح وشاشة جوال وكود HTML")}</figure><h3 style="margin-top:24px">كيف نعمل</h3><ol class="steps" style="margin-top:14px"><li>دفعة 50%</li><li>أرسل المحتوى</li><li>نبني الموقع</li><li>تراجعه</li><li>الدفعة الثانية والإطلاق</li></ol><p class="notice" style="margin-top:24px">لا تشمل الباقة تسجيل النطاق ورسوم الاستضافة والصور المدفوعة إن لزمت، إلا إذا تم الاتفاق على ذلك كتابياً.</p></div></div></section>'''
-    body += demos(L)
+    body += packages(L) + demos(L)
     out[(L,"website-design.html")] = shell(L,"website-design.html","تصميم مواقع للمقاولين دبي | موقع 5 صفحات بسعر 2,000 درهم – D3DDD",
         "تصميم مواقع للمقاولين في دبي والإمارات: 5 صفحات، زر واتساب، نموذج استفسار وأساسيات SEO بسعر 2,000 درهم (50% مقدماً).",body,
         [bc(L,"website-design.html",name),service_ld("تصميم مواقع للمقاولين","موقع من 5 صفحات متوافق مع الجوال مع زر واتساب ونموذج استفسار.",url(L,"website-design.html"),WEB_OFFER)])
