@@ -139,11 +139,13 @@ def crumbs_ld(items: list[tuple[str, str]]) -> dict:
 
 IG = "https://www.instagram.com/mxhaib/"
 FIVERR = "https://www.fiverr.com/mxhoaib"
+LINKEDIN = "https://www.linkedin.com/in/mshoaib94"
 # Required on every article: author byline + author box (see BLOG.md)
 AUTHOR_BYLINE = (
     '<div class="byline"><span class="av" aria-hidden="true">SH</span><span>Written by '
     '<strong>Shoaib Hussan</strong><br><small>Founder, D3DDD · '
-    f'<a href="{IG}" rel="me noopener" target="_blank">@mxhaib</a></small></span></div>'
+    f'<a href="{IG}" rel="me noopener" target="_blank">@mxhaib</a> · '
+    f'<a href="{LINKEDIN}" rel="me noopener" target="_blank">LinkedIn</a></small></span></div>'
 )
 AUTHOR_BOX = (
     '<aside class="author-box" aria-label="About the author"><span class="av lg" aria-hidden="true">SH</span>'
@@ -152,6 +154,7 @@ AUTHOR_BOX = (
     '<strong>D3DDD – Dubai 3D Design &amp; Draft</strong>. Shop drawings, marble &amp; stone detailing, '
     '3D visualisation and construction documentation for contractors and fabricators across the Gulf.</p>'
     f'<p class="socials"><a href="{IG}" rel="me noopener" target="_blank">Instagram @mxhaib</a>'
+    f'<a href="{LINKEDIN}" rel="me noopener" target="_blank">LinkedIn</a>'
     f'<a href="{FIVERR}" rel="me noopener" target="_blank">Hire on Fiverr</a>'
     '<a href="../../contact.html">Work with D3DDD →</a></p></div></aside>'
 )
@@ -164,7 +167,7 @@ def article_ld(p: dict) -> dict:
         "datePublished": p["date"],
         "dateModified": p["date"],
         "image": p["image"],
-        "author": {"@type": "Person", "name": "Shoaib Hussan", "jobTitle": "Founder, D3DDD – Dubai 3D Design & Draft", "url": f"{D}/about.html", "sameAs": [IG, FIVERR]},
+        "author": {"@type": "Person", "name": "Shoaib Hussan", "jobTitle": "Founder, D3DDD – Dubai 3D Design & Draft", "url": f"{D}/about.html", "sameAs": [IG, LINKEDIN, FIVERR]},
         "publisher": {"@id": f"{D}/#business"},
         "mainEntityOfPage": p["url"],
         "articleSection": p["category_title"],
