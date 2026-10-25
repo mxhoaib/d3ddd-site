@@ -142,13 +142,13 @@ FIVERR = "https://www.fiverr.com/mxhoaib"
 # Required on every article: author byline + author box (see BLOG.md)
 AUTHOR_BYLINE = (
     '<div class="byline"><span class="av" aria-hidden="true">SH</span><span>Written by '
-    '<strong>Shoaib Hussan</strong><br><small>Founder, D3DDD · 8 yrs drafting · '
+    '<strong>Shoaib Hussan</strong><br><small>Founder, D3DDD · '
     f'<a href="{IG}" rel="me noopener" target="_blank">@mxhaib</a></small></span></div>'
 )
 AUTHOR_BOX = (
     '<aside class="author-box" aria-label="About the author"><span class="av lg" aria-hidden="true">SH</span>'
     '<div><p class="eyebrow">About the author</p><h2>Shoaib Hussan</h2>'
-    '<p>Draftsman with ~8 years of hands-on drafting experience and founder of '
+    '<p>Draftsman and founder of '
     '<strong>D3DDD – Dubai 3D Design &amp; Draft</strong>. Shop drawings, marble &amp; stone detailing, '
     '3D visualisation and construction documentation for contractors and fabricators across the Gulf.</p>'
     f'<p class="socials"><a href="{IG}" rel="me noopener" target="_blank">Instagram @mxhaib</a>'
