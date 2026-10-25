@@ -12,4 +12,11 @@
   <url><loc>https://d3ddd.com/ar/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><xhtml:link rel="alternate" hreflang="en-AE" href="https://d3ddd.com/about.html"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://d3ddd.com/ar/about.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://d3ddd.com/about.html"/></url>
   <url><loc>https://d3ddd.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><xhtml:link rel="alternate" hreflang="en-AE" href="https://d3ddd.com/contact.html"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://d3ddd.com/ar/contact.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://d3ddd.com/contact.html"/></url>
   <url><loc>https://d3ddd.com/ar/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><xhtml:link rel="alternate" hreflang="en-AE" href="https://d3ddd.com/contact.html"/><xhtml:link rel="alternate" hreflang="ar-AE" href="https://d3ddd.com/ar/contact.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://d3ddd.com/contact.html"/></url>
+  <url><loc>https://d3ddd.com/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://d3ddd.com/blog/feed.xml</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://d3ddd.com/blog/category/architecture/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://d3ddd.com/blog/category/megaprojects/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://d3ddd.com/blog/jeddah-tower-halfway-to-one-kilometre/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://d3ddd.com/blog/neom-the-line-paused-what-drafters-can-learn/</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://d3ddd.com/blog/sagrada-familia-final-height-2026/</loc><lastmod>2026-10-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

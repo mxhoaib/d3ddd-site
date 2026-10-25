@@ -44,13 +44,13 @@ def faq_html(faqs, title, eyebrow):
 
 # ---------------------------------------------------------------- language strings
 T = {
- "en": dict(dir="ltr", locale="en_AE", P="", nav=[("index.html","Home"),("services.html","Services"),("marble.html","Marble Shop Drawings"),("website-design.html","Website Design"),("about.html","About"),("contact.html","Contact")],
+ "en": dict(dir="ltr", locale="en_AE", P="", nav=[("index.html","Home"),("services.html","Services"),("marble.html","Marble Shop Drawings"),("website-design.html","Website Design"),("blog/","Blog"),("about.html","About"),("contact.html","Contact")],
    login="Client Login", menu="Open menu", skip="Skip to content", switch="العربية",
    tagline="Marble & stone shop drawings, AutoCAD drafting, 3D rendering and contractor websites in Dubai, Abu Dhabi, Sharjah and across the UAE.",
    f_services="Services", f_company="Company", f_contact="Contact", portal="Client portal", rights="All rights reserved.", home="Home",
    cta_eye="Let’s work together", cta_h="Your vision. Our precision.", cta_p="Send your drawings, sketches, dimensions or project requirements for a quote — in English or Arabic.", cta_wa="Email us", cta_form="Send an enquiry",
    fonts="family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&family=Tajawal:wght@500&display=swap"),
- "ar": dict(dir="rtl", locale="ar_AE", P="../", nav=[("index.html","الرئيسية"),("services.html","الخدمات"),("marble.html","رسومات الرخام"),("website-design.html","تصميم المواقع"),("about.html","من نحن"),("contact.html","تواصل معنا")],
+ "ar": dict(dir="rtl", locale="ar_AE", P="../", nav=[("index.html","الرئيسية"),("services.html","الخدمات"),("marble.html","رسومات الرخام"),("website-design.html","تصميم المواقع"),("blog/","المدونة"),("about.html","من نحن"),("contact.html","تواصل معنا")],
    login="بوابة العملاء", menu="فتح القائمة", skip="انتقل إلى المحتوى", switch="English",
    tagline="رسومات تنفيذية للرخام والحجر، مخططات أوتوكاد، تصميم ثلاثي الأبعاد ومواقع إلكترونية للمقاولين في دبي وأبوظبي والشارقة وجميع أنحاء الإمارات.",
    f_services="الخدمات", f_company="الشركة", f_contact="التواصل", portal="بوابة العملاء", rights="جميع الحقوق محفوظة.", home="الرئيسية",
@@ -82,27 +82,41 @@ def head(lang, fn, title, desc, ld_nodes, noindex=False, bilingual=True, preload
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?{t["fonts"]}" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?{t["fonts"]}"></noscript>
 <script type="application/ld+json">{ld}</script></head>'''
 
+def nav_href(lang, h):
+    if h == "index.html":
+        return "./"
+    if h == "blog/":
+        return "../blog/" if lang == "ar" else "blog/"
+    return h
+
+GOAT = '<script data-goatcounter="https://d3dddsites.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
+
 def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=True, scripts="", preload=None):
     t = T[lang]; P = t["P"]
-    nav = "".join(f'<a href="{h if h!="index.html" else "./"}"{" aria-current=page" if h==fn else ""}>{n}</a>' for h, n in t["nav"])
+    nav = "".join(f'<a href="{nav_href(lang, h)}"{" aria-current=page" if h==fn else ""}>{n}</a>' for h, n in t["nav"])
     other = "ar" if lang == "en" else "en"
     sw_href = (("ar/" if lang == "en" else "../") + ("" if fn == "index.html" else fn)) if bilingual else ("ar/" if lang == "en" else "../")
     if lang == "en" and not bilingual and fn in ("login.html","signup.html","dashboard.html"): sw_href = "ar/"
-    login_href = f"{P}login.html"
-    S = {k: v for k, v in t.items()}
-    fs = "".join(f'<a href="{h}">{n}</a>' for h, n in t["nav"][1:4])
-    fc = "".join(f'<a href="{h}">{n}</a>' for h, n in [t["nav"][4], t["nav"][5]])
+    blog_href = nav_href(lang, "blog/")
+    fs = "".join(f'<a href="{nav_href(lang, h)}">{n}</a>' for h, n in t["nav"][1:4])
+    fc = "".join(f'<a href="{nav_href(lang, h)}">{n}</a>' for h, n in t["nav"][4:7])
+    top = (f'<div class="topbar"><span><a href="mailto:{EMAIL}">{EMAIL}</a></span>'
+           f'<span><a href="{D}">d3ddd.com</a></span></div>')
+    blog_label = "Blog" if lang == "en" else "المدونة"
+    loc = "Dubai, United Arab Emirates" if lang == "en" else "دبي، الإمارات العربية المتحدة"
     return head(lang, fn, title, desc, list(ld_nodes), noindex, bilingual, preload) + f'''<body>
 <a class="skip" href="#main">{t["skip"]}</a>
-<header class="site-header"><a class="logo" href="{"./" if lang=="en" or True else ""}" aria-label="D3DDD – Dubai 3D Design &amp; Draft"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></a>
+{top}
+<header class="site-header"><a class="logo" href="./" aria-label="D3DDD – Dubai 3D Design and Draft"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></a>
 <button class="menu-toggle" aria-label="{t["menu"]}" aria-expanded="false" aria-controls="nav">☰</button>
 <nav class="nav" id="nav" aria-label="Main">{nav}<a class="lang" href="{sw_href}" hreflang="{other}" lang="{other}">{t["switch"]}</a></nav></header>
 <main id="main">{body}</main>
-<footer><div class="grid"><div><div class="logo"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></div><p style="margin-top:16px;max-width:340px">{t["tagline"]}</p></div>
+<footer><div class="grid"><div><div class="logo"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></div><p style="margin-top:16px;max-width:340px">{t["tagline"]}</p>
+<p style="margin-top:12px"><a href="mailto:{EMAIL}">{EMAIL}</a> · <a href="{D}">d3ddd.com</a></p></div>
 <div><h2>{t["f_services"]}</h2>{fs}</div><div><h2>{t["f_company"]}</h2>{fc}</div>
-<div><h2>{t["f_contact"]}</h2><a href="contact.html">{t["cta_form"]}</a><a href="mailto:{EMAIL}">{EMAIL}</a><span>{"Dubai, United Arab Emirates" if lang=="en" else "دبي، الإمارات العربية المتحدة"}</span></div></div>
+<div><h2>{t["f_contact"]}</h2><a href="contact.html">{t["cta_form"]}</a><a href="mailto:{EMAIL}">{EMAIL}</a><a href="{blog_href}">{blog_label}</a><span>{loc}</span></div></div>
 <div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. {t["rights"]}</div></footer>
-<script src="{P}assets/config.js" defer></script><script src="{P}assets/site.js" defer></script>{scripts}</body></html>'''
+<script src="{P}assets/config.js" defer></script><script src="{P}assets/site.js" defer></script>{scripts}{GOAT}</body></html>'''
 
 def cta(lang):
     t = T[lang]
@@ -138,3 +152,7 @@ x.append('</urlset>')
 open("sitemap.xml", "w").write("\n".join(x) + "\n")
 open("robots.txt", "w").write(f"User-agent: *\nAllow: /\nDisallow: /dashboard.html\nDisallow: /login.html\nDisallow: /signup.html\nDisallow: /thank-you.html\nDisallow: /ar/thank-you.html\nSitemap: {D}sitemap.xml\n")
 print("built", len(out) + len(ns["pages"]), "pages")
+
+# regenerate blog pages + patch sitemap with blog URLs
+import runpy
+runpy.run_path("scripts/build_blog.py", run_name="__main__")

@@ -63,3 +63,23 @@ html[dir=ltr] .ar-touch{text-align:left}.hero h1{font-size:clamp(34px,4.6vw,62px
 .js [data-cur=cad] .p-aed,.js [data-cur=aed] .p-cad{display:none}.js .tier .price span+span{font-size:34px;color:var(--gold2)}
 .tier.featured{border-color:var(--gold)}.pop{display:inline-block;background:var(--gold);color:#14120e;font-size:10px;padding:2px 8px;border-radius:10px;letter-spacing:1px;margin-inline-start:6px}
 .tier .price span{align-self:flex-start}
+
+/* topbar + blog */
+.topbar{display:flex;justify-content:space-between;gap:16px;padding:8px 5vw;font-size:12px;letter-spacing:.4px;background:#090908;border-bottom:1px solid var(--line);color:var(--muted)}
+.topbar a{color:var(--gold2)}.topbar a:hover{color:var(--gold)}
+.site-header{top:0}
+.nav{top:calc(76px)} /* kept for mobile absolute; topbar is above flow */
+@media(max-width:900px){.nav{top:calc(36px + 76px)}}
+.post-grid .post-card figure{padding:0}.post-grid .post-card img{aspect-ratio:1200/630;object-fit:cover;width:100%}
+.post-card time{display:block;font-size:12px;color:var(--muted);margin:6px 0 8px}
+.post-card h2{font-size:20px;margin:0}.post-card .more{display:inline-block;margin-top:12px;color:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{border:1px solid var(--line);padding:6px 14px;border-radius:30px;font-size:12px;color:var(--muted)}.chip:hover{border-color:var(--gold);color:var(--gold)}
+.article-wrap{max-width:760px;margin:0 auto}.hero-fig{margin:0 0 28px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+.hero-fig img{width:100%;aspect-ratio:1200/630;object-fit:cover}.img-credit{font-size:12px;color:var(--muted);padding:8px 12px}
+.prose{font-size:17px;color:var(--ink)}.prose p,.prose li{color:var(--muted);margin:0 0 1em;line-height:1.7}
+.prose h2{margin:1.6em 0 .6em;font-size:28px}.prose h3{margin:1.3em 0 .5em;font-size:20px}
+.prose a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px}.prose ul,.prose ol{margin:0 0 1em;padding-inline-start:1.2em}
+.prose strong{color:var(--ink)}.meta{color:var(--muted);margin-top:12px!important}
+.box.related{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:48px 0 0}
+.box.related h2{font-size:20px;margin-bottom:10px}.box.related ul{padding-inline-start:1.1em;color:var(--muted)}
+.box.related a{color:var(--gold2)}
