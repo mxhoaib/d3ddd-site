@@ -70,7 +70,7 @@ def build_pages(g):
 <div class="card"><div class="b"><h3>🌐 English &amp; Arabic</h3><p>We communicate and annotate in English and Arabic. <span lang="ar">نتواصل بالعربية والإنجليزية.</span></p></div></div>
 <div class="card"><div class="b"><h3>💳 Simple PayPal payments</h3><p>Pay your website deposit or project invoices securely through PayPal.</p></div></div></div>
 <p class="areas" style="margin-top:30px"><strong>Areas served:</strong> Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Umm Al Quwain, Fujairah — across the UAE.</p></div></section>
-{demos("en")}{packages("en")}{faq_html(faq_en,"Frequently asked questions","FAQ")}{cta(L)}'''
+{packages("en")}{faq_html(faq_en,"Frequently asked questions","FAQ")}{cta(L)}'''
     out[(L,"index.html")] = shell(L,"index.html","Shop Drawings Dubai | Marble Shop Drawings, AutoCAD Drafting & 3D Rendering UAE – D3DDD",
         "D3DDD: marble & stone shop drawings, AutoCAD drafting, fit-out drawings and 3D rendering in Dubai, Abu Dhabi & Sharjah. Request a fast quote online.",
         body,[faq_ld(faq_en),{"@type":"WebSite","@id":url(L,"index.html")+"#website","url":url(L,"index.html"),"name":"D3DDD","inLanguage":"en-AE","publisher":{"@id":g["ORG_ID"]}}],preload="hero-marble-kitchen")
@@ -167,7 +167,7 @@ def build_pages(g):
 <div class="card"><div class="b"><h3>🌐 العربية والإنجليزية</h3><p>نتواصل ونكتب ملاحظات المخططات بالعربية والإنجليزية.</p></div></div>
 <div class="card"><div class="b"><h3>💳 دفع سهل عبر PayPal</h3><p>ادفع عربون الموقع أو فواتير المشاريع بأمان عبر PayPal.</p></div></div></div>
 <p class="areas" style="margin-top:30px"><strong>المناطق التي نخدمها:</strong> دبي، أبوظبي، الشارقة، عجمان، رأس الخيمة، أم القيوين، الفجيرة — في جميع أنحاء الإمارات.</p></div></section>
-{demos("ar")}{packages("ar")}{faq_html(faq_ar,"الأسئلة الشائعة","أسئلة وأجوبة")}{cta(L)}'''
+{packages("ar")}{faq_html(faq_ar,"الأسئلة الشائعة","أسئلة وأجوبة")}{cta(L)}'''
     out[(L,"index.html")] = shell(L,"index.html","رسومات تنفيذية دبي | رسومات الرخام، مخططات أوتوكاد وتصميم ثلاثي الأبعاد في الإمارات – D3DDD",
         "D3DDD: رسومات تنفيذية للرخام والحجر، مخططات أوتوكاد، رسومات التشطيبات وتصميم ثلاثي الأبعاد في دبي وأبوظبي والشارقة. اطلب عرض سعر سريع عبر الإنترنت.",
         body,[faq_ld(faq_ar),{"@type":"WebSite","@id":url(L,"index.html")+"#website","url":url(L,"index.html"),"name":"D3DDD","inLanguage":"ar-AE","publisher":{"@id":g["ORG_ID"]}}],preload="hero-marble-kitchen")
