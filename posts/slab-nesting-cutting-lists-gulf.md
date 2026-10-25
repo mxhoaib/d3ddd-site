@@ -49,7 +49,7 @@ If your list cannot be traced back to an elevation tag in thirty seconds, it wil
 
 ## Yield: talk in process, not magic numbers
 
-Clients sometimes ask for a single “waste %” to plug into a [BOQ](/services.html). Reality varies by:
+Clients sometimes ask for a single “waste %” to plug into a [BOQ](/services/architectural-estimation/). Reality varies by:
 
 - slab size vs piece size mix
 - how many book-matched pairs you need
@@ -64,7 +64,7 @@ A more honest approach for estimation:
 - Separate **design waste** (geometry) from **contingency** (breakage / remakes)
 - Update the nest when the drawing revision changes piece sizes
 
-That is ordinary quantity discipline — the same mindset behind careful [AutoCAD drafting](/services.html) and take-offs — not a black-box “optimiser” promise.
+That is ordinary quantity discipline — the same mindset behind careful [AutoCAD drafting](/services/architectural-drafting/) and take-offs — not a black-box “optimiser” promise.
 
 ## Vein direction and book-matching
 
@@ -87,7 +87,7 @@ A perfect geometric nest that ignores vein flow still produces a wall the client
 
 ## How D3DDD fits in
 
-[D3DDD](/) supports fabricators with shop drawings, piece schedules and cutting-list workflows that stay tied to the same IDs from elevation to nest. When helpful, we add [3D visualisation](/services.html) so clients approve vein direction before the saw starts.
+[D3DDD](/) supports fabricators with shop drawings, [estimation / cutting-list](/services/architectural-estimation/) workflows that stay tied to the same IDs from elevation to nest. When helpful, we add [3D visualisation](/services/3d-rendering-modeling-visualization/) so clients approve vein direction before the saw starts.
 
 Need a package nested or a messy schedule cleaned up? [Contact D3DDD](/contact.html), see updates on [Instagram @mxhaib](https://www.instagram.com/mxhaib/), or review gigs on [Fiverr (@mxhoaib)](https://www.fiverr.com/mxhoaib).
 

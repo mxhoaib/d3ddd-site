@@ -60,7 +60,8 @@ def topbar(prefix: str) -> str:
 def nav(prefix: str, current: str = "") -> str:
     items = [
         (f"{prefix}", "Home", "home"),
-        (f"{prefix}services.html", "Services", "services"),
+        (f"{prefix}services/", "Services", "services"),
+        (f"{prefix}projects/", "Projects", "projects"),
         (f"{prefix}marble.html", "Marble Shop Drawings", "marble"),
         (f"{prefix}website-design.html", "Website Design", "website"),
         (f"{prefix}blog/", "Blog", "blog"),
@@ -76,10 +77,17 @@ def nav(prefix: str, current: str = "") -> str:
 
 def footer(prefix: str) -> str:
     return f'''<footer><div class="grid"><div><div class="logo"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></div>
-<p style="margin-top:16px;max-width:340px">Marble &amp; stone shop drawings, AutoCAD drafting, 3D rendering and contractor websites in Dubai, Abu Dhabi, Sharjah and across the UAE.</p>
+<p style="margin-top:16px;max-width:340px">Architectural drafting, designing, estimation, 3D visualization and websites in Dubai, Abu Dhabi, Sharjah and across the UAE.</p>
 <p style="margin-top:12px"><a href="mailto:{EMAIL}">{EMAIL}</a> · <a href="{D}/">d3ddd.com</a></p></div>
-<div><h2>Services</h2><a href="{prefix}services.html">Services</a><a href="{prefix}marble.html">Marble Shop Drawings</a><a href="{prefix}website-design.html">Website Design</a></div>
-<div><h2>Company</h2><a href="{prefix}about.html">About</a><a href="{prefix}blog/">Blog</a><a href="{prefix}contact.html">Contact</a></div>
+<div><h2>Services</h2>
+<a href="{prefix}services/">All services</a>
+<a href="{prefix}services/architectural-drafting/">Architectural drafting</a>
+<a href="{prefix}services/architectural-designing/">Architectural designing</a>
+<a href="{prefix}services/architectural-estimation/">Architectural estimation</a>
+<a href="{prefix}services/3d-rendering-modeling-visualization/">3D rendering &amp; visualization</a>
+<a href="{prefix}services/website-development-designing/">Website development</a>
+</div>
+<div><h2>Company</h2><a href="{prefix}projects/">Projects</a><a href="{prefix}about.html">About</a><a href="{prefix}blog/">Blog</a><a href="{prefix}contact.html">Contact</a></div>
 <div><h2>Contact</h2><a href="{prefix}contact.html">Send an enquiry</a><a href="mailto:{EMAIL}">{EMAIL}</a><a href="{prefix}blog/feed.xml">RSS</a><span>Dubai, United Arab Emirates</span></div></div>
 <div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. All rights reserved.</div></footer>'''
 

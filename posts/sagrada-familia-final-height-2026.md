@@ -50,8 +50,8 @@ The 2026 confusion — *height finished* vs *building finished* — maps cleanly
 1. **Milestone language must be scoped.** “Structure topped out” is not “handover.” Put the distinction in the drawing issue stamp and in the client email.
 2. **Marketing timelines are not fabrication calendars.** A centennial date can drive ceremony; it cannot invent missing urban permits.
 3. **Percent-complete figures need a basis.** “70% complete” only helps if everyone knows whether that means cost, volume, or critical-path packages ([Gaudí Museum](https://gaudi.museum/en/news/is-the-sagrada-familia-finished/)).
-4. **Long programmes need archival discipline.** Generations of architects have touched this site. Your villa renovation will not last 144 years, but staff will still turn over mid-project — keep DWG masters and revision tables boringly consistent via solid [AutoCAD drafting](/services.html#drafting) practice.
-5. **Visuals should match the current issue.** [3D renders](/services.html#3d) that show a completed Glory façade while the permit is unresolved create the same social-media mismatch Barcelona saw in June.
+4. **Long programmes need archival discipline.** Generations of architects have touched this site. Your villa renovation will not last 144 years, but staff will still turn over mid-project — keep DWG masters and revision tables boringly consistent via solid [AutoCAD drafting](/services/architectural-drafting/) practice.
+5. **Visuals should match the current issue.** [3D rendering](/services/3d-rendering-modeling-visualization/) that show a completed Glory façade while the permit is unresolved create the same social-media mismatch Barcelona saw in June.
 
 ## What drafters outside Barcelona should copy
 

@@ -1,0 +1,477 @@
+[
+  {
+    "slug": "architectural-drafting",
+    "num": "01",
+    "img": "svc-drafting",
+    "en": {
+      "name": "Architectural drafting",
+      "short": "Shop drawings, CAD detailing, as-built, joinery and permit sets.",
+      "title": "Architectural Drafting Dubai | Shop Drawings, CAD & Permit Sets UAE – D3DDD",
+      "desc": "Architectural drafting in Dubai and the UAE: shop drawings, CAD detailing, as-built, joinery/fit-out drawings, marble/stone shop drawings and permit sets.",
+      "eyebrow": "Drafting — Dubai & UAE",
+      "h1": "Architectural drafting for Gulf <em>fit-out &amp; construction</em>",
+      "lead": "Construction-ready documentation for contractors, fabricators and consultants in Dubai, Abu Dhabi, Sharjah and across the Gulf — prepared by Shoaib Hussan / D3DDD.",
+      "intro": "Clear sheets, consistent layers and site-usable details. We turn architect and interior sets into drawings fabricators and site teams can trust.",
+      "subs": [
+        [
+          "Shop drawings",
+          "Fabrication and installation drawings with dimensions, joints, piece tags and coordinated details."
+        ],
+        [
+          "CAD detailing",
+          "AutoCAD DWG detailing for interiors, joinery interfaces and stone interfaces."
+        ],
+        [
+          "As-built drawings",
+          "Record sets that capture what was built for handover, FM and future works."
+        ],
+        [
+          "Joinery &amp; fit-out drawings",
+          "Cabinet elevations, sections, hardware notes and construction-ready joinery packages."
+        ],
+        [
+          "Marble &amp; stone shop drawings",
+          "Stone plans, elevations, edges, cut-outs and fabrication-ready sets."
+        ],
+        [
+          "Permit drawing support",
+          "Clean permit-oriented sets prepared from your design package (requirements vary by emirate)."
+        ]
+      ],
+      "deliver": [
+        "DWG + PDF drawing sets",
+        "Layered, revision-tracked sheets",
+        "English notes (Arabic on request)",
+        "Coordination-friendly naming"
+      ],
+      "cta_label": "Enquire about drafting",
+      "marble_link": true,
+      "web_link": false
+    },
+    "ar": {
+      "name": "الرسم المعماري التنفيذي",
+      "short": "رسومات تنفيذية، تفاصيل أوتوكاد، كما بُني، نجارة ودعم تصاريح.",
+      "title": "الرسم المعماري التنفيذي دبي | رسومات تنفيذية ومخططات أوتوكاد – D3DDD",
+      "desc": "رسم معماري تنفيذي في دبي والإمارات: رسومات تنفيذية، تفاصيل أوتوكاد، مخططات كما بُني، رسومات نجارة وفيت آوت، رسومات رخام ودعم مخططات التصاريح.",
+      "eyebrow": "الرسم التنفيذي — دبي والإمارات",
+      "h1": "رسم معماري تنفيذي لأعمال التشطيب و<em>البناء في الخليج</em>",
+      "lead": "مخططات جاهزة للتنفيذ للمقاولين والمصانع والاستشاريين في دبي وأبوظبي والشارقة والخليج — من إعداد شعيب حسين / D3DDD.",
+      "intro": "لوحات واضحة وطبقات منظمة وتفاصيل قابلة للاستخدام في الموقع.",
+      "subs": [
+        [
+          "الرسومات التنفيذية",
+          "رسومات تصنيع وتركيب بأبعاد وفواصل وترقيم قطع."
+        ],
+        [
+          "تفاصيل أوتوكاد",
+          "تفاصيل DWG للديكور والنجارة وتقاطعات الحجر."
+        ],
+        [
+          "مخططات كما بُني",
+          "توثيق لما نُفّذ للتسليم وإدارة المرافق."
+        ],
+        [
+          "رسومات النجارة والفيت آوت",
+          "واجهات خزائن وقطاعات وباقات جاهزة للتنفيذ."
+        ],
+        [
+          "رسومات الرخام والحجر",
+          "مساقط وواجهات وحواف وفتحات جاهزة للتصنيع."
+        ],
+        [
+          "دعم مخططات التصاريح",
+          "مجموعات نظيفة من باقة التصميم (تختلف حسب الإمارة)."
+        ]
+      ],
+      "deliver": [
+        "مجموعات DWG و PDF",
+        "لوحات بطبقات وتتبع مراجعات",
+        "ملاحظات بالإنجليزية (وعربية عند الطلب)",
+        "تسمية تسهّل التنسيق"
+      ],
+      "cta_label": "استفسر عن الرسم التنفيذي",
+      "marble_link": true,
+      "web_link": false
+    }
+  },
+  {
+    "slug": "architectural-designing",
+    "num": "02",
+    "img": "svc-designing",
+    "en": {
+      "name": "Architectural designing",
+      "short": "Concept layouts, space planning, elevations and design development.",
+      "title": "Architectural Designing Dubai | Concept, Space Planning & DD UAE – D3DDD",
+      "desc": "Architectural designing in Dubai and the UAE: concept layouts, space planning, interior design support, elevations/sections and design development.",
+      "eyebrow": "Design — Dubai & UAE",
+      "h1": "Architectural designing that <em>bridges concept and site</em>",
+      "lead": "Concept layouts, space planning and design development for residential and commercial interiors across the UAE — under the D3DDD studio of Shoaib Hussan.",
+      "intro": "We help owners, designers and contractors clarify space, proportion and detailing before drawings go to fabrication.",
+      "subs": [
+        [
+          "Concept layouts",
+          "Early plan options that test flow, furniture and feature zones."
+        ],
+        [
+          "Space planning",
+          "Efficient layouts for villas, apartments, offices and F&amp;B fit-outs."
+        ],
+        [
+          "Interior design support",
+          "Technical backup packs for interior designers."
+        ],
+        [
+          "Elevations &amp; sections",
+          "Wall elevations and key sections for finishes and heights."
+        ],
+        [
+          "Design development (DD)",
+          "Refined packages that move into shop drawings and estimation."
+        ],
+        [
+          "Material &amp; finish guidance",
+          "Practical finish notes coordinated with stone and joinery intent."
+        ]
+      ],
+      "deliver": [
+        "Concept &amp; developed plans",
+        "Elevations / key sections",
+        "Presentation sheets",
+        "Handover into drafting / 3D"
+      ],
+      "cta_label": "Enquire about design",
+      "marble_link": false,
+      "web_link": false
+    },
+    "ar": {
+      "name": "التصميم المعماري",
+      "short": "مخططات مفهومية، تخطيط مساحات، واجهات وتطوير تصميم.",
+      "title": "التصميم المعماري دبي | تخطيط مساحات وتطوير تصميم – D3DDD",
+      "desc": "تصميم معماري في دبي والإمارات: مخططات مفهومية، تخطيط مساحات، دعم تصميم داخلي، واجهات وقطاعات وتطوير تصميم.",
+      "eyebrow": "التصميم — دبي والإمارات",
+      "h1": "تصميم معماري يربط <em>الفكرة بالموقع</em>",
+      "lead": "مخططات مفهومية وتخطيط مساحات وتطوير تصميم للمساحات السكنية والتجارية في الإمارات — عبر استوديو D3DDD لشعيب حسين.",
+      "intro": "نساعد الملاك والمصممين والمقاولين على توضيح المساحة والنسب والتفاصيل قبل التصنيع.",
+      "subs": [
+        [
+          "مخططات مفهومية",
+          "خيارات مبكرة تختبر الحركة والأثاث والمناطق المميزة."
+        ],
+        [
+          "تخطيط المساحات",
+          "توزيعات للفلل والشقق والمكاتب وتشطيبات المطاعم."
+        ],
+        [
+          "دعم التصميم الداخلي",
+          "باقات دعم فني لمصممي الديكور."
+        ],
+        [
+          "الواجهات والقطاعات",
+          "واجهات جدران وقطاعات للتشطيبات والارتفاعات."
+        ],
+        [
+          "تطوير التصميم",
+          "باقات منقّحة تنتقل إلى الرسومات التنفيذية وحساب الكميات."
+        ],
+        [
+          "إرشاد المواد والتشطيبات",
+          "ملاحظات عملية منسّقة مع الحجر والنجارة."
+        ]
+      ],
+      "deliver": [
+        "مساقط مفهومية ومطوّرة",
+        "واجهات / قطاعات",
+        "لوحات عرض",
+        "تسليم للرسم / 3D"
+      ],
+      "cta_label": "استفسر عن التصميم",
+      "marble_link": false,
+      "web_link": false
+    }
+  },
+  {
+    "slug": "architectural-estimation",
+    "num": "03",
+    "img": "svc-estimation",
+    "en": {
+      "name": "Architectural estimation",
+      "short": "BOQ, quantity take-offs, material schedules and tender packages.",
+      "title": "Architectural Estimation Dubai | BOQ, Take-offs & Tender Packages UAE – D3DDD",
+      "desc": "Architectural estimation in Dubai and the UAE: BOQ, quantity take-offs, material schedules, cost plans and tender packages.",
+      "eyebrow": "Estimation — Dubai & UAE",
+      "h1": "Architectural estimation built for <em>tenders &amp; yards</em>",
+      "lead": "Quantity take-offs, BOQ and cost plans tied to the same piece IDs as your drawings — for UAE and Gulf contractors.",
+      "intro": "Estimation is only useful when numbers match the drawings. We structure schedules so procurement and fabrication speak the same language.",
+      "subs": [
+        [
+          "Bill of quantities (BOQ)",
+          "Structured BOQ aligned to drawing revisions."
+        ],
+        [
+          "Quantity take-offs",
+          "Measured quantities from plans, elevations and schedules."
+        ],
+        [
+          "Material schedules",
+          "Stone, joinery and finish schedules for procurement."
+        ],
+        [
+          "Cost plans",
+          "Early cost framing to compare options before tender."
+        ],
+        [
+          "Tender packages",
+          "Drawing + schedule packs organised for bidder clarity."
+        ],
+        [
+          "Revision-aware updates",
+          "Quantity deltas when design or site measure changes."
+        ]
+      ],
+      "deliver": [
+        "Excel-ready schedules",
+        "IDs matched to drawings",
+        "Clear assumptions notes",
+        "Tender-friendly packaging"
+      ],
+      "cta_label": "Enquire about estimation",
+      "marble_link": false,
+      "web_link": false
+    },
+    "ar": {
+      "name": "حساب الكميات والتقدير",
+      "short": "جداول كميات، حصر، جداول مواد وباقات طرح.",
+      "title": "حساب الكميات دبي | جداول كميات وعروض أسعار – D3DDD",
+      "desc": "حساب كميات معماري في دبي والإمارات: جداول كميات، حصر، جداول مواد، خطط تكلفة وباقات طرح.",
+      "eyebrow": "حساب الكميات — دبي والإمارات",
+      "h1": "حساب كميات يناسب <em>المناقصات والمصانع</em>",
+      "lead": "حصر كميات وجداول BOQ وخطط تكلفة مرتبطة بنفس أرقام القطع في المخططات — لمقاولي الإمارات والخليج.",
+      "intro": "التقدير مفيد فقط عندما تطابق الأرقام المخططات.",
+      "subs": [
+        [
+          "جداول الكميات (BOQ)",
+          "جداول منظمة متوافقة مع مراجعات المخططات."
+        ],
+        [
+          "حصر الكميات",
+          "كميات مقاسة من المساقط والواجهات والجداول."
+        ],
+        [
+          "جداول المواد",
+          "جداول حجر ونجارة وتشطيبات جاهزة للشراء."
+        ],
+        [
+          "خطط التكلفة",
+          "تأطير مبكر للتكلفة قبل الطرح."
+        ],
+        [
+          "باقات الطرح",
+          "مخططات وجداول منظمة لمقدّمي العروض."
+        ],
+        [
+          "تحديثات حسب المراجعة",
+          "فروقات كميات عند تغيّر التصميم أو مقاس الموقع."
+        ]
+      ],
+      "deliver": [
+        "جداول جاهزة لـ Excel",
+        "أرقام مطابقة للمخططات",
+        "ملاحظات افتراضات واضحة",
+        "تغليف مناسب للمناقصات"
+      ],
+      "cta_label": "استفسر عن حساب الكميات",
+      "marble_link": false,
+      "web_link": false
+    }
+  },
+  {
+    "slug": "3d-rendering-modeling-visualization",
+    "num": "04",
+    "img": "svc-3d",
+    "en": {
+      "name": "3D rendering, modeling &amp; visualization",
+      "short": "Still renders, interior/exterior viz, modeling, walkthroughs and VR-ready scenes.",
+      "title": "3D Rendering & Visualization Dubai | Modeling, Walkthroughs UAE – D3DDD",
+      "desc": "3D rendering, modeling and visualization in Dubai and the UAE: still renders, interior/exterior viz, walkthroughs, VR-ready scenes and product visualization.",
+      "eyebrow": "3D — Dubai & UAE",
+      "h1": "3D rendering, modeling &amp; <em>visualization</em>",
+      "lead": "Still renders, interior and exterior visualization, modeling and walkthroughs that help clients approve before fabrication — from D3DDD / Shoaib Hussan.",
+      "intro": "Visuals that support decisions: materials, vein direction, lighting and massing — not empty spectacle.",
+      "subs": [
+        [
+          "Still renders",
+          "High-resolution images for approvals and presentations."
+        ],
+        [
+          "Interior visualization",
+          "Rooms, joinery and stone features with realistic finishes."
+        ],
+        [
+          "Exterior visualization",
+          "Facades and outdoor spaces for early buy-in."
+        ],
+        [
+          "3D modeling",
+          "Accurate models prepared from your drawings."
+        ],
+        [
+          "Walkthroughs",
+          "Simple camera paths for stakeholder reviews."
+        ],
+        [
+          "VR-ready / product viz",
+          "Scenes for immersive review or product close-ups when needed."
+        ]
+      ],
+      "deliver": [
+        "PNG / JPG stills",
+        "Model files on request",
+        "Material option studies",
+        "Handoff notes for drafting"
+      ],
+      "cta_label": "Enquire about 3D",
+      "marble_link": false,
+      "web_link": false
+    },
+    "ar": {
+      "name": "التصميم ثلاثي الأبعاد والنمذجة",
+      "short": "صور ثابتة، تصور داخلي/خارجي، نمذجة ومشاهد تجوّل.",
+      "title": "تصميم ثلاثي الأبعاد دبي | نمذجة وتصور ومشاهد تجوّل – D3DDD",
+      "desc": "تصميم ثلاثي الأبعاد ونمذجة وتصور في دبي والإمارات: صور ثابتة، تصور داخلي/خارجي، مشاهد تجوّل وتصور منتجات.",
+      "eyebrow": "ثلاثي الأبعاد — دبي والإمارات",
+      "h1": "تصميم ثلاثي الأبعاد ونمذجة و<em>تصور</em>",
+      "lead": "صور ثابتة وتصور داخلي وخارجي ونمذجة ومشاهد تجوّل تساعد على الاعتماد قبل التصنيع — من D3DDD / شعيب حسين.",
+      "intro": "صور تدعم القرار: المواد واتجاه العروق والإضاءة والكتل.",
+      "subs": [
+        [
+          "صور ثابتة",
+          "صور عالية الدقة للاعتماد والعروض."
+        ],
+        [
+          "تصور داخلي",
+          "غرف ونجارة وعناصر حجر بتشطيبات واقعية."
+        ],
+        [
+          "تصور خارجي",
+          "واجهات ومساحات خارجية للموافقة المبكرة."
+        ],
+        [
+          "النمذجة ثلاثية الأبعاد",
+          "نماذج دقيقة من مخططاتك."
+        ],
+        [
+          "مشاهد التجوّل",
+          "مسارات كاميرا بسيطة للمراجعة."
+        ],
+        [
+          "جاهز للواقع الافتراضي / منتجات",
+          "مشاهد للمراجعة الغامرة أو لقطات منتجات."
+        ]
+      ],
+      "deliver": [
+        "صور PNG / JPG",
+        "ملفات نماذج عند الطلب",
+        "دراسات خيارات مواد",
+        "ملاحظات تسليم للرسم"
+      ],
+      "cta_label": "استفسر عن التصميم ثلاثي الأبعاد",
+      "marble_link": false,
+      "web_link": false
+    }
+  },
+  {
+    "slug": "website-development-designing",
+    "num": "05",
+    "img": "svc-web",
+    "en": {
+      "name": "Website development &amp; designing",
+      "short": "Business sites, landing pages, demos, portfolios, SEO basics and enquiry CTAs.",
+      "title": "Website Development & Design Dubai | Contractor Sites UAE – D3DDD",
+      "desc": "Website development and designing in Dubai and the UAE: business sites, landing pages, client demos, portfolios, SEO basics and WhatsApp/enquiry CTAs.",
+      "eyebrow": "Web — Dubai & UAE",
+      "h1": "Website development &amp; designing for <em>Gulf businesses</em>",
+      "lead": "Business sites, landing pages and enquiry-focused websites for contractors and studios — including our AED 2,000 contractor package.",
+      "intro": "Fast, mobile-friendly sites with clear calls to action. Enquiry paths use your channels; the D3DDD site chrome lists email and d3ddd.com only — no phone.",
+      "subs": [
+        [
+          "Business websites",
+          "Multi-page sites that explain services and build trust."
+        ],
+        [
+          "Landing pages",
+          "Focused pages for a campaign, service or city."
+        ],
+        [
+          "Client demos",
+          "Theme demos you can show stakeholders before branding."
+        ],
+        [
+          "Portfolio sites",
+          "Structure ready for project photos and case notes you supply."
+        ],
+        [
+          "SEO basics",
+          "Titles, meta, sitemap hygiene and readable URLs."
+        ],
+        [
+          "WhatsApp / enquiry CTAs",
+          "Clear enquiry buttons and forms that route to your channels."
+        ]
+      ],
+      "deliver": [
+        "Mobile-friendly build",
+        "Enquiry / CTA wiring",
+        "Demo themes available",
+        "AED 2,000 contractor package"
+      ],
+      "cta_label": "Enquire about a website",
+      "marble_link": false,
+      "web_link": true
+    },
+    "ar": {
+      "name": "تطوير وتصميم المواقع",
+      "short": "مواقع أعمال، صفحات هبوط، نماذج، محافظ، SEO وأزرار استفسار.",
+      "title": "تطوير وتصميم المواقع دبي | مواقع المقاولين – D3DDD",
+      "desc": "تطوير وتصميم مواقع في دبي والإمارات: مواقع أعمال، صفحات هبوط، نماذج، محافظ أعمال، أساسيات SEO وأزرار استفسار.",
+      "eyebrow": "الويب — دبي والإمارات",
+      "h1": "تطوير وتصميم مواقع لـ<em>أعمال الخليج</em>",
+      "lead": "مواقع أعمال وصفحات هبوط ومواقع تركّز على الاستفسارات للمقاولين والاستوديوهات — بما فيها باقة المقاولين بسعر 2,000 درهم.",
+      "intro": "مواقع سريعة ومتوافقة مع الجوال مع دعوات واضحة للتواصل. شريط موقع D3DDD يعرض البريد وd3ddd.com فقط — دون هاتف.",
+      "subs": [
+        [
+          "مواقع الأعمال",
+          "مواقع متعددة الصفحات تشرح الخدمات وتبني الثقة."
+        ],
+        [
+          "صفحات الهبوط",
+          "صفحات مركّزة لحملة أو خدمة أو مدينة."
+        ],
+        [
+          "نماذج للعملاء",
+          "ثيمات تجريبية قبل تخصيص الهوية."
+        ],
+        [
+          "مواقع المحفظة",
+          "هيكل جاهز لصور المشاريع التي تزوّدنا بها."
+        ],
+        [
+          "أساسيات SEO",
+          "عناوين ووصف وخريطة موقع وروابط واضحة."
+        ],
+        [
+          "أزرار واتساب / الاستفسار",
+          "أزرار ونماذج توجّه إلى قنواتك."
+        ]
+      ],
+      "deliver": [
+        "بناء متوافق مع الجوال",
+        "ربط الاستفسارات",
+        "ثيمات تجريبية",
+        "باقة مقاولين 2,000 درهم"
+      ],
+      "cta_label": "استفسر عن موقع",
+      "marble_link": false,
+      "web_link": true
+    }
+  }
+]

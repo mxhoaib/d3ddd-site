@@ -60,7 +60,7 @@ A Dubai villa kitchen package that travels cleanly usually includes:
 - A schedule that exports cleanly to Excel for the yard
 - A nested cutting layout once slab sizes are known (see our related notes on slab nesting when you publish that workflow)
 
-That is ordinary [AutoCAD drafting](/services.html) done carefully — not a marketing render. Renders still help clients approve vein direction; they do not replace the fabrication set.
+That is ordinary [AutoCAD drafting](/services/architectural-drafting/) done carefully — not a marketing render. Renders still help clients approve vein direction; they do not replace the fabrication set.
 
 ## Common failures we see (and how drawings prevent them)
 
@@ -73,7 +73,7 @@ That is ordinary [AutoCAD drafting](/services.html) done carefully — not a mar
 
 ## How D3DDD helps
 
-[D3DDD](/) prepares marble and stone shop drawings, cutting lists and supporting [3D visualisation](/services.html) for fabricators and contractors across the UAE and the wider Gulf. We work from your architect’s set and site measures, and we keep the output boring in the best way: clear IDs, clear edges, clear revisions.
+[D3DDD](/) prepares marble and stone shop drawings, cutting lists and supporting [3D visualisation](/services/3d-rendering-modeling-visualization/) for fabricators and contractors across the UAE and the wider Gulf. We work from your architect’s set and site measures, and we keep the output boring in the best way: clear IDs, clear edges, clear revisions.
 
 If you need a package reviewed or redrawn before the next slab order, [request a quote](/contact.html), follow shop-drawing notes on [Instagram @mxhaib](https://www.instagram.com/mxhaib/), or see sample gigs on [Fiverr (@mxhoaib)](https://www.fiverr.com/mxhoaib).
 

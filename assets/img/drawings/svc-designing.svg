@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="#d9c6a0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><title>Architectural designing – concept floor plan and elevations</title>
+<rect x="30" y="40" width="200" height="200" rx="2"/>
+<path d="M50 60 H180 V200 H50 Z" stroke-width="1.5"/>
+<path d="M50 120 H180"/><path d="M110 60 V200"/>
+<path d="M50 60 H70 M160 60 H180" stroke-width="2.2"/>
+<path d="M50 200 H75"/><path d="M155 200 H180"/>
+<circle cx="80" cy="90" r="14" stroke-width=".9"/><path d="M80 76 V104 M66 90 H94" stroke-width=".6"/>
+<rect x="125" y="140" width="40" height="28" stroke-width=".9"/>
+<path d="M60 150 Q75 135 90 150 Q105 165 120 150" stroke-width=".8"/>
+<path d="M70 210 H160 M70 205 V215 M160 205 V215" stroke-width=".6"/><text x="115" y="228" font-family="Arial" font-size="8" fill="#d9c6a0" stroke="none" text-anchor="middle">CONCEPT · 1:100</text>
+<rect x="250" y="50" width="120" height="70" rx="2"/><path d="M260 100 H360"/><path d="M270 70 H300 V100 M310 85 H340 V100" stroke-width=".9"/>
+<rect x="250" y="140" width="120" height="70" rx="2"/><path d="M265 175 H355 M280 155 H310 V195" stroke-width=".9"/>
+<path d="M250 230 H370" stroke-width="1.4"/><path d="M270 230 L285 255 L300 235 L320 260 L340 240 L360 255" stroke-width="1"/>
+<text x="310" y="280" font-family="Arial" font-size="9" fill="#d9c6a0" stroke="none" text-anchor="middle">LAYOUT · ELEV · DD</text>
+</svg>

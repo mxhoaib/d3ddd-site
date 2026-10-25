@@ -37,7 +37,7 @@ WIRED Middle East framed the wider Vision 2030 giga-project moment as a “reali
 Whether or not The Line resumes after 2030 in anything like its 2021 form, teams that prepared packages for NEOM-scale work already learned (or re-learned) several truths:
 
 ### 1. Renders are not shop drawings
-A mirrored façade animation can win a keynote. It cannot tell a fabricator the gasket size, panel module, or maintenance cradle clearance. Clients who approve only the visual often discover clash problems when [AutoCAD drafting](/services.html#drafting) and fabrication sets begin. Soften the gap early with coordinated plans, sections and [3D visualisation](/services.html#3d) that match the same dimensions.
+A mirrored façade animation can win a keynote. It cannot tell a fabricator the gasket size, panel module, or maintenance cradle clearance. Clients who approve only the visual often discover clash problems when [AutoCAD drafting](/services/architectural-drafting/) and fabrication sets begin. Soften the gap early with coordinated plans, sections and [3D visualisation](/services/3d-rendering-modeling-visualization/) that match the same dimensions.
 
 ### 2. Phasing is a drawing deliverable
 When a 170 km idea collapses to a few kilometres of foundations, the surviving value is in **phase packages**: what is buildable now, what is deferred, what utilities must still land. Every contractor website and every BOQ should expose that phasing clearly — which is why D3DDD’s [contractor website](/website-design.html) work stresses clear scopes, not just mood photography.
@@ -49,7 +49,7 @@ Even a shortened module needs wall elevations, joint layouts and cutting lists. 
 Mott MacDonald’s role description — vertical/horizontal structures and city utility systems — is a reminder that the hero architecture sits on a mountain of civil and MEP documentation ([Mott MacDonald](https://www.mottmac.com/en-middle-east/news/supporting-delivery-of-the-line-as-city-infrastructure-engineer/)). Drafters who ignore risers, trenches and logistics tunnels will redraw forever.
 
 ### 5. Cost reality eventually edits the brief
-Press estimates of The Line’s budget ranging into the trillions of dollars in early speculative reporting (as summarised by WIRED Middle East) show how quickly ambition outruns finance ([WIRED Middle East](https://www.wired.me/story/saudi-arabias-giga-projects-are-entering-their-reality-check)). Estimation and quantity take-off are not anti-design; they are how design stays buildable. See D3DDD [services](/services.html) for how we pair drawings with measurable scopes.
+Press estimates of The Line’s budget ranging into the trillions of dollars in early speculative reporting (as summarised by WIRED Middle East) show how quickly ambition outruns finance ([WIRED Middle East](https://www.wired.me/story/saudi-arabias-giga-projects-are-entering-their-reality-check)). Estimation and quantity take-off are not anti-design; they are how design stays buildable. See D3DDD [services](/services/) for how we pair drawings with measurable scopes.
 
 ## How to brief your next “vision” project without burning the shop
 
@@ -86,7 +86,7 @@ If your pipeline still includes Saudi giga-project conversations:
 2. Mark every sheet that assumed a continuous 500 m wall as **superseded** until reconfirmed.
 3. Rebuild quantities for the module that is actually funded.
 4. Offer clients a **minimum viable documentation** pack: site plan, primary sections, one typical façade bay, and a stone/metal prototype sheet.
-5. Keep [D3DDD services](/services.html) style discipline — clear titles, measured scopes, no phone-number spam in the title block — so packages stay professional when programmes shrink.
+5. Keep [D3DDD services](/services/) style discipline — clear titles, measured scopes, no phone-number spam in the title block — so packages stay professional when programmes shrink.
 
 Ambition is allowed. Unversioned ambition is expensive.
 

@@ -50,16 +50,17 @@ def build_pages(g):
     body = f'''
 <section class="hero" aria-labelledby="h1"><div><p class="eyebrow">🇦🇪 Dubai • Abu Dhabi • Sharjah • UAE</p>
 <h1 id="h1">Shop drawings &amp; 3D design in Dubai — ideas into <em>precise</em> spaces.</h1><span class="ar-touch" lang="ar">رسومات تنفيذية وتصميم ثلاثي الأبعاد في دبي</span>
-<p class="lead">Marble &amp; stone shop drawings, AutoCAD drafting, fit-out drawings and 3D rendering for contractors, fabricators, consultants and designers across the UAE.</p>
-<div class="actions"><a class="btn" href="contact.html">Request a quote →</a><a class="btn ghost" href="services.html">Explore services</a></div></div>
+<p class="lead">Architectural drafting, designing, estimation, 3D visualization and website development for contractors, fabricators, consultants and designers across the UAE.</p>
+<div class="actions"><a class="btn" href="contact.html">Request a quote →</a><a class="btn ghost" href="services/">Explore services</a></div></div>
 <figure>{img(P,"hero-marble-kitchen","Isometric line drawing of a marble kitchen island with waterfall edge, pendant lights and dimension lines",True,520,420)}</figure></section>
 <section class="section" aria-labelledby="svc-h"><div class="wrap"><div class="split"><div><p class="eyebrow">Design • Detail • Deliver</p><h2 id="svc-h">Marble shop drawings, AutoCAD drafting &amp; 3D rendering — one <em>UAE studio.</em></h2></div>
 <div><p>D3DDD combines technical drafting with visual design and real-world marble and fit-out knowledge. The result is documentation that looks refined and works on site — from a single vanity detail to a complete interior visualization package.</p></div></div>
-<div class="grid g4" style="margin-top:50px">
-<a class="card" href="marble.html"><figure>{img(P,"marble-shop-drawing","Marble countertop shop drawing with sink cut-out, dimensions, veining and edge section")}</figure><div class="b"><span class="num">01</span><h3>Marble &amp; Stone Shop Drawings</h3><p>Shop drawings, cutting lists, fabrication details and BOQ for stone works.</p></div></a>
-<a class="card" href="services.html#drafting"><figure>{img(P,"elevation","Wall elevation line drawing with joinery, arched niche and dimension")}</figure><div class="b"><span class="num">02</span><h3>AutoCAD Drafting &amp; Fit-out Drawings</h3><p>Plans, elevations, sections and construction-ready DWG documentation.</p></div></a>
-<a class="card" href="services.html#3d"><figure>{img(P,"sofa","Line drawing of a three-seat sofa in front elevation")}</figure><div class="b"><span class="num">03</span><h3>3D Rendering &amp; Visualization</h3><p>Realistic interior and exterior concepts before work starts on site.</p></div></a>
-<a class="card" href="website-design.html"><figure>{img(P,"web-wireframe","Website wireframe drawing: browser layout, mobile view and HTML code")}</figure><div class="b"><span class="num">04</span><h3>Website Design for Contractors</h3><p>5-page website with WhatsApp button — AED 2,000.</p></div></a>
+<div class="grid g3" style="margin-top:50px">
+<a class="card" href="services/architectural-drafting/"><figure>{img(P,"svc-drafting","Architectural drafting plan sheets and CAD title block")}</figure><div class="b"><span class="num">01</span><h3>Architectural drafting</h3><p>Shop drawings, CAD detailing, as-built, joinery and permit sets.</p></div></a>
+<a class="card" href="services/architectural-designing/"><figure>{img(P,"svc-designing","Architectural concept floor plan and elevations")}</figure><div class="b"><span class="num">02</span><h3>Architectural designing</h3><p>Concept layouts, space planning, elevations and design development.</p></div></a>
+<a class="card" href="services/architectural-estimation/"><figure>{img(P,"svc-estimation","BOQ schedule and quantity take-off sheet")}</figure><div class="b"><span class="num">03</span><h3>Architectural estimation</h3><p>BOQ, take-offs, material schedules and tender packages.</p></div></a>
+<a class="card" href="services/3d-rendering-modeling-visualization/"><figure>{img(P,"svc-3d","Isometric room and camera for 3D visualization")}</figure><div class="b"><span class="num">04</span><h3>3D rendering &amp; visualization</h3><p>Still renders, modeling, walkthroughs and VR-ready scenes.</p></div></a>
+<a class="card" href="services/website-development-designing/"><figure>{img(P,"svc-web","Website layout with enquiry CTA")}</figure><div class="b"><span class="num">05</span><h3>Website development</h3><p>Business sites, landing pages, demos and enquiry CTAs.</p></div></a>
 </div></div></section>
 <section class="section alt" aria-labelledby="how-h"><div class="wrap"><p class="eyebrow">How we work</p><h2 id="how-h" style="margin-bottom:40px">Send. Review. Draft. <em>Deliver.</em></h2>
 <ol class="steps"><li>Send drawings</li><li>We review</li><li>Draft</li><li>You approve</li><li>Deliver DWG / PDF</li></ol>
@@ -123,7 +124,7 @@ def build_pages(g):
 <form class="enquiry card" style="padding:28px" name="enquiry" method="post" action="mailto:info@d3ddd.com?subject=Website%20enquiry" enctype="text/plain">
 <p class="hp"><label>Leave empty <input name="company_website"></label></p>
 <div class="row"><div><label for="n">Name *</label><input id="n" name="name" required autocomplete="name"></div><div><label for="p">Phone (optional)</label><input id="p" name="phone" type="tel" autocomplete="tel"></div></div>
-<div class="row"><div><label for="e">Email *</label><input id="e" name="email" type="email" required autocomplete="email"></div><div><label for="s">Service</label><select id="s" name="service"><option>Marble / stone shop drawings</option><option>Cutting lists / fabrication drawings</option><option>Estimation / BOQ</option><option>AutoCAD drafting / fit-out drawings</option><option>3D rendering</option><option>Contractor Website (AED 2,000)</option><option>Other</option></select></div></div>
+<div class="row"><div><label for="e">Email *</label><input id="e" name="email" type="email" required autocomplete="email"></div><div><label for="s">Service</label><select id="s" name="service"><option>Architectural drafting</option><option>Architectural designing</option><option>Architectural estimation</option><option>3D rendering / modeling / visualization</option><option>Website development &amp; designing</option><option>Marble / stone shop drawings</option><option>Other</option></select></div></div>
 <label for="m">Project details *</label><textarea id="m" name="message" required placeholder="Scope, location (e.g. Dubai, Abu Dhabi), deadline…"></textarea>
 <p class="notice" style="margin-top:14px">Sending opens your email app with the details filled in. Attach drawings to that email before sending, or email us directly at <a href="mailto:info@d3ddd.com"><u>info@d3ddd.com</u></a>.</p>
 <div class="actions" style="margin-top:18px"><button class="btn" type="submit">Send enquiry by email</button></div></form></div>
@@ -147,15 +148,16 @@ def build_pages(g):
 <section class="hero" aria-labelledby="h1"><div><p class="eyebrow">🇦🇪 دبي • أبوظبي • الشارقة • الإمارات</p>
 <h1 id="h1">رسومات تنفيذية وتصميم ثلاثي الأبعاد في دبي — نحوّل الأفكار إلى مساحات <em>دقيقة</em>.</h1>
 <p class="lead">رسومات الرخام والحجر التنفيذية، مخططات أوتوكاد، رسومات أعمال التشطيبات الداخلية (فيت آوت) وتصميم ثلاثي الأبعاد للمقاولين ومصانع الرخام والاستشاريين والمصممين في جميع أنحاء الإمارات.</p>
-<div class="actions"><a class="btn" href="contact.html">اطلب عرض سعر ←</a><a class="btn ghost" href="services.html">تعرّف على خدماتنا</a></div></div>
+<div class="actions"><a class="btn" href="contact.html">اطلب عرض سعر ←</a><a class="btn ghost" href="services/">تعرّف على خدماتنا</a></div></div>
 <figure>{img(P,"hero-marble-kitchen","رسم خطي أيزومتري لجزيرة مطبخ من الرخام مع إنارة معلّقة وخطوط أبعاد",True,520,420)}</figure></section>
 <section class="section" aria-labelledby="svc-h"><div class="wrap"><div class="split"><div><p class="eyebrow">تصميم • تفاصيل • تسليم</p><h2 id="svc-h">رسومات الرخام ومخططات أوتوكاد والتصميم ثلاثي الأبعاد — استوديو <em>واحد</em> في الإمارات.</h2></div>
 <div><p>يجمع D3DDD بين الرسم الهندسي الفني والتصميم البصري والخبرة العملية في أعمال الرخام والتشطيبات، لنقدّم مخططات أنيقة وعملية في الموقع — من تفصيلة مغسلة واحدة إلى مشروع تصميم داخلي متكامل.</p></div></div>
-<div class="grid g4" style="margin-top:50px">
-<a class="card" href="marble.html"><figure>{img(P,"marble-shop-drawing","رسم تنفيذي لسطح رخام مع فتحة مغسلة وأبعاد وعروق الرخام وقطاع الحافة")}</figure><div class="b"><span class="num">01</span><h3>رسومات الرخام والحجر التنفيذية</h3><p>رسومات تنفيذية وقوائم قص وتفاصيل تصنيع وجداول كميات لأعمال الحجر.</p></div></a>
-<a class="card" href="services.html#drafting"><figure>{img(P,"elevation","رسم واجهة جدار مع خزائن وتجويف مقوّس وأبعاد")}</figure><div class="b"><span class="num">02</span><h3>مخططات أوتوكاد ورسومات التشطيبات</h3><p>مساقط وواجهات وقطاعات ومخططات DWG جاهزة للتنفيذ.</p></div></a>
-<a class="card" href="services.html#3d"><figure>{img(P,"sofa","رسم خطي لأريكة ثلاثية بواجهة أمامية")}</figure><div class="b"><span class="num">03</span><h3>تصميم ثلاثي الأبعاد (3D)</h3><p>تصورات واقعية للمساحات الداخلية والخارجية قبل بدء التنفيذ.</p></div></a>
-<a class="card" href="website-design.html"><figure>{img(P,"web-wireframe","رسم تخطيطي لموقع إلكتروني: متصفح وشاشة جوال وكود HTML")}</figure><div class="b"><span class="num">04</span><h3>تصميم مواقع للمقاولين</h3><p>موقع من 5 صفحات مع زر واتساب — 2,000 درهم.</p></div></a>
+<div class="grid g3" style="margin-top:50px">
+<a class="card" href="services/architectural-drafting/"><figure>{img(P,"svc-drafting","رسومات تنفيذية ولوحة عنوان أوتوكاد")}</figure><div class="b"><span class="num">01</span><h3>الرسم المعماري التنفيذي</h3><p>رسومات تنفيذية وتفاصيل أوتوكاد وكما بُني ونجارة.</p></div></a>
+<a class="card" href="services/architectural-designing/"><figure>{img(P,"svc-designing","مخطط مفهومي وواجهات")}</figure><div class="b"><span class="num">02</span><h3>التصميم المعماري</h3><p>مخططات مفهومية وتخطيط مساحات وتطوير تصميم.</p></div></a>
+<a class="card" href="services/architectural-estimation/"><figure>{img(P,"svc-estimation","جدول كميات وحصر")}</figure><div class="b"><span class="num">03</span><h3>حساب الكميات</h3><p>جداول كميات وحصر وباقات طرح.</p></div></a>
+<a class="card" href="services/3d-rendering-modeling-visualization/"><figure>{img(P,"svc-3d","غرفة أيزومترية وكاميرا للتصور")}</figure><div class="b"><span class="num">04</span><h3>تصميم ثلاثي الأبعاد</h3><p>صور ثابتة ونمذجة ومشاهد تجوّل.</p></div></a>
+<a class="card" href="services/website-development-designing/"><figure>{img(P,"svc-web","تخطيط موقع مع زر استفسار")}</figure><div class="b"><span class="num">05</span><h3>تطوير المواقع</h3><p>مواقع أعمال وصفحات هبوط وأزرار استفسار.</p></div></a>
 </div></div></section>
 <section class="section alt" aria-labelledby="how-h"><div class="wrap"><p class="eyebrow">طريقة العمل</p><h2 id="how-h" style="margin-bottom:40px">أرسل. نراجع. نرسم. <em>نسلّم.</em></h2>
 <ol class="steps"><li>أرسل المخططات</li><li>نراجعها</li><li>نرسم</li><li>توافق عليها</li><li>نسلّم DWG / PDF</li></ol>
@@ -219,7 +221,7 @@ def build_pages(g):
 <form class="enquiry card" style="padding:28px" name="enquiry-ar" method="post" action="mailto:info@d3ddd.com?subject=Website%20enquiry" enctype="text/plain">
 <p class="hp"><label>اتركه فارغاً <input name="company_website"></label></p>
 <div class="row"><div><label for="n">الاسم *</label><input id="n" name="name" required autocomplete="name"></div><div><label for="p">الهاتف (اختياري)</label><input id="p" name="phone" type="tel" autocomplete="tel" dir="ltr"></div></div>
-<div class="row"><div><label for="e">البريد الإلكتروني *</label><input id="e" name="email" type="email" required autocomplete="email" dir="ltr"></div><div><label for="s">الخدمة</label><select id="s" name="service"><option>رسومات الرخام والحجر التنفيذية</option><option>قوائم القص / رسومات التصنيع</option><option>حساب الكميات / BOQ</option><option>مخططات أوتوكاد / رسومات التشطيبات</option><option>تصميم ثلاثي الأبعاد</option><option>موقع للمقاولين (2,000 درهم)</option><option>أخرى</option></select></div></div>
+<div class="row"><div><label for="e">البريد الإلكتروني *</label><input id="e" name="email" type="email" required autocomplete="email" dir="ltr"></div><div><label for="s">الخدمة</label><select id="s" name="service"><option>الرسم المعماري التنفيذي</option><option>التصميم المعماري</option><option>حساب الكميات والتقدير</option><option>تصميم ثلاثي الأبعاد / نمذجة</option><option>تطوير وتصميم المواقع</option><option>رسومات الرخام والحجر التنفيذية</option><option>أخرى</option></select></div></div>
 <label for="m">تفاصيل المشروع *</label><textarea id="m" name="message" required placeholder="نطاق العمل، الموقع (مثلاً دبي أو أبوظبي)، الموعد النهائي…"></textarea>
 <p class="notice" style="margin-top:14px">عند الإرسال سيفتح تطبيق البريد لديك مع تعبئة التفاصيل. أرفق المخططات بالرسالة قبل إرسالها، أو راسلنا مباشرة على <a href="mailto:info@d3ddd.com"><u>info@d3ddd.com</u></a>.</p>
 <div class="actions" style="margin-top:18px"><button class="btn" type="submit">أرسل الاستفسار عبر البريد</button></div></form></div>

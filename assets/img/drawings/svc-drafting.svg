@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="#d9c6a0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><title>Architectural drafting – plan sheets and CAD title block</title>
+<rect x="28" y="36" width="220" height="170" rx="4"/><path d="M28 58 H248" stroke-width=".9"/>
+<text x="40" y="52" font-family="Arial" font-size="9" fill="#d9c6a0" stroke="none">SHOP DWG · A-101</text>
+<path d="M48 80 H120 V180 H48 Z M48 120 H120 M84 80 V180" stroke-width="1.1"/>
+<path d="M140 90 H220 V150 H140 Z"/><path d="M152 110 H208 M152 125 H190" stroke-width=".8"/>
+<path d="M140 165 H220 M148 175 H200" stroke-width=".7"/>
+<path d="M48 70 H120 M48 65 V75 M120 65 V75" stroke-width=".6"/><text x="84" y="68" font-family="Arial" font-size="8" fill="#d9c6a0" stroke="none" text-anchor="middle">3600</text>
+<rect x="248" y="70" width="124" height="160" rx="3" stroke-width="1.1"/><path d="M248 98 H372"/><text x="260" y="90" font-family="Arial" font-size="8" fill="#d9c6a0" stroke="none">TITLE BLOCK</text>
+<path d="M260 115 H360 M260 130 H340 M260 145 H350" stroke-width=".7"/>
+<rect x="260" y="165" width="100" height="48" stroke-width=".8"/><path d="M270 180 H350 M270 192 H330" stroke-width=".6"/>
+<path d="M60 230 H340" stroke-width="1.6"/><path d="M80 230 V250 M200 230 V250 M320 230 V250" stroke-width=".9"/>
+<circle cx="80" cy="256" r="4"/><circle cx="200" cy="256" r="4"/><circle cx="320" cy="256" r="4"/>
+<text x="200" y="278" font-family="Arial" font-size="9" fill="#d9c6a0" stroke="none" text-anchor="middle">DWG · PDF · AS-BUILT</text>
+</svg>

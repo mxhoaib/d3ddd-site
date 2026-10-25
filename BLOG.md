@@ -33,6 +33,6 @@ python3 scripts/build_blog.py
 - **Author block required on every post:** byline (top) + author box (bottom) for Shoaib Hussan (founder of D3DDD) with Instagram @mxhaib, LinkedIn (https://www.linkedin.com/in/mshoaib94) and Fiverr. Generated automatically by `AUTHOR_BYLINE` / `AUTHOR_BOX` in `scripts/build_blog.py` — do not remove.
 
 - Cite real sources; no invented stats.
-- Soft-link D3DDD service pages and existing socials.
+- Soft-link D3DDD service pages (`/services/…`) and existing socials.
 - Top bar / footer: `info@d3ddd.com` + d3ddd.com only (no phone/WhatsApp).
 - GoatCounter snippet: `d3dddsites`.

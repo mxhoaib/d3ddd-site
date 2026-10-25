@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="#d9c6a0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><title>Architectural estimation – BOQ schedule and take-off sheet</title>
+<rect x="36" y="34" width="250" height="210" rx="4"/>
+<path d="M36 62 H286" stroke-width="1"/>
+<text x="48" y="54" font-family="Arial" font-size="10" fill="#d9c6a0" stroke="none">BILL OF QUANTITIES</text>
+<path d="M50 78 H270 M50 78 V210 H270 V78" stroke-width="1"/>
+<path d="M50 100 H270 M50 122 H270 M50 144 H270 M50 166 H270 M50 188 H270" stroke-width=".7"/>
+<path d="M100 78 V210 M170 78 V210 M220 78 V210" stroke-width=".7"/>
+<text x="58" y="93" font-family="Arial" font-size="8" fill="#d9c6a0" stroke="none">ITEM</text>
+<text x="112" y="93" font-family="Arial" font-size="8" fill="#d9c6a0" stroke="none">UNIT</text>
+<text x="178" y="93" font-family="Arial" font-size="8" fill="#d9c6a0" stroke="none">QTY</text>
+<text x="232" y="93" font-family="Arial" font-size="8" fill="#d9c6a0" stroke="none">RATE</text>
+<path d="M58 114 H90 M112 114 H150 M178 114 H205 M232 114 H258" stroke-width="1.4"/>
+<path d="M58 136 H85 M112 136 H145 M178 136 H200 M232 136 H255" stroke-width="1.2"/>
+<path d="M58 158 H92 M112 158 H148 M178 158 H208 M232 158 H260" stroke-width="1.2"/>
+<path d="M58 180 H80 M112 180 H140 M178 180 H198 M232 180 H250" stroke-width="1.1"/>
+<rect x="300" y="50" width="70" height="90" rx="6"/><path d="M312 70 H358 M312 88 H350 M312 106 H358 M312 124 H340" stroke-width="1.5"/>
+<path d="M310 160 H360 V230 H310 Z" stroke-width="1.1"/><path d="M318 175 H352 M318 190 H345 M318 205 H352" stroke-width=".8"/>
+<text x="200" y="270" font-family="Arial" font-size="9" fill="#d9c6a0" stroke="none" text-anchor="middle">TAKE-OFF · COST PLAN · TENDER</text>
+</svg>

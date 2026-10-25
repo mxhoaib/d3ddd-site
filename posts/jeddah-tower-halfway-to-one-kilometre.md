@@ -49,9 +49,9 @@ Façade and interior stone packages sit on top of that spine. A millimetre error
 Most UAE and international fit-out packages will never touch a kilometre tower. The transferable habits still apply on every site D3DDD supports:
 
 1. **Freeze geometry before cutting stone or metal.** Megatall projects amplify the cost of a wrong cut; marble and cladding packages on any high-rise share the same risk profile. Clear [marble shop drawings](/marble.html) with piece IDs, edge profiles and joint layouts keep fabricators aligned with approved elevations.
-2. **Layer discipline beats pretty plots.** When hundreds of consultants touch a model, AutoCAD layer standards and clean [AutoCAD drafting](/services.html#drafting) deliverables reduce clash noise and make consultant redlines faster to absorb.
-3. **Visualise before you pour or order.** [3D rendering](/services.html#3d) is not marketing fluff when a client needs to approve vein direction on a feature wall or the look of a lobby cladding module under site lighting.
-4. **Measure twice for BOQ.** Tall buildings multiply waste if stone and glass quantities are guessed. Structured take-offs sit next to the drawing set, not after the order form — see our related service pages under [Services](/services.html).
+2. **Layer discipline beats pretty plots.** When hundreds of consultants touch a model, AutoCAD layer standards and clean [AutoCAD drafting](/services/architectural-drafting/) deliverables reduce clash noise and make consultant redlines faster to absorb.
+3. **Visualise before you pour or order.** [3D rendering](/services/3d-rendering-modeling-visualization/) is not marketing fluff when a client needs to approve vein direction on a feature wall or the look of a lobby cladding module under site lighting.
+4. **Measure twice for BOQ.** Tall buildings multiply waste if stone and glass quantities are guessed. Structured take-offs sit next to the drawing set, not after the order form — see our related service pages under [Services](/services/).
 5. **Publish a revision table humans can read.** Clouded changes and a dated revision block save more site hours than another decorative cover sheet.
 
 D3DDD’s day-to-day work sits in that practical layer — fabrication-ready drawings and visualisations for contractors and fabricators — even when the project itself is a villa kitchen rather than a Red Sea megatall. The same drafting culture that keeps Jeddah Tower’s wings on sequence is what keeps a book-matched vanity from arriving 12 mm short.
