@@ -196,10 +196,11 @@ def build_index(posts: list[dict]) -> None:
     chips = "".join(
         f'<a class="chip" href="category/{esc(c)}/">{esc(t)}</a>' for c, t in cats
     )
+    byline = AUTHOR_BYLINE.replace("../../", "../")
     body = f'''<section class="page-hero"><nav class="crumbs" aria-label="Breadcrumb"><a href="../">Home</a> / <span>Blog</span></nav>
 <p class="eyebrow">Insights</p><h1>Architecture &amp; drafting <em>notes.</em></h1>
 <p>Researched articles on megaprojects, stone detailing and documentation habits — written for contractors, fabricators and design teams.</p>
-'''+AUTHOR_BYLINE.replace('../../','../')+'''
+{byline}
 <p class="chips" style="margin-top:18px">{chips}<a class="chip" href="feed.xml">RSS</a></p></section>
 <section class="section"><div class="wrap"><div class="grid g3 post-grid">{"".join(cards)}</div></div></section>'''
     ld = [
