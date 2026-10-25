@@ -35,24 +35,32 @@ def build_service_pages(g):
             extra += f'<p style="margin-top:16px"><a class="btn ghost" href="{webpkg}">{label}</a></p>'
         if lang == "en":
             home_l, svc_l, sub_h, soft, soft_p = (
-                "Home", "Services", "Sub-services", "Soft next step",
-                "Share drawings, sketches or a short brief for a quote — no hard sell.",
+                "Home", "Services", "Sub-services", "Next step",
+                "Share drawings, sketches or a short brief for a quote by email — no phone required on this site.",
             )
-            contact_l = "Contact D3DDD"
+            contact_l = "Email D3DDD"
         else:
             home_l, svc_l, sub_h, soft, soft_p = (
                 "الرئيسية", "الخدمات", "الخدمات الفرعية", "الخطوة التالية",
-                "أرسل المخططات أو الرسومات الأولية أو وصفاً مختصراً لعرض سعر — دون ضغط.",
+                "أرسل المخططات أو الرسومات الأولية أو وصفاً مختصراً لعرض سعر عبر البريد — دون رقم هاتف على هذا الموقع.",
             )
-            contact_l = "تواصل مع D3DDD"
+            contact_l = "راسل D3DDD"
+        svc_q = {
+            "architectural-drafting": "drafting",
+            "3d-rendering-modeling-visualization": "3d",
+            "architectural-designing": "design",
+            "architectural-estimation": "estimation",
+            "website-development-designing": "website",
+        }.get(s["slug"], "")
+        contact_q = contact + (("?service=" + svc_q) if svc_q else "")
         body = f'''<section class="page-hero"><nav class="crumbs" aria-label="Breadcrumb"><a href="{home}">{home_l}</a> / <a href="{hub}">{svc_l}</a> / <span>{t["name"]}</span></nav>
 <p class="eyebrow">{t["eyebrow"]}</p><h1>{t["h1"]}</h1><p>{t["lead"]}</p></section>
 <section class="section"><div class="wrap split"><figure>{img(P, s["img"], t["name"], True)}</figure><div><span class="num">{s["num"]}</span><h2>{t["name"]}</h2><p>{t["intro"]}</p>
 <ul class="check">{deliver}</ul>
-<p style="margin-top:18px"><a class="btn" href="{contact}">{t["cta_label"]} {arrow}</a></p>{extra}</div></div></section>
+<p style="margin-top:18px"><a class="btn" href="{contact_q}">{t["cta_label"]} {arrow}</a></p>{extra}</div></div></section>
 <section class="section alt"><div class="wrap"><p class="eyebrow">{sub_h}</p><h2 style="margin-bottom:24px">{sub_h}</h2>
 <div class="grid g3">{subs}</div>
-<div class="notice" style="margin-top:28px"><strong>{soft}:</strong> {soft_p} <a href="{contact}">{contact_l}</a>.</div>
+<div class="notice" style="margin-top:28px"><strong>{soft}:</strong> {soft_p} <a href="{contact_q}">{contact_l}</a>.</div>
 </div></section>'''
         body += cta(lang).replace('href="contact.html"', f'href="{contact}"')
         ld = [
@@ -79,7 +87,15 @@ def build_service_pages(g):
 <p class="eyebrow">Services — Dubai &amp; UAE</p>
 <h1>Five service lines for Gulf <em>design, drafting &amp; web</em></h1>
 <p>Architectural drafting, designing, estimation, 3D visualization and website development — practical packages for Dubai, Abu Dhabi, Sharjah and the wider Gulf. Led by Shoaib Hussan / D3DDD. <span lang="ar" class="ar-touch">خدماتنا في الإمارات والخليج</span></p></section>'''
-            more = f'''<section class="section alt"><div class="wrap"><p class="eyebrow">Specialist pages</p><h2>Also available</h2>
+            contact = g["href"](lang, fn, "contact.html")
+            more = f'''<section class="section alt" id="get-started"><div class="wrap"><p class="eyebrow">Clear paths to a quote</p><h2>Marble shop drawings, AutoCAD drafting &amp; shop drawing <em>approval</em></h2>
+<p style="color:var(--muted);max-width:720px;margin-top:10px">Blog readers and project teams: pick a path, then email drawings for a quote — site contact is email only.</p>
+<div class="grid g3" style="margin-top:24px">
+<div class="card"><div class="b"><span class="num">STONE</span><h3>Marble shop drawings</h3><p>Fabrication drawings, cutting lists and BOQ.</p><div class="actions" style="margin-top:12px"><a class="btn" href="{contact}?service=marble">Request quote</a><a class="btn ghost" href="{marble}">Details</a></div></div></div>
+<div class="card"><div class="b"><span class="num">CAD</span><h3>AutoCAD drafting</h3><p>Shop drawings and fit-out CAD sets.</p><div class="actions" style="margin-top:12px"><a class="btn" href="{contact}?service=drafting">Request quote</a><a class="btn ghost" href="architectural-drafting/">Details</a></div></div></div>
+<div class="card"><div class="b"><span class="num">3D</span><h3>Shop drawing approval / 3D</h3><p>Renders that support client and consultant approval.</p><div class="actions" style="margin-top:12px"><a class="btn" href="{contact}?service=3d">Request quote</a><a class="btn ghost" href="3d-rendering-modeling-visualization/">Details</a></div></div></div>
+</div></div></section>
+<section class="section"><div class="wrap"><p class="eyebrow">Specialist pages</p><h2>Also available</h2>
 <div class="grid g2" style="margin-top:24px">
 <a class="card" href="{marble}"><div class="b"><span class="num">STONE</span><h3>Marble &amp; stone shop drawings</h3><p>Fabrication drawings, cutting lists and BOQ for stone works.</p></div></a>
 <a class="card" href="{webpkg}"><div class="b"><span class="num">WEB</span><h3>Contractor website package</h3><p>AED 2,000 · 5 pages · enquiry-focused — pricing and demos.</p></div></a>
@@ -93,7 +109,15 @@ def build_service_pages(g):
 <p class="eyebrow">الخدمات — دبي والإمارات</p>
 <h1>خمس خطوط خدمة لـ<em>التصميم والرسم والويب</em> في الخليج</h1>
 <p>رسم تنفيذي، تصميم معماري، حساب كميات، تصور ثلاثي الأبعاد وتطوير مواقع — باقات عملية لدبي وأبوظبي والشارقة والخليج. بإشراف شعيب حسين / D3DDD.</p></section>'''
-            more = f'''<section class="section alt"><div class="wrap"><p class="eyebrow">صفحات متخصصة</p><h2>أيضاً متاح</h2>
+            contact = g["href"](lang, fn, "contact.html")
+            more = f'''<section class="section alt" id="get-started"><div class="wrap"><p class="eyebrow">مسارات واضحة لعرض السعر</p><h2>رسومات الرخام، مخططات أوتوكاد واعتماد الرسومات <em>التنفيذية</em></h2>
+<p style="color:var(--muted);max-width:720px;margin-top:10px">لقراء المدونة وفرق المشاريع: اختر المسار ثم أرسل المخططات بالبريد — التواصل عبر البريد فقط.</p>
+<div class="grid g3" style="margin-top:24px">
+<div class="card"><div class="b"><span class="num">حجر</span><h3>رسومات الرخام</h3><p>رسومات تصنيع وقوائم قص وجداول كميات.</p><div class="actions" style="margin-top:12px"><a class="btn" href="{contact}?service=marble">اطلب عرض سعر</a><a class="btn ghost" href="../marble.html">التفاصيل</a></div></div></div>
+<div class="card"><div class="b"><span class="num">أوتوكاد</span><h3>مخططات أوتوكاد</h3><p>رسومات تنفيذية ومجموعات CAD للفيت آوت.</p><div class="actions" style="margin-top:12px"><a class="btn" href="{contact}?service=drafting">اطلب عرض سعر</a><a class="btn ghost" href="architectural-drafting/">التفاصيل</a></div></div></div>
+<div class="card"><div class="b"><span class="num">3D</span><h3>اعتماد الرسومات / 3D</h3><p>تصاميم تساعد على اعتماد الشكل قبل التصنيع.</p><div class="actions" style="margin-top:12px"><a class="btn" href="{contact}?service=3d">اطلب عرض سعر</a><a class="btn ghost" href="3d-rendering-modeling-visualization/">التفاصيل</a></div></div></div>
+</div></div></section>
+<section class="section"><div class="wrap"><p class="eyebrow">صفحات متخصصة</p><h2>أيضاً متاح</h2>
 <div class="grid g2" style="margin-top:24px">
 <a class="card" href="{marble}"><div class="b"><span class="num">حجر</span><h3>رسومات الرخام والحجر</h3><p>رسومات تصنيع وقوائم قص وجداول كميات.</p></div></a>
 <a class="card" href="{webpkg}"><div class="b"><span class="num">ويب</span><h3>باقة موقع المقاولين</h3><p>2,000 درهم · 5 صفحات — الأسعار والنماذج.</p></div></a>

@@ -73,13 +73,13 @@ T = {
    tagline="Marble & stone shop drawings, AutoCAD drafting, 3D rendering and contractor websites in Dubai, Abu Dhabi, Sharjah and across the UAE.",
    f_services="Services", f_company="Company", f_contact="Contact", portal="Client portal", rights="All rights reserved.", home="Home",
    cta_eye="Let’s work together", cta_h="Your vision. Our precision.", cta_p="Send your drawings, sketches, dimensions or project requirements for a quote — in English or Arabic.", cta_wa="Email us", cta_form="Send an enquiry",
-   fonts="family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&family=Tajawal:wght@500&display=swap"),
+   fonts="family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@1,500&family=Tajawal:wght@500&display=swap"),
  "ar": dict(dir="rtl", locale="ar_AE", P="../", nav=[("index.html","الرئيسية"),("services/","الخدمات"),("projects/","المشاريع"),("marble.html","رسومات الرخام"),("website-design.html","تصميم المواقع"),("blog/","المدونة"),("about.html","من نحن"),("contact.html","تواصل معنا")],
    login="بوابة العملاء", menu="فتح القائمة", skip="انتقل إلى المحتوى", switch="English",
    tagline="رسومات تنفيذية للرخام والحجر، مخططات أوتوكاد، تصميم ثلاثي الأبعاد ومواقع إلكترونية للمقاولين في دبي وأبوظبي والشارقة وجميع أنحاء الإمارات.",
    f_services="الخدمات", f_company="الشركة", f_contact="التواصل", portal="بوابة العملاء", rights="جميع الحقوق محفوظة.", home="الرئيسية",
    cta_eye="لنعمل معاً", cta_h="رؤيتك. دقتنا.", cta_p="أرسل مخططاتك أو رسوماتك الأولية أو المقاسات أو متطلبات مشروعك للحصول على عرض سعر — بالعربية أو الإنجليزية.", cta_wa="راسلنا عبر البريد", cta_form="أرسل استفسارك",
-   fonts="family=Tajawal:wght@400;500;700&family=DM+Sans:wght@400;600;700&display=swap"),
+   fonts="family=Tajawal:wght@400;700&family=DM+Sans:wght@400;600;700&display=swap"),
 }
 
 def head(lang, fn, title, desc, ld_nodes, noindex=False, bilingual=True, preload=None):

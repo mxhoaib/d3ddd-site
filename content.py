@@ -62,7 +62,15 @@ def build_pages(g):
 <a class="card" href="services/3d-rendering-modeling-visualization/"><figure>{img(P,"svc-3d","Isometric room and camera for 3D visualization")}</figure><div class="b"><span class="num">04</span><h3>3D rendering &amp; visualization</h3><p>Still renders, modeling, walkthroughs and VR-ready scenes.</p></div></a>
 <a class="card" href="services/website-development-designing/"><figure>{img(P,"svc-web","Website layout with enquiry CTA")}</figure><div class="b"><span class="num">05</span><h3>Website development</h3><p>Business sites, landing pages, demos and enquiry CTAs.</p></div></a>
 </div></div></section>
-<section class="section alt" aria-labelledby="how-h"><div class="wrap"><p class="eyebrow">How we work</p><h2 id="how-h" style="margin-bottom:40px">Send. Review. Draft. <em>Deliver.</em></h2>
+<section class="section alt" id="get-started" aria-labelledby="inbound-h"><div class="wrap"><p class="eyebrow">Clear paths to a quote</p>
+<h2 id="inbound-h" style="margin-bottom:12px">Marble shop drawings, AutoCAD drafting &amp; shop drawing <em>approval</em></h2>
+<p style="color:var(--muted);max-width:720px">Coming from a blog post or a live UAE project? Choose the path that matches your scope, then send drawings by email — no phone number required on this site.</p>
+<div class="grid g3" style="margin-top:28px">
+<div class="card"><div class="b"><span class="num">STONE</span><h3>Marble shop drawings</h3><p>Fabrication drawings, cutting lists, slab layouts and BOQ for stone works in Dubai &amp; the UAE.</p><div class="actions" style="margin-top:14px"><a class="btn" href="contact.html?service=marble">Request marble quote</a><a class="btn ghost" href="marble.html">Details</a></div></div></div>
+<div class="card"><div class="b"><span class="num">CAD</span><h3>AutoCAD drafting</h3><p>Shop drawings, CAD detailing, joinery and fit-out sets ready for contractor coordination.</p><div class="actions" style="margin-top:14px"><a class="btn" href="contact.html?service=drafting">Request drafting quote</a><a class="btn ghost" href="services/architectural-drafting/">Details</a></div></div></div>
+<div class="card"><div class="b"><span class="num">3D</span><h3>Shop drawing approval / 3D</h3><p>Still renders and visualization that help clients and consultants approve the look before fabrication.</p><div class="actions" style="margin-top:14px"><a class="btn" href="contact.html?service=3d">Request 3D quote</a><a class="btn ghost" href="services/3d-rendering-modeling-visualization/">Details</a></div></div></div>
+</div></div></section>
+<section class="section" aria-labelledby="how-h"><div class="wrap"><p class="eyebrow">How we work</p><h2 id="how-h" style="margin-bottom:40px">Send. Review. Draft. <em>Deliver.</em></h2>
 <ol class="steps"><li>Send drawings</li><li>We review</li><li>Draft</li><li>You approve</li><li>Deliver DWG / PDF</li></ol>
 <div class="tags"><span>COUNTERTOPS</span><span>VANITIES</span><span>STAIRCASES</span><span>WALL CLADDING</span><span>FLOORING</span><span>KITCHEN ISLANDS</span><span>FIREPLACES</span><span>WATERJET INLAYS</span></div></div></section>
 <section class="section" aria-labelledby="why-h"><div class="wrap"><h2 id="why-h" style="margin-bottom:30px">Why contractors in the UAE choose D3DDD</h2><div class="grid g3">
@@ -97,7 +105,9 @@ def build_pages(g):
 <div class="card"><div class="b"><h3>⚙️ Fabrication Drawings</h3><p>Tolerances, profiles, joints, mitres and CNC / waterjet information for manufacturing and installation.</p></div></div>
 <div class="card"><div class="b"><h3>✨ Marble Designing</h3><p>2D layouts and 3D concepts, material selection and bookmatching or pattern guidance.</p></div></div>
 <div class="card"><div class="b"><h3>🧮 Estimation &amp; BOQ</h3><p>Quantity takeoffs, rate analysis and Excel-ready cost summaries.</p></div></div>
-<div class="card"><div class="b"><h3>🤝 Project Support</h3><p>Coordination with contractors, consultants and fabricators from concept to execution.</p></div></div></div></div></section>
+<div class="card"><div class="b"><h3>🤝 Project Support</h3><p>Coordination with contractors, consultants and fabricators from concept to execution.</p></div></div></div>
+<div class="actions" style="margin-top:28px"><a class="btn" href="contact.html?service=marble">Request marble shop drawing quote →</a><a class="btn ghost" href="mailto:info@d3ddd.com">Email drawings</a></div>
+</div></section>
 <section class="section alt"><div class="wrap split"><figure>{img(P,"cladding","Bookmatched marble wall cladding elevation drawing with veining")}</figure><div><p class="eyebrow">Every cut starts with a clear drawing</p><h2>Applications</h2><div class="tags"><span>COUNTERTOPS</span><span>VANITIES</span><span>STAIRCASES</span><span>WALL CLADDING</span><span>FLOORING</span><span>KITCHEN ISLANDS</span><span>FIREPLACES</span><span>WATERJET INLAYS</span></div>
 <h3 style="margin-top:36px">Process</h3><ol class="steps" style="margin-top:14px"><li>Send</li><li>Review</li><li>Draft</li><li>Approve</li><li>Fabricate</li><li>Install</li></ol></div></div></section>{cta(L)}'''
     out[(L,"marble.html")] = shell(L,"marble.html","Marble Shop Drawings Dubai | Stone Shop Drawings, Cutting Lists & BOQ UAE – D3DDD",
@@ -159,7 +169,15 @@ def build_pages(g):
 <a class="card" href="services/3d-rendering-modeling-visualization/"><figure>{img(P,"svc-3d","غرفة أيزومترية وكاميرا للتصور")}</figure><div class="b"><span class="num">04</span><h3>تصميم ثلاثي الأبعاد</h3><p>صور ثابتة ونمذجة ومشاهد تجوّل.</p></div></a>
 <a class="card" href="services/website-development-designing/"><figure>{img(P,"svc-web","تخطيط موقع مع زر استفسار")}</figure><div class="b"><span class="num">05</span><h3>تطوير المواقع</h3><p>مواقع أعمال وصفحات هبوط وأزرار استفسار.</p></div></a>
 </div></div></section>
-<section class="section alt" aria-labelledby="how-h"><div class="wrap"><p class="eyebrow">طريقة العمل</p><h2 id="how-h" style="margin-bottom:40px">أرسل. نراجع. نرسم. <em>نسلّم.</em></h2>
+<section class="section alt" id="get-started" aria-labelledby="inbound-h"><div class="wrap"><p class="eyebrow">مسارات واضحة لعرض السعر</p>
+<h2 id="inbound-h" style="margin-bottom:12px">رسومات الرخام، مخططات أوتوكاد واعتماد الرسومات <em>التنفيذية</em></h2>
+<p style="color:var(--muted);max-width:720px">قادم من مقال أو مشروع قائم؟ اختر المسار المناسب ثم أرسل المخططات عبر البريد — دون رقم هاتف على هذا الموقع.</p>
+<div class="grid g3" style="margin-top:28px">
+<div class="card"><div class="b"><span class="num">حجر</span><h3>رسومات الرخام</h3><p>رسومات تصنيع وقوائم قص وتوزيع ألواح وجداول كميات لأعمال الحجر في دبي والإمارات.</p><div class="actions" style="margin-top:14px"><a class="btn" href="contact.html?service=marble">اطلب عرض رخام</a><a class="btn ghost" href="./marble.html">التفاصيل</a></div></div></div>
+<div class="card"><div class="b"><span class="num">أوتوكاد</span><h3>مخططات أوتوكاد</h3><p>رسومات تنفيذية وتفاصيل CAD ونجارة وفيت آوت جاهزة للتنسيق مع المقاول.</p><div class="actions" style="margin-top:14px"><a class="btn" href="contact.html?service=drafting">اطلب عرض رسم</a><a class="btn ghost" href="services/architectural-drafting/">التفاصيل</a></div></div></div>
+<div class="card"><div class="b"><span class="num">3D</span><h3>اعتماد الرسومات / 3D</h3><p>صور وتصميم ثلاثي الأبعاد يساعد العملاء والاستشاريين على اعتماد الشكل قبل التصنيع.</p><div class="actions" style="margin-top:14px"><a class="btn" href="contact.html?service=3d">اطلب عرض 3D</a><a class="btn ghost" href="services/3d-rendering-modeling-visualization/">التفاصيل</a></div></div></div>
+</div></div></section>
+<section class="section" aria-labelledby="how-h"><div class="wrap"><p class="eyebrow">طريقة العمل</p><h2 id="how-h" style="margin-bottom:40px">أرسل. نراجع. نرسم. <em>نسلّم.</em></h2>
 <ol class="steps"><li>أرسل المخططات</li><li>نراجعها</li><li>نرسم</li><li>توافق عليها</li><li>نسلّم DWG / PDF</li></ol>
 <div class="tags"><span>أسطح المطابخ</span><span>المغاسل</span><span>الدرج</span><span>تكسية الجدران</span><span>الأرضيات</span><span>جزر المطبخ</span><span>المدافئ</span><span>تطعيم الووترجت</span></div></div></section>
 <section class="section" aria-labelledby="why-h"><div class="wrap"><h2 id="why-h" style="margin-bottom:30px">لماذا يختار المقاولون في الإمارات D3DDD</h2><div class="grid g3">
@@ -194,7 +212,9 @@ def build_pages(g):
 <div class="card"><div class="b"><h3>⚙️ رسومات التصنيع</h3><p>التفاوتات والحواف والفواصل والزوايا ومعلومات CNC والووترجت للتصنيع والتركيب.</p></div></div>
 <div class="card"><div class="b"><h3>✨ تصميم الرخام</h3><p>مخططات ثنائية الأبعاد وتصاميم ثلاثية الأبعاد واختيار المواد وتطابق العروق (بوك ماتش).</p></div></div>
 <div class="card"><div class="b"><h3>🧮 حساب الكميات والتكاليف</h3><p>حصر الكميات وتحليل الأسعار وملخصات تكلفة جاهزة لبرنامج Excel.</p></div></div>
-<div class="card"><div class="b"><h3>🤝 دعم المشروع</h3><p>التنسيق مع المقاولين والاستشاريين والمصانع من الفكرة حتى التنفيذ.</p></div></div></div></div></section>
+<div class="card"><div class="b"><h3>🤝 دعم المشروع</h3><p>التنسيق مع المقاولين والاستشاريين والمصانع من الفكرة حتى التنفيذ.</p></div></div></div>
+<div class="actions" style="margin-top:28px"><a class="btn" href="contact.html?service=marble">اطلب عرض رسومات الرخام ←</a><a class="btn ghost" href="mailto:info@d3ddd.com">أرسل بالبريد</a></div>
+</div></section>
 <section class="section alt"><div class="wrap split"><figure>{img(P,"cladding","رسم واجهة تكسية جدار رخام بعروق متطابقة")}</figure><div><p class="eyebrow">كل قصّة تبدأ برسم واضح</p><h2>مجالات التطبيق</h2><div class="tags"><span>أسطح المطابخ</span><span>المغاسل</span><span>الدرج</span><span>تكسية الجدران</span><span>الأرضيات</span><span>جزر المطبخ</span><span>المدافئ</span><span>تطعيم الووترجت</span></div>
 <h3 style="margin-top:36px">مراحل العمل</h3><ol class="steps" style="margin-top:14px"><li>الإرسال</li><li>المراجعة</li><li>الرسم</li><li>الاعتماد</li><li>التصنيع</li><li>التركيب</li></ol></div></div></section>{cta(L)}'''
     out[(L,"marble.html")] = shell(L,"marble.html","رسومات الرخام التنفيذية دبي | رسومات الحجر وقوائم القص وجداول الكميات – D3DDD",
