@@ -137,6 +137,25 @@ def crumbs_ld(items: list[tuple[str, str]]) -> dict:
         ],
     }
 
+IG = "https://www.instagram.com/mxhaib/"
+FIVERR = "https://www.fiverr.com/mxhoaib"
+# Required on every article: author byline + author box (see BLOG.md)
+AUTHOR_BYLINE = (
+    '<div class="byline"><span class="av" aria-hidden="true">SH</span><span>Written by '
+    '<strong>Shoaib Hussan</strong><br><small>Founder, D3DDD · 8 yrs drafting · '
+    f'<a href="{IG}" rel="me noopener" target="_blank">@mxhaib</a></small></span></div>'
+)
+AUTHOR_BOX = (
+    '<aside class="author-box" aria-label="About the author"><span class="av lg" aria-hidden="true">SH</span>'
+    '<div><p class="eyebrow">About the author</p><h2>Shoaib Hussan</h2>'
+    '<p>Draftsman with ~8 years of hands-on drafting experience and founder of '
+    '<strong>D3DDD – Dubai 3D Design &amp; Draft</strong>. Shop drawings, marble &amp; stone detailing, '
+    '3D visualisation and construction documentation for contractors and fabricators across the Gulf.</p>'
+    f'<p class="socials"><a href="{IG}" rel="me noopener" target="_blank">Instagram @mxhaib</a>'
+    f'<a href="{FIVERR}" rel="me noopener" target="_blank">Hire on Fiverr</a>'
+    '<a href="../../contact.html">Work with D3DDD →</a></p></div></aside>'
+)
+
 def article_ld(p: dict) -> dict:
     return {
         "@type": "Article",
@@ -145,7 +164,7 @@ def article_ld(p: dict) -> dict:
         "datePublished": p["date"],
         "dateModified": p["date"],
         "image": p["image"],
-        "author": {"@type": "Organization", "name": "D3DDD", "url": f"{D}/"},
+        "author": {"@type": "Person", "name": "Shoaib Hussan", "jobTitle": "Founder, D3DDD – Dubai 3D Design & Draft", "url": f"{D}/about.html", "sameAs": [IG, FIVERR]},
         "publisher": {"@id": f"{D}/#business"},
         "mainEntityOfPage": p["url"],
         "articleSection": p["category_title"],
@@ -180,6 +199,7 @@ def build_index(posts: list[dict]) -> None:
     body = f'''<section class="page-hero"><nav class="crumbs" aria-label="Breadcrumb"><a href="../">Home</a> / <span>Blog</span></nav>
 <p class="eyebrow">Insights</p><h1>Architecture &amp; drafting <em>notes.</em></h1>
 <p>Researched articles on megaprojects, stone detailing and documentation habits — written for contractors, fabricators and design teams.</p>
+'''+AUTHOR_BYLINE.replace('../../','../')+'''
 <p class="chips" style="margin-top:18px">{chips}<a class="chip" href="feed.xml">RSS</a></p></section>
 <section class="section"><div class="wrap"><div class="grid g3 post-grid">{"".join(cards)}</div></div></section>'''
     ld = [
@@ -211,10 +231,12 @@ def build_article(p: dict, all_posts: list[dict]) -> None:
 <p class="eyebrow">{esc(p["category_title"])}</p>
 <h1>{esc(p["title"])}</h1>
 <p class="meta"><time datetime="{esc(p["date"])}">{esc(p["date"])}</time> · {p["word_count"]} words</p>
+{AUTHOR_BYLINE}
 </section>
 <section class="section"><div class="wrap article-wrap">
 <figure class="hero-fig"><img src="{esc(p["image"])}" alt="{esc(p["image_alt"])}" width="1200" height="630" fetchpriority="high" decoding="async">{credit}</figure>
 <div class="prose">{p["body_html"]}</div>
+{AUTHOR_BOX}
 <aside class="box related"><h2>Related</h2><ul>{rel_html}</ul>
 <p style="margin-top:14px"><a class="btn" href="../../contact.html">Request a quote →</a>
 <a class="btn ghost" href="../">All articles</a></p></aside>
