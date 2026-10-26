@@ -45,7 +45,7 @@ def business_ld(lang):
             "email": EMAIL,
             "description": "Marble and stone shop drawings, AutoCAD drafting, fit-out drawings, 3D rendering and contractor website design in Dubai and across the UAE.",
             "address": {"@type": "PostalAddress", "addressLocality": "Dubai", "addressRegion": "Dubai", "addressCountry": "AE"},
-            "areaServed": [{"@type": "City", "name": a} for a in ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah"]] + [{"@type": "Country", "name": "United Arab Emirates"}, {"@type": "Place", "name": "Palm Jumeirah, Dubai"}],
+            "areaServed": [{"@type": "City", "name": a} for a in ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah"]] + [{"@type": "Country", "name": "United Arab Emirates"}, {"@type": "Place", "name": "Palm Jumeirah, Dubai"}, {"@type": "Place", "name": "New York, NY, United States"}, {"@type": "Place", "name": "London, United Kingdom"}],
             "knowsLanguage": ["en", "ar"],
             "contactPoint": {"@type": "ContactPoint", "email": EMAIL, "contactType": "sales", "availableLanguage": ["English", "Arabic"]},
             "sameAs": ["https://www.fiverr.com/mxhoaib", "https://www.instagram.com/mxhaib/", "https://www.linkedin.com/in/mshoaib94"], "paymentAccepted": "PayPal"}
@@ -55,7 +55,7 @@ def crumbs_ld(lang, items):
 
 def service_ld(name, desc, u, offers=None):
     s = {"@type": "Service", "name": name, "description": desc, "url": u, "provider": {"@id": ORG_ID},
-         "areaServed": [{"@type": "City", "name": a} for a in ["Dubai", "Abu Dhabi", "Sharjah"]] + [{"@type": "Country", "name": "United Arab Emirates"}]}
+         "areaServed": [{"@type": "City", "name": a} for a in ["Dubai", "Abu Dhabi", "Sharjah"]] + [{"@type": "Country", "name": "United Arab Emirates"}, {"@type": "Place", "name": "New York, NY, United States"}, {"@type": "Place", "name": "London, United Kingdom"}]}
     if offers: s["offers"] = offers
     return s
 

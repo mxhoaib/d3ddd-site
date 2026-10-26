@@ -137,6 +137,8 @@ def business_ld() -> dict:
             {"@type": "City", "name": "Dubai"},
             {"@type": "Place", "name": "Palm Jumeirah, Dubai"},
             {"@type": "Country", "name": "United Arab Emirates"},
+            {"@type": "Place", "name": "New York, NY, United States"},
+            {"@type": "Place", "name": "London, United Kingdom"},
         ],
         "sameAs": [
             "https://www.fiverr.com/mxhoaib",
