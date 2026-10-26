@@ -113,7 +113,8 @@ def head(lang, fn, title, desc, ld_nodes, noindex=False, bilingual=True, preload
         '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
         '<link rel="preload" href="%sassets/style.css" as="style"><link rel="stylesheet" href="%sassets/style.css">%s\n'
         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?%s" media="print" onload="this.media=\'all\'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?%s"></noscript>\n'
-        '<script type="application/ld+json">%s</script></head>'
+        '<script type="application/ld+json">%s</script>\n'
+        '<meta name="google-site-verification" content="5lkd8Q8BFpICgD4ixvCvKxc2GmHxE7pH7XFaXVRZG-s" /></head>'
     ) % (
         lang_attr, t["dir"], title, desc, robots, canon, alts,
         title, desc, canon, t["locale"], og_alt, D,
