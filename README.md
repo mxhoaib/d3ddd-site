@@ -25,6 +25,7 @@ index, services, marble, website-design, about, contact (enquiry form), thank-yo
 - Arabic pages live in `/ar/`, laid out right-to-left with the Tajawal font. Every page has a language switcher, hreflang tags (en-AE, ar-AE, x-default) and canonical links. `sitemap.xml` lists the alternate language URLs.
 - Content lives in `content.py`. `build.py` holds the layout, SEO tags and schema. The client portal pages are in `portal_pages.py` and are English only. Rebuild with `python3 build.py`.
 - Schema markup is in JSON-LD: ProfessionalService/LocalBusiness (city-level address only, with no street, ratings or reviews), Service with an AED 2,000 Offer for the website package, FAQPage on the home page, BreadcrumbList, WebSite and ContactPage. Each page also has Open Graph and Twitter tags (`assets/img/og-image.png`) and a geo meta tag (AE-DU).
+- **IndexNow:** `{KEY}.txt` at the site root is pending (no key file in the repo). When you have a key, `python3 scripts/place_indexnow_key.py KEY` writes it.
 - **Owner SEO to-dos:**
   1. After going live, verify d3ddd.com in Google Search Console (DNS TXT record at GoDaddy) and submit https://d3ddd.com/sitemap.xml. Do the same in Bing Webmaster Tools.
   2. Create or claim a Google Business Profile with category "Drafting service" or "Architectural designer". If there is no public office, set it up as a service-area business covering Dubai, Abu Dhabi and Sharjah. Use the same name, email and website as the site.
