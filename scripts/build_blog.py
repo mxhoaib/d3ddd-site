@@ -133,7 +133,16 @@ def business_ld() -> dict:
         "logo": f"{D}/assets/img/logo.svg",
         "image": f"{D}/assets/img/og-image.png",
         "address": {"@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE"},
-        "sameAs": ["https://www.fiverr.com/mxhoaib"],
+        "areaServed": [
+            {"@type": "City", "name": "Dubai"},
+            {"@type": "Place", "name": "Palm Jumeirah, Dubai"},
+            {"@type": "Country", "name": "United Arab Emirates"},
+        ],
+        "sameAs": [
+            "https://www.fiverr.com/mxhoaib",
+            "https://www.instagram.com/mxhaib/",
+            "https://www.linkedin.com/in/mshoaib94",
+        ],
     }
 
 def crumbs_ld(items: list[tuple[str, str]]) -> dict:

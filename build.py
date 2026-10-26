@@ -45,10 +45,10 @@ def business_ld(lang):
             "email": EMAIL,
             "description": "Marble and stone shop drawings, AutoCAD drafting, fit-out drawings, 3D rendering and contractor website design in Dubai and across the UAE.",
             "address": {"@type": "PostalAddress", "addressLocality": "Dubai", "addressRegion": "Dubai", "addressCountry": "AE"},
-            "areaServed": [{"@type": "City", "name": a} for a in ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah"]] + [{"@type": "Country", "name": "United Arab Emirates"}],
+            "areaServed": [{"@type": "City", "name": a} for a in ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah"]] + [{"@type": "Country", "name": "United Arab Emirates"}, {"@type": "Place", "name": "Palm Jumeirah, Dubai"}],
             "knowsLanguage": ["en", "ar"],
             "contactPoint": {"@type": "ContactPoint", "email": EMAIL, "contactType": "sales", "availableLanguage": ["English", "Arabic"]},
-            "sameAs": [], "paymentAccepted": "PayPal"}
+            "sameAs": ["https://www.fiverr.com/mxhoaib", "https://www.instagram.com/mxhaib/", "https://www.linkedin.com/in/mshoaib94"], "paymentAccepted": "PayPal"}
 
 def crumbs_ld(lang, items):
     return {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(items)]}
