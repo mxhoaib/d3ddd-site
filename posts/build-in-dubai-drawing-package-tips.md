@@ -3,11 +3,10 @@ title: "Build in Dubai Platform: Drawing Package Tips for Faster Permits"
 slug: build-in-dubai-drawing-package-tips
 date: 2026-10-26
 category: shop-drawings
-category_title: "Shop Drawings"
+category_title: Shop Drawings
 description: "Prepare cleaner drawing packages for Build in Dubai—layer hygiene, consistency checks, and AI-permit readiness tips."
-canonical: "https://shoaibsite.blogspot.com/2026/10/build-in-dubai-drawing-package-tips.html"
+canonical: https://shoaibsite.blogspot.com/2026/10/build-in-dubai-drawing-package-tips.html
 ---
-
 The **Build in Dubai platform** is where more Dubai building and fit-out submissions are consolidating. As Dubai Municipality expands AI-assisted permit checking, messy layers, conflicting dimensions and bloated DWGs become expensive—not just untidy. Cleaner packages clear faster whether a human or an automated rule set reviews them.
 
 This guide gives drafters and consultants an AI-ready drawing checklist: layer hygiene, PURGE/AUDIT habits, title consistency, Bluebeam markup discipline, and links to official DM and Media Office sources. It complements—not replaces—the authority’s portal help text.
@@ -117,6 +116,6 @@ Keep layers consistent, purge junk, match title-block data to forms, align dimen
 
 Dubai Municipality publishes the Dubai Building Code on its official planning and construction pages. Download only from dm.gov.ae or authorised competent entity sites.
 
-Need permit-ready drafting packages? [D3DDD](https://d3ddd.com/) · [info@d3ddd.com](mailto:info@d3ddd.com).
+Need permit-ready drafting packages? [D3DDD](/) · [info@d3ddd.com](mailto:info@d3ddd.com).
 
 Originally published on [ShoaibSite](https://shoaibsite.blogspot.com/2026/10/build-in-dubai-drawing-package-tips.html).

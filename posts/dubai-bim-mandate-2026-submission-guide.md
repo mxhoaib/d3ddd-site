@@ -3,11 +3,10 @@ title: "Dubai BIM Mandate 2026: Who Must Submit and What to Prepare"
 slug: dubai-bim-mandate-2026-submission-guide
 date: 2026-10-26
 category: architecture
-category_title: "Architecture"
+category_title: Architecture
 description: "Dubai Municipality BIM rules from April 2026—thresholds, modification triggers, and drawing-model prep checklist."
-canonical: "https://shoaibsite.blogspot.com/2026/10/dubai-bim-mandate-2026-submission-guide.html"
+canonical: https://shoaibsite.blogspot.com/2026/10/dubai-bim-mandate-2026-submission-guide.html
 ---
-
 The **Dubai BIM mandate 2026** is the compliance topic every consultant, contractor and drafting studio should brief before mid-year bids. Dubai Municipality communications around Circular materials describe mandatory BIM for qualifying buildings from 1 April 2026—commonly summarised as projects with 12 or more floors or 15,000 m² and above, with additional modification triggers. Always read the official circular text; thresholds and definitions can be refined in authority guidance.
 
 This article is a practical prep guide: who is likely in scope, what to assemble in the BIM Execution Plan (BEP), and how shop drawings, IFC and Build in Dubai submissions connect—without replacing legal advice or the DM portal itself.
@@ -106,6 +105,6 @@ Public communications point to 1 April 2026 for the mandatory BIM regime describ
 
 Agree a BEP, choose authoring tools, practise IFC export/checks, align naming and coordinates, and connect the model workflow to Build in Dubai submissions and shop-drawing approvals.
 
-Need BIM-aligned drafting and shop drawings in Dubai? See [d3ddd.com](https://d3ddd.com/) · [info@d3ddd.com](mailto:info@d3ddd.com).
+Need BIM-aligned drafting and shop drawings in Dubai? See [d3ddd.com](/) · [info@d3ddd.com](mailto:info@d3ddd.com).
 
 Originally published on [ShoaibSite](https://shoaibsite.blogspot.com/2026/10/dubai-bim-mandate-2026-submission-guide.html).

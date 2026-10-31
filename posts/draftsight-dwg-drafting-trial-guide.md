@@ -3,11 +3,10 @@ title: "DraftSight for DWG Drafting: Trial Setup Limits & When to Use It"
 slug: draftsight-dwg-drafting-trial-guide
 date: 2026-10-26
 category: drafting
-category_title: "Drafting"
+category_title: Drafting
 description: "Legal DraftSight setup for DWG shop drawings—trial, 2D limits, and when freelancers should stay on AutoCAD LT."
-canonical: "https://shoaibsite.blogspot.com/2026/10/blog-post_635.html"
+canonical: https://shoaibsite.blogspot.com/2026/10/blog-post_635.html
 ---
-
 **DraftSight DWG** drafting is a common search for freelancers who want a familiar 2D CAD seat without jumping straight to a full AutoCAD subscription. DraftSight can open and edit DWG files, but UAE shop-drawing work lives or dies on Xrefs, fonts, CTB plot styles and what the consultant’s review machine expects.
 
 This legal guide covers official trial setup, practical 2D limits, and a clear decision matrix against AutoCAD LT and BricsCAD so you spend once and avoid file-rejection loops.
@@ -111,6 +110,6 @@ If clients and main contractors expect AutoCAD LT workflows, stay on LT. Conside
 
 LibreCAD is a free DXF-oriented option useful for light 2D work. It is not a drop-in replacement for complex DWG shop-drawing packages with heavy Xrefs and plot styles.
 
-Need reliable DWG shop drawings without seat drama? Reach [D3DDD](https://d3ddd.com/) via [info@d3ddd.com](mailto:info@d3ddd.com).
+Need reliable DWG shop drawings without seat drama? Reach [D3DDD](/) via [info@d3ddd.com](mailto:info@d3ddd.com).
 
 Originally published on [ShoaibSite](https://shoaibsite.blogspot.com/2026/10/blog-post_635.html).

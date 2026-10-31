@@ -3,11 +3,10 @@ title: "AutoCAD 2026 New Features: Smart Blocks AI Assist & Faster DWG"
 slug: autocad-2026-new-features-smart-blocks-ai
 date: 2026-10-26
 category: drafting
-category_title: "Drafting"
+category_title: Drafting
 description: "What’s new in AutoCAD 2026 for UAE drafters: Smart Blocks, Autodesk AI assist, Connected Support Files and faster DWG open."
-canonical: "https://shoaibsite.blogspot.com/2026/10/blog-post_26.html"
+canonical: https://shoaibsite.blogspot.com/2026/10/blog-post_26.html
 ---
-
 **AutoCAD 2026 new features** matter most when they cut open time, reduce block mistakes and keep every draftsman on the same fonts and plot styles. For UAE shop-drawing and fit-out teams, this release is less about flashy demos and more about production: Smart Blocks that place themselves more intelligently, Autodesk Assistant for in-product help, Connected Support Files for shared office standards, and faster DWG open on large packages.
 
 This guide translates the official Autodesk release notes into a drafter-first checklist. You will see what to test first on a live package, how Smart Blocks fit Dynamic Block workflows, and where education or trial access comes from—always through Autodesk’s official channels.
@@ -86,6 +85,6 @@ Yes. Autodesk Assistant is built into AutoCAD 2026 to answer product questions a
 
 Eligible students and educators can use the official Autodesk Education plan for legal access. Professionals should use a licensed subscription or the official Autodesk free trial to evaluate AutoCAD 2026 new features.
 
-Need production AutoCAD drafting or shop drawings for a UAE fit-out? See [D3DDD](https://d3ddd.com/) or email [info@d3ddd.com](mailto:info@d3ddd.com).
+Need production AutoCAD drafting or shop drawings for a UAE fit-out? See [D3DDD](/) or email [info@d3ddd.com](mailto:info@d3ddd.com).
 
 Originally published on [ShoaibSite](https://shoaibsite.blogspot.com/2026/10/blog-post_26.html).

@@ -3,11 +3,10 @@ title: "Navisworks Manage Clash Detection: UAE Coordination Workflow"
 slug: navisworks-clash-detection-uae-coordination
 date: 2026-10-26
 category: drafting
-category_title: "Drafting"
+category_title: Drafting
 description: "Run Navisworks Manage clash tests for UAE projects—federate models, set tolerances, report and close clashes."
-canonical: "https://shoaibsite.blogspot.com/2026/10/navisworks-clash-detection-uae-coordination.html"
+canonical: https://shoaibsite.blogspot.com/2026/10/navisworks-clash-detection-uae-coordination.html
 ---
-
 **Navisworks clash detection** is how many UAE main contractors and BIM leads catch duct-vs-beam and pipe-vs-ceiling conflicts before fit-out starts. Navisworks Manage federates architectural, structural and MEP models, runs Clash Detective, and produces reports the design team can close against a shared issue list.
 
 This tutorial walks through a practical UAE coordination workflow: append models, set hard vs soft tests, assign owners, and push status through Autodesk Docs or BIM collaboration without drowning the team in duplicate clashes.
@@ -108,6 +107,6 @@ There is no single number. Agree tolerances per discipline in the BEP—often ti
 
 Clash Detective and full coordination tools require Navisworks Manage (or the appropriate Autodesk collection). Freedom is for viewing published NWD/NWC files, not for running clash tests.
 
-Need coordinated shop drawings after clash close-out? Contact [D3DDD](https://d3ddd.com/) at [info@d3ddd.com](mailto:info@d3ddd.com).
+Need coordinated shop drawings after clash close-out? Contact [D3DDD](/) at [info@d3ddd.com](mailto:info@d3ddd.com).
 
 Originally published on [ShoaibSite](https://shoaibsite.blogspot.com/2026/10/navisworks-clash-detection-uae-coordination.html).

@@ -3,11 +3,10 @@ title: "Primavera P6 vs Microsoft Project for UAE Fit-Out Schedules"
 slug: primavera-p6-vs-microsoft-project-uae-fit-out
 date: 2026-10-26
 category: planning
-category_title: "Planning"
+category_title: Planning
 description: "Choose P6 or Microsoft Project for UAE fit-out and building schedules—when clients require each tool."
-canonical: "https://shoaibsite.blogspot.com/2026/10/blog-post_33.html"
+canonical: https://shoaibsite.blogspot.com/2026/10/blog-post_33.html
 ---
-
 **Primavera P6 vs Microsoft Project** is a contract question before it is a software preference. On UAE building and fit-out jobs, the main contractor’s planning department often dictates P6 for the master programme, while consultants and fit-out specialists still live in Microsoft Project for look-aheads and short-term coordination.
 
 This decision matrix helps planners, PMPs and drafting-studio owners pick the right seat—and know when to keep both. Official product and PMI links only; no cracked schedulers.
@@ -35,10 +34,10 @@ This decision matrix helps planners, PMPs and drafting-studio owners pick the ri
 
 ## How schedules meet drawings
 
-Build a WBS that mirrors deliverables—see [WBS for construction projects](https://shoaibsite.blogspot.com/2026/10/wbs-construction-projects-guide.html) and our MSP-focused [Microsoft Project construction schedule](https://shoaibsite.blogspot.com/2026/10/microsoft-project-construction-schedule.html) guide. Tie activities to shop-drawing approval gates from [Dubai shop drawing approval](https://shoaibsite.blogspot.com/2026/10/shop-drawing-approval-process-dubai.html) and fit-out packages.
+Build a WBS that mirrors deliverables—see [WBS for construction projects](https://shoaibsite.blogspot.com/2026/10/wbs-construction-projects-guide.html) and our MSP-focused [Microsoft Project construction schedule](https://shoaibsite.blogspot.com/2026/10/microsoft-project-construction-schedule.html) guide. Tie activities to shop-drawing approval gates from [Dubai shop drawing approval](https://shoaibsite.blogspot.com/2026/10/shop-drawing-approval-process-dubai.html) (cross-batch link via process knowledge) and fit-out packages.
 
 - SD submission / consultant review / resubmission as explicit tasks.
-- Long-lead stone and joinery linked to nesting completion—see [marble slab nesting](/blog/slab-nesting-cutting-lists-gulf/).
+- Long-lead stone and joinery linked to nesting completion—see [marble slab nesting](https://shoaibsite.blogspot.com/2026/10/marble-slab-nesting-cnc-dxf-shop-drawings.html).
 - Authority milestones aligned to [Build in Dubai package tips](/blog/build-in-dubai-drawing-package-tips/) and BIM drops when mandated.
 
 ## EVM, risk and PMP practice
@@ -118,6 +117,6 @@ For many interior fit-out and small building schedules, Microsoft Project is eno
 
 Both tools can express WBS, critical path and EVM concepts taught in PMP. Tool choice is contractual; process quality still follows PMI practice.
 
-Need schedule-aware shop drawing production planning? [D3DDD](https://d3ddd.com/) · [info@d3ddd.com](mailto:info@d3ddd.com).
+Need schedule-aware shop drawing production planning? [D3DDD](/) · [info@d3ddd.com](mailto:info@d3ddd.com).
 
 Originally published on [ShoaibSite](https://shoaibsite.blogspot.com/2026/10/blog-post_33.html).

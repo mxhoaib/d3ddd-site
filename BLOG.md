@@ -17,9 +17,11 @@ description: "…"
 image: /assets/img/blog/my-og.jpg
 image_alt: "…"
 image_credit: "…"
-canonical: "https://example.com/original"  # optional; sets link rel=canonical
+canonical: https://original.example/post
 ---
 ```
+
+`canonical` is optional. When set, the article `<link rel="canonical">` uses that URL (republished posts point at the original). Omit images rather than hot-linking them. End a republished post with one line: `Originally published on [ShoaibSite](original-url).`
 
 2. From repo root:
 

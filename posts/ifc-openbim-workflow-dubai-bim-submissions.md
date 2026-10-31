@@ -3,11 +3,10 @@ title: "IFC OpenBIM Workflow for Dubai Municipality BIM Submissions"
 slug: ifc-openbim-workflow-dubai-bim-submissions
 date: 2026-10-26
 category: architecture
-category_title: "Architecture"
+category_title: Architecture
 description: "Export clean IFC for Dubai BIM submissions—units, classification, model checks before Build in Dubai upload."
-canonical: "https://shoaibsite.blogspot.com/2026/10/blog-post_877.html"
+canonical: https://shoaibsite.blogspot.com/2026/10/blog-post_877.html
 ---
-
 **IFC OpenBIM Dubai** workflows are how multi-vendor teams hand models to Dubai Municipality processes without locking everyone into one proprietary format. As the [Dubai BIM mandate 2026](/blog/dubai-bim-mandate-2026-submission-guide/) approaches, clean IFC export—units, classification, coordinates and schema—becomes a submission skill, not an optional geek interest.
 
 This guide walks Revit and Archicad authors through a practical openBIM path: setup, export, model checking and upload readiness for Build in Dubai, with links to buildingSMART and official product pages only.
@@ -123,6 +122,6 @@ Use the version stated in the project BEP or DM submission guide for your permit
 
 Yes—openBIM is designed for that—but only if coordinates, classification and MVD/view settings are agreed in the BEP and validated on a federated check.
 
-Need drawings that stay aligned to your IFC deliverables? [d3ddd.com](https://d3ddd.com/) · [info@d3ddd.com](mailto:info@d3ddd.com).
+Need drawings that stay aligned to your IFC deliverables? [d3ddd.com](/) · [info@d3ddd.com](mailto:info@d3ddd.com).
 
 Originally published on [ShoaibSite](https://shoaibsite.blogspot.com/2026/10/blog-post_877.html).

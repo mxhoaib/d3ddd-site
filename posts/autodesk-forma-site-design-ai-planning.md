@@ -3,11 +3,10 @@ title: "Autodesk Forma Site Design: AI Site Planning for Early Concepts"
 slug: autodesk-forma-site-design-ai-planning
 date: 2026-10-26
 category: architecture
-category_title: "Architecture"
+category_title: Architecture
 description: "Official Autodesk Forma Site Design guide—AI layout options, sun/wind analyses, IFC export for UAE concept work."
-canonical: "https://shoaibsite.blogspot.com/2026/10/autodesk-forma-site-design-ai-planning.html"
+canonical: https://shoaibsite.blogspot.com/2026/10/autodesk-forma-site-design-ai-planning.html
 ---
-
 **Autodesk Forma Site Design** is Autodesk’s legal, cloud-based AI site-planning environment (the path that grew out of Spacemaker). For UAE concept teams, it is useful when you need fast massing options with sun and environmental feedback before you commit weeks of Revit or Archicad modelling.
 
 This guide stays AdSense-safe and vendor-official: how Forma fits an early design loop, what to analyse, how to hand off to BIM, and where education or commercial access lives on Autodesk’s sites.
@@ -112,6 +111,6 @@ No. Forma is for early site options and analysis. Detailed BIM, documentation an
 
 Check current eligibility on the official Autodesk Education plan page. Product access lists change; always use Autodesk’s education portal rather than unofficial keys.
 
-Need concept-to-shop-drawing support in Dubai? Visit [https://d3ddd.com](https://d3ddd.com/) or email [info@d3ddd.com](mailto:info@d3ddd.com).
+Need concept-to-shop-drawing support in Dubai? Visit [https://d3ddd.com](/) or email [info@d3ddd.com](mailto:info@d3ddd.com).
 
 Originally published on [ShoaibSite](https://shoaibsite.blogspot.com/2026/10/autodesk-forma-site-design-ai-planning.html).

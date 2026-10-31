@@ -3,11 +3,10 @@ title: "Stone Staircase Shop Drawings: Treads Risers Stringers & Fixings"
 slug: stone-staircase-shop-drawings-treads-risers
 date: 2026-10-26
 category: shop-drawings
-category_title: "Shop Drawings"
+category_title: Shop Drawings
 description: "Produce approval-ready stone stair shop drawings—dimensions, nosings, fixings, sequencing for UAE fit-outs."
-canonical: "https://shoaibsite.blogspot.com/2026/10/stone-staircase-shop-drawings-treads-risers.html"
+canonical: https://shoaibsite.blogspot.com/2026/10/stone-staircase-shop-drawings-treads-risers.html
 ---
-
 **Stone staircase shop drawings** fail reviews when treads, risers and fixings are pretty but incomplete. Consultants in the UAE expect clear dimensions, nosing profiles, thicknesses, support conditions and installation sequence—especially on marble or limestone stairs in villas and lobbies.
 
 This how-to covers sheet content, detailing callouts, anchor coordination and annotative scaling so your stair package clears shop-drawing approval without endless “provide fixing detail” comments.
@@ -48,7 +47,7 @@ Code and accessibility context: [Dubai Municipality](https://www.dm.gov.ae/) and
 
 ## Fabrication handoff
 
-After approval, nest treads and risers with vein control using [marble slab nesting and CNC DXF](/blog/slab-nesting-cutting-lists-gulf/).
+After approval, nest treads and risers with vein control using [marble slab nesting and CNC DXF](https://shoaibsite.blogspot.com/2026/10/marble-slab-nesting-cnc-dxf-shop-drawings.html).
 
 ## Field measure protocol before cutting stone
 
@@ -114,6 +113,6 @@ Show anchor type, embedment, spacing and substrate (concrete, steel stringer, wa
 
 Yes. Riser/tread geometry and handrail clearances must respect the applicable Dubai Building Code and project accessibility requirements. Confirm values on official DM code pages.
 
-Need stair and stone shop drawings for a UAE fit-out? [D3DDD](https://d3ddd.com/) · [info@d3ddd.com](mailto:info@d3ddd.com).
+Need stair and stone shop drawings for a UAE fit-out? [D3DDD](/) · [info@d3ddd.com](mailto:info@d3ddd.com).
 
 Originally published on [ShoaibSite](https://shoaibsite.blogspot.com/2026/10/stone-staircase-shop-drawings-treads-risers.html).

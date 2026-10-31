@@ -3,11 +3,10 @@ title: "AutoCAD Architecture Toolset for UAE Floor Plans & Renovation Plans"
 slug: autocad-architecture-toolset-uae-floor-plans
 date: 2026-10-26
 category: drafting
-category_title: "Drafting"
+category_title: Drafting
 description: "Use AutoCAD Architecture toolset for faster UAE floor plans—walls, doors, spaces, renovation display, IFC notes."
-canonical: "https://shoaibsite.blogspot.com/2026/10/blog-post_954.html"
+canonical: https://shoaibsite.blogspot.com/2026/10/blog-post_954.html
 ---
-
 The **AutoCAD Architecture toolset** is for teams that still deliver UAE floor plans and renovation drawings in the AutoCAD world—but want walls, doors, spaces and schedules instead of raw lines. Included with AutoCAD subscriptions, ACA speeds villa GAs, fit-out plans and “existing / demo / new” sets without forcing a full Revit migration on day one.
 
 This tutorial shows when ACA wins, how to structure wall styles and renovation display, and how it connects to layer standards, annotative scaling and eventual BIM/IFC needs under Dubai’s evolving rules.
@@ -124,6 +123,6 @@ Use ACA when the team is AutoCAD-native and deliverables are 2D-heavy floor plan
 
 ACA has IFC-related capabilities; for authority-grade openBIM, validate exports carefully and compare against a Revit/Archicad BIM workflow when the BEP demands richer model data.
 
-Need UAE floor plans or renovation drafting? [https://d3ddd.com](https://d3ddd.com/) · [info@d3ddd.com](mailto:info@d3ddd.com).
+Need UAE floor plans or renovation drafting? [https://d3ddd.com](/) · [info@d3ddd.com](mailto:info@d3ddd.com).
 
 Originally published on [ShoaibSite](https://shoaibsite.blogspot.com/2026/10/blog-post_954.html).
