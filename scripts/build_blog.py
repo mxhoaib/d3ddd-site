@@ -67,11 +67,13 @@ def nav(prefix: str, current: str = "") -> str:
         (f"{prefix}blog/", "Blog", "blog"),
         (f"{prefix}about.html", "About", "about"),
         (f"{prefix}contact.html", "Contact", "contact"),
+        (f"{prefix}#hire", "Hire / Buy", "hire"),
     ]
     links = []
     for href, label, key in items:
         cur = ' aria-current="page"' if key == current else ""
-        links.append(f'<a href="{href}"{cur}>{label}</a>')
+        pill = ' class="pill"' if key == "hire" else ""
+        links.append(f'<a href="{href}"{pill}{cur}>{label}</a>')
     links.append(f'<a class="lang" href="{prefix}ar/" hreflang="ar" lang="ar">العربية</a>')
     return "".join(links)
 

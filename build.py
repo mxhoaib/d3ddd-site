@@ -68,13 +68,13 @@ def faq_html(faqs, title, eyebrow):
 
 # ---------------------------------------------------------------- language strings
 T = {
- "en": dict(dir="ltr", locale="en_AE", P="", nav=[("index.html","Home"),("services/","Services"),("projects/","Projects"),("marble.html","Marble Shop Drawings"),("website-design.html","Website Design"),("blog/","Blog"),("about.html","About"),("contact.html","Contact")],
+ "en": dict(dir="ltr", locale="en_AE", P="", nav=[("index.html","Home"),("services/","Services"),("projects/","Projects"),("marble.html","Marble Shop Drawings"),("website-design.html","Website Design"),("blog/","Blog"),("about.html","About"),("contact.html","Contact"),("#hire","Hire / Buy")],
    login="Client Login", menu="Open menu", skip="Skip to content", switch="العربية",
    tagline="Marble & stone shop drawings, AutoCAD drafting, 3D rendering and contractor websites in Dubai, Abu Dhabi, Sharjah and across the UAE.",
    f_services="Services", f_company="Company", f_contact="Contact", portal="Client portal", rights="All rights reserved.", home="Home",
    cta_eye="Let’s work together", cta_h="Your vision. Our precision.", cta_p="Send your drawings, sketches, dimensions or project requirements for a quote — in English or Arabic.", cta_wa="Email us", cta_form="Send an enquiry",
    fonts="family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@1,500&family=Tajawal:wght@500&display=swap"),
- "ar": dict(dir="rtl", locale="ar_AE", P="../", nav=[("index.html","الرئيسية"),("services/","الخدمات"),("projects/","المشاريع"),("marble.html","رسومات الرخام"),("website-design.html","تصميم المواقع"),("blog/","المدونة"),("about.html","من نحن"),("contact.html","تواصل معنا")],
+ "ar": dict(dir="rtl", locale="ar_AE", P="../", nav=[("index.html","الرئيسية"),("services/","الخدمات"),("projects/","المشاريع"),("marble.html","رسومات الرخام"),("website-design.html","تصميم المواقع"),("blog/","المدونة"),("about.html","من نحن"),("contact.html","تواصل معنا"),("#hire","وظّف / اشترِ")],
    login="بوابة العملاء", menu="فتح القائمة", skip="انتقل إلى المحتوى", switch="English",
    tagline="رسومات تنفيذية للرخام والحجر، مخططات أوتوكاد، تصميم ثلاثي الأبعاد ومواقع إلكترونية للمقاولين في دبي وأبوظبي والشارقة وجميع أنحاء الإمارات.",
    f_services="الخدمات", f_company="الشركة", f_contact="التواصل", portal="بوابة العملاء", rights="جميع الحقوق محفوظة.", home="الرئيسية",
@@ -124,6 +124,18 @@ def head(lang, fn, title, desc, ld_nodes, noindex=False, bilingual=True, preload
 def nav_href(lang, fn, h):
     if h == "index.html":
         return href(lang, fn, "")
+    if h == "#hire":
+        home = href(lang, fn, "")
+        if lang == "ar":
+            # prefix() counts the ar/ directory as an extra level, so the
+            # computed home points at the English site. Drop one "../".
+            if home.startswith("../"):
+                home = home[3:]
+            if not home:
+                home = "./"
+        if home in ("./", ""):
+            return "#hire" if fn in ("", "index.html") else "./#hire"
+        return home + "#hire"
     return href(lang, fn, h)
 
 GOAT = '<script data-goatcounter="https://d3dddsites.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
@@ -135,7 +147,8 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
     for h, n in t["nav"]:
         current = (fn == h) or (h.endswith("/") and (fn == h + "index.html" or fn.startswith(h)))
         cur = " aria-current=page" if current else ""
-        nav_parts.append('<a href="%s"%s>%s</a>' % (nav_href(lang, fn, h), cur, n))
+        pill = ' class="pill"' if h == "#hire" else ""
+        nav_parts.append('<a href="%s"%s%s>%s</a>' % (nav_href(lang, fn, h), pill, cur, n))
     nav = "".join(nav_parts)
     other = "ar" if lang == "en" else "en"
     if bilingual:
