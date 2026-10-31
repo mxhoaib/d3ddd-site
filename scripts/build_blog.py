@@ -91,14 +91,16 @@ def footer(prefix: str) -> str:
 <div><h2>Contact</h2><a href="{prefix}contact.html">Send an enquiry</a><a href="mailto:{EMAIL}">{EMAIL}</a><a href="{prefix}blog/feed.xml">RSS</a><span>Dubai, United Arab Emirates</span></div></div>
 <div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. All rights reserved.</div></footer>'''
 
-def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: list, og_type: str = "website", image: str | None = None, current: str = "blog") -> str:
+def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: list, og_type: str = "website", image: str | None = None, current: str = "blog", link_canonical: str | None = None) -> str:
     img = image or f"{D}/assets/img/og-image.png"
+    # Page URL stays on og:url. Republished posts may set link_canonical to the original.
+    canon_link = link_canonical or canonical
     ld_json = json.dumps({"@context": "https://schema.org", "@graph": ld}, ensure_ascii=False)
     return f'''<!DOCTYPE html>
 <html lang="en-AE" dir="ltr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="{canonical}">
+<link rel="canonical" href="{esc(canon_link)}">
 <link rel="alternate" type="application/rss+xml" title="D3DDD Blog" href="{D}/blog/feed.xml">
 <meta name="geo.region" content="AE-DU"><meta name="geo.placename" content="Dubai, United Arab Emirates">
 <meta property="og:type" content="{og_type}"><meta property="og:site_name" content="D3DDD – Dubai 3D Design &amp; Draft">
@@ -174,7 +176,7 @@ AUTHOR_BOX = (
     '3D visualisation and construction documentation for contractors and fabricators across the Gulf.</p>'
     f'<p class="socials"><a href="{IG}" rel="me noopener" target="_blank">Instagram @mxhaib</a>'
     f'<a href="{LINKEDIN}" rel="me noopener" target="_blank">LinkedIn</a>'
-    f'<a href="{FIVERR}" rel="me noopener" target="_blank">Hire on Fiverr</a>'
+    f'<a href="{FIVERR}" rel="me noopener" target="_blank">Fiverr mxhoaib</a>'
     '<a href="../../contact.html">Work with D3DDD →</a></p></div></aside>'
 )
 
@@ -285,6 +287,7 @@ def build_article(p: dict, all_posts: list[dict]) -> None:
             ld,
             og_type="article",
             image=p["image"],
+            link_canonical=p.get("canonical") or None,
         ),
     )
 
