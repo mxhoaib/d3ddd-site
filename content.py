@@ -5,6 +5,28 @@ def build_pages(g):
     out = {}
     THEMES=[('carpentry-joinery', 'Carpentry & Joinery', 'النجارة والأعمال الخشبية'), ('marble-stone', 'Marble & Stone', 'الرخام والحجر'), ('fitout-interiors', 'Fit-out & Interiors', 'التشطيبات الداخلية'), ('contracting-construction', 'Contracting & Construction', 'المقاولات والبناء'), ('engineering-consultants', 'Engineering Consultants', 'الاستشارات الهندسية'), ('trading', 'Trading', 'التجارة'), ('interior-designers', 'Interior Designers', 'مصممو الديكور الداخلي')]
     PP='https://paypal.me/imshoi'
+    FIVERR='https://www.fiverr.com/mxhoaib'
+    # No Gumroad URL exists in this repo. Do not invent one.
+    GUMROAD='#gumroad-link-needed'
+    def hire(lang):
+        en=lang=="en"
+        eye="Hire / Buy" if en else "وظّف / اشترِ"
+        heading="Pay for shop drawings &amp; a 3D render" if en else "ادفع مقابل الرسومات التنفيذية وتصميم ثلاثي الأبعاد"
+        lead=("Two fixed offers you can pay for now. Payment terms: <span dir=\"ltr\">50% upfront</span>." if en else "عرضان بسعر ثابت يمكن دفعهما الآن. شروط الدفع: <span dir=\"ltr\">50% upfront</span>.")
+        fiverr_label="Hire on Fiverr" if en else "وظّف عبر Fiverr"
+        gumroad_label="Buy on Gumroad" if en else "اشترِ عبر Gumroad"
+        pending=("Gumroad shop link is a placeholder until the real URL is added." if en else "رابط متجر Gumroad مؤقت إلى أن يُضاف الرابط الحقيقي.")
+        return f'''<section class="section alt" id="hire" aria-labelledby="hire-h"><div class="wrap"><p class="eyebrow">{eye}</p><h2 id="hire-h">{heading}</h2>
+<p style="color:var(--muted);max-width:720px">{lead}</p>
+<div class="grid g2" style="margin-top:28px">
+<div class="card tier featured"><div class="b"><p class="eyebrow">01</p><h3 dir="ltr">Shop drawing pack — 1,200 AED</h3><p dir="ltr">50% upfront</p></div></div>
+<div class="card tier"><div class="b"><p class="eyebrow">02</p><h3 dir="ltr">Single 3D render — 650 AED</h3><p dir="ltr">50% upfront</p></div></div>
+</div>
+<div class="actions" style="margin-top:22px"><a class="btn" href="{FIVERR}" target="_blank" rel="noopener">{fiverr_label}</a>
+<!-- TODO: replace #gumroad-link-needed with the real Gumroad shop URL before merge -->
+<a class="btn ghost" href="{GUMROAD}">{gumroad_label}</a></div>
+<p class="notice" style="margin-top:16px">{pending}</p>
+</div></section>'''
     def demos(lang):
         en=lang=="en"
         cards="".join(f'<a class="card" href="https://mxhoaib.github.io/d3ddd-demos/{k}/" target="_blank" rel="noopener"><div class="b"><span class="num">{"DEMO" if en else "نموذج"} {i+1:02d}</span><h3>{e if en else a}</h3><p>{"View live demo theme ↗" if en else "شاهد النموذج المباشر ↗"}</p></div></a>' for i,(k,e,a) in enumerate(THEMES))
@@ -53,6 +75,7 @@ def build_pages(g):
 <p class="lead">Architectural drafting, designing, estimation, 3D visualization and website development for contractors, fabricators, consultants and designers across the UAE.</p>
 <div class="actions"><a class="btn" href="contact.html">Request a quote →</a><a class="btn ghost" href="services/">Explore services</a></div></div>
 <figure>{img(P,"hero-marble-kitchen","Isometric line drawing of a marble kitchen island with waterfall edge, pendant lights and dimension lines",True,520,420)}</figure></section>
+{hire("en")}
 <section class="section" aria-labelledby="svc-h"><div class="wrap"><div class="split"><div><p class="eyebrow">Design • Detail • Deliver</p><h2 id="svc-h">Marble shop drawings, AutoCAD drafting &amp; 3D rendering — one <em>UAE studio.</em></h2></div>
 <div><p>D3DDD combines technical drafting with visual design and real-world marble and fit-out knowledge. The result is documentation that looks refined and works on site — from a single vanity detail to a complete interior visualization package.</p></div></div>
 <div class="grid g3" style="margin-top:50px">
@@ -160,6 +183,7 @@ def build_pages(g):
 <p class="lead">رسومات الرخام والحجر التنفيذية، مخططات أوتوكاد، رسومات أعمال التشطيبات الداخلية (فيت آوت) وتصميم ثلاثي الأبعاد للمقاولين ومصانع الرخام والاستشاريين والمصممين في جميع أنحاء الإمارات.</p>
 <div class="actions"><a class="btn" href="contact.html">اطلب عرض سعر ←</a><a class="btn ghost" href="services/">تعرّف على خدماتنا</a></div></div>
 <figure>{img(P,"hero-marble-kitchen","رسم خطي أيزومتري لجزيرة مطبخ من الرخام مع إنارة معلّقة وخطوط أبعاد",True,520,420)}</figure></section>
+{hire("ar")}
 <section class="section" aria-labelledby="svc-h"><div class="wrap"><div class="split"><div><p class="eyebrow">تصميم • تفاصيل • تسليم</p><h2 id="svc-h">رسومات الرخام ومخططات أوتوكاد والتصميم ثلاثي الأبعاد — استوديو <em>واحد</em> في الإمارات.</h2></div>
 <div><p>يجمع D3DDD بين الرسم الهندسي الفني والتصميم البصري والخبرة العملية في أعمال الرخام والتشطيبات، لنقدّم مخططات أنيقة وعملية في الموقع — من تفصيلة مغسلة واحدة إلى مشروع تصميم داخلي متكامل.</p></div></div>
 <div class="grid g3" style="margin-top:50px">
