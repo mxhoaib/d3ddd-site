@@ -17,6 +17,7 @@ description: "…"
 image: /assets/img/blog/my-og.jpg
 image_alt: "…"
 image_credit: "…"
+canonical: "https://example.com/original"  # optional; sets link rel=canonical
 ---
 ```
 
