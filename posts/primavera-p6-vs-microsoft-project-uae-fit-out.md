@@ -34,10 +34,10 @@ This decision matrix helps planners, PMPs and drafting-studio owners pick the ri
 
 ## How schedules meet drawings
 
-Build a WBS that mirrors deliverables—see [WBS for construction projects](https://shoaibsite.blogspot.com/2026/10/wbs-construction-projects-guide.html) and our MSP-focused [Microsoft Project construction schedule](https://shoaibsite.blogspot.com/2026/10/microsoft-project-construction-schedule.html) guide. Tie activities to shop-drawing approval gates from [Dubai shop drawing approval](https://shoaibsite.blogspot.com/2026/10/shop-drawing-approval-process-dubai.html) (cross-batch link via process knowledge) and fit-out packages.
+Build a WBS that mirrors deliverables—see [WBS for construction projects](https://shoaibsite.blogspot.com/2026/10/wbs-construction-projects-guide.html) and our MSP-focused [Microsoft Project construction schedule](https://shoaibsite.blogspot.com/2026/10/microsoft-project-construction-schedule.html) guide. Tie activities to shop-drawing approval gates from [Dubai shop drawing approval](https://shoaibsite.blogspot.com/2026/10/shop-drawing-approval-process-dubai.html) and fit-out packages.
 
 - SD submission / consultant review / resubmission as explicit tasks.
-- Long-lead stone and joinery linked to nesting completion—see [marble slab nesting](https://shoaibsite.blogspot.com/2026/10/marble-slab-nesting-cnc-dxf-shop-drawings.html).
+- Long-lead stone and joinery linked to nesting completion—see [marble slab nesting](/blog/slab-nesting-cutting-lists-gulf/).
 - Authority milestones aligned to [Build in Dubai package tips](/blog/build-in-dubai-drawing-package-tips/) and BIM drops when mandated.
 
 ## EVM, risk and PMP practice

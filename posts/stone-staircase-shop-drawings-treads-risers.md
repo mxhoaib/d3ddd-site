@@ -47,7 +47,7 @@ Code and accessibility context: [Dubai Municipality](https://www.dm.gov.ae/) and
 
 ## Fabrication handoff
 
-After approval, nest treads and risers with vein control using [marble slab nesting and CNC DXF](https://shoaibsite.blogspot.com/2026/10/marble-slab-nesting-cnc-dxf-shop-drawings.html).
+After approval, nest treads and risers with vein control using [marble slab nesting and CNC DXF](/blog/slab-nesting-cutting-lists-gulf/).
 
 ## Field measure protocol before cutting stone
 

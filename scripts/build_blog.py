@@ -105,7 +105,7 @@ def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: lis
 <meta name="geo.region" content="AE-DU"><meta name="geo.placename" content="Dubai, United Arab Emirates">
 <meta property="og:type" content="{og_type}"><meta property="og:site_name" content="D3DDD – Dubai 3D Design &amp; Draft">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
-<meta property="og:url" content="{esc(social_url)}"><meta property="og:locale" content="en_AE">
+<meta property="og:url" content="{canonical}"><meta property="og:locale" content="en_AE">
 <meta property="og:image" content="{img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{img}">
@@ -281,7 +281,7 @@ def build_article(p: dict, all_posts: list[dict]) -> None:
         shell(
             f'{p["title"]} | D3DDD Blog',
             p["description"],
-            p.get("canonical") or p["url"],
+            p["url"],
             body,
             "../../",
             ld,
