@@ -82,7 +82,7 @@ T = {
    fonts="family=Tajawal:wght@400;700&family=DM+Sans:wght@400;600;700&display=swap"),
 }
 
-def head(lang, fn, title, desc, ld_nodes, noindex=False, bilingual=True, preload=None):
+def head(lang, fn, title, desc, ld_nodes, noindex=False, bilingual=True, preload=None, og_image=None, extra_head=""):
     t = T[lang]
     P = prefix(lang, fn)
     canon = url(lang, fn)
@@ -100,6 +100,10 @@ def head(lang, fn, title, desc, ld_nodes, noindex=False, bilingual=True, preload
         pre = '<link rel="preload" as="image" href="%sassets/img/drawings/%s.svg" fetchpriority="high">' % (P, preload)
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large"
     lang_attr = "ar-AE" if lang == "ar" else "en-AE"
+    # og_image: optional (absolute_url, width, height, alt); default is the site-wide OG image.
+    og_src, og_w, og_h, og_a = og_image or (D + "assets/img/og-image.png", 1200, 630, "D3DDD – architectural line drawing of a marble kitchen island")
+    og_tags = ('<meta property="og:image" content="%s"><meta property="og:image:width" content="%s"><meta property="og:image:height" content="%s"><meta property="og:image:alt" content="%s">'
+               % (og_src, og_w, og_h, og_a))
     return (
         '<!DOCTYPE html>\n'
         '<html lang="%s" dir="%s"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">\n'
@@ -107,18 +111,18 @@ def head(lang, fn, title, desc, ld_nodes, noindex=False, bilingual=True, preload
         '<meta name="robots" content="%s">\n'
         '<link rel="canonical" href="%s">%s\n'
         '<meta name="geo.region" content="AE-DU"><meta name="geo.placename" content="Dubai, United Arab Emirates"><meta name="geo.position" content="25.2048;55.2708"><meta name="ICBM" content="25.2048, 55.2708">\n'
-        '<meta property="og:type" content="website"><meta property="og:site_name" content="D3DDD – Dubai 3D Design &amp; Draft"><meta property="og:title" content="%s"><meta property="og:description" content="%s"><meta property="og:url" content="%s"><meta property="og:locale" content="%s"><meta property="og:locale:alternate" content="%s"><meta property="og:image" content="%sassets/img/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="D3DDD – architectural line drawing of a marble kitchen island">\n'
-        '<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="%s"><meta name="twitter:description" content="%s"><meta name="twitter:image" content="%sassets/img/og-image.png">\n'
+        '<meta property="og:type" content="website"><meta property="og:site_name" content="D3DDD – Dubai 3D Design &amp; Draft"><meta property="og:title" content="%s"><meta property="og:description" content="%s"><meta property="og:url" content="%s"><meta property="og:locale" content="%s"><meta property="og:locale:alternate" content="%s">%s\n'
+        '<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="%s"><meta name="twitter:description" content="%s"><meta name="twitter:image" content="%s">\n'
         '<meta name="theme-color" content="#0e0e0c"><meta name="format-detection" content="telephone=no"><link rel="icon" href="%sassets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="%sassets/img/favicon.svg">\n'
         '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-        '<link rel="preload" href="%sassets/style.css" as="style"><link rel="stylesheet" href="%sassets/style.css">%s\n'
+        '<link rel="preload" href="%sassets/style.css" as="style"><link rel="stylesheet" href="%sassets/style.css">%s%s\n'
         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?%s" media="print" onload="this.media=\'all\'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?%s"></noscript>\n'
         '<script type="application/ld+json">%s</script>\n'
         '<meta name="google-site-verification" content="5lkd8Q8BFpICgD4ixvCvKxc2GmHxE7pH7XFaXVRZG-s" /></head>'
     ) % (
         lang_attr, t["dir"], title, desc, robots, canon, alts,
-        title, desc, canon, t["locale"], og_alt, D,
-        title, desc, D, P, P, P, P, pre, t["fonts"], t["fonts"], ld,
+        title, desc, canon, t["locale"], og_alt, og_tags,
+        title, desc, og_src, P, P, P, P, pre, extra_head, t["fonts"], t["fonts"], ld,
     )
 
 def nav_href(lang, fn, h):
@@ -128,7 +132,7 @@ def nav_href(lang, fn, h):
 
 GOAT = '<script data-goatcounter="https://d3dddsites.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
 
-def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=True, scripts="", preload=None):
+def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=True, scripts="", preload=None, og_image=None, extra_head="", switch=None):
     t = T[lang]
     P = prefix(lang, fn)
     nav_parts = []
@@ -143,20 +147,22 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
             if fn == "index.html":
                 sw_href = "ar/"
             elif fn.endswith("/index.html"):
-                sw_href = "ar/" + fn[: -len("index.html")]
+                sw_href = "/ar/" + fn[: -len("index.html")]
             else:
                 sw_href = "ar/" + fn
         else:
             if fn == "index.html":
                 sw_href = "../"
             elif fn.endswith("/index.html"):
-                sw_href = "../" + fn[: -len("index.html")]
+                sw_href = "/" + fn[: -len("index.html")]
             else:
                 sw_href = "../" + fn
     else:
         sw_href = "ar/" if lang == "en" else "../"
     if lang == "en" and not bilingual and fn in ("login.html", "signup.html", "dashboard.html"):
         sw_href = "ar/"
+    if switch:
+        sw_href = switch
     blog_href = href(lang, fn, "blog/")
     fs = '<a href="%s">%s</a>' % (href(lang, fn, "services/"), "All services" if lang == "en" else "كل الخدمات")
     for path, label_en, label_ar in SERVICE_FOOTER:
@@ -180,7 +186,7 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
         body = body.replace('href="marble.html"', 'href="%s"' % href(lang, fn, "marble.html"))
         body = body.replace('href="website-design.html"', 'href="%s"' % href(lang, fn, "website-design.html"))
         body = body.replace('href="./"', 'href="%s"' % home_href)
-    return head(lang, fn, title, desc, list(ld_nodes), noindex, bilingual, preload) + (
+    return head(lang, fn, title, desc, list(ld_nodes), noindex, bilingual, preload, og_image, extra_head) + (
         '<body>\n'
         '<a class="skip" href="#main">%s</a>\n'
         '%s\n'
@@ -219,6 +225,8 @@ globals()["href"] = href
 
 out = build_pages(globals())
 out.update(build_service_pages(globals()))
+from project_pages import build_project_pages, PROJECTS  # portfolio: /projects/ grid, project pages, related blocks
+out.update(build_project_pages(globals(), out))
 
 # Legacy services.html -> /services/ redirect
 for lang in ("en", "ar"):
@@ -259,6 +267,8 @@ for fn in BILINGUAL_PAGES:
             '<xhtml:link rel="alternate" hreflang="x-default" href="%s"/></url>'
             % (url(lang, fn), pr, url("en", fn), url("ar", fn), url("en", fn))
         )
+for pr in PROJECTS:  # project pages are English only (no hreflang alternates)
+    x.append('  <url><loc>%s</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>' % url("en", "projects/%s/" % pr["slug"]))
 x.append("</urlset>")
 open("sitemap.xml", "w", encoding="utf-8").write("\n".join(x) + "\n")
 open("robots.txt", "w", encoding="utf-8").write(
