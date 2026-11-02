@@ -1,5 +1,6 @@
 # D3DDD static site generator (English + Arabic). Edit content here, then run: python3 build.py
 import json, os
+from contact_config import whatsapp_html
 D = "https://d3ddd.com/"
 EMAIL = "info@d3ddd.com"
 BILINGUAL = ["index.html", "services.html", "marble.html", "website-design.html", "about.html", "contact.html"]
@@ -210,15 +211,15 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
         '<nav class="nav" id="nav" aria-label="Main">%s<a class="lang" href="%s" hreflang="%s" lang="%s">%s</a></nav></header>\n'
         '<main id="main">%s</main>\n'
         '<footer><div class="grid"><div><div class="logo"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></div><p style="margin-top:16px;max-width:340px">%s</p>\n'
-        '<p style="margin-top:12px"><a href="mailto:%s">%s</a> · <a href="%s">d3ddd.com</a></p></div>\n'
+        '<p style="margin-top:12px"><a href="mailto:%s">%s</a> · %s · <a href="%s">d3ddd.com</a></p></div>\n'
         '<div><h2>%s</h2>%s</div><div><h2>%s</h2>%s</div>\n'
-        '<div><h2>%s</h2><a href="%s">%s</a><a href="mailto:%s">%s</a><a href="%s">%s</a><span>%s</span></div></div>\n'
+        '<div><h2>%s</h2><a href="%s">%s</a><a href="mailto:%s">%s</a>%s<a href="%s">%s</a><span>%s</span></div></div>\n'
         '<div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. %s</div></footer>\n'
         '<script src="%sassets/config.js" defer></script><script src="%sassets/site.js" defer></script>%s%s</body></html>'
     ) % (
         t["skip"], top, home_href, t["menu"], nav, sw_href, other, other, t["switch"], body,
-        t["tagline"], EMAIL, EMAIL, D, t["f_services"], fs, t["f_company"], fc,
-        t["f_contact"], contact_href, t["cta_form"], EMAIL, EMAIL, blog_href, blog_label, loc,
+        t["tagline"], EMAIL, EMAIL, whatsapp_html(lang), D, t["f_services"], fs, t["f_company"], fc,
+        t["f_contact"], contact_href, t["cta_form"], EMAIL, EMAIL, whatsapp_html(lang), blog_href, blog_label, loc,
         t["rights"], P, P, scripts, GOAT,
     )
 

@@ -1,4 +1,5 @@
 # Page content for English and Arabic. Used by build.py.
+from contact_config import whatsapp_html
 def build_pages(g):
     shell, img, cta, page_hero, faq_html, faq_ld = g["shell"], g["img"], g["cta"], g["page_hero"], g["faq_html"], g["faq_ld"]
     # Homepage hero visual. Markup only — shell() adds the lazy module + preconnect on index.html.
@@ -174,7 +175,7 @@ def build_pages(g):
 <label for="m">Project details *</label><textarea id="m" name="message" required placeholder="Scope, location (e.g. Dubai, Abu Dhabi), deadline…"></textarea>
 <p class="notice" style="margin-top:14px">Sending opens your email app with the details filled in. Attach drawings to that email before sending, or email us directly at <a href="mailto:info@d3ddd.com"><u>info@d3ddd.com</u></a>.</p>
 <div class="actions" style="margin-top:18px"><button class="btn" type="submit">Send enquiry by email</button></div></form></div>
-<div><h2 style="font-size:26px">Direct contact</h2><ul class="check"><li><a href="mailto:info@d3ddd.com">info@d3ddd.com</a></li><li>Dubai, United Arab Emirates — serving the whole UAE</li></ul></div></div></section>'''
+<div><h2 style="font-size:26px">Direct contact</h2><ul class="check"><li><a href="mailto:info@d3ddd.com">info@d3ddd.com</a></li><li>{whatsapp_html("en")}</li><li>Dubai, United Arab Emirates — serving the whole UAE</li></ul></div></div></section>'''
     out[(L,"contact.html")] = shell(L,"contact.html","Contact D3DDD | Shop Drawings & 3D Rendering Quote Dubai & UAE",
         "Get a quote for marble shop drawings, AutoCAD drafting, fit-out drawings, 3D rendering or a contractor website in Dubai and the UAE.",body,[bc(L,"contact.html",name),{"@type":"ContactPage","url":url(L,"contact.html"),"about":{"@id":g["ORG_ID"]}}])
     out[(L,"thank-you.html")] = shell(L,"thank-you.html","Thank you | D3DDD","Your enquiry has been received.",
@@ -286,7 +287,7 @@ def build_pages(g):
 <label for="m">تفاصيل المشروع *</label><textarea id="m" name="message" required placeholder="نطاق العمل، الموقع (مثلاً دبي أو أبوظبي)، الموعد النهائي…"></textarea>
 <p class="notice" style="margin-top:14px">عند الإرسال سيفتح تطبيق البريد لديك مع تعبئة التفاصيل. أرفق المخططات بالرسالة قبل إرسالها، أو راسلنا مباشرة على <a href="mailto:info@d3ddd.com"><u>info@d3ddd.com</u></a>.</p>
 <div class="actions" style="margin-top:18px"><button class="btn" type="submit">أرسل الاستفسار عبر البريد</button></div></form></div>
-<div><h2 style="font-size:26px">تواصل مباشر</h2><ul class="check"><li><a href="mailto:info@d3ddd.com">info@d3ddd.com</a></li><li>دبي، الإمارات العربية المتحدة — نخدم جميع الإمارات</li></ul></div></div></section>'''
+<div><h2 style="font-size:26px">تواصل مباشر</h2><ul class="check"><li><a href="mailto:info@d3ddd.com">info@d3ddd.com</a></li><li>{whatsapp_html("ar")}</li><li>دبي، الإمارات العربية المتحدة — نخدم جميع الإمارات</li></ul></div></div></section>'''
     out[(L,"contact.html")] = shell(L,"contact.html","تواصل مع D3DDD | عرض سعر رسومات تنفيذية وتصميم ثلاثي الأبعاد دبي والإمارات",
         "اطلب عرض سعر لرسومات الرخام التنفيذية أو مخططات أوتوكاد أو رسومات التشطيبات أو التصميم ثلاثي الأبعاد أو موقع للمقاولين في دبي والإمارات.",body,[bc(L,"contact.html",name),{"@type":"ContactPage","url":url(L,"contact.html"),"about":{"@id":g["ORG_ID"]}}])
     out[(L,"thank-you.html")] = shell(L,"thank-you.html","شكراً لك | D3DDD","تم استلام استفسارك.",
