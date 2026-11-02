@@ -1,6 +1,9 @@
 # Page content for English and Arabic. Used by build.py.
 def build_pages(g):
     shell, img, cta, page_hero, faq_html, faq_ld = g["shell"], g["img"], g["cta"], g["page_hero"], g["faq_html"], g["faq_ld"]
+    # Homepage hero visual. Markup only — shell() adds the lazy module + preconnect on index.html.
+    ROOM = ('<div class="hero-3d" aria-hidden="true"><div class="fallback"></div>'
+            '<div class="room3d"><canvas id="room3d" data-scene="https://prod.spline.design/7Q6BdrThb-USp2wy/scene.splinecode"></canvas></div></div>')
     crumbs_ld, service_ld, url, T, WA = g["crumbs_ld"], g["service_ld"], g["url"], g["T"], None
     out = {}
     THEMES=[('carpentry-joinery', 'Carpentry & Joinery', 'النجارة والأعمال الخشبية'), ('marble-stone', 'Marble & Stone', 'الرخام والحجر'), ('fitout-interiors', 'Fit-out & Interiors', 'التشطيبات الداخلية'), ('contracting-construction', 'Contracting & Construction', 'المقاولات والبناء'), ('engineering-consultants', 'Engineering Consultants', 'الاستشارات الهندسية'), ('trading', 'Trading', 'التجارة'), ('interior-designers', 'Interior Designers', 'مصممو الديكور الداخلي')]
@@ -48,11 +51,11 @@ def build_pages(g):
      ("How much does a contractor website cost?", "Our Contractor Website package is AED 2,000 for a 5-page, mobile-friendly website with WhatsApp button and enquiry form. 50% is paid upfront and the balance on completion."),
     ]
     body = f'''
-<section class="hero" aria-labelledby="h1"><div><p class="eyebrow">🇦🇪 Dubai • Abu Dhabi • Sharjah • UAE</p>
+<section class="hero" aria-labelledby="h1"><div class="hero-copy"><p class="eyebrow">🇦🇪 Dubai • Abu Dhabi • Sharjah • UAE</p>
 <h1 id="h1">Shop drawings &amp; 3D design in Dubai — ideas into <em>precise</em> spaces.</h1><span class="ar-touch" lang="ar">رسومات تنفيذية وتصميم ثلاثي الأبعاد في دبي</span>
 <p class="lead">Architectural drafting, designing, estimation, 3D visualization and website development for contractors, fabricators, consultants and designers across the UAE.</p>
 <div class="actions"><a class="btn" href="contact.html">Request a quote →</a><a class="btn ghost" href="services/">Explore services</a></div></div>
-<figure>{img(P,"hero-marble-kitchen","Isometric line drawing of a marble kitchen island with waterfall edge, pendant lights and dimension lines",True,520,420)}</figure></section>
+{ROOM}</section>
 <section class="section" aria-labelledby="svc-h"><div class="wrap"><div class="split"><div><p class="eyebrow">Design • Detail • Deliver</p><h2 id="svc-h">Marble shop drawings, AutoCAD drafting &amp; 3D rendering — one <em>UAE studio.</em></h2></div>
 <div><p>D3DDD combines technical drafting with visual design and real-world marble and fit-out knowledge. The result is documentation that looks refined and works on site — from a single vanity detail to a complete interior visualization package.</p></div></div>
 <div class="grid g3" style="margin-top:50px">
@@ -81,7 +84,7 @@ def build_pages(g):
 {packages("en")}{faq_html(faq_en,"Frequently asked questions","FAQ")}{cta(L)}'''
     out[(L,"index.html")] = shell(L,"index.html","Shop Drawings Dubai | Marble Shop Drawings, AutoCAD Drafting & 3D Rendering UAE – D3DDD",
         "D3DDD: marble & stone shop drawings, AutoCAD drafting, fit-out drawings and 3D rendering in Dubai, Abu Dhabi & Sharjah. Request a fast quote online.",
-        body,[faq_ld(faq_en),{"@type":"WebSite","@id":url(L,"index.html")+"#website","url":url(L,"index.html"),"name":"D3DDD","inLanguage":"en-AE","publisher":{"@id":g["ORG_ID"]}}],preload="hero-marble-kitchen")
+        body,[faq_ld(faq_en),{"@type":"WebSite","@id":url(L,"index.html")+"#website","url":url(L,"index.html"),"name":"D3DDD","inLanguage":"en-AE","publisher":{"@id":g["ORG_ID"]}}])
 
     name="Services"
     body = page_hero(L,"Services — Dubai &amp; UAE","Shop drawings, AutoCAD drafting, 3D rendering &amp; <em>website design</em> in the UAE","Practical documentation and visuals for interiors, fit-outs and premium spaces in Dubai, Abu Dhabi, Sharjah and across the Emirates. <span lang=\"ar\" class=\"ar-touch\">خدماتنا في جميع أنحاء الإمارات</span>",name) + f'''
@@ -155,11 +158,11 @@ def build_pages(g):
      ("كم تكلفة موقع إلكتروني للمقاول؟", "باقة موقع المقاولين بسعر 2,000 درهم إماراتي لموقع من 5 صفحات متوافق مع الجوال مع زر واتساب ونموذج استفسار، تُدفع 50% مقدماً والباقي عند التسليم."),
     ]
     body = f'''
-<section class="hero" aria-labelledby="h1"><div><p class="eyebrow">🇦🇪 دبي • أبوظبي • الشارقة • الإمارات</p>
+<section class="hero" aria-labelledby="h1"><div class="hero-copy"><p class="eyebrow">🇦🇪 دبي • أبوظبي • الشارقة • الإمارات</p>
 <h1 id="h1">رسومات تنفيذية وتصميم ثلاثي الأبعاد في دبي — نحوّل الأفكار إلى مساحات <em>دقيقة</em>.</h1>
 <p class="lead">رسومات الرخام والحجر التنفيذية، مخططات أوتوكاد، رسومات أعمال التشطيبات الداخلية (فيت آوت) وتصميم ثلاثي الأبعاد للمقاولين ومصانع الرخام والاستشاريين والمصممين في جميع أنحاء الإمارات.</p>
 <div class="actions"><a class="btn" href="contact.html">اطلب عرض سعر ←</a><a class="btn ghost" href="services/">تعرّف على خدماتنا</a></div></div>
-<figure>{img(P,"hero-marble-kitchen","رسم خطي أيزومتري لجزيرة مطبخ من الرخام مع إنارة معلّقة وخطوط أبعاد",True,520,420)}</figure></section>
+{ROOM}</section>
 <section class="section" aria-labelledby="svc-h"><div class="wrap"><div class="split"><div><p class="eyebrow">تصميم • تفاصيل • تسليم</p><h2 id="svc-h">رسومات الرخام ومخططات أوتوكاد والتصميم ثلاثي الأبعاد — استوديو <em>واحد</em> في الإمارات.</h2></div>
 <div><p>يجمع D3DDD بين الرسم الهندسي الفني والتصميم البصري والخبرة العملية في أعمال الرخام والتشطيبات، لنقدّم مخططات أنيقة وعملية في الموقع — من تفصيلة مغسلة واحدة إلى مشروع تصميم داخلي متكامل.</p></div></div>
 <div class="grid g3" style="margin-top:50px">
@@ -188,7 +191,7 @@ def build_pages(g):
 {packages("ar")}{faq_html(faq_ar,"الأسئلة الشائعة","أسئلة وأجوبة")}{cta(L)}'''
     out[(L,"index.html")] = shell(L,"index.html","رسومات تنفيذية دبي | رسومات الرخام، مخططات أوتوكاد وتصميم ثلاثي الأبعاد في الإمارات – D3DDD",
         "D3DDD: رسومات تنفيذية للرخام والحجر، مخططات أوتوكاد، رسومات التشطيبات وتصميم ثلاثي الأبعاد في دبي وأبوظبي والشارقة. اطلب عرض سعر سريع عبر الإنترنت.",
-        body,[faq_ld(faq_ar),{"@type":"WebSite","@id":url(L,"index.html")+"#website","url":url(L,"index.html"),"name":"D3DDD","inLanguage":"ar-AE","publisher":{"@id":g["ORG_ID"]}}],preload="hero-marble-kitchen")
+        body,[faq_ld(faq_ar),{"@type":"WebSite","@id":url(L,"index.html")+"#website","url":url(L,"index.html"),"name":"D3DDD","inLanguage":"ar-AE","publisher":{"@id":g["ORG_ID"]}}])
 
     name="الخدمات"
     body = page_hero(L,"الخدمات — دبي والإمارات","رسومات تنفيذية ومخططات أوتوكاد وتصميم ثلاثي الأبعاد و<em>تصميم مواقع</em> في الإمارات","مخططات عملية وتصاميم بصرية للمساحات الداخلية وأعمال التشطيبات في دبي وأبوظبي والشارقة وجميع الإمارات.",name) + f'''
