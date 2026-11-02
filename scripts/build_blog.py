@@ -79,7 +79,7 @@ def nav(prefix: str, current: str = "") -> str:
 def footer(prefix: str) -> str:
     return f'''<footer><div class="grid"><div><div class="logo"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></div>
 <p style="margin-top:16px;max-width:340px">Architectural drafting, designing, estimation, 3D visualization and websites in Dubai, Abu Dhabi, Sharjah and across the UAE.</p>
-<p style="margin-top:12px"><a href="mailto:{EMAIL}">{EMAIL}</a> · {whatsapp_html("en")} · <a href="{D}/">d3ddd.com</a></p></div>
+<p style="margin-top:12px"><a href="mailto:{EMAIL}">{EMAIL}</a>{whatsapp_html("en")} · <a href="{D}/">d3ddd.com</a></p></div>
 <div><h2>Services</h2>
 <a href="{prefix}services/">All services</a>
 <a href="{prefix}services/architectural-drafting/">Architectural drafting</a>

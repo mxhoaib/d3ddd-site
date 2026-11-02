@@ -211,7 +211,7 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
         '<nav class="nav" id="nav" aria-label="Main">%s<a class="lang" href="%s" hreflang="%s" lang="%s">%s</a></nav></header>\n'
         '<main id="main">%s</main>\n'
         '<footer><div class="grid"><div><div class="logo"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></div><p style="margin-top:16px;max-width:340px">%s</p>\n'
-        '<p style="margin-top:12px"><a href="mailto:%s">%s</a> · %s · <a href="%s">d3ddd.com</a></p></div>\n'
+        '<p style="margin-top:12px"><a href="mailto:%s">%s</a>%s · <a href="%s">d3ddd.com</a></p></div>\n'
         '<div><h2>%s</h2>%s</div><div><h2>%s</h2>%s</div>\n'
         '<div><h2>%s</h2><a href="%s">%s</a><a href="mailto:%s">%s</a>%s<a href="%s">%s</a><span>%s</span></div></div>\n'
         '<div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. %s</div></footer>\n'
