@@ -23,4 +23,4 @@ html[dir=rtl] .hero{background:radial-gradient(ellipse at 25% 40%,#2a241a 0%,var
 .hero::after,html[dir=rtl] .hero::after{background:linear-gradient(to top,var(--bg) 0%,rgba(14,14,12,.98) 48%,rgba(14,14,12,.94) 62%,rgba(14,14,12,.72) 72%,rgba(14,14,12,.2) 84%,transparent 94%)}
 }
 @media(max-width:768px){.room3d{pointer-events:none}}
-@media(prefers-reduced-motion:reduce){.room3d{display:none!important;transition:none}}
+@media(prefers-reduced-motion:reduce){.room3d{display:none!important;transition:none}}.wa-contact{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}.wa-ico{width:1em;height:1em;flex:none;color:var(--gold)}footer .grid>div>.wa-contact,footer p>.wa-contact{display:flex;padding:3px 0}

@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT))
 os.chdir(ROOT)
 
 import markdown
+from contact_config import whatsapp_html
 
 D = "https://d3ddd.com"
 EMAIL = "info@d3ddd.com"
@@ -78,7 +79,7 @@ def nav(prefix: str, current: str = "") -> str:
 def footer(prefix: str) -> str:
     return f'''<footer><div class="grid"><div><div class="logo"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></div>
 <p style="margin-top:16px;max-width:340px">Architectural drafting, designing, estimation, 3D visualization and websites in Dubai, Abu Dhabi, Sharjah and across the UAE.</p>
-<p style="margin-top:12px"><a href="mailto:{EMAIL}">{EMAIL}</a> · <a href="{D}/">d3ddd.com</a></p></div>
+<p style="margin-top:12px"><a href="mailto:{EMAIL}">{EMAIL}</a>{whatsapp_html("en")} · <a href="{D}/">d3ddd.com</a></p></div>
 <div><h2>Services</h2>
 <a href="{prefix}services/">All services</a>
 <a href="{prefix}services/architectural-drafting/">Architectural drafting</a>
@@ -88,7 +89,7 @@ def footer(prefix: str) -> str:
 <a href="{prefix}services/website-development-designing/">Website development</a>
 </div>
 <div><h2>Company</h2><a href="{prefix}projects/">Projects</a><a href="{prefix}about.html">About</a><a href="{prefix}blog/">Blog</a><a href="{prefix}contact.html">Contact</a></div>
-<div><h2>Contact</h2><a href="{prefix}contact.html">Send an enquiry</a><a href="mailto:{EMAIL}">{EMAIL}</a><a href="{prefix}blog/feed.xml">RSS</a><span>Dubai, United Arab Emirates</span></div></div>
+<div><h2>Contact</h2><a href="{prefix}contact.html">Send an enquiry</a><a href="mailto:{EMAIL}">{EMAIL}</a>{whatsapp_html("en")}<a href="{prefix}blog/feed.xml">RSS</a><span>Dubai, United Arab Emirates</span></div></div>
 <div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. All rights reserved.</div></footer>'''
 
 def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: list, og_type: str = "website", image: str | None = None, current: str = "blog", link_canonical: str | None = None) -> str:

@@ -1,5 +1,6 @@
 # D3DDD static site generator (English + Arabic). Edit content here, then run: python3 build.py
 import json, os
+from contact_config import whatsapp_html
 D = "https://d3ddd.com/"
 EMAIL = "info@d3ddd.com"
 BILINGUAL = ["index.html", "services.html", "marble.html", "website-design.html", "about.html", "contact.html"]
@@ -38,8 +39,8 @@ def img(P, name, alt, eager=False, w=400, h=300):
             f'{"fetchpriority=\"high\"" if eager else "loading=\"lazy\""} decoding="async">')
 
 ORG_ID = D + "#business"
-def business_ld(lang):
-    return {"@type": ["ProfessionalService", "LocalBusiness"], "@id": ORG_ID,
+def business_ld(lang, fn=""):
+    node = {"@type": ["ProfessionalService", "LocalBusiness"], "@id": ORG_ID,
             "name": "D3DDD – Dubai 3D Design & Draft", "alternateName": ["D3DDD", "دبي للتصميم والرسم ثلاثي الأبعاد"],
             "url": D, "logo": D + "assets/img/logo.svg", "image": D + "assets/img/og-image.png",
             "email": EMAIL,
@@ -49,6 +50,13 @@ def business_ld(lang):
             "knowsLanguage": ["en", "ar"],
             "contactPoint": {"@type": "ContactPoint", "email": EMAIL, "contactType": "sales", "availableLanguage": ["English", "Arabic"]},
             "sameAs": ["https://www.fiverr.com/mxhoaib", "https://www.instagram.com/mxhaib/", "https://www.linkedin.com/in/mshoaib94"], "paymentAccepted": "PayPal"}
+    # Homepage only: attach the main-services catalogue to the single business node (no duplicate org).
+    if fn == "index.html" and HOME_CATALOG.get(lang):
+        node["hasOfferCatalog"] = HOME_CATALOG[lang]
+    return node
+
+# Filled by content.py for the EN/AR homepages: {"en": OfferCatalog, "ar": OfferCatalog}
+HOME_CATALOG = {}
 
 def crumbs_ld(lang, items):
     return {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(items)]}
@@ -94,7 +102,7 @@ def head(lang, fn, title, desc, ld_nodes, noindex=False, bilingual=True, preload
             '<link rel="alternate" hreflang="x-default" href="%s">'
         ) % (url("en", fn), url("en", fn), url("ar", fn), url("ar", fn), url("en", fn))
     og_alt = "ar_AE" if lang == "en" else "en_AE"
-    ld = json.dumps({"@context": "https://schema.org", "@graph": [business_ld(lang)] + list(ld_nodes)}, ensure_ascii=False)
+    ld = json.dumps({"@context": "https://schema.org", "@graph": [business_ld(lang, fn)] + list(ld_nodes)}, ensure_ascii=False)
     pre = ""
     if preload:
         pre = '<link rel="preload" as="image" href="%sassets/img/drawings/%s.svg" fetchpriority="high">' % (P, preload)
@@ -203,15 +211,15 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
         '<nav class="nav" id="nav" aria-label="Main">%s<a class="lang" href="%s" hreflang="%s" lang="%s">%s</a></nav></header>\n'
         '<main id="main">%s</main>\n'
         '<footer><div class="grid"><div><div class="logo"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></div><p style="margin-top:16px;max-width:340px">%s</p>\n'
-        '<p style="margin-top:12px"><a href="mailto:%s">%s</a> · <a href="%s">d3ddd.com</a></p></div>\n'
+        '<p style="margin-top:12px"><a href="mailto:%s">%s</a>%s · <a href="%s">d3ddd.com</a></p></div>\n'
         '<div><h2>%s</h2>%s</div><div><h2>%s</h2>%s</div>\n'
-        '<div><h2>%s</h2><a href="%s">%s</a><a href="mailto:%s">%s</a><a href="%s">%s</a><span>%s</span></div></div>\n'
+        '<div><h2>%s</h2><a href="%s">%s</a><a href="mailto:%s">%s</a>%s<a href="%s">%s</a><span>%s</span></div></div>\n'
         '<div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. %s</div></footer>\n'
         '<script src="%sassets/config.js" defer></script><script src="%sassets/site.js" defer></script>%s%s</body></html>'
     ) % (
         t["skip"], top, home_href, t["menu"], nav, sw_href, other, other, t["switch"], body,
-        t["tagline"], EMAIL, EMAIL, D, t["f_services"], fs, t["f_company"], fc,
-        t["f_contact"], contact_href, t["cta_form"], EMAIL, EMAIL, blog_href, blog_label, loc,
+        t["tagline"], EMAIL, EMAIL, whatsapp_html(lang), D, t["f_services"], fs, t["f_company"], fc,
+        t["f_contact"], contact_href, t["cta_form"], EMAIL, EMAIL, whatsapp_html(lang), blog_href, blog_label, loc,
         t["rights"], P, P, scripts, GOAT,
     )
 
