@@ -147,14 +147,14 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
             if fn == "index.html":
                 sw_href = "ar/"
             elif fn.endswith("/index.html"):
-                sw_href = "ar/" + fn[: -len("index.html")]
+                sw_href = "/ar/" + fn[: -len("index.html")]
             else:
                 sw_href = "ar/" + fn
         else:
             if fn == "index.html":
                 sw_href = "../"
             elif fn.endswith("/index.html"):
-                sw_href = "../" + fn[: -len("index.html")]
+                sw_href = "/" + fn[: -len("index.html")]
             else:
                 sw_href = "../" + fn
     else:
