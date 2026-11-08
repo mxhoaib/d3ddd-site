@@ -385,12 +385,18 @@ def main() -> None:
     posts = load_posts()
     if not posts:
         raise SystemExit("No posts in posts/")
+    if "--arabic-only" in sys.argv:
+        from build_ar_blog import build_arabic
+        build_arabic(sys.modules[__name__], posts, include_drafts="--include-drafts" in sys.argv)
+        return
     build_index(posts)
     for p in posts:
         build_article(p, posts)
     build_categories(posts)
     build_rss(posts)
     patch_sitemap(posts)
+    from build_ar_blog import build_arabic
+    build_arabic(sys.modules[__name__], posts, include_drafts="--include-drafts" in sys.argv)
     print(f"blog: {len(posts)} posts → blog/")
 
 if __name__ == "__main__":
