@@ -33,10 +33,15 @@ def load_arabic(b, include_drafts=False):
 
 
 def alternates(b, p):
-    en = f"{b.D}/blog/{p['translation_of']}/"
-    return ''.join(f'<link rel="alternate" hreflang="{lang}" href="{url}">'
-                   for lang, url in [('ar-AE', p['url']), ('ar', p['url']),
-                                     ('en-AE', en), ('en', en), ('x-default', en)])
+    pairs = [('ar-AE', p['url']), ('ar', p['url'])]
+    twin = p.get('translation_of')
+    if twin:
+        en = f"{b.D}/blog/{twin}/"
+        pairs += [('en-AE', en), ('en', en), ('x-default', en)]
+    else:
+        # No English article exists; do not point en hreflang at another URL.
+        pairs.append(('x-default', p['url']))
+    return ''.join(f'<link rel="alternate" hreflang="{lang}" href="{url}">' for lang, url in pairs)
 
 
 def author(b):
@@ -57,7 +62,7 @@ def shell(b, title, desc, url, body, ld, p=None):
     out = out.replace('title="D3DDD Blog"', 'title="مدونة D3DDD بالعربية"')
     out = out.replace('DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500', 'Tajawal:wght@400;700&family=DM+Sans:wght@400;600;700')
     nav = ''.join(f'<a href="{href}">{label}</a>' for href, label in [('/ar/', 'الرئيسية'), ('/ar/services/', 'الخدمات'), ('/projects/', 'المشاريع'), ('/ar/marble.html', 'رسومات الرخام'), ('/ar/blog/', 'المدونة'), ('/ar/contact.html', 'تواصل معنا')])
-    en = f"/blog/{p['translation_of']}/" if p else '/blog/'
+    en = f"/blog/{p['translation_of']}/" if p and p.get('translation_of') else '/blog/'
     nav += f'<a class="lang" href="{en}" hreflang="en-AE" lang="en">English</a>'
     out = out.replace(b.nav('/', 'blog'), nav)
     foot = '''<footer><div class="grid"><div><h2>D3DDD</h2><p>رسومات تنفيذية وتفاصيل رخام وإظهار ثلاثي الأبعاد لمشاريع دبي وأبوظبي والشارقة والإمارات.</p></div><div><h2>الخدمات والمشاريع</h2><a href="/ar/marble.html">رسومات الرخام</a><a href="/projects/">المشاريع</a></div><div><h2>المدونة</h2><a href="/ar/blog/">مقالات بالعربية</a><a href="/blog/" lang="en">English blog</a><a href="/ar/blog/feed.xml">خلاصة RSS</a></div><div><h2>تواصل معنا</h2><a href="/ar/contact.html">نموذج التواصل</a><a href="https://www.instagram.com/mxhaib/" rel="me noopener" target="_blank">Instagram @mxhaib</a><a href="https://www.linkedin.com/in/mshoaib94" rel="me noopener" target="_blank">LinkedIn</a><span>دبي، الإمارات العربية المتحدة</span></div></div><div class="copy">© D3DDD. جميع الحقوق محفوظة.</div></footer>'''
@@ -75,7 +80,10 @@ def shell(b, title, desc, url, body, ld, p=None):
 
 def faq_ld(b, p):
     # Schema answers come from the visible FAQ, preventing content/schema drift.
-    section = p['body_md'].split('## أسئلة شائعة', 1)[1].split('\n## ', 1)[0]
+    match = re.search(r'^## (?:الأسئلة الشائعة|أسئلة شائعة).*$', p['body_md'], re.M)
+    if not match:
+        raise SystemExit(f"{p['slug']}: missing FAQ heading")
+    section = p['body_md'][match.end():].split('\n## ', 1)[0]
     items = []
     for question in section.split('\n### ')[1:]:
         name, answer = question.split('\n', 1)
@@ -92,21 +100,26 @@ def build_arabic(b, english_posts, include_drafts=False):
     for p in posts:
         # Count rendered prose, excluding Markdown syntax and link destinations.
         p['word_count'] = len(visible_text(p['body_html']).split())
-        en = next(x for x in english_posts if x['slug'] == p['translation_of'])
+        twin = p.get('translation_of')
+        en = next((x for x in english_posts if x['slug'] == twin), None) if twin else None
+        if twin and en is None:
+            raise SystemExit(f"{p['slug']}: translation_of {twin} has no English post")
         article = b.article_ld(p)
         article['inLanguage'] = 'ar-AE'
         article['author']['name'] = 'شعيب حسن'
         article['author']['jobTitle'] = 'مؤسس D3DDD'
-        article['translationOfWork'] = {'@type': 'Article', 'url': en['url'], 'inLanguage': 'en-AE'}
+        if en:
+            article['translationOfWork'] = {'@type': 'Article', 'url': en['url'], 'inLanguage': 'en-AE'}
         body = f'''<article class="article"><section class="page-hero"><nav class="crumbs" aria-label="مسار التنقل"><a href="/ar/">الرئيسية</a> / <a href="/ar/blog/">المدونة</a> / <a href="/ar/blog/category/{p['category']}/">{b.esc(p['category_title'])}</a></nav><p class="eyebrow">{b.esc(p['category_title'])}</p><h1>{b.esc(p['title'])}</h1><p class="meta"><time datetime="{p['date']}">{p['date']}</time> · {p['word_count']} كلمة</p>{byline}</section><section class="section"><div class="wrap article-wrap"><figure class="hero-fig"><img src="{b.esc(p['image'])}" alt="{b.esc(p['image_alt'])}" width="1600" height="1304" fetchpriority="high" decoding="async"></figure><div class="prose">{p['body_html']}</div>{box}</div></section></article>'''
         ld = [b.business_ld(), article, faq_ld(b, p), b.crumbs_ld([('الرئيسية', b.D + '/ar/'), ('المدونة', b.D + '/ar/blog/'), (p['title'], p['url'])])]
         b.write(base / p['slug'] / 'index.html', shell(b, p.get('seo_title', p['title']), p['description'], p['url'], body, ld, p))
         # Only the English sibling changes; other articles' Related lists stay intact.
-        sibling = b.BLOG_DIR / en['slug'] / 'index.html'
-        text = sibling.read_text()
-        text = re.sub(r'<link rel="alternate" hreflang="[^"]+" href="[^"]+">', '', text)
-        text = text.replace('</head>', alternates(b, p) + '</head>')
-        sibling.write_text(text)
+        if en:
+            sibling = b.BLOG_DIR / en['slug'] / 'index.html'
+            text = sibling.read_text()
+            text = re.sub(r'<link rel="alternate" hreflang="[^"]+" href="[^"]+">', '', text)
+            text = text.replace('</head>', alternates(b, p) + '</head>')
+            sibling.write_text(text)
     cards = ''.join(f'<a class="card post-card" href="{p["url"].replace(b.D, "")}"><div class="b"><h2>{b.esc(p["title"])}</h2><p>{b.esc(p["description"])}</p></div></a>' for p in posts)
     def listing(title, url, items):
         body = f'<section class="page-hero"><h1>{title}</h1><p>مقالات عملية للمقاولين والمصنّعين وفرق التشطيبات في الإمارات.</p></section><section class="section"><div class="wrap grid g2 post-grid">{items}</div></section>'
