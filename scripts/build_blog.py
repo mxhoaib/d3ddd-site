@@ -3,6 +3,7 @@
 from __future__ import annotations
 import html, json, os, re, sys
 from datetime import datetime
+from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -42,9 +43,13 @@ def parse_post(path: Path) -> dict:
     )
     data["word_count"] = len(re.findall(r"\w+", body))
     data["url"] = f"{D}/blog/{data['slug']}/"
-    data["image"] = data.get("image") or f"{D}/assets/img/og-image.png"
-    if data["image"].startswith("/"):
-        data["image"] = D + data["image"]
+    # hero: omit skips the article figure for this post only. Cards still use the site image.
+    data["omit_hero"] = data.get("hero", "").lower() in {"omit", "none", "false", "no"}
+    image = data.get("image") or ""
+    if not image or image.lower() in {"omit", "none"}:
+        data["image"] = f"{D}/assets/img/og-image.png"
+    elif image.startswith("/"):
+        data["image"] = D + image
     data["image_alt"] = data.get("image_alt") or data["title"]
     data["image_credit"] = data.get("image_credit") or ""
     return data
@@ -173,6 +178,49 @@ AUTHOR_BOX = (
     '<a href="../../contact.html">Work with D3DDD →</a></p></div></aside>'
 )
 
+class _VisibleText(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts = []
+
+    def handle_data(self, data):
+        self.parts.append(data)
+
+
+def visible_text(markup: str) -> str:
+    parser = _VisibleText()
+    parser.feed(markup)
+    return " ".join("".join(parser.parts).split())
+
+
+def faq_ld(p: dict) -> dict | None:
+    """FAQPage copied from the rendered FAQ, only when faq_schema is set."""
+    if p.get("faq_schema", "").lower() not in {"true", "yes", "1"}:
+        return None
+    match = re.search(
+        r"<h2>Frequently Asked Questions</h2>(.*?)(?:<h2>|$)",
+        p["body_html"],
+        re.S,
+    )
+    if not match:
+        raise SystemExit(f"{p['slug']}: faq_schema set but FAQ heading was not rendered")
+    parts = re.split(r"<h3>(.*?)</h3>", match.group(1))
+    if len(parts) < 3:
+        raise SystemExit(f"{p['slug']}: faq_schema set but no questions were rendered")
+    items = []
+    for i in range(1, len(parts), 2):
+        question = visible_text(parts[i])
+        answer = visible_text(parts[i + 1])
+        if not question or not answer:
+            raise SystemExit(f"{p['slug']}: empty FAQ question or answer")
+        items.append({
+            "@type": "Question",
+            "name": question,
+            "acceptedAnswer": {"@type": "Answer", "text": answer},
+        })
+    return {"@type": "FAQPage", "inLanguage": "en-AE", "mainEntity": items}
+
+
 def article_ld(p: dict) -> dict:
     return {
         "@type": "Article",
@@ -243,6 +291,12 @@ def build_article(p: dict, all_posts: list[dict]) -> None:
         f'<li><a href="../{esc(r["slug"])}/">{esc(r["title"])}</a></li>' for r in related
     )
     credit = f'<p class="img-credit">{esc(p["image_credit"])}</p>' if p["image_credit"] else ""
+    hero = ""
+    if not p.get("omit_hero"):
+        hero = (
+            f'<figure class="hero-fig"><img src="{esc(p["image"])}" alt="{esc(p["image_alt"])}" '
+            f'width="1200" height="630" fetchpriority="high" decoding="async">{credit}</figure>\n'
+        )
     prose = obscure_emails(p["body_html"], "../../contact.html")
     body = f'''<article class="article">
 <section class="page-hero">
@@ -253,23 +307,22 @@ def build_article(p: dict, all_posts: list[dict]) -> None:
 {AUTHOR_BYLINE}
 </section>
 <section class="section"><div class="wrap article-wrap">
-<figure class="hero-fig"><img src="{esc(p["image"])}" alt="{esc(p["image_alt"])}" width="1200" height="630" fetchpriority="high" decoding="async">{credit}</figure>
-<div class="prose">{prose}</div>
+{hero}<div class="prose">{prose}</div>
 {AUTHOR_BOX}
 <aside class="box related"><h2>Related</h2><ul>{rel_html}</ul>
 <p class="mt-14"><a class="btn" href="../../contact.html">Request a quote →</a>
 <a class="btn ghost" href="../">All articles</a></p></aside>
 </div></section></article>'''
-    ld = [
-        business_ld(),
-        article_ld(p),
-        crumbs_ld([
-            ("Home", f"{D}/"),
-            ("Blog", f"{D}/blog/"),
-            (p["category_title"], f"{D}/blog/category/{p['category']}/"),
-            (p["title"], p["url"]),
-        ]),
-    ]
+    ld = [business_ld(), article_ld(p)]
+    faq = faq_ld(p)
+    if faq:
+        ld.append(faq)
+    ld.append(crumbs_ld([
+        ("Home", f"{D}/"),
+        ("Blog", f"{D}/blog/"),
+        (p["category_title"], f"{D}/blog/category/{p['category']}/"),
+        (p["title"], p["url"]),
+    ]))
     write(
         BLOG_DIR / p["slug"] / "index.html",
         shell(
