@@ -1,12 +1,11 @@
-# Arabic article 01 — local editorial draft
+# Arabic article 01 — published
 
-Nothing in this branch has been pushed or deployed. The article remains `status: DRAFT`.
+Owner approved. The article status is `PUBLISHED`.
 
 - Source: `posts/ar/what-are-marble-shop-drawings.md`
-- Planned URL: `https://d3ddd.com/ar/blog/what-are-marble-shop-drawings/`
-- Build local review files: `python3 scripts/build_blog.py --arabic-only --include-drafts`
-- Standard builds skip Arabic sources marked DRAFT; `--include-drafts` is an explicit local preview opt-in. Preview HTML has `noindex, follow`.
-- After owner approval, change status to PUBLISHED and rebuild. Do not deploy the draft preview artifacts or their index/feed/sitemap references. A standard build does not delete already generated preview files, so use a clean output checkout or remove preview artifacts before any unrelated deployment.
+- URL: `https://d3ddd.com/ar/blog/what-are-marble-shop-drawings/`
+- Publish build: `python3 scripts/build_blog.py --arabic-only` (do not pass `--include-drafts`). Published Arabic posts are included; sources marked DRAFT are skipped.
+- Draft previews use `python3 scripts/build_blog.py --arabic-only --include-drafts`. Preview HTML has `noindex, follow`. A standard build does not delete already generated preview files, so rebuild after changing status so the published page, index, feed and sitemap replace the preview.
 
 ## Minimal build extension
 

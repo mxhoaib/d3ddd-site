@@ -9,7 +9,7 @@ category_title: رسومات تنفيذية
 description: "تعرّف إلى رسومات الرخام التنفيذية ومحتوياتها وخطوات مراجعتها قبل القص والتركيب، ودورها في تنسيق أعمال المقاولين والاستشاريين في دبي وأبوظبي والشارقة بالإمارات."
 keywords: "رسومات الرخام التنفيذية، مخططات الرخام، تفاصيل تركيب الرخام، رسومات رخام دبي، رسومات رخام أبوظبي، تشطيبات الشارقة، قوائم قص الرخام"
 author: "شعيب حسن، مؤسس D3DDD"
-status: DRAFT
+status: PUBLISHED
 translation_of: what-are-marble-shop-drawings
 image: /assets/img/projects/luxury-bathroom-marble-cladding-shop-drawings/luxury-bathroom-marble-cladding-shop-drawings-01.jpg
 image_alt: "مخطط أرضية وواجهات تكسية حمام بالرخام مع أبعاد الألواح وتفاصيل الزوايا من أعمال D3DDD"
