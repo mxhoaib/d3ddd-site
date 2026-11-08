@@ -326,7 +326,7 @@ def build_article(p: dict, all_posts: list[dict]) -> None:
     write(
         BLOG_DIR / p["slug"] / "index.html",
         shell(
-            f'{p["title"]} | D3DDD Blog',
+            p.get("seo_title") or f'{p["title"]} | D3DDD Blog',
             p["description"],
             p["url"],
             body,
