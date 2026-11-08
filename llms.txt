@@ -7,6 +7,7 @@ D3DDD prepares fabrication and installation drawings that contractors, fabricato
 ## Services
 
 - [Marble and stone shop drawings](https://d3ddd.com/marble.html): Fabrication drawings, cutting lists, slab layouts and BOQ for stone.
+- [Fit-out and joinery shop drawings](https://d3ddd.com/fitout-shop-drawings/): Joinery, ceilings, partitions, kitchens, wardrobes and interior elevations.
 - [Architectural drafting](https://d3ddd.com/services/architectural-drafting/): Shop drawings, CAD detailing, as-built, joinery and fit-out sets.
 - [Architectural designing](https://d3ddd.com/services/architectural-designing/): Concept layouts, space planning, elevations and design development.
 - [Architectural estimation](https://d3ddd.com/services/architectural-estimation/): BOQ, quantity take-offs, material schedules and tender packages.
@@ -24,6 +25,13 @@ D3DDD prepares fabrication and installation drawings that contractors, fabricato
 - [Website packages](https://d3ddd.com/website-design.html): AED and CAD website prices and demo themes.
 - [Blog](https://d3ddd.com/blog/): Drafting and shop-drawing notes. English only.
 
+## Industries
+
+- [Construction companies](https://d3ddd.com/construction-companies-uae/): Outsourced architectural and technical drawing support for UAE contractors.
+- [Real estate developers](https://d3ddd.com/real-estate-developers-uae/): 3D visualization, presentation stills and design coordination.
+- [Interior design firms](https://d3ddd.com/interior-design-companies-uae/): Interior renders, joinery drawings and material coordination.
+- [Marble contractors](https://d3ddd.com/marble-contractors-uae/): Shop drawings, slab layouts, cutting lists and stone quantities.
+
 ## Projects
 
 - [Villa Entrance Lobby Waterjet Marble Medallion & Flooring Layout – Dubai](https://d3ddd.com/projects/entrance-lobby-waterjet-marble-medallion-flooring/): A waterjet marble rosette with brass inlay, set inside a numbered ground-floor slab layout.
@@ -37,7 +45,9 @@ D3DDD prepares fabrication and installation drawings that contractors, fabricato
 
 ## Blog
 
+- [أفضل ممارسات التصميم الثلاثي الأبعاد للمقاولين في دبي](https://d3ddd.com/ar/blog/3d-design-best-practices-dubai-contractors/)
 - [دليل شامل لاستخدام أوتوكاد في إعداد رسومات تنفيذية للرخام](https://d3ddd.com/ar/blog/autocad-marble-shop-drawings-guide/)
+- [10 خطوات لإعداد جداول كميات دقيقة لمشاريع الرخام](https://d3ddd.com/ar/blog/marble-boq-quantity-takeoff-10-steps/)
 - [ما هي رسومات الرخام التنفيذية ولماذا تحتاجها مشاريع الإمارات؟](https://d3ddd.com/ar/blog/what-are-marble-shop-drawings/)
 - [AutoCAD 2026 New Features: Smart Blocks AI Assist & Faster DWG](https://d3ddd.com/blog/autocad-2026-new-features-smart-blocks-ai/)
 - [AutoCAD Architecture Toolset for UAE Floor Plans & Renovation Plans](https://d3ddd.com/blog/autocad-architecture-toolset-uae-floor-plans/)
@@ -51,6 +61,7 @@ D3DDD prepares fabrication and installation drawings that contractors, fabricato
 - [Jeddah Tower 2026: Halfway to One Kilometre — What Drafters Should Watch](https://d3ddd.com/blog/jeddah-tower-halfway-to-one-kilometre/)
 - [Marble Flooring & Wall Cladding Shop Drawings: How-To](https://d3ddd.com/blog/marble-flooring-wall-cladding-shop-drawings/)
 - [Marble Shop Drawings in the UAE: A Practical Checklist for Fabricators](https://d3ddd.com/blog/marble-shop-drawings-checklist-uae/)
+- [Marble Table Design: Coffee, Dining & Side Table Guide](https://d3ddd.com/blog/marble-table-design-shop-drawings/)
 - [Navisworks Manage Clash Detection: UAE Coordination Workflow](https://d3ddd.com/blog/navisworks-clash-detection-uae-coordination/)
 - [NEOM’s The Line, Paused Until 2030: What Drafters Can Still Learn](https://d3ddd.com/blog/neom-the-line-paused-what-drafters-can-learn/)
 - [Primavera P6 vs Microsoft Project for UAE Fit-Out Schedules](https://d3ddd.com/blog/primavera-p6-vs-microsoft-project-uae-fit-out/)

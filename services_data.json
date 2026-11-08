@@ -6,8 +6,8 @@
     "en": {
       "name": "Architectural drafting",
       "short": "Shop drawings, CAD detailing, as-built, joinery and permit sets.",
-      "title": "Architectural Drafting Dubai | Shop Drawings, CAD & Permit Sets UAE – D3DDD",
-      "desc": "Architectural drafting in Dubai and the UAE: shop drawings, CAD detailing, as-built, joinery/fit-out drawings, marble/stone shop drawings and permit sets.",
+      "title": "Architectural Drafting Services UAE | D3DDD",
+      "desc": "Architectural drafting services across the UAE: shop drawings, fit-out sets, joinery elevations and as-built CAD for contractors, issued as DWG and PDF.",
       "eyebrow": "Drafting — Dubai & UAE",
       "h1": "Architectural drafting for Gulf <em>fit-out &amp; construction</em>",
       "lead": "Construction-ready documentation for contractors, fabricators and consultants in Dubai, Abu Dhabi, Sharjah and across the Gulf — prepared by Shoaib Hussan / D3DDD.",
@@ -28,6 +28,10 @@
         [
           "Joinery &amp; fit-out drawings",
           "Cabinet elevations, sections, hardware notes and construction-ready joinery packages."
+        ],
+        [
+          "Interior elevations",
+          "Wall elevations for finishes, joinery lines, niches and the points where stone meets cabinetwork."
         ],
         [
           "Marble &amp; stone shop drawings",
@@ -196,8 +200,8 @@
     "en": {
       "name": "Architectural estimation",
       "short": "BOQ, quantity take-offs, material schedules and tender packages.",
-      "title": "Architectural Estimation Dubai | BOQ, Take-offs & Tender Packages UAE – D3DDD",
-      "desc": "Architectural estimation in Dubai and the UAE: BOQ, quantity take-offs, material schedules, cost plans and tender packages.",
+      "title": "Construction Estimation &amp; BOQ Services UAE | D3DDD",
+      "desc": "Construction estimation and BOQ services in the UAE: quantity take-offs, material schedules and tender bills measured from your project drawings.",
       "eyebrow": "Estimation — Dubai & UAE",
       "h1": "Architectural estimation built for <em>tenders &amp; yards</em>",
       "lead": "Quantity take-offs, BOQ and cost plans tied to the same piece IDs as your drawings — for UAE and Gulf contractors.",
@@ -214,6 +218,10 @@
         [
           "Material schedules",
           "Stone, joinery and finish schedules for procurement."
+        ],
+        [
+          "Stone quantities",
+          "Areas, linear metres and piece counts for marble and stone, with the cutting-waste assumption written in the header."
         ],
         [
           "Cost plans",
@@ -291,8 +299,8 @@
     "en": {
       "name": "3D rendering, modeling &amp; visualization",
       "short": "Still renders, interior/exterior viz, modeling, walkthroughs and VR-ready scenes.",
-      "title": "3D Rendering & Visualization Dubai | Modeling, Walkthroughs UAE – D3DDD",
-      "desc": "3D rendering, modeling and visualization in Dubai and the UAE: still renders, interior/exterior viz, walkthroughs, VR-ready scenes and product visualization.",
+      "title": "3D Architectural Visualization Dubai | D3DDD",
+      "desc": "3D architectural visualization in Dubai: interior renders, material studies and presentation images for design reviews before stone is cut.",
       "eyebrow": "3D — Dubai & UAE",
       "h1": "3D rendering, modeling &amp; <em>visualization</em>",
       "lead": "Still renders, interior and exterior visualization, modeling and walkthroughs that help clients approve before fabrication — from D3DDD / Shoaib Hussan.",
@@ -301,6 +309,14 @@
         [
           "Still renders",
           "High-resolution images for approvals and presentations."
+        ],
+        [
+          "Marketing presentation stills",
+          "Images for a client or sales presentation, still tied back to the drawing set."
+        ],
+        [
+          "Design coordination views",
+          "Views that show how stone, joinery and ceilings meet, so the picture and the shop drawings describe the same junctions."
         ],
         [
           "Interior visualization",
