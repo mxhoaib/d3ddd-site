@@ -1,0 +1,77 @@
+# D3DDD - Dubai 3D Design & Draft
+
+> Marble and stone shop drawings, AutoCAD drafting, fit-out drawings, 3D rendering and contractor websites for Dubai, Abu Dhabi, Sharjah and the rest of the UAE. Founded by Shoaib Hussan. English and Arabic.
+
+D3DDD prepares fabrication and installation drawings that contractors, fabricators and consultants can review. Drawing sets are issued as AutoCAD DWG and PDF. Shop-drawing fees are quoted per project. Published website prices are the Starter (AED 1,200), Business (AED 2,000) and Premium (AED 3,500+) packages, with the 5-page contractor website at AED 2,000 and a 50% deposit. There is no street address and no phone number. The studio is in Dubai, United Arab Emirates.
+
+## Services
+
+- [Marble and stone shop drawings](https://d3ddd.com/marble.html): Fabrication drawings, cutting lists, slab layouts and BOQ for stone.
+- [Architectural drafting](https://d3ddd.com/services/architectural-drafting/): Shop drawings, CAD detailing, as-built, joinery and fit-out sets.
+- [Architectural designing](https://d3ddd.com/services/architectural-designing/): Concept layouts, space planning, elevations and design development.
+- [Architectural estimation](https://d3ddd.com/services/architectural-estimation/): BOQ, quantity take-offs, material schedules and tender packages.
+- [3D rendering and visualization](https://d3ddd.com/services/3d-rendering-modeling-visualization/): Still renders, modeling and walkthroughs.
+- [Website development](https://d3ddd.com/services/website-development-designing/): Business sites and landing pages for contractors.
+- [All services](https://d3ddd.com/services/): The five service lines, in English.
+- [الخدمات](https://d3ddd.com/ar/services/): The same services in Arabic.
+
+## Key pages
+
+- [Home](https://d3ddd.com/): English homepage.
+- [Arabic home](https://d3ddd.com/ar/): Arabic homepage.
+- [Projects](https://d3ddd.com/projects/): Marble and stone shop-drawing portfolio.
+- [About](https://d3ddd.com/about.html): The studio.
+- [Website packages](https://d3ddd.com/website-design.html): AED and CAD website prices and demo themes.
+- [Blog](https://d3ddd.com/blog/): Drafting and shop-drawing notes. English only.
+
+## Projects
+
+- [Villa Entrance Lobby Waterjet Marble Medallion & Flooring Layout – Dubai](https://d3ddd.com/projects/entrance-lobby-waterjet-marble-medallion-flooring/): A waterjet marble rosette with brass inlay, set inside a numbered ground-floor slab layout.
+- [Luxury Villa Ground Floor Marble & Stone Flooring Layout – Dubai](https://d3ddd.com/projects/villa-ground-floor-marble-flooring-layout/): A colour-zoned ground floor plan with a radial marble hall, herringbone majlis and full slab set-out.
+- [Villa Swimming Pool & Outdoor Seating Tiling Details – Dubai](https://d3ddd.com/projects/villa-swimming-pool-and-outdoor-majlis-tiling-details/): Set-out plans, long sections and step, coping and fireplace details for a villa pool, deck and outdoor seating.
+- [Luxury Bathroom Marble Wall & Floor Cladding Shop Drawings – Dubai](https://d3ddd.com/projects/luxury-bathroom-marble-cladding-shop-drawings/): Wall and floor cladding for two villa bathrooms, with mitred corners, LED grooves and fluted feature panels.
+- [Venatino Marble Freestanding Bath Vanity Shop Drawing – Dubai](https://d3ddd.com/projects/venatino-marble-bath-vanity-shop-drawing/): A 2200 mm freestanding Venatino vanity: elevations, section, edge details and a slab-mapped cutting plan.
+- [Paonazzetto Marble Vanity Tops Shop Drawings – Residential Villa, Dubai](https://d3ddd.com/projects/paonazzetto-marble-vanity-tops-shop-drawings/): Seven undermount Paonazzetto vanity tops with sink sections, edge profiles and true-scale slab previews.
+- [Marble Slab Cutting Layout & Bathroom Cladding Drawings – Dubai](https://d3ddd.com/projects/marble-slab-cutting-layout-bathroom-cladding/): Numbered Venatino bathroom panels nested on real slab photos for low-waste, vein-matched cutting.
+- [Fusion Blue Marble Door Frames & Skirting Slab Layout – Dubai](https://d3ddd.com/projects/fusion-blue-marble-door-frame-and-skirting-slab-layout/): Fusion Blue door frames, lintels and skirting nested slab by slab so every piece follows the vein.
+
+## Blog
+
+- [دليل شامل لاستخدام أوتوكاد في إعداد رسومات تنفيذية للرخام](https://d3ddd.com/ar/blog/autocad-marble-shop-drawings-guide/)
+- [ما هي رسومات الرخام التنفيذية ولماذا تحتاجها مشاريع الإمارات؟](https://d3ddd.com/ar/blog/what-are-marble-shop-drawings/)
+- [AutoCAD 2026 New Features: Smart Blocks AI Assist & Faster DWG](https://d3ddd.com/blog/autocad-2026-new-features-smart-blocks-ai/)
+- [AutoCAD Architecture Toolset for UAE Floor Plans & Renovation Plans](https://d3ddd.com/blog/autocad-architecture-toolset-uae-floor-plans/)
+- [AutoCAD Drafting Standards for Gulf Fit-Out Packages](https://d3ddd.com/blog/autocad-drafting-standards-gulf-fitout/)
+- [Autodesk Forma Site Design: AI Site Planning for Early Concepts](https://d3ddd.com/blog/autodesk-forma-site-design-ai-planning/)
+- [Build in Dubai Platform: Drawing Package Tips for Faster Permits](https://d3ddd.com/blog/build-in-dubai-drawing-package-tips/)
+- [Chaos Vantage Tutorial: Real-Time Ray Tracing for V-Ray Scenes](https://d3ddd.com/blog/chaos-vantage-realtime-ray-tracing-vray/)
+- [DraftSight for DWG Drafting: Trial Setup Limits & When to Use It](https://d3ddd.com/blog/draftsight-dwg-drafting-trial-guide/)
+- [Dubai BIM Mandate 2026: Who Must Submit and What to Prepare](https://d3ddd.com/blog/dubai-bim-mandate-2026-submission-guide/)
+- [IFC OpenBIM Workflow for Dubai Municipality BIM Submissions](https://d3ddd.com/blog/ifc-openbim-workflow-dubai-bim-submissions/)
+- [Jeddah Tower 2026: Halfway to One Kilometre — What Drafters Should Watch](https://d3ddd.com/blog/jeddah-tower-halfway-to-one-kilometre/)
+- [Marble Flooring & Wall Cladding Shop Drawings: How-To](https://d3ddd.com/blog/marble-flooring-wall-cladding-shop-drawings/)
+- [Marble Shop Drawings in the UAE: A Practical Checklist for Fabricators](https://d3ddd.com/blog/marble-shop-drawings-checklist-uae/)
+- [Navisworks Manage Clash Detection: UAE Coordination Workflow](https://d3ddd.com/blog/navisworks-clash-detection-uae-coordination/)
+- [NEOM’s The Line, Paused Until 2030: What Drafters Can Still Learn](https://d3ddd.com/blog/neom-the-line-paused-what-drafters-can-learn/)
+- [Primavera P6 vs Microsoft Project for UAE Fit-Out Schedules](https://d3ddd.com/blog/primavera-p6-vs-microsoft-project-uae-fit-out/)
+- [Sagrada Família Hits 172.5 m: Why ‘Finished Height’ Is Not a Finished Building](https://d3ddd.com/blog/sagrada-familia-final-height-2026/)
+- [Slab Nesting and Cutting Lists: How Gulf Stone Yards Cut Waste](https://d3ddd.com/blog/slab-nesting-cutting-lists-gulf/)
+- [Stone Staircase Shop Drawings: Treads Risers Stringers & Fixings](https://d3ddd.com/blog/stone-staircase-shop-drawings-treads-risers/)
+- [What Are Marble Shop Drawings and Why Are They Necessary?](https://d3ddd.com/blog/what-are-marble-shop-drawings/)
+
+## Contact
+
+- Email: info@d3ddd.com
+- [Enquiry form](https://d3ddd.com/contact.html): Preferred way to send drawings and ask for a quote.
+- [Arabic enquiry form](https://d3ddd.com/ar/contact.html): The same form in Arabic.
+- Instagram: https://instagram.com/mxhaib
+- LinkedIn: https://www.linkedin.com/in/mshoaib94
+- WhatsApp username (no phone number published): @mxhoaib
+
+## Founder
+
+Shoaib Hussan, founder of D3DDD – Dubai 3D Design & Draft. Draftsman working with contractors, fabricators and consultants in the UAE.
+
+## Areas served
+
+Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Umm Al Quwain and Fujairah, across the United Arab Emirates. Work is delivered digitally. No street address is published.

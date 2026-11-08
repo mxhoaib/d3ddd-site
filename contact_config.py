@@ -1,4 +1,5 @@
 # Shared contact settings for build.py and scripts/build_blog.py.
+import json
 # WhatsApp: there is no official click-to-chat link for usernames yet (wa.me only accepts phone numbers),
 # so the username is shown as text. To make it a link later, set WHATSAPP_NUMBER to the full international
 # number, digits only (no +, spaces or leading 0), then rebuild: python3 build.py
@@ -17,3 +18,74 @@ def whatsapp_html(lang="en"):
     if num:
         return f'<a class="wa-contact" href="https://wa.me/{num}" target="_blank" rel="noopener">{inner}</a>'
     return f'<span class="wa-contact">{inner}</span>'
+
+# GA4 measurement ID (G-XXXXXXXX). No ID is stored in this repo; leave blank to skip the tag.
+ANALYTICS_ID = ""
+
+IG_URL = "https://instagram.com/mxhaib"
+LI_URL = "https://www.linkedin.com/in/mshoaib94"
+IG_ICON = ('<svg class="soc-ico" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">'
+           '<path fill="currentColor" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.2 6.8a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>')
+LI_ICON = ('<svg class="soc-ico" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">'
+           '<path fill="currentColor" d="M6.5 9H4V20h2.5zM5.2 4A1.6 1.6 0 1 0 5.2 7.2 1.6 1.6 0 0 0 5.2 4zM20 20h-2.5v-5.6c0-1.8-.8-2.4-1.8-2.4s-2 .9-2 2.5V20H11V9h2.4v1.5c.5-.8 1.6-1.8 3.3-1.8 2.2 0 3.3 1.4 3.3 4.1z"/></svg>')
+
+def analytics_snippet():
+    """gtag snippet, or empty when ANALYTICS_ID is blank."""
+    aid = (ANALYTICS_ID or "").strip()
+    if not aid:
+        return ""
+    return (
+        '<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>'
+        '<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}'
+        "gtag('js',new Date());gtag('config',%s);</script>"
+    ) % (aid, json.dumps(aid))
+
+def mail_link(fallback_href, label=None, class_name="mail-link"):
+    """Link whose address is assembled in assets/site.js from data-u and data-d.
+    Until JS runs, it points at the enquiry form. noscript shows the obfuscated fallback.
+    """
+    inner = '<span class="mail-slot">Email</span>' if label is None else label
+    return (
+        f'<a class="{class_name}" data-u="info" data-d="d3ddd.com" href="{fallback_href}">{inner}</a>'
+        '<noscript> info [at] d3ddd.com</noscript>'
+    )
+
+def social_links(lang="en"):
+    """Labelled Instagram and LinkedIn icons. WhatsApp is separate and unchanged."""
+    ig = "إنستغرام" if lang == "ar" else "Instagram"
+    li = "لينكدإن" if lang == "ar" else "LinkedIn"
+    return (
+        f'<p class="social-row"><a class="social-link" href="{IG_URL}" rel="me noopener" target="_blank">{IG_ICON}<span>{ig}</span></a>'
+        f'<a class="social-link" href="{LI_URL}" rel="me noopener" target="_blank">{LI_ICON}<span>{li}</span></a></p>'
+    )
+
+def area_served():
+    """Cities named on the site, plus the UAE. New York, London and Palm Jumeirah are not listed in the copy."""
+    cities = ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Umm Al Quwain", "Fujairah"]
+    return [{"@type": "City", "name": name} for name in cities] + [{"@type": "Country", "name": "United Arab Emirates"}]
+
+def business_node():
+    email = "info@d3ddd.com"
+    origin = "https://d3ddd.com/"
+    return {
+        "@type": ["ProfessionalService", "LocalBusiness"],
+        "@id": origin + "#business",
+        "name": "D3DDD – Dubai 3D Design & Draft",
+        "alternateName": ["D3DDD", "دبي للتصميم والرسم ثلاثي الأبعاد"],
+        "url": origin,
+        "logo": origin + "assets/img/logo.svg",
+        "image": origin + "assets/img/og-image.png",
+        "email": email,
+        "priceRange": "AED",
+        "description": "Marble and stone shop drawings, AutoCAD drafting, fit-out drawings, 3D rendering and contractor website design in Dubai and across the UAE.",
+        "address": {"@type": "PostalAddress", "addressLocality": "Dubai", "addressRegion": "Dubai", "addressCountry": "AE"},
+        "areaServed": area_served(),
+        "knowsLanguage": ["en", "ar"],
+        "contactPoint": {"@type": "ContactPoint", "email": email, "contactType": "sales", "availableLanguage": ["English", "Arabic"]},
+        "sameAs": [
+            "https://www.fiverr.com/mxhoaib",
+            "https://www.instagram.com/mxhaib/",
+            "https://www.linkedin.com/in/mshoaib94",
+        ],
+        "paymentAccepted": "PayPal",
+    }

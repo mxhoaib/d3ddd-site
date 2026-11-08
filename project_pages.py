@@ -156,7 +156,7 @@ def build_project_pages(g, out: dict) -> dict:
 <div class="pj-gallery" data-gallery>{"".join(shots)}</div></div></section>
 <section class="cta-band"><p class="eyebrow">Let’s work together</p><h2>{esc(p["cta_h"])}</h2><p>{esc(p["cta_p"])}</p>
 <div class="actions"><a class="btn" href="{contact}">Send your drawings &rarr;</a><a class="btn ghost" href="{projects}">All projects</a></div></section>
-<section class="section"><div class="wrap"><p class="eyebrow">Portfolio</p><h2 style="margin-bottom:28px">More <em>projects</em></h2><div class="pj-grid pj-sm">{more}</div></div></section>'''
+<section class="section"><div class="wrap"><p class="eyebrow">Portfolio</p><h2 class="mb-28">More <em>projects</em></h2><div class="pj-grid pj-sm">{more}</div></div></section>'''
         first = p["images"][0]; fw, fh = p["sizes"][first]
         og = (f'{D}{IMG_DIR}/{p["slug"]}/{first}', fw, fh, esc(p["title"]) + " – shop drawing")
         ld = [crumbs_ld(lang, [("Home", url(lang, "index.html")), ("Projects", url(lang, "projects/")), (p["title"], url(lang, f"projects/{p['slug']}/"))]),
@@ -174,8 +174,8 @@ def build_project_pages(g, out: dict) -> dict:
             continue
         P = g["prefix"]("en", svc_fn)
         block = (f'<section class="section pj-related" aria-labelledby="rel-h"><div class="wrap"><p class="eyebrow">Portfolio</p>'
-                 f'<h2 id="rel-h" style="margin-bottom:28px">Related <em>projects</em></h2><div class="pj-grid pj-sm">{"".join(card(p, P) for p in rel)}</div>'
-                 f'<p style="margin-top:28px"><a class="btn ghost" href="{P}projects/">All projects &rarr;</a></p></div></section>')
+                 f'<h2 class="mb-28" id="rel-h">Related <em>projects</em></h2><div class="pj-grid pj-sm">{"".join(card(p, P) for p in rel)}</div>'
+                 f'<p class="mt-28"><a class="btn ghost" href="{P}projects/">All projects &rarr;</a></p></div></section>')
         page = out[("en", svc_fn)]
         assert page.count('<section class="cta-band">') == 1, svc_fn
         page = page.replace('<section class="cta-band">', block + '<section class="cta-band">')

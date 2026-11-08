@@ -24,3 +24,40 @@ html[dir=rtl] .hero{background:radial-gradient(ellipse at 25% 40%,#2a241a 0%,var
 }
 @media(max-width:768px){.room3d{pointer-events:none}}
 @media(prefers-reduced-motion:reduce){.room3d{display:none!important;transition:none}}.wa-contact{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}.wa-ico{width:1em;height:1em;flex:none;color:var(--gold)}footer .grid>div>.wa-contact,footer p>.wa-contact{display:flex;padding:3px 0}
+/* Spacing and type previously set with style attributes. Values match the old inline rules. */
+.mt-12{margin-top:12px}.mt-14{margin-top:14px}.mt-16{margin-top:16px}.mt-18{margin-top:18px}.mt-24{margin-top:24px}.mt-28{margin-top:28px}.mt-30{margin-top:30px}.mt-36{margin-top:36px}.mt-50{margin-top:50px}
+.mb-12{margin-bottom:12px}.mb-20{margin-bottom:20px}.mb-24{margin-bottom:24px}.mb-28{margin-bottom:28px}.mb-30{margin-bottom:30px}.mb-40{margin-bottom:40px}.mb-50{margin-bottom:50px}
+.footer-intro{margin-top:16px;max-width:340px}
+.actions-center{margin-top:22px;align-items:center}
+.muted{color:var(--muted)}
+.price.price-md{font-size:28px}
+.fine-print{color:var(--muted);font-size:13px;margin-top:16px}
+.split.split-start{align-items:start}
+.card.card-pad{padding:28px}
+h2.h-contact{font-size:26px}
+.page-hero.hero-short{min-height:60vh}
+.lede{color:var(--muted);max-width:720px}
+.intro-gap{color:var(--muted);margin:10px 0 30px}
+.lede-top{color:var(--muted);max-width:720px;margin-top:10px}
+.prose-fig{margin:1.6em 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+.btn-block{margin-top:18px;width:100%}
+.auth-note{margin-top:16px;font-size:14px}
+.side .who{padding:10px 12px;font-size:13px}
+.table-gap{margin-top:20px}
+.file-in{margin:16px 0;max-width:400px}
+.form-narrow{max-width:480px}
+address.postal{font-style:normal;color:var(--ink);display:block}
+footer address.postal{padding:3px 0}
+.social-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+footer .social-row a.social-link{display:inline-flex;align-items:center;gap:8px;width:auto;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--gold2)}
+footer .social-row a.social-link:hover{border-color:var(--gold);color:var(--gold)}
+.soc-ico{width:16px;height:16px;flex:none}
+.social-line a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px}
+.copy p{color:var(--muted);margin-top:12px}
+.copy h2{margin-top:8px}
+.copy h3{margin-top:22px;font-size:20px}
+.copy ul,.copy ol{margin:12px 0 0;padding-inline-start:1.2em;color:var(--muted)}
+.copy li{margin:6px 0}
+.copy a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px}
+.topbar{flex-wrap:wrap}
+.auth h1,.portal h1{font-size:clamp(28px,4vw,46px)}

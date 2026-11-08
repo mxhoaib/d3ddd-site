@@ -2,6 +2,7 @@
 from __future__ import annotations
 import json
 from pathlib import Path
+from longform import hub_bundle, service_bundle
 
 SERVICES = json.loads((Path(__file__).parent / "services_data.json").read_text(encoding="utf-8"))
 
@@ -29,10 +30,10 @@ def build_service_pages(g):
         extra = ""
         if t.get("marble_link"):
             label = "Marble shop drawings " + arrow if lang == "en" else "رسومات الرخام " + arrow
-            extra += f'<p style="margin-top:16px"><a class="btn ghost" href="{marble}">{label}</a></p>'
+            extra += f'<p class="mt-16"><a class="btn ghost" href="{marble}">{label}</a></p>'
         if t.get("web_link"):
             label = "Contractor website package " + arrow if lang == "en" else "باقة موقع المقاولين " + arrow
-            extra += f'<p style="margin-top:16px"><a class="btn ghost" href="{webpkg}">{label}</a></p>'
+            extra += f'<p class="mt-16"><a class="btn ghost" href="{webpkg}">{label}</a></p>'
         if lang == "en":
             home_l, svc_l, sub_h, soft, soft_p = (
                 "Home", "Services", "Sub-services", "Next step",
@@ -57,15 +58,24 @@ def build_service_pages(g):
 <p class="eyebrow">{t["eyebrow"]}</p><h1>{t["h1"]}</h1><p>{t["lead"]}</p></section>
 <section class="section"><div class="wrap split"><figure>{img(P, s["img"], t["name"], True)}</figure><div><span class="num">{s["num"]}</span><h2>{t["name"]}</h2><p>{t["intro"]}</p>
 <ul class="check">{deliver}</ul>
-<p style="margin-top:18px"><a class="btn" href="{contact_q}">{t["cta_label"]} {arrow}</a></p>{extra}</div></div></section>
-<section class="section alt"><div class="wrap"><p class="eyebrow">{sub_h}</p><h2 style="margin-bottom:24px">{sub_h}</h2>
+<p class="mt-18"><a class="btn" href="{contact_q}">{t["cta_label"]} {arrow}</a></p>{extra}</div></div></section>
+<section class="section alt"><div class="wrap"><p class="eyebrow">{sub_h}</p><h2 class="mb-24">{sub_h}</h2>
 <div class="grid g3">{subs}</div>
-<div class="notice" style="margin-top:28px"><strong>{soft}:</strong> {soft_p} <a href="{contact_q}">{contact_l}</a>.</div>
+<div class="notice mt-28"><strong>{soft}:</strong> {soft_p} <a href="{contact_q}">{contact_l}</a>.</div>
 </div></section>'''
+        guide, faqs = service_bundle(
+            lang, s["slug"],
+            lambda target, lang=lang, fn=fn: g["href"](lang, fn, target),
+            lambda target, lang=lang, fn=fn: g["en_href"](lang, fn, target),
+        )
+        faq_title = "Frequently asked questions" if lang == "en" else "الأسئلة الشائعة"
+        faq_eye = "FAQ" if lang == "en" else "أسئلة وأجوبة"
+        body += guide + g["faq_html"](faqs, faq_title, faq_eye)
         body += cta(lang).replace('href="contact.html"', f'href="{contact}"')
         ld = [
             crumbs_ld(lang, [(home_l, url(lang, "index.html")), (svc_l, url(lang, "services/")), (t["name"], url(lang, f"services/{s['slug']}/"))]),
             service_ld(t["name"].replace("&amp;", "&"), t["desc"], url(lang, f"services/{s['slug']}/")),
+            g["faq_ld"](faqs),
         ]
         out[(lang, fn)] = shell(lang, fn, t["title"], t["desc"], body, ld, preload=s["img"])
 
@@ -89,14 +99,14 @@ def build_service_pages(g):
 <p>Architectural drafting, designing, estimation, 3D visualization and website development — practical packages for Dubai, Abu Dhabi, Sharjah and the wider Gulf. Led by Shoaib Hussan / D3DDD. <span lang="ar" class="ar-touch">خدماتنا في الإمارات والخليج</span></p></section>'''
             contact = g["href"](lang, fn, "contact.html")
             more = f'''<section class="section alt" id="get-started"><div class="wrap"><p class="eyebrow">Clear paths to a quote</p><h2>Marble shop drawings, AutoCAD drafting &amp; shop drawing <em>approval</em></h2>
-<p style="color:var(--muted);max-width:720px;margin-top:10px">Blog readers and project teams: pick a path, then email drawings for a quote — site contact is email only.</p>
-<div class="grid g3" style="margin-top:24px">
-<div class="card"><div class="b"><span class="num">STONE</span><h3>Marble shop drawings</h3><p>Fabrication drawings, cutting lists and BOQ.</p><div class="actions" style="margin-top:12px"><a class="btn" href="{contact}?service=marble">Request quote</a><a class="btn ghost" href="{marble}">Details</a></div></div></div>
-<div class="card"><div class="b"><span class="num">CAD</span><h3>AutoCAD drafting</h3><p>Shop drawings and fit-out CAD sets.</p><div class="actions" style="margin-top:12px"><a class="btn" href="{contact}?service=drafting">Request quote</a><a class="btn ghost" href="architectural-drafting/">Details</a></div></div></div>
-<div class="card"><div class="b"><span class="num">3D</span><h3>Shop drawing approval / 3D</h3><p>Renders that support client and consultant approval.</p><div class="actions" style="margin-top:12px"><a class="btn" href="{contact}?service=3d">Request quote</a><a class="btn ghost" href="3d-rendering-modeling-visualization/">Details</a></div></div></div>
+<p class="lede-top">Blog readers and project teams: pick a path, then send drawings through the enquiry form. This site does not publish a phone number.</p>
+<div class="grid g3 mt-24">
+<div class="card"><div class="b"><span class="num">STONE</span><h3>Marble shop drawings</h3><p>Fabrication drawings, cutting lists and BOQ.</p><div class="actions mt-12"><a class="btn" href="{contact}?service=marble">Request quote</a><a class="btn ghost" href="{marble}">Marble shop drawing details</a></div></div></div>
+<div class="card"><div class="b"><span class="num">CAD</span><h3>AutoCAD drafting</h3><p>Shop drawings and fit-out CAD sets.</p><div class="actions mt-12"><a class="btn" href="{contact}?service=drafting">Request quote</a><a class="btn ghost" href="architectural-drafting/">Architectural drafting details</a></div></div></div>
+<div class="card"><div class="b"><span class="num">3D</span><h3>Shop drawing approval / 3D</h3><p>Renders that support client and consultant approval.</p><div class="actions mt-12"><a class="btn" href="{contact}?service=3d">Request quote</a><a class="btn ghost" href="3d-rendering-modeling-visualization/">3D rendering details</a></div></div></div>
 </div></div></section>
 <section class="section"><div class="wrap"><p class="eyebrow">Specialist pages</p><h2>Also available</h2>
-<div class="grid g2" style="margin-top:24px">
+<div class="grid g2 mt-24">
 <a class="card" href="{marble}"><div class="b"><span class="num">STONE</span><h3>Marble &amp; stone shop drawings</h3><p>Fabrication drawings, cutting lists and BOQ for stone works.</p></div></a>
 <a class="card" href="{webpkg}"><div class="b"><span class="num">WEB</span><h3>Contractor website package</h3><p>AED 2,000 · 5 pages · enquiry-focused — pricing and demos.</p></div></a>
 </div></div></section>'''
@@ -111,14 +121,14 @@ def build_service_pages(g):
 <p>رسم تنفيذي، تصميم معماري، حساب كميات، تصور ثلاثي الأبعاد وتطوير مواقع — باقات عملية لدبي وأبوظبي والشارقة والخليج. بإشراف شعيب حسين / D3DDD.</p></section>'''
             contact = g["href"](lang, fn, "contact.html")
             more = f'''<section class="section alt" id="get-started"><div class="wrap"><p class="eyebrow">مسارات واضحة لعرض السعر</p><h2>رسومات الرخام، مخططات أوتوكاد واعتماد الرسومات <em>التنفيذية</em></h2>
-<p style="color:var(--muted);max-width:720px;margin-top:10px">لقراء المدونة وفرق المشاريع: اختر المسار ثم أرسل المخططات بالبريد — التواصل عبر البريد فقط.</p>
-<div class="grid g3" style="margin-top:24px">
-<div class="card"><div class="b"><span class="num">حجر</span><h3>رسومات الرخام</h3><p>رسومات تصنيع وقوائم قص وجداول كميات.</p><div class="actions" style="margin-top:12px"><a class="btn" href="{contact}?service=marble">اطلب عرض سعر</a><a class="btn ghost" href="../marble.html">التفاصيل</a></div></div></div>
-<div class="card"><div class="b"><span class="num">أوتوكاد</span><h3>مخططات أوتوكاد</h3><p>رسومات تنفيذية ومجموعات CAD للفيت آوت.</p><div class="actions" style="margin-top:12px"><a class="btn" href="{contact}?service=drafting">اطلب عرض سعر</a><a class="btn ghost" href="architectural-drafting/">التفاصيل</a></div></div></div>
-<div class="card"><div class="b"><span class="num">3D</span><h3>اعتماد الرسومات / 3D</h3><p>تصاميم تساعد على اعتماد الشكل قبل التصنيع.</p><div class="actions" style="margin-top:12px"><a class="btn" href="{contact}?service=3d">اطلب عرض سعر</a><a class="btn ghost" href="3d-rendering-modeling-visualization/">التفاصيل</a></div></div></div>
+<p class="lede-top">لقراء المدونة وفرق المشاريع: اختر المسار ثم أرسل المخططات عبر نموذج الاستفسار. هذا الموقع لا ينشر رقم هاتف.</p>
+<div class="grid g3 mt-24">
+<div class="card"><div class="b"><span class="num">حجر</span><h3>رسومات الرخام</h3><p>رسومات تصنيع وقوائم قص وجداول كميات.</p><div class="actions mt-12"><a class="btn" href="{contact}?service=marble">اطلب عرض سعر</a><a class="btn ghost" href="../marble.html">تفاصيل رسومات الرخام</a></div></div></div>
+<div class="card"><div class="b"><span class="num">أوتوكاد</span><h3>مخططات أوتوكاد</h3><p>رسومات تنفيذية ومجموعات CAD للفيت آوت.</p><div class="actions mt-12"><a class="btn" href="{contact}?service=drafting">اطلب عرض سعر</a><a class="btn ghost" href="architectural-drafting/">تفاصيل الرسم التنفيذي</a></div></div></div>
+<div class="card"><div class="b"><span class="num">3D</span><h3>اعتماد الرسومات / 3D</h3><p>تصاميم تساعد على اعتماد الشكل قبل التصنيع.</p><div class="actions mt-12"><a class="btn" href="{contact}?service=3d">اطلب عرض سعر</a><a class="btn ghost" href="3d-rendering-modeling-visualization/">تفاصيل التصميم ثلاثي الأبعاد</a></div></div></div>
 </div></div></section>
 <section class="section"><div class="wrap"><p class="eyebrow">صفحات متخصصة</p><h2>أيضاً متاح</h2>
-<div class="grid g2" style="margin-top:24px">
+<div class="grid g2 mt-24">
 <a class="card" href="{marble}"><div class="b"><span class="num">حجر</span><h3>رسومات الرخام والحجر</h3><p>رسومات تصنيع وقوائم قص وجداول كميات.</p></div></a>
 <a class="card" href="{webpkg}"><div class="b"><span class="num">ويب</span><h3>باقة موقع المقاولين</h3><p>2,000 درهم · 5 صفحات — الأسعار والنماذج.</p></div></a>
 </div></div></section>'''
@@ -127,12 +137,20 @@ def build_service_pages(g):
             name = "الخدمات"
             home_l = "الرئيسية"
         body = hero + f'<section class="section"><div class="wrap"><div class="grid g3">{"".join(cards)}</div></div></section>' + more
+        guide, faqs = hub_bundle(
+            lang,
+            lambda target, lang=lang, fn=fn: g["href"](lang, fn, target),
+            lambda target, lang=lang, fn=fn: g["en_href"](lang, fn, target),
+        )
+        faq_title = "Frequently asked questions" if lang == "en" else "الأسئلة الشائعة"
+        faq_eye = "FAQ" if lang == "en" else "أسئلة وأجوبة"
+        body += guide + g["faq_html"](faqs, faq_title, faq_eye)
         body += cta(lang).replace('href="contact.html"', f'href="{g["href"](lang, fn, "contact.html")}"')
         ld_services = [
             service_ld(s[lang]["name"].replace("&amp;", "&"), s[lang]["desc"], url(lang, f"services/{s['slug']}/"))
             for s in SERVICES
         ]
-        ld = [crumbs_ld(lang, [(home_l, url(lang, "index.html")), (name, url(lang, "services/"))])] + ld_services
+        ld = [crumbs_ld(lang, [(home_l, url(lang, "index.html")), (name, url(lang, "services/"))]), g["faq_ld"](faqs)] + ld_services
         out[(lang, fn)] = shell(lang, fn, title, desc, body, ld)
 
         for s in SERVICES:
