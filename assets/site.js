@@ -24,19 +24,24 @@
   var f = document.querySelector("form.enquiry");
   if (f) {
     var map = {
-      marble: "Marble / stone shop drawings",
-      stone: "Marble / stone shop drawings",
-      "shop-drawings": "Marble / stone shop drawings",
-      drafting: "Architectural drafting",
-      autocad: "Architectural drafting",
-      "shop-drawing-approval": "3D rendering / modeling / visualization",
-      approval: "3D rendering / modeling / visualization",
-      "3d": "3D rendering / modeling / visualization",
-      rendering: "3D rendering / modeling / visualization",
-      design: "Architectural designing",
-      estimation: "Architectural estimation",
-      website: "Website development & designing",
-      web: "Website development & designing",
+      marble: "Marble & Stone Shop Drawings",
+      stone: "Marble & Stone Shop Drawings",
+      "shop-drawings": "Marble & Stone Shop Drawings",
+      drafting: "Architectural Drafting",
+      autocad: "Architectural Drafting",
+      fitout: "Fit-Out & Joinery Drawings",
+      "fit-out": "Fit-Out & Joinery Drawings",
+      joinery: "Fit-Out & Joinery Drawings",
+      "shop-drawing-approval": "3D Visualization",
+      approval: "3D Visualization",
+      "3d": "3D Visualization",
+      rendering: "3D Visualization",
+      visualization: "3D Visualization",
+      design: "Other",
+      estimation: "Estimation & BOQ",
+      boq: "Estimation & BOQ",
+      website: "Other",
+      web: "Other",
       "رسومات الرخام والحجر التنفيذية": "رسومات الرخام والحجر التنفيذية",
       "الرسم المعماري التنفيذي": "الرسم المعماري التنفيذي",
       "التصميم المعماري": "التصميم المعماري",
@@ -91,19 +96,62 @@
       var d = new FormData(f);
       if (d.get("company_website")) return;
       var L = document.documentElement.lang.indexOf("ar") === 0;
-      var lab = L ? ["الاسم", "الهاتف", "البريد", "الخدمة", "التفاصيل"] : ["Name", "Phone", "Email", "Service", "Details"];
-      var body = [
-        lab[0] + ": " + (d.get("name") || ""),
-        lab[1] + ": " + (d.get("phone") || ""),
-        lab[2] + ": " + (d.get("email") || ""),
-        lab[3] + ": " + (d.get("service") || ""),
-        "",
-        lab[4] + ":",
-        (d.get("message") || "")
-      ].join("\n");
-      location.href = "mailto:" + addr + "?subject=" + encodeURIComponent((L ? "استفسار من الموقع – " : "Website enquiry – ") + (d.get("service") || "")) + "&body=" + encodeURIComponent(body);
+      var fields = [
+        ["name", "Name", "الاسم"],
+        ["company", "Company", "الشركة"],
+        ["phone", "Phone", "الهاتف"],
+        ["whatsapp", "WhatsApp", "واتساب"],
+        ["email", "Email", "البريد"],
+        ["service", "Service", "الخدمة"],
+        ["location", "Location", "الموقع"]
+      ];
+      var lines = [];
+      fields.forEach(function (row) {
+        if (!f.elements[row[0]]) return;
+        lines.push((L ? row[2] : row[1]) + ": " + (d.get(row[0]) || ""));
+      });
+      lines.push("");
+      lines.push((L ? "التفاصيل" : "Details") + ":");
+      lines.push(d.get("message") || "");
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "enquiry_submit", {
+          service: d.get("service") || "",
+          location: d.get("location") || ""
+        });
+      }
+      location.href = "mailto:" + addr + "?subject=" + encodeURIComponent((L ? "استفسار من الموقع – " : "Website enquiry – ") + (d.get("service") || "")) + "&body=" + encodeURIComponent(lines.join("\n"));
     });
   }
+  document.addEventListener("click", function (ev) {
+    if (typeof window.gtag !== "function" || !ev.target.closest) return;
+    var el = ev.target.closest("a.mail-link, a.wa-contact, .wa-contact");
+    if (!el) return;
+    if (el.classList.contains("wa-contact")) window.gtag("event", "whatsapp_click");
+    else window.gtag("event", "mailto_click");
+  });
+  document.querySelectorAll(".nav-drop").forEach(function (btn) {
+    btn.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      var group = btn.parentElement;
+      var open = !group.classList.contains("open");
+      document.querySelectorAll(".nav-group.open").forEach(function (other) {
+        if (other === group) return;
+        other.classList.remove("open");
+        var otherBtn = other.querySelector(".nav-drop");
+        if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
+      });
+      group.classList.toggle("open", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+  document.addEventListener("click", function () {
+    document.querySelectorAll(".nav-group.open").forEach(function (group) {
+      group.classList.remove("open");
+      var btn = group.querySelector(".nav-drop");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    });
+  });
   document.querySelectorAll("[data-cur]").forEach(function (sec) {
     function set(c) {
       sec.setAttribute("data-cur", c);

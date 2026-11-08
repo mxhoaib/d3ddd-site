@@ -33,11 +33,26 @@ def en_href(lang, fn, target):
 
 SERVICE_FOOTER = [
     ("services/architectural-drafting/", "Architectural drafting", "الرسم المعماري التنفيذي"),
+    ("fitout-shop-drawings/", "Fit-out &amp; joinery drawings", "رسومات الفيت آوت والنجارة"),
     ("services/architectural-designing/", "Architectural designing", "التصميم المعماري"),
     ("services/architectural-estimation/", "Architectural estimation", "حساب الكميات"),
     ("services/3d-rendering-modeling-visualization/", "3D rendering & visualization", "تصميم ثلاثي الأبعاد"),
     ("services/website-development-designing/", "Website development", "تطوير المواقع"),
 ]
+
+INDUSTRY_LINKS = [
+    ("construction-companies-uae/", "Construction companies", "شركات المقاولات"),
+    ("real-estate-developers-uae/", "Real estate developers", "المطورون العقاريون"),
+    ("interior-design-companies-uae/", "Interior design firms", "شركات التصميم الداخلي"),
+    ("marble-contractors-uae/", "Marble contractors", "مقاولو الرخام"),
+]
+
+EN_ONLY_PATHS = {path for path, _, _ in INDUSTRY_LINKS} | {"fitout-shop-drawings/"}
+
+def site_href(lang, fn, target):
+    if target in EN_ONLY_PATHS:
+        return en_href(lang, fn, target)
+    return href(lang, fn, target)
 
 def img(P, name, alt, eager=False, w=400, h=300):
     return (f'<img src="{P}assets/img/drawings/{name}.svg" alt="{alt}" width="{w}" height="{h}" '
@@ -46,10 +61,14 @@ def img(P, name, alt, eager=False, w=400, h=300):
 ORG_ID = D + "#business"
 def business_ld(lang, fn=""):
     node = business_node()
-    # Homepage only: attach the main-services catalogue to the single business node (no duplicate org).
-    if fn == "index.html" and HOME_CATALOG.get(lang):
+    # Homepage only: Organization typing plus the main-services catalogue on the one business node.
+    if fn == "index.html":
         node = dict(node)
-        node["hasOfferCatalog"] = HOME_CATALOG[lang]
+        types = list(node.get("@type") or [])
+        if "Organization" not in types:
+            node["@type"] = ["Organization"] + types
+        if HOME_CATALOG.get(lang):
+            node["hasOfferCatalog"] = HOME_CATALOG[lang]
     return node
 
 # Filled by content.py for the EN/AR homepages: {"en": OfferCatalog, "ar": OfferCatalog}
@@ -76,13 +95,13 @@ T = {
  "en": dict(dir="ltr", locale="en_AE", P="", nav=[("index.html","Home"),("services/","Services"),("projects/","Projects"),("marble.html","Marble Shop Drawings"),("website-design.html","Website Design"),("blog/","Blog"),("about.html","About"),("contact.html","Contact")],
    login="Client Login", menu="Open menu", skip="Skip to content", switch="العربية",
    tagline="Marble & stone shop drawings, AutoCAD drafting, 3D rendering and contractor websites in Dubai, Abu Dhabi, Sharjah and across the UAE.",
-   f_services="Services", f_company="Company", f_contact="Contact", portal="Client portal", rights="All rights reserved.", home="Home",
+   f_services="Services", f_company="Company", f_industries="Industries", f_contact="Contact", portal="Client portal", rights="All rights reserved.", home="Home",
    cta_eye="Let’s work together", cta_h="Your vision. Our precision.", cta_p="Send your drawings, sketches, dimensions or project requirements for a quote — in English or Arabic.", cta_wa="Email us", cta_form="Send an enquiry",
    fonts="family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@1,500&family=Tajawal:wght@500&display=swap"),
  "ar": dict(dir="rtl", locale="ar_AE", P="../", nav=[("index.html","الرئيسية"),("services/","الخدمات"),("projects/","المشاريع"),("marble.html","رسومات الرخام"),("website-design.html","تصميم المواقع"),("blog/","المدونة"),("about.html","من نحن"),("contact.html","تواصل معنا")],
    login="بوابة العملاء", menu="فتح القائمة", skip="انتقل إلى المحتوى", switch="English",
    tagline="رسومات تنفيذية للرخام والحجر، مخططات أوتوكاد، تصميم ثلاثي الأبعاد ومواقع إلكترونية للمقاولين في دبي وأبوظبي والشارقة وجميع أنحاء الإمارات.",
-   f_services="الخدمات", f_company="الشركة", f_contact="التواصل", portal="بوابة العملاء", rights="جميع الحقوق محفوظة.", home="الرئيسية",
+   f_services="الخدمات", f_company="الشركة", f_industries="القطاعات", f_contact="التواصل", portal="بوابة العملاء", rights="جميع الحقوق محفوظة.", home="الرئيسية",
    cta_eye="لنعمل معاً", cta_h="رؤيتك. دقتنا.", cta_p="أرسل مخططاتك أو رسوماتك الأولية أو المقاسات أو متطلبات مشروعك للحصول على عرض سعر — بالعربية أو الإنجليزية.", cta_wa="راسلنا عبر البريد", cta_form="أرسل استفسارك",
    fonts="family=Tajawal:wght@400;700&family=DM+Sans:wght@400;600;700&display=swap"),
 }
@@ -135,7 +154,50 @@ def nav_href(lang, fn, h):
         return href(lang, fn, "")
     if h.startswith("blog"):
         return en_href(lang, fn, h)
-    return href(lang, fn, h)
+    return site_href(lang, fn, h)
+
+def _on_page(fn, target):
+    return (fn == target) or (target.endswith("/") and (fn == target + "index.html" or fn.startswith(target)))
+
+def _menu_links(lang, fn, items):
+    en = lang == "en"
+    parts = []
+    for path, en_label, ar_label in items:
+        cur = ' aria-current="page"' if _on_page(fn, path) else ""
+        parts.append('<a href="%s"%s>%s</a>' % (site_href(lang, fn, path), cur, en_label if en else ar_label))
+    return "".join(parts)
+
+def services_menu(lang, fn):
+    en = lang == "en"
+    items = [
+        ("services/", "All services", "كل الخدمات"),
+        ("services/architectural-drafting/", "Architectural drafting", "الرسم المعماري التنفيذي"),
+        ("services/architectural-designing/", "Architectural designing", "التصميم المعماري"),
+        ("fitout-shop-drawings/", "Fit-out &amp; joinery drawings", "رسومات الفيت آوت والنجارة"),
+        ("services/architectural-estimation/", "Architectural estimation", "حساب الكميات"),
+        ("services/3d-rendering-modeling-visualization/", "3D visualization", "تصميم ثلاثي الأبعاد"),
+        ("marble.html", "Marble shop drawings", "رسومات الرخام"),
+        ("services/website-development-designing/", "Website development", "تطوير المواقع"),
+    ]
+    label = "Services" if en else "الخدمات"
+    caret = "Show services" if en else "عرض الخدمات"
+    current = _on_page(fn, "services/") or _on_page(fn, "fitout-shop-drawings/")
+    cur = " aria-current=page" if current else ""
+    return (
+        '<div class="nav-group"><a href="%s"%s>%s</a>'
+        '<button type="button" class="nav-drop" aria-expanded="false" aria-controls="nav-services" aria-label="%s">▾</button>'
+        '<div class="nav-sub" id="nav-services"><div class="nav-sub-panel">%s</div></div></div>'
+    ) % (site_href(lang, fn, "services/"), cur, label, caret, _menu_links(lang, fn, items))
+
+def industries_menu(lang, fn):
+    en = lang == "en"
+    label = "Industries" if en else "القطاعات"
+    current = any(_on_page(fn, path) for path, _, _ in INDUSTRY_LINKS)
+    cur = " aria-current=page" if current else ""
+    return (
+        '<div class="nav-group"><button type="button" class="nav-drop nav-drop-label" aria-expanded="false" aria-controls="nav-industries"%s>%s</button>'
+        '<div class="nav-sub" id="nav-industries"><div class="nav-sub-panel">%s</div></div></div>'
+    ) % (cur, label, _menu_links(lang, fn, INDUSTRY_LINKS))
 
 GOAT = '<script data-goatcounter="https://d3dddsites.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
 
@@ -144,7 +206,11 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
     P = prefix(lang, fn)
     nav_parts = []
     for h, n in t["nav"]:
-        current = (fn == h) or (h.endswith("/") and (fn == h + "index.html" or fn.startswith(h)))
+        if h == "services/":
+            nav_parts.append(services_menu(lang, fn))
+            nav_parts.append(industries_menu(lang, fn))
+            continue
+        current = _on_page(fn, h)
         cur = " aria-current=page" if current else ""
         nav_parts.append('<a href="%s"%s>%s</a>' % (nav_href(lang, fn, h), cur, n))
     nav = "".join(nav_parts)
@@ -173,7 +239,10 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
     blog_href = en_href(lang, fn, "blog/")
     fs = '<a href="%s">%s</a>' % (href(lang, fn, "services/"), "All services" if lang == "en" else "كل الخدمات")
     for path, label_en, label_ar in SERVICE_FOOTER:
-        fs += '<a href="%s">%s</a>' % (href(lang, fn, path), label_en if lang == "en" else label_ar)
+        fs += '<a href="%s">%s</a>' % (site_href(lang, fn, path), label_en if lang == "en" else label_ar)
+    fi = ""
+    for path, label_en, label_ar in INDUSTRY_LINKS:
+        fi += '<a href="%s">%s</a>' % (site_href(lang, fn, path), label_en if lang == "en" else label_ar)
     company = [
         ("projects/", "Projects", "المشاريع"),
         ("blog/", "Blog", "المدونة"),
@@ -215,13 +284,13 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
         '<main id="main">%s</main>\n'
         '<footer><div class="grid"><div><div class="logo"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></div><p class="footer-intro">%s</p>\n'
         '<p class="mt-12">%s%s · <a href="%s">d3ddd.com</a></p>%s</div>\n'
-        '<div><h2>%s</h2>%s</div><div><h2>%s</h2>%s</div>\n'
+        '<div><h2>%s</h2>%s</div><div><h2>%s</h2>%s</div><div><h2>%s</h2>%s</div>\n'
         '<div><h2>%s</h2><a href="%s">%s</a>%s%s<a href="%s">%s</a><address class="postal">%s</address></div></div>\n'
         '<div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. %s</div></footer>\n'
         '<script src="%sassets/config.js" defer></script><script src="%sassets/site.js" defer></script>%s%s</body></html>'
     ) % (
         t["skip"], top, home_href, t["menu"], nav, sw_href, other, other, t["switch"], body,
-        t["tagline"], mail_link(contact_href), whatsapp_html(lang), D, social_links(lang), t["f_services"], fs, t["f_company"], fc,
+        t["tagline"], mail_link(contact_href), whatsapp_html(lang), D, social_links(lang), t["f_services"], fs, t["f_company"], fc, t["f_industries"], fi,
         t["f_contact"], contact_href, t["cta_form"], mail_link(contact_href), whatsapp_html(lang), blog_href, blog_label, loc,
         t["rights"], P, P, scripts, GOAT,
     )
@@ -244,6 +313,8 @@ globals()["href"] = href
 
 out = build_pages(globals())
 out.update(build_service_pages(globals()))
+from landing_pages import build_landing_pages
+out.update(build_landing_pages(globals()))
 from project_pages import build_project_pages, PROJECTS  # portfolio: /projects/ grid, project pages, related blocks
 out.update(build_project_pages(globals(), out))
 
@@ -270,6 +341,9 @@ ns = {}
 exec(open("portal_pages.py", encoding="utf-8").read(), ns)
 for fn, (t, d, b, *rest) in ns["pages"].items():
     open(fn, "w", encoding="utf-8").write(shell("en", fn, t, d, b, (), True, False, rest[1] if len(rest) > 1 else ""))
+for portal in ("login.html", "signup.html", "dashboard.html"):
+    if os.path.exists(portal):
+        os.remove(portal)
 
 BILINGUAL_PAGES = [
     "index.html", "about.html", "contact.html", "marble.html", "website-design.html",
@@ -288,6 +362,14 @@ for fn in BILINGUAL_PAGES:
         )
 for pr in PROJECTS:  # project pages are English only (no hreflang alternates)
     x.append('  <url><loc>%s</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>' % url("en", "projects/%s/" % pr["slug"]))
+for fn in (
+    "fitout-shop-drawings/",
+    "construction-companies-uae/",
+    "real-estate-developers-uae/",
+    "interior-design-companies-uae/",
+    "marble-contractors-uae/",
+):
+    x.append('  <url><loc>%s</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>' % url("en", fn))
 x.append("</urlset>")
 open("sitemap.xml", "w", encoding="utf-8").write("\n".join(x) + "\n")
 open("robots.txt", "w", encoding="utf-8").write(
@@ -324,6 +406,7 @@ def write_llms():
         "## Services",
         "",
         "- [Marble and stone shop drawings](https://d3ddd.com/marble.html): Fabrication drawings, cutting lists, slab layouts and BOQ for stone.",
+        "- [Fit-out and joinery shop drawings](https://d3ddd.com/fitout-shop-drawings/): Joinery, ceilings, partitions, kitchens, wardrobes and interior elevations.",
         "- [Architectural drafting](https://d3ddd.com/services/architectural-drafting/): Shop drawings, CAD detailing, as-built, joinery and fit-out sets.",
         "- [Architectural designing](https://d3ddd.com/services/architectural-designing/): Concept layouts, space planning, elevations and design development.",
         "- [Architectural estimation](https://d3ddd.com/services/architectural-estimation/): BOQ, quantity take-offs, material schedules and tender packages.",
@@ -340,6 +423,13 @@ def write_llms():
         "- [About](https://d3ddd.com/about.html): The studio.",
         "- [Website packages](https://d3ddd.com/website-design.html): AED and CAD website prices and demo themes.",
         "- [Blog](https://d3ddd.com/blog/): Drafting and shop-drawing notes. English only.",
+        "",
+        "## Industries",
+        "",
+        "- [Construction companies](https://d3ddd.com/construction-companies-uae/): Outsourced architectural and technical drawing support for UAE contractors.",
+        "- [Real estate developers](https://d3ddd.com/real-estate-developers-uae/): 3D visualization, presentation stills and design coordination.",
+        "- [Interior design firms](https://d3ddd.com/interior-design-companies-uae/): Interior renders, joinery drawings and material coordination.",
+        "- [Marble contractors](https://d3ddd.com/marble-contractors-uae/): Shop drawings, slab layouts, cutting lists and stone quantities.",
         "",
         "## Projects",
         "",

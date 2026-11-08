@@ -7,6 +7,49 @@ from longform import hub_bundle, service_bundle
 SERVICES = json.loads((Path(__file__).parent / "services_data.json").read_text(encoding="utf-8"))
 
 
+def related_services(g, lang, fn, slug):
+    groups = {
+        "architectural-drafting": [
+            ("fitout-shop-drawings/", "FIT", "Fit-out and joinery", "Ceilings, partitions, kitchens and wardrobes."),
+            ("marble.html", "STONE", "Marble shop drawings", "Fabrication drawings, slab layouts and cutting lists."),
+            ("services/architectural-estimation/", "BOQ", "Estimation and BOQ", "Quantities measured from the drafted sheets."),
+            ("construction-companies-uae/", "SITE", "Construction companies", "Outsourced drawing support for contractors."),
+            ("interior-design-companies-uae/", "INT", "Interior firms", "Joinery drawings and material coordination."),
+            ("projects/villa-ground-floor-marble-flooring-layout/", "PLAN", "Villa floor layout", "A drafted ground-floor stone set-out."),
+        ],
+        "architectural-estimation": [
+            ("marble.html", "STONE", "Marble shop drawings", "The sheets stone quantities are measured from."),
+            ("services/architectural-drafting/", "CAD", "Architectural drafting", "The wider drawing set behind a bill."),
+            ("construction-companies-uae/", "SITE", "Construction companies", "Tender and shop-drawing support for contractors."),
+            ("marble-contractors-uae/", "YARD", "Marble contractors", "Cutting lists, slab layouts and stone quantities."),
+            ("projects/marble-slab-cutting-layout-bathroom-cladding/", "SLAB", "Bathroom slab nesting", "Numbered panels a yard can price."),
+            ("projects/villa-ground-floor-marble-flooring-layout/", "PLAN", "Villa floor layout", "Areas that become a flooring schedule."),
+        ],
+        "3d-rendering-modeling-visualization": [
+            ("real-estate-developers-uae/", "DEV", "Real estate developers", "Presentation stills and design coordination."),
+            ("interior-design-companies-uae/", "INT", "Interior firms", "Renders coordinated with joinery and stone."),
+            ("services/architectural-designing/", "DES", "Architectural design", "Layouts that the images are built from."),
+            ("marble.html", "STONE", "Marble shop drawings", "The measured sheets a render must not replace."),
+            ("projects/entrance-lobby-waterjet-marble-medallion-flooring/", "LOBBY", "Lobby medallion", "A feature floor that reads in a presentation."),
+            ("projects/luxury-bathroom-marble-cladding-shop-drawings/", "BATH", "Bathroom cladding", "Stone junctions a material study should follow."),
+        ],
+    }
+    items = groups.get(slug)
+    if not items:
+        return ""
+    cards = []
+    for target, num, title, text in items:
+        cards.append(
+            '<a class="card" href="%s"><div class="b"><span class="num">%s</span><h3>%s</h3><p>%s</p></div></a>'
+            % (g["href"](lang, fn, target), num, title, text)
+        )
+    return (
+        '<section class="section" id="related"><div class="wrap"><p class="eyebrow">Related</p>'
+        '<h2 class="mb-24">Continue to the matching service, industry or sheet</h2>'
+        '<div class="grid g3">%s</div></div></section>' % "".join(cards)
+    )
+
+
 def build_service_pages(g):
     shell, img, cta = g["shell"], g["img"], g["cta"]
     crumbs_ld, service_ld, url = g["crumbs_ld"], g["service_ld"], g["url"]
@@ -71,6 +114,8 @@ def build_service_pages(g):
         faq_title = "Frequently asked questions" if lang == "en" else "الأسئلة الشائعة"
         faq_eye = "FAQ" if lang == "en" else "أسئلة وأجوبة"
         body += guide + g["faq_html"](faqs, faq_title, faq_eye)
+        if lang == "en":
+            body += related_services(g, lang, fn, s["slug"])
         body += cta(lang).replace('href="contact.html"', f'href="{contact}"')
         ld = [
             crumbs_ld(lang, [(home_l, url(lang, "index.html")), (svc_l, url(lang, "services/")), (t["name"], url(lang, f"services/{s['slug']}/"))]),
@@ -92,6 +137,11 @@ def build_service_pages(g):
         home = g["href"](lang, fn, "")
         marble = g["href"](lang, fn, "marble.html")
         webpkg = g["href"](lang, fn, "website-design.html")
+        fitout = g["href"](lang, fn, "fitout-shop-drawings/")
+        contractors = g["href"](lang, fn, "construction-companies-uae/")
+        developers = g["href"](lang, fn, "real-estate-developers-uae/")
+        interiors = g["href"](lang, fn, "interior-design-companies-uae/")
+        yards = g["href"](lang, fn, "marble-contractors-uae/")
         if lang == "en":
             hero = f'''<section class="page-hero"><nav class="crumbs" aria-label="Breadcrumb"><a href="{home}">Home</a> / <span>Services</span></nav>
 <p class="eyebrow">Services — Dubai &amp; UAE</p>
@@ -106,9 +156,17 @@ def build_service_pages(g):
 <div class="card"><div class="b"><span class="num">3D</span><h3>Shop drawing approval / 3D</h3><p>Renders that support client and consultant approval.</p><div class="actions mt-12"><a class="btn" href="{contact}?service=3d">Request quote</a><a class="btn ghost" href="3d-rendering-modeling-visualization/">3D rendering details</a></div></div></div>
 </div></div></section>
 <section class="section"><div class="wrap"><p class="eyebrow">Specialist pages</p><h2>Also available</h2>
-<div class="grid g2 mt-24">
+<div class="grid g3 mt-24">
+<a class="card" href="{fitout}"><div class="b"><span class="num">FIT</span><h3>Fit-out &amp; joinery shop drawings</h3><p>Ceilings, partitions, kitchens, wardrobes and interior elevations.</p></div></a>
 <a class="card" href="{marble}"><div class="b"><span class="num">STONE</span><h3>Marble &amp; stone shop drawings</h3><p>Fabrication drawings, cutting lists and BOQ for stone works.</p></div></a>
 <a class="card" href="{webpkg}"><div class="b"><span class="num">WEB</span><h3>Contractor website package</h3><p>AED 2,000 · 5 pages · enquiry-focused — pricing and demos.</p></div></a>
+</div></div></section>
+<section class="section alt"><div class="wrap"><p class="eyebrow">Industries</p><h2>Who the drawings are for</h2>
+<div class="grid g4 mt-24">
+<a class="card" href="{contractors}"><div class="b"><h3>Construction companies</h3><p>Technical drafting support for UAE contractors.</p></div></a>
+<a class="card" href="{developers}"><div class="b"><h3>Real estate developers</h3><p>Visualization and presentation stills.</p></div></a>
+<a class="card" href="{interiors}"><div class="b"><h3>Interior design firms</h3><p>Joinery drawings and material coordination.</p></div></a>
+<a class="card" href="{yards}"><div class="b"><h3>Marble contractors</h3><p>Shop drawings, slab layouts and cutting lists.</p></div></a>
 </div></div></section>'''
             title = "Services | Architectural Drafting, Design, Estimation, 3D & Web UAE – D3DDD"
             desc = "D3DDD services in Dubai and the UAE: architectural drafting, designing, estimation, 3D rendering and website development for Gulf contractors."
