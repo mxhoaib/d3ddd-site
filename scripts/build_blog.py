@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT))
 os.chdir(ROOT)
 
 import markdown
-from contact_config import whatsapp_html
+from contact_config import whatsapp_html, mail_link, social_links, business_node, analytics_snippet
 
 D = "https://d3ddd.com"
 EMAIL = "info@d3ddd.com"
@@ -53,8 +53,9 @@ def esc(s: str) -> str:
     return html.escape(s, quote=True)
 
 def topbar(prefix: str) -> str:
+    contact = f"{prefix}contact.html"
     return (
-        f'<div class="topbar"><span><a href="mailto:{EMAIL}">{EMAIL}</a></span>'
+        f'<div class="topbar"><span><a href="{contact}">Enquiry form</a> · {mail_link(contact)}</span>'
         f'<span><a href="{D}/">d3ddd.com</a></span></div>'
     )
 
@@ -78,8 +79,8 @@ def nav(prefix: str, current: str = "") -> str:
 
 def footer(prefix: str) -> str:
     return f'''<footer><div class="grid"><div><div class="logo"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></div>
-<p style="margin-top:16px;max-width:340px">Architectural drafting, designing, estimation, 3D visualization and websites in Dubai, Abu Dhabi, Sharjah and across the UAE.</p>
-<p style="margin-top:12px"><a href="mailto:{EMAIL}">{EMAIL}</a>{whatsapp_html("en")} · <a href="{D}/">d3ddd.com</a></p></div>
+<p class="footer-intro">Architectural drafting, designing, estimation, 3D visualization and websites in Dubai, Abu Dhabi, Sharjah and across the UAE.</p>
+<p class="mt-12">{mail_link(prefix + "contact.html")}{whatsapp_html("en")} · <a href="{D}/">d3ddd.com</a></p>{social_links("en")}</div>
 <div><h2>Services</h2>
 <a href="{prefix}services/">All services</a>
 <a href="{prefix}services/architectural-drafting/">Architectural drafting</a>
@@ -89,7 +90,7 @@ def footer(prefix: str) -> str:
 <a href="{prefix}services/website-development-designing/">Website development</a>
 </div>
 <div><h2>Company</h2><a href="{prefix}projects/">Projects</a><a href="{prefix}about.html">About</a><a href="{prefix}blog/">Blog</a><a href="{prefix}contact.html">Contact</a></div>
-<div><h2>Contact</h2><a href="{prefix}contact.html">Send an enquiry</a><a href="mailto:{EMAIL}">{EMAIL}</a>{whatsapp_html("en")}<a href="{prefix}blog/feed.xml">RSS</a><span>Dubai, United Arab Emirates</span></div></div>
+<div><h2>Contact</h2><a href="{prefix}contact.html">Send an enquiry</a>{mail_link(prefix + "contact.html")}{whatsapp_html("en")}<a href="{prefix}blog/feed.xml">RSS</a><address class="postal">Dubai, United Arab Emirates</address></div></div>
 <div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. All rights reserved.</div></footer>'''
 
 def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: list, og_type: str = "website", image: str | None = None, current: str = "blog", link_canonical: str | None = None) -> str:
@@ -115,7 +116,7 @@ def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: lis
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="{prefix}assets/style.css" as="style"><link rel="stylesheet" href="{prefix}assets/style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" media="print" onload="this.media='all'">
-<script type="application/ld+json">{ld_json}</script></head><body>
+<script type="application/ld+json">{ld_json}</script>{analytics_snippet()}</head><body>
 <a class="skip" href="#main">Skip to content</a>
 {topbar(prefix)}
 <header class="site-header"><a class="logo" href="{prefix}" aria-label="D3DDD – Dubai 3D Design &amp; Draft"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></a>
@@ -127,28 +128,19 @@ def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: lis
 {GOAT}</body></html>'''
 
 def business_ld() -> dict:
-    return {
-        "@type": ["ProfessionalService", "LocalBusiness"],
-        "@id": f"{D}/#business",
-        "name": "D3DDD – Dubai 3D Design & Draft",
-        "url": f"{D}/",
-        "email": EMAIL,
-        "logo": f"{D}/assets/img/logo.svg",
-        "image": f"{D}/assets/img/og-image.png",
-        "address": {"@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE"},
-        "areaServed": [
-            {"@type": "City", "name": "Dubai"},
-            {"@type": "Place", "name": "Palm Jumeirah, Dubai"},
-            {"@type": "Country", "name": "United Arab Emirates"},
-            {"@type": "Place", "name": "New York, NY, United States"},
-            {"@type": "Place", "name": "London, United Kingdom"},
-        ],
-        "sameAs": [
-            "https://www.fiverr.com/mxhoaib",
-            "https://www.instagram.com/mxhaib/",
-            "https://www.linkedin.com/in/mshoaib94",
-        ],
-    }
+    return business_node()
+
+def obscure_emails(fragment: str, contact_href: str) -> str:
+    """Replace visible addresses in article HTML. JSON-LD is not passed through here."""
+    widget = mail_link(contact_href)
+    fragment = re.sub(
+        r'<a href="mailto:info@d3ddd\.com">info@d3ddd\.com</a>',
+        widget,
+        fragment,
+    )
+    if "info@d3ddd.com" in fragment:
+        fragment = fragment.replace("info@d3ddd.com", widget)
+    return fragment
 
 def crumbs_ld(items: list[tuple[str, str]]) -> dict:
     return {
@@ -226,7 +218,7 @@ def build_index(posts: list[dict]) -> None:
 <p class="eyebrow">Insights</p><h1>Architecture &amp; drafting <em>notes.</em></h1>
 <p>Researched articles on megaprojects, stone detailing and documentation habits — written for contractors, fabricators and design teams.</p>
 {byline}
-<p class="chips" style="margin-top:18px">{chips}<a class="chip" href="feed.xml">RSS</a></p></section>
+<p class="chips mt-18">{chips}<a class="chip" href="feed.xml">RSS</a></p></section>
 <section class="section"><div class="wrap"><div class="grid g3 post-grid">{"".join(cards)}</div></div></section>'''
     ld = [
         business_ld(),
@@ -251,6 +243,7 @@ def build_article(p: dict, all_posts: list[dict]) -> None:
         f'<li><a href="../{esc(r["slug"])}/">{esc(r["title"])}</a></li>' for r in related
     )
     credit = f'<p class="img-credit">{esc(p["image_credit"])}</p>' if p["image_credit"] else ""
+    prose = obscure_emails(p["body_html"], "../../contact.html")
     body = f'''<article class="article">
 <section class="page-hero">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> / <a href="../">Blog</a> / <a href="../category/{esc(p["category"])}/">{esc(p["category_title"])}</a> / <span>{esc(p["title"])}</span></nav>
@@ -261,10 +254,10 @@ def build_article(p: dict, all_posts: list[dict]) -> None:
 </section>
 <section class="section"><div class="wrap article-wrap">
 <figure class="hero-fig"><img src="{esc(p["image"])}" alt="{esc(p["image_alt"])}" width="1200" height="630" fetchpriority="high" decoding="async">{credit}</figure>
-<div class="prose">{p["body_html"]}</div>
+<div class="prose">{prose}</div>
 {AUTHOR_BOX}
 <aside class="box related"><h2>Related</h2><ul>{rel_html}</ul>
-<p style="margin-top:14px"><a class="btn" href="../../contact.html">Request a quote →</a>
+<p class="mt-14"><a class="btn" href="../../contact.html">Request a quote →</a>
 <a class="btn ghost" href="../">All articles</a></p></aside>
 </div></section></article>'''
     ld = [
@@ -386,6 +379,7 @@ def main() -> None:
     if not posts:
         raise SystemExit("No posts in posts/")
     if "--arabic-only" in sys.argv:
+        sys.path.insert(0, str(ROOT / "scripts"))
         from build_ar_blog import build_arabic
         build_arabic(sys.modules[__name__], posts, include_drafts="--include-drafts" in sys.argv)
         return
@@ -395,6 +389,7 @@ def main() -> None:
     build_categories(posts)
     build_rss(posts)
     patch_sitemap(posts)
+    sys.path.insert(0, str(ROOT / "scripts"))
     from build_ar_blog import build_arabic
     build_arabic(sys.modules[__name__], posts, include_drafts="--include-drafts" in sys.argv)
     print(f"blog: {len(posts)} posts → blog/")

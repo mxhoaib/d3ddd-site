@@ -3,7 +3,7 @@
 window.D3DDD_CONFIG = {
   SUPABASE_URL: "",            // e.g. "https://xxxxxxxx.supabase.co"
   SUPABASE_ANON_KEY: "",       // public anon key from Supabase > Project Settings > API
-  EMAIL: "info@d3ddd.com",
   PAYPAL: "https://paypal.me/imshoi"
+  // The public studio address is not stored here. Pages assemble it in the browser from data attributes.
 };
 

@@ -34,7 +34,7 @@ The exact contents depend on the scope and the consultant's requirements, but a 
 - Openings, niches, sockets and switches cut into the stone
 - Panel numbering that ties back to the cutting list
 
-<figure style="margin:1.6em 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)"><img src="/assets/img/projects/luxury-bathroom-marble-cladding-shop-drawings/luxury-bathroom-marble-cladding-shop-drawings-01.jpg" alt="Marble shop drawing example by D3DDD: bathroom floor plan and wall plan with slab set-out, four dimensioned Burberry Grey marble cladding elevations, an LED groove and mitred-corner detail, and the approved slab" width="1600" height="1304" loading="lazy" decoding="async"><figcaption class="img-credit">Floor plan, wall plan and dimensioned cladding elevations for a villa bathroom in Dubai. From our project <a href="/projects/luxury-bathroom-marble-cladding-shop-drawings/">Luxury Bathroom Marble Cladding Shop Drawings</a>.</figcaption></figure>
+<figure class="prose-fig"><img src="/assets/img/projects/luxury-bathroom-marble-cladding-shop-drawings/luxury-bathroom-marble-cladding-shop-drawings-01.jpg" alt="Marble shop drawing example by D3DDD: bathroom floor plan and wall plan with slab set-out, four dimensioned Burberry Grey marble cladding elevations, an LED groove and mitred-corner detail, and the approved slab" width="1600" height="1304" loading="lazy" decoding="async"><figcaption class="img-credit">Floor plan, wall plan and dimensioned cladding elevations for a villa bathroom in Dubai. From our project <a href="/projects/luxury-bathroom-marble-cladding-shop-drawings/">Luxury Bathroom Marble Cladding Shop Drawings</a>.</figcaption></figure>
 
 ### Sections and details
 
@@ -43,7 +43,7 @@ The exact contents depend on the scope and the consultant's requirements, but a 
 - Interfaces with skirting, thresholds, glass, joinery and sanitary fittings
 - Fixing details for wall cladding, such as adhesive fixing or mechanical anchors, as specified
 
-<figure style="margin:1.6em 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)"><img src="/assets/img/projects/paonazzetto-marble-vanity-tops-shop-drawings/paonazzetto-marble-vanity-tops-shop-drawings-03.jpg" alt="Marble section and edge profile details by D3DDD: undermount sink section, 2 mm pencil-round edges, 5×10 mm drip groove and angle support for a 2 cm Paonazzetto marble vanity top" width="1600" height="665" loading="lazy" decoding="async"><figcaption class="img-credit">Section and edge details for Paonazzetto vanity tops: sink junction, pencil-round edges, drip groove and support bracket. From our project <a href="/projects/paonazzetto-marble-vanity-tops-shop-drawings/">Paonazzetto Marble Vanity Tops Shop Drawings</a>.</figcaption></figure>
+<figure class="prose-fig"><img src="/assets/img/projects/paonazzetto-marble-vanity-tops-shop-drawings/paonazzetto-marble-vanity-tops-shop-drawings-03.jpg" alt="Marble section and edge profile details by D3DDD: undermount sink section, 2 mm pencil-round edges, 5×10 mm drip groove and angle support for a 2 cm Paonazzetto marble vanity top" width="1600" height="665" loading="lazy" decoding="async"><figcaption class="img-credit">Section and edge details for Paonazzetto vanity tops: sink junction, pencil-round edges, drip groove and support bracket. From our project <a href="/projects/paonazzetto-marble-vanity-tops-shop-drawings/">Paonazzetto Marble Vanity Tops Shop Drawings</a>.</figcaption></figure>
 
 ### Material and finish information
 
