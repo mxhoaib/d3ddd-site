@@ -57,6 +57,8 @@ The phrase **“glaze marble” is ambiguous**, so it should not be used alone a
 
 Natural marble does **not** need glazing simply because it is marble. Approve a physical finish sample and ask the stone supplier which treatment, if any, is appropriate. International Stoneworks’ [finish guide](https://intlstoneworks.com/blog/2015/05/26/choosing-the-right-finish-polished-honed-or-textured/) explains the distinction between a polished surface and a coating.
 
+For coffee, dining, side table and tray ideas that use glaze marble on UAE projects, see [custom marble tables in Dubai](/blog/custom-marble-tables-dubai-glaze-marble/).
+
 ## Support, Thickness and Edges: What Needs Checking?
 
 There is no responsible universal thickness recommendation for every marble table. The selected stone, slab condition, unsupported spans, overhangs, joints, base stiffness and expected loads all matter. An apparently thick edge may be a built-up or mitred detail rather than a solid section of that depth.
