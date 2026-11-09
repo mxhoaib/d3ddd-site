@@ -1,9 +1,27 @@
 # Longer page copy for the homepage, marble page and /services/ pages.
 # Imported by content.py and service_pages.py. No invented prices, clients or regulations.
+from illustrations import svg_cut, svg_delivered, svg_review, svg_turnaround, svg_next
 
 def _a(href, text, en=False):
     extra = ' lang="en" dir="ltr"' if en else ""
     return '<a href="%s"%s>%s</a>' % (href, extra, text)
+
+def _ul(items):
+    return "<ul>" + "".join("<li>%s</li>" % item for item in items) + "</ul>"
+
+
+def _guide(rows):
+    # rows: (heading, svg, inner html). Illustration beside the copy on desktop.
+    parts = ['<section class="section" id="guide"><div class="wrap guide-list">']
+    for i, (title, svg, inner) in enumerate(rows):
+        flip = " guide-flip" if i % 2 else ""
+        parts.append(
+            '<article class="split guide-row%s"><figure class="illu">%s</figure>'
+            '<div class="copy"><h2>%s</h2>%s</div></article>' % (flip, svg, title, inner)
+        )
+    parts.append("</div></section>")
+    return "".join(parts)
+
 
 def _html(blocks):
     parts = ['<section class="section" id="guide"><div class="wrap copy">']
@@ -60,27 +78,40 @@ def _links(lang, here, root):
 def home_bundle(lang, here, root):
     L = _links(lang, here, root)
     if lang == "en":
-        html = _html([
-            ("h", "Why shop drawings matter before anything is cut"),
-            ("p", "A design drawing shows intent: a marble floor, a stone wall, a vanity, a staircase. A shop drawing shows how that intent is built. It names every piece, joint, thickness, edge and cut-out, and it is the sheet the fabricator, the site team and the consultant are all looking at. On a UAE fit-out that difference is expensive to get wrong. Stone is ordered, nested and cut from the approved set. A sink that is 20 mm out, a vein that runs the wrong way, or a mitre that does not match the adjacent wall is not a quick site fix."),
-            ("p", "D3DDD prepares those sets for contractors, stone fabricators, joinery shops, consultants and interior designers in Dubai, Abu Dhabi, Sharjah and the other emirates. The work is delivered digitally. You send the architectural or interior drawings, sketches, site sizes or photographs through the %s, and the scope, price and delivery date are confirmed in writing before drafting starts. Shop drawings, drafting, design, estimation and 3D work are quoted per project. The only published prices on this site are the website packages." % L["contact"]),
-            ("h", "What a delivered set contains"),
-            ("p", "The standard issue is an AutoCAD DWG and a PDF of the same sheets. The DWG is the working file: layers, real dimensions, and piece marks the factory can keep using. The PDF is what most consultants mark up and what the site prints. When the scope includes quantities, cutting lists or a bill of quantities, the schedules are set out so they can be taken into a spreadsheet. 3D work is issued as high-resolution images. Other formats can be discussed when you ask for a quote; they are not assumed."),
-            ("ul", [
-                "Plans, elevations, sections and the enlarged details the work actually needs.",
-                "Joint layout, edge profile, thickness, finish and cut-outs such as sinks, hobs and sockets.",
-                "Piece marks that match a cutting list or slab layout, when stone is being nested.",
-                "A revision table, so a later comment round is a new issue and not a silent overwrite.",
-                "Notes in English, Arabic, or both. Say which you need with the enquiry.",
-            ]),
-            ("h", "How consultant review usually works in Dubai, Abu Dhabi and Sharjah"),
-            ("p", "On most fit-out projects in these three emirates the specialist drawing — stone, joinery, or the coordinated architectural set — is submitted by the contractor to the project’s consultant. That reviewer is whoever the contract names: the architect, the interior designer, the engineer, or more than one of them. Comments come back on the PDF, as a marked-up print, or as a comments list. The drafter revises the sheets, clouds what changed, raises the revision, and the set goes back. Fabrication waits until that reviewer has approved the issue they asked to see. D3DDD does not replace the consultant, and a shop drawing is not a building permit."),
-            ("p", "What changes from Dubai to Abu Dhabi to Sharjah, and from one project to the next, is the title block, the number of review copies, and whether the main contractor wants a transmittal or a particular sheet list. There is no single national shop-drawing form. If your project has a checklist, send it with the drawings and the set will follow that checklist. Permit sets and BIM submissions are a different scope from a fabrication shop drawing. Where a project also needs them, that is agreed separately. Notes on drawing packages and on Dubai BIM submissions are on the %s, including %s and %s." % (L["blog"], L["b_dubai"], L["b_bim"])),
-            ("h", "Turnaround"),
-            ("p", "There is no fixed public turnaround, because a single vanity is not the same job as a villa floor. The delivery date is written into the quote and confirmed before drafting starts. A comment round after the consultant replies is a further issue, timed once those comments are in hand. Missing site dimensions pause the affected sheets until you send them. If a date is critical, say so in the enquiry and send the drawings you already have, even if they are still sketches."),
-            ("h", "Where to go next"),
-            ("p", "Stone fabrication lives on the %s page. Broader CAD sets are under %s. Early layouts are %s, quantities are %s, and presentation images are %s. Contractor websites, with the published AED prices, are under %s and the %s page." % (L["marble"], L["draft"], L["design"], L["estim"], L["viz"], L["web"], L["webpkg"])),
-            ("p", "The %s show the kind of sheets already issued for Dubai villas: %s, %s, %s and %s. For a short read before you send a package, start with %s or the %s." % (L["projects"], L["p_bath"], L["p_floor"], L["p_nest"], L["p_vanity"], L["b_what"], L["b_check"])),
+        html = _guide([
+            (
+                "Why shop drawings matter before anything is cut",
+                svg_cut(),
+                "<p>Shop drawings name every piece, joint, thickness, edge and cut-out before stone is cut in Dubai, Abu Dhabi, Sharjah and the UAE. Send drawings through the %s; scope, price and date are confirmed in writing, and only website packages have published prices.</p>" % L["contact"],
+            ),
+            (
+                "What a delivered set contains",
+                svg_delivered(),
+                _ul([
+                    "DWG and PDF shop drawings for Dubai, Abu Dhabi, Sharjah and the UAE: plans, elevations, sections, joints, edges and cut-outs.",
+                    "Piece marks, a cutting list or bill of quantities, and a revision table.",
+                    "Notes in English, Arabic, or both.",
+                ]),
+            ),
+            (
+                "How consultant review usually works in Dubai, Abu Dhabi and Sharjah",
+                svg_review(),
+                "<p>In Dubai, Abu Dhabi and Sharjah the contractor submits shop drawings to the consultant; comments return on the PDF and fabrication waits for the revised approval. A shop drawing is not a permit.</p>"
+                "<p>Title block and copies follow your project checklist. Notes are on the %s, including %s and %s.</p>" % (L["blog"], L["b_dubai"], L["b_bim"]),
+            ),
+            (
+                "Turnaround",
+                svg_turnaround(),
+                "<p>Shop-drawing turnaround in Dubai, Abu Dhabi, Sharjah and the UAE is the date in the written quote. Comment rounds start when the comments arrive, and a missing site size pauses only that sheet.</p>",
+            ),
+            (
+                "Where to go next",
+                svg_next(),
+                "<p>For shop drawings, see %s, %s, %s, %s and %s. Websites with published prices: %s and %s.</p>"
+                "<p>Dubai villa sheets are in the %s: %s, %s, %s and %s. Read %s or the %s.</p>"
+                % (L["marble"], L["draft"], L["design"], L["estim"], L["viz"], L["web"], L["webpkg"],
+                   L["projects"], L["p_bath"], L["p_floor"], L["p_nest"], L["p_vanity"], L["b_what"], L["b_check"]),
+            ),
         ])
         faqs = [
             ("Why do shop drawings matter before stone is cut?", "They freeze piece sizes, joints, thickness, edges and cut-outs while the material can still be nested. Once a slab is cut, a wrong opening or a vein running the wrong way is a replacement, not a pencil correction."),
