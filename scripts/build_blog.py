@@ -101,7 +101,7 @@ def footer(prefix: str) -> str:
 <a href="{prefix}services/3d-rendering-modeling-visualization/">3D rendering &amp; visualization</a>
 <a href="{prefix}services/website-development-designing/">Website development</a>
 </div>
-<div><h2>Company</h2><a href="{prefix}projects/">Projects</a><a href="{prefix}about.html">About</a><a href="{prefix}blog/">Blog</a><a href="{prefix}contact.html">Contact</a></div>
+<div><h2>Company</h2><a href="{prefix}projects/">Projects</a><a href="{prefix}about.html">About</a><a href="{prefix}blog/">Blog</a><a href="{prefix}resources/uae-directories/">UAE Directories</a><a href="{prefix}contact.html">Contact</a></div>
 <div><h2>Contact</h2><a href="{prefix}contact.html">Send an enquiry</a>{mail_link(prefix + "contact.html")}{whatsapp_html("en")}<a href="{prefix}blog/feed.xml">RSS</a><address class="postal">Dubai, United Arab Emirates</address></div></div>
 <div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. All rights reserved.</div></footer>'''
 

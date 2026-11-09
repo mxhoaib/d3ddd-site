@@ -247,12 +247,15 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
         ("projects/", "Projects", "المشاريع"),
         ("blog/", "Blog", "المدونة"),
         ("about.html", "About", "من نحن"),
+        ("resources/uae-directories/", "UAE Directories", "أدلة الإمارات"),
         ("contact.html", "Contact", "تواصل معنا"),
     ]
     fc = ""
     for path, en_label, ar_label in company:
-        target = en_href(lang, fn, path) if path.startswith("blog") else href(lang, fn, path)
-        fc += '<a href="%s">%s</a>' % (target, en_label if lang == "en" else ar_label)
+        english_only = path.startswith("blog") or path.startswith("resources/")
+        target = en_href(lang, fn, path) if english_only else href(lang, fn, path)
+        cur = ' aria-current="page"' if _on_page(fn, path) else ""
+        fc += '<a href="%s"%s>%s</a>' % (target, cur, en_label if lang == "en" else ar_label)
     blog_label = "Blog" if lang == "en" else "المدونة"
     loc = "Dubai, United Arab Emirates"
     home_href = href(lang, fn, "")
@@ -310,6 +313,8 @@ out = build_pages(globals())
 out.update(build_service_pages(globals()))
 from landing_pages import build_landing_pages
 out.update(build_landing_pages(globals()))
+from directories_page import build_directory_page
+out.update(build_directory_page(globals()))
 from project_pages import build_project_pages, PROJECTS  # portfolio: /projects/ grid, project pages, related blocks
 out.update(build_project_pages(globals(), out))
 
@@ -363,6 +368,7 @@ for fn in (
     "real-estate-developers-uae/",
     "interior-design-companies-uae/",
     "marble-contractors-uae/",
+    "resources/uae-directories/",
 ):
     x.append('  <url><loc>%s</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>' % url("en", fn))
 x.append("</urlset>")
