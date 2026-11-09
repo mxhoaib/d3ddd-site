@@ -6,6 +6,9 @@ category: architecture
 category_title: Architecture
 description: "Export clean IFC for Dubai BIM submissions—units, classification, model checks before Build in Dubai upload."
 canonical: https://shoaibsite.blogspot.com/2026/10/blog-post_877.html
+image: /assets/img/blog/ifc-openbim-workflow-dubai-bim-submissions.svg
+og_image: /assets/img/blog/ifc-openbim-workflow-dubai-bim-submissions.jpg
+image_alt: "Building model exported to an IFC file with unit, classification and coordinate checks"
 ---
 **IFC OpenBIM Dubai** workflows are how multi-vendor teams hand models to Dubai Municipality processes without locking everyone into one proprietary format. As the [Dubai BIM mandate 2026](/blog/dubai-bim-mandate-2026-submission-guide/) approaches, clean IFC export—units, classification, coordinates and schema—becomes a submission skill, not an optional geek interest.
 

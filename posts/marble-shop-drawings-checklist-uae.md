@@ -5,6 +5,9 @@ date: 2026-10-25
 category: shop-drawings
 category_title: Shop Drawings
 description: "A field-tested checklist for marble and stone shop drawings in Dubai, Abu Dhabi and Sharjah — piece IDs, edge profiles, joint layouts and what to freeze before the slab is cut."
+image: /assets/img/blog/marble-shop-drawings-checklist-uae.svg
+og_image: /assets/img/blog/marble-shop-drawings-checklist-uae.jpg
+image_alt: "Marble shop-drawing checklist with piece, edge, joint and thickness items ticked"
 ---
 
 Marble and stone packages in the UAE fail more often on **paper** than on the saw. A villa vanity in Jumeirah, a hotel lobby in Abu Dhabi, or a retail feature wall in Sharjah all share the same risk: the fabricator cuts from an incomplete or outdated drawing while the site is still moving.

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img">
+<title>Permit drawing package of stacked sheets with a review check</title>
+<rect width="1200" height="630" fill="#0e0e0c"/>
+<defs>
+<radialGradient id="glow" cx="58%" cy="40%" r="62%">
+<stop offset="0%" stop-color="#c9a96e" stop-opacity="0.15"/>
+<stop offset="72%" stop-color="#c9a96e" stop-opacity="0.03"/>
+<stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#glow)"/>
+<rect x="32" y="32" width="1136" height="566" rx="18" fill="none" stroke="#c9a96e" stroke-opacity="0.28" stroke-width="1.5"/>
+<rect x="210.0" y="150.0" width="460.0" height="320.0" rx="6" fill="#141410" fill-opacity="1" stroke="#3a362e" stroke-width="1.6"/><rect x="180.0" y="132.0" width="460.0" height="320.0" rx="6" fill="#17160f" fill-opacity="1" stroke="#a9a296" stroke-width="1.6"/><rect x="150.0" y="114.0" width="460.0" height="320.0" rx="8" fill="#1b1a17" fill-opacity="1" stroke="#c9a96e" stroke-width="2.3"/><line x1="150.0" y1="156.0" x2="610.0" y2="156.0" stroke="#3a362e" stroke-width="1.5" stroke-linecap="round"/><text x="168.0" y="142.0" text-anchor="start" fill="#e2c99a" stroke="none" font-family="Inter, Liberation Sans, sans-serif" font-size="15" letter-spacing="1.4">A-101  ·  PDF</text><rect x="190.0" y="180.0" width="200.0" height="140.0" fill="none" stroke="#c9a96e" stroke-width="1.8"/><line x1="190.0" y1="250.0" x2="390.0" y2="250.0" stroke="#e2c99a" stroke-width="1.3" stroke-linecap="round"/><line x1="290.0" y1="180.0" x2="290.0" y2="320.0" stroke="#e2c99a" stroke-width="1.3" stroke-linecap="round"/><line x1="430.0" y1="190.0" x2="560.0" y2="190.0" stroke="#3a362e" stroke-width="1.5" stroke-linecap="round"/><line x1="430.0" y1="220.0" x2="540.0" y2="220.0" stroke="#3a362e" stroke-width="1.5" stroke-linecap="round"/><line x1="430.0" y1="250.0" x2="560.0" y2="250.0" stroke="#3a362e" stroke-width="1.5" stroke-linecap="round"/><circle cx="860.0" cy="280.0" r="110.0" fill="none" stroke="#c9a96e" stroke-width="2.6"/><circle cx="860.0" cy="280.0" r="92.0" fill="none" stroke="#e2c99a" stroke-width="1.4"/><path d="M 820.0 276.0 l 8 10 l 18 -22" fill="none" stroke="#e2c99a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><text x="860.0" y="250.0" text-anchor="middle" fill="#e2c99a" stroke="none" font-family="Inter, Liberation Sans, sans-serif" font-size="16" letter-spacing="1.6">REVIEWED</text><text x="860.0" y="320.0" text-anchor="middle" fill="#ece6da" stroke="none" font-family="Inter, Liberation Sans, sans-serif" font-size="16" letter-spacing="2">SET</text><text x="860.0" y="450.0" text-anchor="middle" fill="#a9a296" stroke="none" font-family="Inter, Liberation Sans, sans-serif" font-size="14" letter-spacing="1.2">LAYERS  ·  TITLE  ·  DIMS</text>
+<line x1="72" y1="556" x2="156" y2="556" stroke="#c9a96e" stroke-width="2"/>
+<text x="172.0" y="562.0" text-anchor="start" fill="#e2c99a" stroke="none" font-family="Inter, Liberation Sans, sans-serif" font-size="15" letter-spacing="2">D3DDD</text>
+<text x="1128.0" y="562.0" text-anchor="end" fill="#a9a296" stroke="none" font-family="Inter, Liberation Sans, sans-serif" font-size="15" letter-spacing="2.2">PERMIT SET</text>
+</svg>

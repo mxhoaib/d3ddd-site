@@ -6,6 +6,9 @@ category: drafting
 category_title: Drafting
 description: "Run Navisworks Manage clash tests for UAE projects—federate models, set tolerances, report and close clashes."
 canonical: https://shoaibsite.blogspot.com/2026/10/navisworks-clash-detection-uae-coordination.html
+image: /assets/img/blog/navisworks-clash-detection-uae-coordination.svg
+og_image: /assets/img/blog/navisworks-clash-detection-uae-coordination.jpg
+image_alt: "Clash detection view of a duct crossing a pipe, with the overlap marked"
 ---
 **Navisworks clash detection** is how many UAE main contractors and BIM leads catch duct-vs-beam and pipe-vs-ceiling conflicts before fit-out starts. Navisworks Manage federates architectural, structural and MEP models, runs Clash Detective, and produces reports the design team can close against a shared issue list.
 

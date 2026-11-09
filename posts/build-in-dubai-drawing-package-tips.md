@@ -6,6 +6,9 @@ category: shop-drawings
 category_title: Shop Drawings
 description: "Prepare cleaner drawing packages for Build in Dubai—layer hygiene, consistency checks, and AI-permit readiness tips."
 canonical: https://shoaibsite.blogspot.com/2026/10/build-in-dubai-drawing-package-tips.html
+image: /assets/img/blog/build-in-dubai-drawing-package-tips.svg
+og_image: /assets/img/blog/build-in-dubai-drawing-package-tips.jpg
+image_alt: "Permit drawing package of stacked sheets with a review check"
 ---
 The **Build in Dubai platform** is where more Dubai building and fit-out submissions are consolidating. As Dubai Municipality expands AI-assisted permit checking, messy layers, conflicting dimensions and bloated DWGs become expensive—not just untidy. Cleaner packages clear faster whether a human or an automated rule set reviews them.
 

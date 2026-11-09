@@ -6,6 +6,9 @@ category: architecture
 category_title: Architecture
 description: "Dubai Municipality BIM rules from April 2026—thresholds, modification triggers, and drawing-model prep checklist."
 canonical: https://shoaibsite.blogspot.com/2026/10/dubai-bim-mandate-2026-submission-guide.html
+image: /assets/img/blog/dubai-bim-mandate-2026-submission-guide.svg
+og_image: /assets/img/blog/dubai-bim-mandate-2026-submission-guide.jpg
+image_alt: "Isometric BIM model split into architecture, structure and MEP layers beside a Dubai skyline"
 ---
 The **Dubai BIM mandate 2026** is the compliance topic every consultant, contractor and drafting studio should brief before mid-year bids. Dubai Municipality communications around Circular materials describe mandatory BIM for qualifying buildings from 1 April 2026—commonly summarised as projects with 12 or more floors or 15,000 m² and above, with additional modification triggers. Always read the official circular text; thresholds and definitions can be refined in authority guidance.
 
