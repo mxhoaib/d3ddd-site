@@ -272,6 +272,182 @@ def svg_turnaround():
     return _svg("Clock and a quote, draft, issue timeline", body)
 
 
+def _pill(x, y, w, label, delay):
+    return (
+        '<g class="pill" data-at="%g %g" transform="translate(%g %g)"><g class="lbl" style="--d:%s">'
+        '<rect width="%g" height="26" rx="13" fill="var(--bg)" fill-opacity=".84" stroke="var(--gold)" stroke-width="1.15"/>'
+        '<circle cx="13" cy="13" r="2.6" fill="var(--gold)" stroke="none"/>'
+        '<text x="24" y="17.5" fill="var(--gold2)" font-size="13">%s</text>'
+        "</g></g>"
+    ) % (x, y, x, y, delay, w, label)
+
+
+def svg_hero():
+    """Layered homepage scene: blueprint, Dubai skyline, shop drawing, isometric room."""
+    grid = []
+    for x in range(0, 721, 36):
+        grid.append("M%d 0V980" % x)
+    for y in range(0, 981, 36):
+        grid.append("M0 %dH720" % y)
+    sky = (
+        '<g class="ink" style="--d:.05s" stroke="var(--gold)" stroke-width="1.25" opacity=".78">'
+        '<path pathLength="1" d="M24 292H210"/>'
+        '<path pathLength="1" d="M530 292H696"/>'
+        '<path pathLength="1" d="M40 292V258H62V242H78V258H104V292"/>'
+        '<path pathLength="1" d="M112 292V214H126V196H142V214H156V248H176V292"/>'
+        # Burj Khalifa, left of the room so the spire stays readable
+        '<path pathLength="1" d="M86 292L94 236H104L110 196H118L124 150H130L136 104H142L148 58L154 22L160 58H166L172 104H178L184 150H190L196 196H204L210 236H220L228 292"/>'
+        '<path pathLength="1" d="M104 236H220M118 196H204M130 150H190M142 104H178" stroke-width="1"/>'
+        '<path pathLength="1" d="M108 292L154 232L200 292" stroke-width="1.05"/>'
+        # right-hand towers and the Museum of the Future ring
+        '<path pathLength="1" d="M548 292V214H566V192H586V214H604V292"/>'
+        '<path pathLength="1" d="M548 246H604M548 266H604" stroke-width=".9"/>'
+        '<path pathLength="1" d="M624 292V248"/>'
+        '<ellipse cx="650" cy="214" rx="18" ry="46" pathLength="1"/>'
+        '<ellipse cx="650" cy="214" rx="8" ry="28" pathLength="1" stroke-width="1"/>'
+        '<path pathLength="1" d="M632 248H668V292"/>'
+        '<path pathLength="1" d="M640 198C650 188 660 198 662 208M638 226C650 236 662 224 664 214" stroke-width=".9"/>'
+        "</g>"
+    )
+    plan = (
+        '<g style="--d:.42s">'
+        '<rect class="ink" x="40" y="524" width="640" height="420" rx="3" pathLength="1" stroke="var(--ink)" stroke-width="1.45"/>'
+        '<rect class="ink" x="52" y="536" width="616" height="396" pathLength="1" stroke="var(--line)" stroke-width="1"/>'
+        '<path class="ink" pathLength="1" d="M52 566H668" stroke="var(--line)"/>'
+        '<text x="68" y="556" fill="var(--gold2)" font-size="13" text-anchor="start">SHOP DWG  ·  A-201</text>'
+        '<text x="644" y="556" fill="var(--muted)" font-size="12" text-anchor="end">MARBLE &amp; STONE</text>'
+        # floor plan
+        '<rect class="ink" x="72" y="590" width="268" height="168" pathLength="1" stroke="var(--ink)" stroke-width="1.45"/>'
+        '<path class="ink" pathLength="1" d="M196 590V758M196 686H340" stroke="var(--muted)" stroke-width="1.15"/>'
+        '<path class="ink" pathLength="1" d="M196 624V666" stroke="var(--bg)" stroke-width="3"/>'
+        '<path class="ink" pathLength="1" d="M196 624A34 34 0 0 1 230 658" stroke="var(--gold2)" stroke-width="1.2"/>'
+        '<path class="ink" pathLength="1" d="M86 590V602M118 590V602M250 590V602M300 590V602" stroke="var(--gold2)" stroke-width="1.15"/>'
+        '<rect x="214" y="704" width="52" height="28" rx="2" stroke="var(--gold2)" stroke-width="1.2"/>'
+        '<ellipse cx="240" cy="718" rx="10" ry="6" stroke="var(--gold)" stroke-width="1.15"/>'
+        '<ellipse cx="300" cy="724" rx="8" ry="11" stroke="var(--muted)" stroke-width="1.1"/>'
+        '<rect x="214" y="608" width="40" height="36" stroke="var(--muted)" stroke-width="1.1"/>'
+        '<circle cx="234" cy="626" r="3" stroke="var(--gold2)" stroke-width="1"/>'
+        # north arrow
+        '<path d="M318 608V632" stroke="var(--gold)" stroke-width="1.2"/>'
+        '<path d="M318 608l-4.5 8h9Z" fill="var(--gold)" stroke="none"/>'
+        '<text x="318" y="648" fill="var(--gold2)" font-size="11" text-anchor="middle">N</text>'
+        # dimensions
+        '<path class="ink" pathLength="1" d="M72 776H340" stroke="var(--gold2)" stroke-width="1.1"/>'
+        '<path class="ink" pathLength="1" d="M72 770V782M340 770V782" stroke="var(--gold2)" stroke-width="1.1"/>'
+        '<path class="ink" pathLength="1" d="M72 776l8-3.5M72 776l8 3.5M340 776l-8-3.5M340 776l-8 3.5" stroke="var(--gold2)" stroke-width="1.1"/>'
+        '<text x="206" y="770" fill="var(--gold2)" font-size="13" text-anchor="middle">4 200</text>'
+        '<path class="ink" pathLength="1" d="M352 590V758" stroke="var(--gold2)" stroke-width="1.1"/>'
+        '<path class="ink" pathLength="1" d="M346 590H358M346 758H358" stroke="var(--gold2)" stroke-width="1.1"/>'
+        '<text x="384" y="672" fill="var(--gold2)" font-size="13" text-anchor="middle">2 800</text>'
+        # marble slab, veins, cut lines, sink
+        '<rect class="ink" x="408" y="590" width="248" height="168" pathLength="1" stroke="var(--ink)" stroke-width="1.45"/>'
+        '<path class="ink" pathLength="1" d="M424 632C470 610 496 666 540 640C582 616 610 668 640 644" stroke="var(--gold2)" stroke-width="1.2"/>'
+        '<path class="ink" pathLength="1" d="M430 712C478 692 510 742 556 716C590 698 616 738 646 722" stroke="var(--gold2)" stroke-width="1.15"/>'
+        '<path class="fade" style="--d:1s" d="M490 590V758M572 590V758M408 674H656" stroke="var(--gold)" stroke-width="1.15" stroke-dasharray="5 4"/>'
+        '<ellipse cx="532" cy="650" rx="30" ry="18" stroke="var(--gold)" stroke-width="1.35"/>'
+        '<text x="449" y="628" fill="var(--gold2)" font-size="12" text-anchor="middle">01</text>'
+        '<text x="612" y="628" fill="var(--gold2)" font-size="12" text-anchor="middle">03</text>'
+        '<text x="449" y="724" fill="var(--gold2)" font-size="12" text-anchor="middle">04</text>'
+        '<text x="532" y="724" fill="var(--gold2)" font-size="12" text-anchor="middle">05</text>'
+        '<text x="612" y="724" fill="var(--gold2)" font-size="12" text-anchor="middle">06</text>'
+        '<text x="532" y="744" fill="var(--muted)" font-size="12" text-anchor="middle">CALACATTA  ·  20 mm</text>'
+        # elevation
+        '<path class="ink" pathLength="1" d="M72 868H340" stroke="var(--ink)" stroke-width="1.3"/>'
+        '<path class="ink" pathLength="1" d="M72 868V812H124V792H168V812H230V828H286V812H340V868" stroke="var(--gold)" stroke-width="1.25"/>'
+        '<path class="ink" pathLength="1" d="M124 828H168M230 848H286" stroke="var(--muted)" stroke-width="1.1"/>'
+        '<path class="ink" pathLength="1" d="M352 792V868" stroke="var(--gold2)" stroke-width="1.1"/>'
+        '<path class="ink" pathLength="1" d="M346 792H358M346 868H358" stroke="var(--gold2)" stroke-width="1.1"/>'
+        '<text x="206" y="890" fill="var(--muted)" font-size="12" text-anchor="middle">ELEVATION</text>'
+        '<text x="368" y="834" fill="var(--gold2)" font-size="12" text-anchor="start">900</text>'
+        # BOQ
+        '<rect class="ink" x="408" y="800" width="248" height="108" rx="3" pathLength="1" stroke="var(--ink)" stroke-width="1.3"/>'
+        '<rect x="408" y="800" width="248" height="26" fill="var(--gold)" fill-opacity=".14" stroke="none"/>'
+        '<path d="M408 826H656M408 854H656M408 882H656M500 800V908M584 800V908" stroke="var(--line)" stroke-width="1"/>'
+        '<text x="454" y="818" fill="var(--gold2)" font-size="11" text-anchor="middle">ITEM</text>'
+        '<text x="542" y="818" fill="var(--gold2)" font-size="11" text-anchor="middle">QTY</text>'
+        '<text x="620" y="818" fill="var(--gold2)" font-size="11" text-anchor="middle">UNIT</text>'
+        '<text x="418" y="846" fill="var(--ink)" font-size="12" text-anchor="start">Floor</text>'
+        '<text x="542" y="846" fill="var(--ink)" font-size="12" text-anchor="middle">86</text>'
+        '<text x="620" y="846" fill="var(--muted)" font-size="12" text-anchor="middle">m²</text>'
+        '<text x="418" y="874" fill="var(--ink)" font-size="12" text-anchor="start">Cladding</text>'
+        '<text x="542" y="874" fill="var(--ink)" font-size="12" text-anchor="middle">42</text>'
+        '<text x="620" y="874" fill="var(--muted)" font-size="12" text-anchor="middle">m²</text>'
+        '<text x="418" y="900" fill="var(--ink)" font-size="12" text-anchor="start">Vanity</text>'
+        '<text x="542" y="900" fill="var(--ink)" font-size="12" text-anchor="middle">2</text>'
+        '<text x="620" y="900" fill="var(--muted)" font-size="12" text-anchor="middle">no.</text>'
+        '<text x="68" y="934" fill="var(--muted)" font-size="12" text-anchor="start">D3DDD  ·  DUBAI  ·  SCALE 1:50</text>'
+        '<text x="644" y="934" fill="var(--gold2)" font-size="12" text-anchor="end">REV A</text>'
+        "</g>"
+    )
+    # Isometric room. Floor stays put; walls, window and counter rise with --ex.
+    iso_floor = (
+        '<g class="iso-floor">'
+        '<path class="fade" style="--d:.8s" d="M250 425L390 500L530 425L390 350Z" fill="var(--bg)" fill-opacity=".55" stroke="none"/>'
+        '<path class="ink" style="--d:.85s" pathLength="1" d="M250 425L390 500L530 425L390 350Z" stroke="var(--ink)" stroke-width="1.45"/>'
+        '<path class="ink" style="--d:.95s" pathLength="1" d="M306 425L390 468L474 425L390 382Z" stroke="var(--muted)" stroke-width="1"/>'
+        '<path class="ink" style="--d:1s" pathLength="1" d="M306 425H474M390 382V468" stroke="var(--muted)" stroke-width=".9"/>'
+        "</g>"
+    )
+    iso_rise = (
+        '<g class="iso-rise" style="--d:1.05s">'
+        '<path class="rise-fill" d="M250 425L250 270L390 345L390 500Z" fill="var(--bg)" fill-opacity=".92"/>'
+        '<path class="rise-fill" d="M390 500L390 345L530 270L530 425Z" fill="var(--bg)" fill-opacity=".92"/>'
+        '<path class="ink" pathLength="1" d="M250 425L250 270L390 345L390 500" stroke="var(--gold)" stroke-width="1.6"/>'
+        '<path class="ink" pathLength="1" d="M390 500L390 345L530 270L530 425" stroke="var(--gold)" stroke-width="1.6"/>'
+        '<path class="ink" pathLength="1" d="M250 270L390 195L530 270" stroke="var(--gold)" stroke-width="1.45"/>'
+        '<path class="fade" style="--d:1.35s" d="M390 350V195" stroke="var(--muted)" stroke-width="1.1" stroke-dasharray="3 3"/>'
+        # door on the left wall, window on the right
+        '<path class="ink" pathLength="1" d="M295 449L331 469L331 394L295 375Z" stroke="var(--gold2)" stroke-width="1.2"/>'
+        '<path class="ink" pathLength="1" d="M421 440L477 410L477 357L421 387Z" stroke="var(--gold2)" stroke-width="1.25"/>'
+        '<path class="ink" pathLength="1" d="M449 425V372" stroke="var(--gold2)" stroke-width="1.05"/>'
+        # marble counter, waterfall edge, vein
+        '<path class="ink" pathLength="1" d="M340 425L390 452L440 425L390 398Z" stroke="var(--ink)" stroke-width="1.2"/>'
+        '<path class="ink" pathLength="1" d="M340 385L390 412L440 385L390 358Z" stroke="var(--gold)" stroke-width="1.45"/>'
+        '<path class="ink" pathLength="1" d="M340 425V385M390 452V412M440 425V385" stroke="var(--gold)" stroke-width="1.2"/>'
+        '<path class="ink" pathLength="1" d="M356 392C378 380 402 394 424 384" stroke="var(--gold2)" stroke-width="1.1"/>'
+        '<path class="fade" style="--d:1.45s" d="M548 425V270" stroke="var(--gold2)" stroke-width="1.1"/>'
+        '<path class="fade" style="--d:1.45s" d="M542 425H554M542 270H554" stroke="var(--gold2)" stroke-width="1.1"/>'
+        '<text class="ex-note" x="560" y="352" fill="var(--gold2)" font-size="13">3 000</text>'
+        "</g>"
+    )
+    labels = (
+        '<g class="labels">'
+        + _pill(28, 436, 152, "Shop drawings", "1.6s")
+        + _pill(488, 148, 118, "3D render", "1.75s")
+        + _pill(546, 762, 74, "BOQ", "1.9s")
+        + _pill(548, 948, 108, "DWG/PDF", "2.05s")
+        + "</g>"
+    )
+    # The shop-drawings leader above is a stub; real leaders sit with each callout.
+    leaders = (
+        '<g class="leaders" stroke="var(--gold)" stroke-width="1" opacity=".65" fill="none">'
+        '<path class="ink" style="--d:1.5s" pathLength="1" d="M104 462V524"/>'
+        '<path class="ink" style="--d:1.65s" pathLength="1" d="M547 174V208"/>'
+        '<path class="ink" style="--d:1.8s" pathLength="1" d="M583 788V800"/>'
+        '<path class="ink" style="--d:1.95s" pathLength="1" d="M602 948V934"/>'
+        "</g>"
+    )
+    body = (
+        '<g class="scene-root"><g class="layer layer-back">'
+        '<ellipse cx="430" cy="430" rx="250" ry="190" fill="var(--gold)" opacity=".07" stroke="none"/>'
+        '<g class="bp"><path d="' + " ".join(grid) + '" stroke="var(--gold)" stroke-width=".6" opacity=".2"/></g>'
+        + sky +
+        "</g>"
+        '<g class="layer layer-mid">' + plan + "</g>"
+        '<g class="layer layer-front">' + iso_floor + iso_rise + "</g>"
+        '<g class="layer layer-labels">' + leaders + labels + "</g></g>"
+    )
+    svg = (
+        '<div class="hero-scene" aria-hidden="true">'
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 980" width="720" height="980" '
+        'fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" '
+        'focusable="false" role="presentation">'
+        + body +
+        "</svg></div>"
+    )
+    return svg
+
+
 def svg_next():
     body = (
         '<path d="M48 196 C 96 196, 108 92, 164 92 S 230 196, 286 150" stroke="var(--gold)"/>'

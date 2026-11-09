@@ -266,14 +266,9 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
         body = body.replace('href="marble.html"', 'href="%s"' % href(lang, fn, "marble.html"))
         body = body.replace('href="website-design.html"', 'href="%s"' % href(lang, fn, "website-design.html"))
         body = body.replace('href="./"', 'href="%s"' % home_href)
-    # Homepage only: warm the Spline hosts, then load a tiny module that imports the runtime after idle.
+    # Homepage only: line-art hero. No third-party scene runtime.
     if fn == "index.html":
-        extra_head = (
-            '<link rel="preconnect" href="https://unpkg.com" crossorigin>'
-            '<link rel="preconnect" href="https://prod.spline.design" crossorigin>'
-            + (extra_head or "")
-        )
-        scripts = '<script type="module" src="%sassets/room.js"></script>' % P + (scripts or "")
+        scripts = '<script src="%sassets/hero.js" defer></script>' % P + (scripts or "")
     return head(lang, fn, title, desc, list(ld_nodes), noindex, bilingual, preload, og_image, extra_head) + (
         '<body>\n'
         '<a class="skip" href="#main">%s</a>\n'

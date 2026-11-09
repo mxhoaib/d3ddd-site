@@ -1,12 +1,11 @@
 # Page content for English and Arabic. Used by build.py.
 from contact_config import whatsapp_html, mail_link, IG_URL, LI_URL, area_served
-from illustrations import svg_design, svg_draft, svg_estimate, svg_marble, svg_uae, svg_viz
+from illustrations import svg_design, svg_draft, svg_estimate, svg_hero, svg_marble, svg_uae, svg_viz
 from longform import home_bundle, marble_bundle
 def build_pages(g):
     shell, img, cta, page_hero, faq_html, faq_ld = g["shell"], g["img"], g["cta"], g["page_hero"], g["faq_html"], g["faq_ld"]
-    # Homepage hero visual. Markup only — shell() adds the lazy module + preconnect on index.html.
-    ROOM = ('<div class="hero-3d" aria-hidden="true"><div class="fallback"></div>'
-            '<div class="room3d"><canvas id="room3d" data-scene="https://prod.spline.design/7Q6BdrThb-USp2wy/scene.splinecode"></canvas></div></div>')
+    # Homepage hero visual. Inline line drawing; shell() adds assets/hero.js on index.html only.
+    ROOM = svg_hero()
     crumbs_ld, service_ld, url, T, WA = g["crumbs_ld"], g["service_ld"], g["url"], g["T"], None
     out = {}
     THEMES=[('carpentry-joinery', 'Carpentry & Joinery', 'النجارة والأعمال الخشبية'), ('marble-stone', 'Marble & Stone', 'الرخام والحجر'), ('fitout-interiors', 'Fit-out & Interiors', 'التشطيبات الداخلية'), ('contracting-construction', 'Contracting & Construction', 'المقاولات والبناء'), ('engineering-consultants', 'Engineering Consultants', 'الاستشارات الهندسية'), ('trading', 'Trading', 'التجارة'), ('interior-designers', 'Interior Designers', 'مصممو الديكور الداخلي')]
