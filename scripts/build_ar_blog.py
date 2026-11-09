@@ -54,7 +54,8 @@ def author(b):
 
 
 def shell(b, title, desc, url, body, ld, p=None):
-    out = b.shell(title, desc, url, body, '/', ld, og_type='article' if p else 'website', image=p['image'] if p else None)
+    social = (p.get('og_image') or p['image']) if p else None
+    out = b.shell(title, desc, url, body, '/', ld, og_type='article' if p else 'website', image=social)
     out = out.replace('<html lang="en-AE" dir="ltr">', '<html lang="ar-AE" dir="rtl">')
     out = out.replace('og:site_name" content="D3DDD – Dubai 3D Design &amp; Draft', 'og:site_name" content="D3DDD – دبي للتصميم والرسم ثلاثي الأبعاد')
     out = out.replace('content="en_AE"', 'content="ar_AE"').replace('Skip to content', 'انتقل إلى المحتوى').replace('Open menu', 'فتح القائمة')

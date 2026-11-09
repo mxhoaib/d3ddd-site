@@ -6,6 +6,9 @@ category: drafting
 category_title: Drafting
 description: "Legal DraftSight setup for DWG shop drawings—trial, 2D limits, and when freelancers should stay on AutoCAD LT."
 canonical: https://shoaibsite.blogspot.com/2026/10/blog-post_635.html
+image: /assets/img/blog/draftsight-dwg-drafting-trial-guide.svg
+og_image: /assets/img/blog/draftsight-dwg-drafting-trial-guide.jpg
+image_alt: "2D DWG drafting workspace with a floor plan and a command line"
 ---
 **DraftSight DWG** drafting is a common search for freelancers who want a familiar 2D CAD seat without jumping straight to a full AutoCAD subscription. DraftSight can open and edit DWG files, but UAE shop-drawing work lives or dies on Xrefs, fonts, CTB plot styles and what the consultant’s review machine expects.
 

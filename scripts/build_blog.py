@@ -45,17 +45,24 @@ def parse_post(path: Path) -> dict:
     data["url"] = f"{D}/blog/{data['slug']}/"
     # hero: omit skips the article figure for this post only. Cards still use the site image.
     data["omit_hero"] = data.get("hero", "").lower() in {"omit", "none", "false", "no"}
-    image = data.get("image") or ""
-    if not image or image.lower() in {"omit", "none"}:
-        data["image"] = f"{D}/assets/img/og-image.png"
-    elif image.startswith("/"):
-        data["image"] = D + image
+    data["image"] = resolve_asset(data.get("image") or "")
+    # Social and Article schema need a raster. The on-page hero may be an SVG.
+    og = (data.get("og_image") or "").strip()
+    data["og_image"] = resolve_asset(og) if og else data["image"]
     data["image_alt"] = data.get("image_alt") or data["title"]
     data["image_credit"] = data.get("image_credit") or ""
     return data
 
 def esc(s: str) -> str:
     return html.escape(s, quote=True)
+
+def resolve_asset(image: str) -> str:
+    image = (image or "").strip()
+    if not image or image.lower() in {"omit", "none"}:
+        return f"{D}/assets/img/og-image.png"
+    if image.startswith("/"):
+        return D + image
+    return image
 
 def topbar(prefix: str) -> str:
     contact = f"{prefix}contact.html"
@@ -228,7 +235,7 @@ def article_ld(p: dict) -> dict:
         "description": p["description"],
         "datePublished": p["date"],
         "dateModified": p["date"],
-        "image": p["image"],
+        "image": p["og_image"],
         "author": {"@type": "Person", "name": "Shoaib Hussan", "jobTitle": "Founder, D3DDD – Dubai 3D Design & Draft", "url": f"{D}/about.html", "sameAs": [IG, LINKEDIN, FIVERR]},
         "publisher": {"@id": f"{D}/#business"},
         "mainEntityOfPage": p["url"],
@@ -333,7 +340,7 @@ def build_article(p: dict, all_posts: list[dict]) -> None:
             "../../",
             ld,
             og_type="article",
-            image=p["image"],
+            image=p["og_image"],
             link_canonical=p.get("canonical") or None,
         ),
     )
@@ -345,13 +352,22 @@ def build_categories(posts: list[dict]) -> None:
         by_cat.setdefault(p["category"], []).append(p)
         titles[p["category"]] = p["category_title"]
     for cat, items in by_cat.items():
-        cards = "".join(
-            f'<a class="card post-card" href="../../{esc(p["slug"])}/">'
-            f'<div class="b"><time datetime="{esc(p["date"])}">{esc(p["date"])}</time>'
-            f'<h2>{esc(p["title"])}</h2><p>{esc(p["description"])}</p>'
-            f'<span class="more">Read article →</span></div></a>'
-            for p in items
-        )
+        cards = []
+        for p in items:
+            thumb = ""
+            if not p["image"].endswith("/assets/img/og-image.png"):
+                thumb = (
+                    f'<figure><img src="{esc(p["image"])}" alt="{esc(p["image_alt"])}" '
+                    f'width="1200" height="630" loading="lazy" decoding="async"></figure>'
+                )
+            cards.append(
+                f'<a class="card post-card" href="../../{esc(p["slug"])}/">'
+                f'{thumb}'
+                f'<div class="b"><time datetime="{esc(p["date"])}">{esc(p["date"])}</time>'
+                f'<h2>{esc(p["title"])}</h2><p>{esc(p["description"])}</p>'
+                f'<span class="more">Read article →</span></div></a>'
+            )
+        cards = "".join(cards)
         title = titles[cat]
         body = f'''<section class="page-hero"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../../">Home</a> / <a href="../../">Blog</a> / <span>{esc(title)}</span></nav>
 <p class="eyebrow">Category</p><h1>{esc(title)}</h1></section>

@@ -6,6 +6,9 @@ category: drafting
 category_title: Drafting
 description: "What’s new in AutoCAD 2026 for UAE drafters: Smart Blocks, Autodesk AI assist, Connected Support Files and faster DWG open."
 canonical: https://shoaibsite.blogspot.com/2026/10/blog-post_26.html
+image: /assets/img/blog/autocad-2026-new-features-smart-blocks-ai.svg
+og_image: /assets/img/blog/autocad-2026-new-features-smart-blocks-ai.jpg
+image_alt: "AutoCAD Smart Block door with grip points and an AI assist spark"
 ---
 **AutoCAD 2026 new features** matter most when they cut open time, reduce block mistakes and keep every draftsman on the same fonts and plot styles. For UAE shop-drawing and fit-out teams, this release is less about flashy demos and more about production: Smart Blocks that place themselves more intelligently, Autodesk Assistant for in-product help, Connected Support Files for shared office standards, and faster DWG open on large packages.
 

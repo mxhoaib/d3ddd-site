@@ -6,6 +6,9 @@ category: shop-drawings
 category_title: Shop Drawings
 description: "Produce approval-ready stone stair shop drawings—dimensions, nosings, fixings, sequencing for UAE fit-outs."
 canonical: https://shoaibsite.blogspot.com/2026/10/stone-staircase-shop-drawings-treads-risers.html
+image: /assets/img/blog/stone-staircase-shop-drawings-treads-risers.svg
+og_image: /assets/img/blog/stone-staircase-shop-drawings-treads-risers.jpg
+image_alt: "Stone stair section showing treads, risers, a stringer and fixing points"
 ---
 **Stone staircase shop drawings** fail reviews when treads, risers and fixings are pretty but incomplete. Consultants in the UAE expect clear dimensions, nosing profiles, thicknesses, support conditions and installation sequence—especially on marble or limestone stairs in villas and lobbies.
 

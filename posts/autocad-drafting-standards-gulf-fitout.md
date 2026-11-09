@@ -5,6 +5,9 @@ date: 2026-10-25
 category: drafting
 category_title: Drafting
 description: "Practical AutoCAD drafting standards for UAE and Gulf fit-out work — layers, naming, xrefs, plot styles and revision habits that keep marble, joinery and MEP consultants aligned."
+image: /assets/img/blog/autocad-drafting-standards-gulf-fitout.svg
+og_image: /assets/img/blog/autocad-drafting-standards-gulf-fitout.jpg
+image_alt: "CAD layer standards list beside a fit-out plan drawn on named layers"
 ---
 
 Fit-out packages in Dubai, Abu Dhabi, Doha and Riyadh move through many hands: architect, interior designer, MEP, joinery, stone, glass, and the main contractor’s document controller. When [AutoCAD drafting](/services/architectural-drafting/) standards are weak, every consultant invents their own layer soup — and the site pays in clashes and RFIs.

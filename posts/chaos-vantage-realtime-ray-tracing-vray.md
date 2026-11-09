@@ -6,6 +6,9 @@ category: visualization
 category_title: Visualization
 description: "Learn Chaos Vantage for real-time ray-traced walkthroughs of V-Ray scenes—official trial, viewport tips, client reviews."
 canonical: https://shoaibsite.blogspot.com/2026/10/chaos-vantage-realtime-ray-tracing-vray.html
+image: /assets/img/blog/chaos-vantage-realtime-ray-tracing-vray.svg
+og_image: /assets/img/blog/chaos-vantage-realtime-ray-tracing-vray.jpg
+image_alt: "Ray-traced 3D interior with a camera sending light rays into the room"
 ---
 A practical **Chaos Vantage tutorial** starts from one question: do you already have a V-Ray scene that clients need to walk through today? Chaos Vantage is Chaos’s real-time ray-tracing app for exploring those scenes interactively—materials, lights and cameras stay in the V-Ray ecosystem while you navigate at interactive frame rates.
 

@@ -5,6 +5,9 @@ date: 2026-10-25
 category: estimation
 category_title: Estimation
 description: "How slab nesting and cutting lists reduce marble and granite waste for UAE fabricators — piece IDs, yield, vein direction and BOQ habits that survive real yard constraints."
+image: /assets/img/blog/slab-nesting-cutting-lists-gulf.svg
+og_image: /assets/img/blog/slab-nesting-cutting-lists-gulf.jpg
+image_alt: "Marble slab nesting layout beside a cutting-list quantity sheet"
 ---
 
 Stone is expensive. Freight, customs and remakes make it more expensive. Yet many Gulf packages still treat the **cutting list** as an afterthought — a spreadsheet someone builds after the drawings are “done,” instead of as part of the same documentation set.

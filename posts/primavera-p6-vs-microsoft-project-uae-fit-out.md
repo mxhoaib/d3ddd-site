@@ -6,6 +6,9 @@ category: planning
 category_title: Planning
 description: "Choose P6 or Microsoft Project for UAE fit-out and building schedules—when clients require each tool."
 canonical: https://shoaibsite.blogspot.com/2026/10/blog-post_33.html
+image: /assets/img/blog/primavera-p6-vs-microsoft-project-uae-fit-out.svg
+og_image: /assets/img/blog/primavera-p6-vs-microsoft-project-uae-fit-out.jpg
+image_alt: "Side-by-side fit-out schedules, a linked P6 programme and a simpler bar chart"
 ---
 **Primavera P6 vs Microsoft Project** is a contract question before it is a software preference. On UAE building and fit-out jobs, the main contractor’s planning department often dictates P6 for the master programme, while consultants and fit-out specialists still live in Microsoft Project for look-aheads and short-term coordination.
 

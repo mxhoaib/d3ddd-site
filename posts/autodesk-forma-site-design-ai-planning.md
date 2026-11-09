@@ -6,6 +6,9 @@ category: architecture
 category_title: Architecture
 description: "Official Autodesk Forma Site Design guide—AI layout options, sun/wind analyses, IFC export for UAE concept work."
 canonical: https://shoaibsite.blogspot.com/2026/10/autodesk-forma-site-design-ai-planning.html
+image: /assets/img/blog/autodesk-forma-site-design-ai-planning.svg
+og_image: /assets/img/blog/autodesk-forma-site-design-ai-planning.jpg
+image_alt: "Site massing options with a sun path and wind arrows for early planning"
 ---
 **Autodesk Forma Site Design** is Autodesk’s legal, cloud-based AI site-planning environment (the path that grew out of Spacemaker). For UAE concept teams, it is useful when you need fast massing options with sun and environmental feedback before you commit weeks of Revit or Archicad modelling.
 

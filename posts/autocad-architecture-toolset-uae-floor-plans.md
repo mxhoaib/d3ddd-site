@@ -6,6 +6,9 @@ category: drafting
 category_title: Drafting
 description: "Use AutoCAD Architecture toolset for faster UAE floor plans—walls, doors, spaces, renovation display, IFC notes."
 canonical: https://shoaibsite.blogspot.com/2026/10/blog-post_954.html
+image: /assets/img/blog/autocad-architecture-toolset-uae-floor-plans.svg
+og_image: /assets/img/blog/autocad-architecture-toolset-uae-floor-plans.jpg
+image_alt: "Architectural floor plan with walls, a door swing and existing versus new work"
 ---
 The **AutoCAD Architecture toolset** is for teams that still deliver UAE floor plans and renovation drawings in the AutoCAD world—but want walls, doors, spaces and schedules instead of raw lines. Included with AutoCAD subscriptions, ACA speeds villa GAs, fit-out plans and “existing / demo / new” sets without forcing a full Revit migration on day one.
 
