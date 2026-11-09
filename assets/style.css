@@ -85,3 +85,21 @@ footer .grid{grid-template-columns:1.45fr 1.15fr .9fr 1.05fr 1.05fr}
   footer .grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:600px){footer .grid{grid-template-columns:1fr}}
+/* Homepage illustrations: line art beside the copy, stacked under 900px. */
+.illu{margin:0}
+.illu svg{width:100%;height:auto;display:block}
+.illu svg text{font-family:"DM Sans",system-ui,sans-serif;stroke:none}
+.card .illu svg,.guide-row .illu svg{aspect-ratio:4/3}
+.guide-list{display:flex;flex-direction:column;gap:72px}
+.guide-row{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center}
+.guide-row .copy h2{margin-top:0}
+.guide-flip{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+.guide-flip>figure{order:2}
+.uae-split{align-items:center}
+.uae-map svg{aspect-ratio:540/372}
+.split .eyebrow{color:var(--gold);margin-top:0}
+@media(max-width:900px){
+  .guide-list{gap:48px}
+  .guide-row,.guide-flip{grid-template-columns:1fr}
+  .guide-flip>figure{order:-1}
+}
