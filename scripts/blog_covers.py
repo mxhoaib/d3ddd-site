@@ -542,6 +542,35 @@ def draw_permit():
     return "".join(parts)
 
 
+def draw_shop_vs_fab():
+    parts = [sheet(72, 92, 460, 410, "SHOP  ·  APPROVAL")]
+    parts.append(rect(104, 168, 270, 190, GOLD, 2.1))
+    parts.append(line((194, 168), (194, 358), GOLD2, 1.4))
+    parts.append(line((284, 168), (284, 358), GOLD2, 1.4))
+    parts.append(line((104, 262), (374, 262), GOLD2, 1.4))
+    parts.append(path("M 124 214 C 180 180, 230 246, 300 204", GOLD2, 1.4))
+    parts.append(path("M 130 310 C 200 280, 250 340, 340 308", GOLD2, 1.3))
+    parts.append(circle(430, 250, 64, GOLD, 2.4))
+    parts.append(circle(430, 250, 52, GOLD2, 1.3))
+    parts.append(check(402, 248, GOLD2))
+    parts.append(T(430, 226, "APPROVED", 12, GOLD2, spacing="1.1"))
+    parts.append(T(430, 286, "REV B", 13, INK, spacing="1.4"))
+    parts.append(T(302, 470, "LAYOUT  ·  JOINTS", 14, MUTED, spacing="1.1"))
+    parts.append(T(600, 318, "VS", 26, GOLD2, spacing="3"))
+    parts.append(sheet(668, 92, 460, 410, "FAB  ·  P-04"))
+    parts.append(rect(708, 168, 230, 156, GOLD, 2.2))
+    parts.append(rect(778, 206, 96, 72, GOLD2, 1.8, CARD, 1, 18))
+    parts.append(T(823, 248, "SINK", 13, GOLD2, spacing="1.2"))
+    parts.append(tick_h(708, 938, 352, "860"))
+    parts.append(tick_v(958, 168, 324, "540", "start", 12))
+    parts.append(T(708, 400, "EDGE  E1", 15, GOLD2, "start", "0.8"))
+    parts.append(T(860, 400, "THK  20", 15, INK, "start", "0.8"))
+    parts.append(line((708, 418), (1088, 418), LINE, 1.3))
+    parts.append(T(708, 448, "CUT LIST", 14, MUTED, "start", "1.4"))
+    parts.append(T(860, 448, "P-04", 14, GOLD2, "start", "1"))
+    return "".join(parts)
+
+
 def draw_p6():
     def panel(x, title, bars, link):
         body = [rect(x, 108, 470, 410, GOLD, 2.3, CARD, 1, 10)]
@@ -644,6 +673,11 @@ COVERS = {
         "Side-by-side fit-out schedules, a linked P6 programme and a simpler bar chart",
         draw_p6,
         "P6 · MSP",
+    ),
+    "marble-shop-drawings-vs-fabrication-drawings": (
+        "Side-by-side marble drawings: an approved shop layout and a numbered fabrication piece with a sink cut-out",
+        draw_shop_vs_fab,
+        "SHOP · FAB",
     ),
 }
 
