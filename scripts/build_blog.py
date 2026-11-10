@@ -79,6 +79,7 @@ def nav(prefix: str, current: str = "") -> str:
         (f"{prefix}marble.html", "Marble Shop Drawings", "marble"),
         (f"{prefix}website-design.html", "Website Design", "website"),
         (f"{prefix}blog/", "Blog", "blog"),
+        (f"{prefix}apps/", "Web Apps", "apps"),
         (f"{prefix}about.html", "About", "about"),
         (f"{prefix}contact.html", "Contact", "contact"),
     ]

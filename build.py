@@ -1,5 +1,5 @@
 # D3DDD static site generator (English + Arabic). Edit content here, then run: python3 build.py
-import json, os
+import html, json, os
 from contact_config import whatsapp_html, analytics_snippet, mail_link, social_links, business_node, area_served
 D = "https://d3ddd.com/"
 EMAIL = "info@d3ddd.com"
@@ -92,13 +92,13 @@ def faq_html(faqs, title, eyebrow):
 
 # ---------------------------------------------------------------- language strings
 T = {
- "en": dict(dir="ltr", locale="en_AE", P="", nav=[("index.html","Home"),("services/","Services"),("projects/","Projects"),("marble.html","Marble Shop Drawings"),("website-design.html","Website Design"),("blog/","Blog"),("about.html","About"),("contact.html","Contact")],
+ "en": dict(dir="ltr", locale="en_AE", P="", nav=[("index.html","Home"),("services/","Services"),("projects/","Projects"),("marble.html","Marble Shop Drawings"),("website-design.html","Website Design"),("blog/","Blog"),("apps/","Web Apps"),("about.html","About"),("contact.html","Contact")],
    login="Client Login", menu="Open menu", skip="Skip to content", switch="العربية",
    tagline="Marble & stone shop drawings, AutoCAD drafting, 3D rendering and contractor websites in Dubai, Abu Dhabi, Sharjah and across the UAE.",
    f_services="Services", f_company="Company", f_industries="Industries", f_contact="Contact", portal="Client portal", rights="All rights reserved.", home="Home",
    cta_eye="Let’s work together", cta_h="Your vision. Our precision.", cta_p="Send your drawings, sketches, dimensions or project requirements for a quote — in English or Arabic.", cta_wa="Email us", cta_form="Send an enquiry",
    fonts="family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@1,500&family=Tajawal:wght@500&display=swap"),
- "ar": dict(dir="rtl", locale="ar_AE", P="../", nav=[("index.html","الرئيسية"),("services/","الخدمات"),("projects/","المشاريع"),("marble.html","رسومات الرخام"),("website-design.html","تصميم المواقع"),("blog/","المدونة"),("about.html","من نحن"),("contact.html","تواصل معنا")],
+ "ar": dict(dir="rtl", locale="ar_AE", P="../", nav=[("index.html","الرئيسية"),("services/","الخدمات"),("projects/","المشاريع"),("marble.html","رسومات الرخام"),("website-design.html","تصميم المواقع"),("blog/","المدونة"),("apps/","تطبيقات الويب"),("about.html","من نحن"),("contact.html","تواصل معنا")],
    login="بوابة العملاء", menu="فتح القائمة", skip="انتقل إلى المحتوى", switch="English",
    tagline="رسومات تنفيذية للرخام والحجر، مخططات أوتوكاد، تصميم ثلاثي الأبعاد ومواقع إلكترونية للمقاولين في دبي وأبوظبي والشارقة وجميع أنحاء الإمارات.",
    f_services="الخدمات", f_company="الشركة", f_industries="القطاعات", f_contact="التواصل", portal="بوابة العملاء", rights="جميع الحقوق محفوظة.", home="الرئيسية",
@@ -303,6 +303,57 @@ def crumb_html(lang, name):
 def page_hero(lang, eyebrow, h1, p, name):
     return f'<section class="page-hero">{crumb_html(lang, name)}<p class="eyebrow">{eyebrow}</p><h1>{h1}</h1><p>{p}</p></section>'
 
+# Append one dict to list another free tool on /apps/ and /ar/apps/.
+APPS = [
+    {
+        "slug": "still",
+        "title_en": "Still — Free Online Image Straightener & Photo Leveler",
+        "title_ar": "Still — تقويم الصور وتسويتها مجاناً عبر الإنترنت",
+        "desc_en": "Straighten and level photos in the browser. It runs on your device and nothing is uploaded.",
+        "desc_ar": "قوّم الصور المائلة وسوِّ الأفق في المتصفح. يعمل على جهازك ولا يُرفع أي ملف.",
+    },
+]
+
+def build_app_pages():
+    pages = {}
+    for lang in ("en", "ar"):
+        fn = "apps/index.html"
+        home = href(lang, fn, "")
+        if lang == "en":
+            title = "Web Apps - Useful Free Tools | D3DDD"
+            desc = "Useful free browser tools from D3DDD. Straighten and level photos on your device, with nothing uploaded."
+            eyebrow, h1, lead = "Free tools", "Web <em>apps.</em>", "Useful free tools that run in your browser, on your device."
+            crumb, home_l, open_label = "Web Apps", "Home", "Open app →"
+        else:
+            title = "تطبيقات الويب - أدوات مجانية مفيدة | D3DDD"
+            desc = "أدوات مجانية مفيدة من D3DDD تعمل في المتصفح على جهازك، دون رفع أي ملف."
+            eyebrow, h1, lead = "أدوات مجانية", "تطبيقات <em>الويب</em>", "أدوات مجانية مفيدة تعمل في المتصفح على جهازك."
+            crumb, home_l, open_label = "تطبيقات الويب", "الرئيسية", "افتح التطبيق ←"
+        cards = []
+        for i, app in enumerate(APPS, 1):
+            name = app["title_en"] if lang == "en" else app["title_ar"]
+            blurb = app["desc_en"] if lang == "en" else app["desc_ar"]
+            cards.append(
+                '<a class="card post-card" href="/apps/%s/"><div class="b"><span class="num">%02d</span><h2>%s</h2><p>%s</p><span class="more">%s</span></div></a>'
+                % (app["slug"], i, html.escape(name), html.escape(blurb), open_label)
+            )
+        body = (
+            '<section class="page-hero"><nav class="crumbs" aria-label="Breadcrumb"><a href="%s">%s</a> / <span>%s</span></nav>'
+            '<p class="eyebrow">%s</p><h1>%s</h1><p>%s</p></section>'
+            '<section class="section"><div class="wrap"><div class="grid g2">%s</div></div></section>'
+        ) % (home, home_l, crumb, eyebrow, h1, lead, "".join(cards))
+        body += cta(lang)
+        items = {"@type": "ItemList", "name": crumb, "itemListElement": [
+            {"@type": "ListItem", "position": i, "name": app["title_en"] if lang == "en" else app["title_ar"], "url": url("en", "apps/%s/" % app["slug"])}
+            for i, app in enumerate(APPS, 1)]}
+        ld = [crumbs_ld(lang, [(home_l, url(lang, "index.html")), (crumb, url(lang, "apps/"))]), items]
+        page = shell(lang, fn, title, desc, body, ld)
+        # New pages must not point at instagram.com/mxhaib. The Still app uses dubai3ddd.
+        page = page.replace("https://instagram.com/mxhaib", "https://instagram.com/dubai3ddd")
+        page = page.replace("https://www.instagram.com/mxhaib/", "https://www.instagram.com/dubai3ddd/")
+        pages[(lang, fn)] = page
+    return pages
+
 from content import build_pages  # page content lives in content.py
 from service_pages import build_service_pages, SERVICES as SERVICE_DEFS
 
@@ -317,6 +368,7 @@ from directories_page import build_directory_page
 out.update(build_directory_page(globals()))
 from project_pages import build_project_pages, PROJECTS  # portfolio: /projects/ grid, project pages, related blocks
 out.update(build_project_pages(globals(), out))
+out.update(build_app_pages())
 
 # Legacy services.html -> /services/ redirect
 for lang in ("en", "ar"):
@@ -347,7 +399,7 @@ for portal in ("login.html", "signup.html", "dashboard.html"):
 
 BILINGUAL_PAGES = [
     "index.html", "about.html", "contact.html", "marble.html", "website-design.html",
-    "services/", "projects/",
+    "services/", "projects/", "apps/",
 ] + ["services/%s/" % s["slug"] for s in SERVICE_DEFS]
 
 x = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
@@ -360,6 +412,7 @@ for fn in BILINGUAL_PAGES:
             '<xhtml:link rel="alternate" hreflang="x-default" href="%s"/></url>'
             % (url(lang, fn), pr, url("en", fn), url("ar", fn), url("en", fn))
         )
+x.append('  <url><loc>%s</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>' % url("en", "apps/still/"))
 for pr in PROJECTS:  # project pages are English only (no hreflang alternates)
     x.append('  <url><loc>%s</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>' % url("en", "projects/%s/" % pr["slug"]))
 for fn in (
