@@ -62,7 +62,7 @@ def shell(b, title, desc, url, body, ld, p=None):
     out = out.replace('href="https://d3ddd.com/blog/feed.xml"', 'href="https://d3ddd.com/ar/blog/feed.xml"')
     out = out.replace('title="D3DDD Blog"', 'title="مدونة D3DDD بالعربية"')
     out = out.replace('DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500', 'Tajawal:wght@400;700&family=DM+Sans:wght@400;600;700')
-    nav = ''.join(f'<a href="{href}">{label}</a>' for href, label in [('/ar/', 'الرئيسية'), ('/ar/services/', 'الخدمات'), ('/projects/', 'المشاريع'), ('/ar/marble.html', 'رسومات الرخام'), ('/ar/blog/', 'المدونة'), ('/ar/contact.html', 'تواصل معنا')])
+    nav = ''.join(f'<a href="{href}">{label}</a>' for href, label in [('/ar/', 'الرئيسية'), ('/ar/services/', 'الخدمات'), ('/projects/', 'المشاريع'), ('/ar/marble.html', 'رسومات الرخام'), ('/ar/blog/', 'المدونة'), ('/ar/apps/', 'تطبيقات الويب'), ('/ar/contact.html', 'تواصل معنا')])
     en = f"/blog/{p['translation_of']}/" if p and p.get('translation_of') else '/blog/'
     nav += f'<a class="lang" href="{en}" hreflang="en-AE" lang="en">English</a>'
     out = out.replace(b.nav('/', 'blog'), nav)
