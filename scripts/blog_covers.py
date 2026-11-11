@@ -542,6 +542,39 @@ def draw_permit():
     return "".join(parts)
 
 
+def draw_allocation():
+    parts = [sheet(64, 96, 640, 420, "SLAB  01  ·  ALLOCATION")]
+    parts.append(rect(96, 176, 250, 148, GOLD, 2.1))
+    parts.append(rect(366, 176, 300, 148, GOLD, 2.1))
+    parts.append(line((356, 176), (356, 324), GOLD2, 1.3, "3 5"))
+    parts.append(T(356, 164, "KERF", 12, GOLD2, spacing="0.8"))
+    parts.append(path("M 118 248 C 190 196, 280 268, 346 232", GOLD2, 1.5))
+    parts.append(path("M 366 232 C 440 196, 540 268, 640 232", GOLD2, 1.5))
+    parts.append(path("M 130 300 C 200 268, 280 318, 346 292", GOLD2, 1.3))
+    parts.append(path("M 366 292 C 450 268, 560 318, 648 292", GOLD2, 1.3))
+    parts.append(T(221, 270, "P-01", 18, INK, spacing="1"))
+    parts.append(T(516, 270, "P-02", 18, INK, spacing="1"))
+    parts.append(rect(96, 348, 168, 122, GOLD, 2.0))
+    parts.append(rect(284, 348, 176, 122, GOLD, 2.0))
+    parts.append(rect(480, 348, 186, 122, LINE, 1.6))
+    parts.append(T(180, 416, "P-03", 16, GOLD2, spacing="1"))
+    parts.append(T(372, 416, "P-04", 16, GOLD2, spacing="1"))
+    parts.append(T(573, 408, "OFFCUT", 13, MUTED, spacing="1.1"))
+    parts.append(T(384, 492, "VEIN MATCH", 14, MUTED, spacing="1.6"))
+    parts.append(sheet(740, 96, 400, 420, "BOOK MATCH"))
+    parts.append(rect(768, 178, 160, 248, GOLD, 2.1))
+    parts.append(rect(948, 178, 160, 248, GOLD, 2.1))
+    parts.append(line((928, 178), (928, 426), GOLD2, 1.3, "4 5"))
+    parts.append(path("M 788 250 C 840 210, 880 300, 918 238", GOLD2, 1.6))
+    parts.append(path("M 1088 250 C 1036 210, 996 300, 958 238", GOLD2, 1.6))
+    parts.append(path("M 800 338 C 848 308, 888 378, 918 328", GOLD2, 1.4))
+    parts.append(path("M 1076 338 C 1028 308, 988 378, 958 328", GOLD2, 1.4))
+    parts.append(T(848, 300, "A", 16, INK, spacing="1"))
+    parts.append(T(1028, 300, "A'", 16, INK, spacing="1"))
+    parts.append(T(940, 470, "MIRROR  ·  SLAB 02", 14, MUTED, spacing="1.2"))
+    return "".join(parts)
+
+
 def draw_shop_vs_fab():
     parts = [sheet(72, 92, 460, 410, "SHOP  ·  APPROVAL")]
     parts.append(rect(104, 168, 270, 190, GOLD, 2.1))
@@ -678,6 +711,11 @@ COVERS = {
         "Side-by-side marble drawings: an approved shop layout and a numbered fabrication piece with a sink cut-out",
         draw_shop_vs_fab,
         "SHOP · FAB",
+    ),
+    "marble-slab-allocation-cutting-optimization": (
+        "Marble slab layout with numbered pieces, a saw kerf, continuous vein matching and a book-matched pair",
+        draw_allocation,
+        "SLAB LAYOUT",
     ),
 }
 
