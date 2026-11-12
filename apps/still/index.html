@@ -24,7 +24,7 @@
 <meta property="og:title" content="Still — Free Online Image Straightener & Photo Leveler">
 <meta property="og:description" content="Straighten crooked photos and fix tilted horizons for free in your browser. Auto-align, crop, add text, and batch export — 100% private on-device processing.">
 <meta property="og:url" content="https://d3ddd.com/apps/still/">
-<meta property="og:image" content="https://d3ddd.com/assets/img/og-image.png">
+<meta property="og:image" content="https://d3ddd.com/assets/img/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Still — Free Online Image Straightener & Photo Leveler preview">
@@ -34,7 +34,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Still — Free Online Image Straightener & Photo Leveler">
 <meta name="twitter:description" content="Straighten crooked photos and fix tilted horizons for free in your browser. Auto-align, crop, add text, and batch export — 100% private on-device processing.">
-<meta name="twitter:image" content="https://d3ddd.com/assets/img/og-image.png">
+<meta name="twitter:image" content="https://d3ddd.com/assets/img/og-default.jpg">
 
 <!-- Favicon & App Icons (self-contained SVG data URI — no extra image files needed) -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='14' fill='%23536dfe'/%3E%3Ctext x='50%25' y='55%25' font-size='28' font-weight='800' font-family='system-ui,sans-serif' text-anchor='middle' dominant-baseline='central' fill='white'%3E%E2%86%97%3C/text%3E%3C/svg%3E">
@@ -326,11 +326,37 @@ html,body{font-family:var(--apple-font)!important}body *{font-family:var(--apple
 @media(max-width:760px){.app{padding-bottom:calc(102px + env(safe-area-inset-bottom))!important}.designer-credit{align-self:center;justify-content:center;text-align:center;gap:6px;max-width:100%}.designer-credit .designer-email{font-size:9px}}
 @media(max-width:390px){.designer-credit{font-size:9px;gap:5px;padding:7px 8px}}
 </style>
+<style id="bottom-dock-tutorial-style">
+.tutorial-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:36px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--text);font-size:10px;font-weight:700;box-shadow:0 3px 12px rgba(20,26,45,.05);transition:transform .16s ease,background .16s ease,border-color .16s ease}.tutorial-btn:hover{transform:translateY(-1px);background:var(--accent-soft);border-color:var(--accent)}.tutorial-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tutorial-overlay{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;padding:22px;background:rgba(8,11,18,.48);backdrop-filter:blur(9px)}.tutorial-overlay[hidden]{display:none}.tutorial-card{width:min(560px,100%);max-height:min(680px,calc(100dvh - 44px));overflow:auto;border:1px solid var(--line);border-radius:24px;background:var(--panel);color:var(--text);box-shadow:0 28px 90px rgba(0,0,0,.3);padding:24px}.tutorial-kicker{color:var(--accent);font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.tutorial-card h2{margin:7px 0 8px;font-size:clamp(23px,4vw,31px);letter-spacing:-.05em}.tutorial-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}.tutorial-progress{display:flex;gap:5px;margin:19px 0 17px}.tutorial-progress span{height:4px;flex:1;border-radius:99px;background:var(--surface-2)}.tutorial-progress span.active{background:var(--accent)}.tutorial-step-icon{display:grid;place-items:center;width:48px;height:48px;margin-bottom:13px;border-radius:15px;background:var(--accent-soft);color:var(--accent);font-size:21px;font-weight:800}.tutorial-step-title{margin:0 0 6px;font-size:18px;letter-spacing:-.03em}.tutorial-step-copy{min-height:68px}.tutorial-step-tip{margin-top:12px!important;padding:10px 12px;border:1px solid var(--line);border-radius:11px;background:var(--surface);font-size:11px!important}.tutorial-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:22px}.tutorial-actions .tutorial-secondary{border:0;background:transparent;color:var(--muted);font-size:11px;padding:9px 4px}.tutorial-actions .tutorial-secondary:hover{color:var(--text)}.tutorial-actions .tutorial-primary{border:0;border-radius:10px;background:var(--accent);color:var(--accent-ink);font-size:11px;font-weight:750;padding:10px 15px}.tutorial-actions .tutorial-primary:hover{filter:brightness(1.08)}
+@media(min-width:761px){
+  main{min-height:0}.workspace{display:flex!important;flex-direction:column;gap:10px;min-height:0}.preview-panel{flex:1;min-height:0}.control-panel{order:2;position:relative;display:flex;flex-direction:row;align-items:stretch;gap:7px;width:100%!important;max-height:none!important;overflow:visible!important;padding:7px;border-radius:18px}.control-panel>.tool-group{position:relative;flex:1 1 0;min-width:0;overflow:visible;border-radius:12px}.control-panel>.tool-group>summary{justify-content:center;flex-direction:column;gap:4px;min-height:62px;padding:8px 5px;text-align:center;font-size:9px}.control-panel>.tool-group>summary .group-icon{width:19px;height:19px}.control-panel>.tool-group>summary .group-name{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.control-panel>.tool-group[open]>summary{background:var(--accent-soft)}.control-panel>.tool-group>.tool-content{position:absolute;z-index:80;left:0;bottom:calc(100% + 9px);width:min(360px,31vw);max-height:min(68vh,620px);overflow:auto;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:0 20px 55px rgba(12,17,30,.24);backdrop-filter:blur(22px);padding:11px}.control-panel>.tool-group:nth-child(n+7)>.tool-content{left:auto;right:0}.control-panel>.tool-group:nth-child(4)>.tool-content,.control-panel>.tool-group:nth-child(5)>.tool-content,.control-panel>.tool-group:nth-child(6)>.tool-content{left:50%;transform:translateX(-50%)}.control-panel.tools-expanded{overflow:visible}.mobile-tab-bar{display:none!important}
+}
+@media(min-width:761px){.control-panel{zoom:1!important}}
+@media(max-width:760px){.tutorial-btn{min-height:34px;padding:6px 9px}.tutorial-btn span{font-size:10px}.tutorial-overlay{padding:12px}.tutorial-card{padding:19px;border-radius:20px}.tutorial-step-copy{min-height:92px}}
+.tutorial-overlay{display:block;padding:0;background:transparent;backdrop-filter:none;pointer-events:none}.tutorial-card{position:fixed;pointer-events:auto;width:min(350px,calc(100vw - 24px));max-height:min(470px,calc(100dvh - 24px));padding:18px;border-radius:17px;transition:left .2s ease,top .2s ease;box-shadow:0 20px 60px rgba(8,12,25,.3)}.tutorial-card::after{content:"";position:absolute;left:50%;bottom:-8px;width:15px;height:15px;background:var(--panel);border-right:1px solid var(--line);border-bottom:1px solid var(--line);transform:translateX(-50%) rotate(45deg)}.tutorial-progress{margin:13px 0 14px}.tutorial-step-copy{min-height:60px}.tutorial-step-tip{margin-top:8px!important}.tutorial-tool-highlight{position:relative!important;z-index:2001!important;border-color:var(--accent)!important;box-shadow:0 0 0 3px var(--accent-soft),0 8px 28px var(--premium-glow)!important}.tutorial-tool-highlight>summary{background:var(--accent-soft)!important}
+@media(max-width:760px){.tutorial-card{max-height:min(520px,calc(100dvh - 24px))}.tutorial-card::after{display:none}.tutorial-step-copy{min-height:75px}}
+</style>
+<style id="mobile-bottom-dock-style">
+@media(max-width:760px){
+  body[data-mobile-view="editor"] .control-panel{position:sticky;bottom:calc(70px + env(safe-area-inset-bottom));z-index:50;display:flex;flex-direction:row;align-items:stretch;gap:6px;width:100%!important;max-height:none!important;overflow:visible!important;overflow-x:auto!important;padding:6px!important;border-radius:17px;background:color-mix(in srgb,var(--panel) 94%,transparent);backdrop-filter:blur(20px) saturate(1.25);box-shadow:0 10px 30px rgba(10,16,30,.18)}
+  body[data-mobile-view="editor"] .control-panel>.tool-group{position:relative;flex:0 0 76px;width:76px!important;min-width:76px;overflow:visible;border-radius:12px}
+  body[data-mobile-view="editor"] .control-panel>.tool-group>summary{display:flex;flex-direction:column;justify-content:center;gap:4px;min-height:62px;padding:7px 4px!important;text-align:center;font-size:9px;line-height:1.15}
+  body[data-mobile-view="editor"] .control-panel>.tool-group>summary .group-icon{width:19px;height:19px}
+  body[data-mobile-view="editor"] .control-panel>.tool-group>summary .group-name{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  body[data-mobile-view="editor"] .control-panel>.tool-group>.tool-content{position:absolute;z-index:80;left:0;bottom:calc(100% + 9px);width:min(350px,calc(100vw - 24px));max-height:min(58vh,520px);overflow:auto;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:0 18px 48px rgba(8,12,25,.28);backdrop-filter:blur(20px);padding:10px}
+  body[data-mobile-view="editor"] .control-panel>.tool-group:nth-child(n+7)>.tool-content{left:auto;right:0}
+  body[data-mobile-view="editor"] .control-panel>.tool-group:nth-child(4)>.tool-content,body[data-mobile-view="editor"] .control-panel>.tool-group:nth-child(5)>.tool-content,body[data-mobile-view="editor"] .control-panel>.tool-group:nth-child(6)>.tool-content{left:50%;transform:translateX(-50%)}
+  body[data-mobile-view="editor"] .control-panel.tools-expanded{overflow-x:auto!important;overflow-y:visible!important}
+  body[data-mobile-view="editor"] .control-panel:has(.tool-group[open]){overflow:visible!important}
+  body[data-mobile-view="editor"] .mobile-tab-bar{z-index:60}
+}
+</style>
 </head>
 <body>
 
 <div class="app">
-  <header class="topbar"><div class="brand" aria-label="Still Image Straightener"><div class="brand-mark" aria-hidden="true">↗</div><div><div class="brand-name">still</div><div class="brand-sub">image straightener</div></div></div><div class="topbar-actions"><div class="top-note">On-device processing · original files stay unchanged</div><button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark appearance" aria-pressed="false"><svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.7 8.7 0 1 0 20.5 15.5Z"/></svg><svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m12.73-12.73 1.41-1.41"/></svg><span id="themeModeLabel">Dark mode</span></button></div></header>
+  <header class="topbar"><div class="brand" aria-label="Still Image Straightener"><div class="brand-mark" aria-hidden="true">↗</div><div><div class="brand-name">still</div><div class="brand-sub">image straightener</div></div></div><div class="topbar-actions"><div class="top-note">On-device processing · original files stay unchanged</div><button id="tutorialBtn" class="tutorial-btn" type="button" aria-haspopup="dialog" aria-controls="tutorialOverlay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.3 2.3 0 1 1 3.7 1.8c-.9.7-1.5 1.1-1.5 2.2M12 16.5h.01"/></svg><span>Tutorial</span></button><button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark appearance" aria-pressed="false"><svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.7 8.7 0 1 0 20.5 15.5Z"/></svg><svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m12.73-12.73 1.41-1.41"/></svg><span id="themeModeLabel">Dark mode</span></button></div></header>
   <main>
     <section class="intro"><div class="eyebrow">A little more level</div><h1>Straighten, crop & caption.</h1><p>Auto-align, enhance, crop, add styled text layers, and export your photos together at a chosen ratio and pixel size.</p></section>
     <section id="mobileHome" class="mobile-screen" aria-label="Home">
@@ -442,10 +468,23 @@ html,body{font-family:var(--apple-font)!important}body *{font-family:var(--apple
       </aside>
     </div>
   </main>
-<div class="designer-credit" aria-label="Designer links"><span>Created by <strong>Shoaib Designer</strong></span><a class="social-link" href="https://paypal.me/imshoi" target="_blank" rel="noopener noreferrer" aria-label="Treat Shoaib Designer to a coffee via PayPal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 4.5h7.1c3.1 0 5 1.8 4.4 4.6-.4 2.1-2 3.3-4.4 3.5l-.8 4.2h-3l.8-4.2H8.7l-.8 4.2H5L7.2 4.5Zm3.4 2.6-.5 2.7h2.8c1.2 0 2-.5 2.2-1.5.2-.8-.4-1.2-1.6-1.2h-2.9Z"/></svg><span class="coffee-cta">Treat me to a coffee</span></a><a class="social-link" href="https://www.instagram.com/dubai3ddd" target="_blank" rel="noopener noreferrer" aria-label="Instagram: dubai3ddd"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2"/></svg><span>Instagram</span></a><a class="social-link" href="https://www.linkedin.com/in/mshoaib94" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn: mshoaib94"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5A2 2 0 1 1 5 8.5a2 2 0 0 1 0-4ZM3.5 10h3v10h-3V10Zm5 0h2.9v1.4h.1c.4-.8 1.4-1.7 3.1-1.7 3.3 0 3.9 2.2 3.9 5.1V20h-3v-4.6c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5V20h-3V10Z"/></svg><span>LinkedIn</span></a><a class="social-link email-link" href="mailto:mxhoaib0@gmail.com" aria-label="Email Shoaib Designer at mxhoaib0@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span>mxhoaib0@gmail.com</span></a></div>
+<div class="designer-credit" aria-label="Designer links"><span>Created by <strong>Shoaib Designer</strong></span><a class="social-link" href="https://paypal.me/imshoi" target="_blank" rel="noopener noreferrer" aria-label="Treat the Designer Coffee via PayPal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 4.5h7.1c3.1 0 5 1.8 4.4 4.6-.4 2.1-2 3.3-4.4 3.5l-.8 4.2h-3l.8-4.2H8.7l-.8 4.2H5L7.2 4.5Zm3.4 2.6-.5 2.7h2.8c1.2 0 2-.5 2.2-1.5.2-.8-.4-1.2-1.6-1.2h-2.9Z"/></svg><span class="coffee-cta">Treat the Designer Coffee</span></a><a class="social-link" href="https://www.instagram.com/dubai3ddd" target="_blank" rel="noopener noreferrer" aria-label="Instagram: dubai3ddd"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2"/></svg><span>Instagram</span></a><a class="social-link" href="https://www.linkedin.com/in/mshoaib94" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn: mshoaib94"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5A2 2 0 1 1 5 8.5a2 2 0 0 1 0-4ZM3.5 10h3v10h-3V10Zm5 0h2.9v1.4h.1c.4-.8 1.4-1.7 3.1-1.7 3.3 0 3.9 2.2 3.9 5.1V20h-3v-4.6c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5V20h-3V10Z"/></svg><span>LinkedIn</span></a><a class="social-link email-link" href="mailto:mxhoaib0@gmail.com" aria-label="Email Shoaib Designer at mxhoaib0@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span>mxhoaib0@gmail.com</span></a></div>
 
 </div>
 
+<div id="tutorialOverlay" class="tutorial-overlay" role="dialog" aria-modal="true" aria-labelledby="tutorialTitle" hidden>
+  <div class="tutorial-card">
+    <div class="tutorial-kicker">Quick start guide</div>
+    <h2 id="tutorialTitle">Make every photo feel level.</h2>
+    <p>Take a quick tour of the editing panels. Your photos stay on this device and the guide can be reopened anytime from the top-right Tutorial button.</p>
+    <div id="tutorialProgress" class="tutorial-progress" aria-hidden="true"></div>
+    <div id="tutorialIcon" class="tutorial-step-icon" aria-hidden="true">↗</div>
+    <h3 id="tutorialStepTitle" class="tutorial-step-title"></h3>
+    <p id="tutorialStepCopy" class="tutorial-step-copy"></p>
+    <p id="tutorialStepTip" class="tutorial-step-tip"></p>
+    <div class="tutorial-actions"><button id="tutorialLaterBtn" class="tutorial-secondary" type="button">Watch later</button><div style="display:flex;gap:7px"><button id="tutorialBackBtn" class="tutorial-secondary" type="button">Back</button><button id="tutorialNextBtn" class="tutorial-primary" type="button">Next</button></div></div>
+  </div>
+</div>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script>
 (() => {
@@ -947,6 +986,46 @@ html,body{font-family:var(--apple-font)!important}body *{font-family:var(--apple
   let stageDragDepth=0;stage.addEventListener('dragenter',e=>{e.preventDefault();stageDragDepth++;stage.classList.add('dragging');});stage.addEventListener('dragover',e=>{e.preventDefault();if(e.dataTransfer)e.dataTransfer.dropEffect='copy';stage.classList.add('dragging');});stage.addEventListener('dragleave',e=>{e.preventDefault();stageDragDepth=Math.max(0,stageDragDepth-1);if(!stageDragDepth)stage.classList.remove('dragging');});stage.addEventListener('drop',e=>{e.preventDefault();stageDragDepth=0;stage.classList.remove('dragging');const files=e.dataTransfer&&e.dataTransfer.files;if(files&&files.length)addFiles(files);});
   const observer=new ResizeObserver(renderPreview);observer.observe(stage);window.addEventListener('resize',renderPreview);window.addEventListener('beforeunload',()=>items.forEach(revoke));
   refreshActive();
+})();
+</script>
+<script id="bottom-dock-tutorial-script">
+(() => {
+  const overlay=document.getElementById('tutorialOverlay');
+  const tutorialBtn=document.getElementById('tutorialBtn');
+  if(!overlay||!tutorialBtn)return;
+  const title=document.getElementById('tutorialStepTitle'),copy=document.getElementById('tutorialStepCopy'),tip=document.getElementById('tutorialStepTip'),icon=document.getElementById('tutorialIcon'),progress=document.getElementById('tutorialProgress'),next=document.getElementById('tutorialNextBtn'),back=document.getElementById('tutorialBackBtn'),later=document.getElementById('tutorialLaterBtn');
+  const steps=[
+    ['↗','Batch & files','Add one or more photos, review the queue, rename exports, and save individual files or a ZIP batch.','Start by clicking Add images or dragging photos onto the preview.'],
+    ['⌁','Straighten & align','Detect a horizon automatically, fine-tune the angle, or rotate by 90 degrees. Apply the selected angle to the whole queue when needed.','Review automatic alignment before exporting; it works best with strong horizontal lines.'],
+    ['◐','Light, tone & color','Adjust brightness and contrast, use Auto-enhance, or choose a color look such as Vivid, Warm, Mono, or Sepia.','Edits are non-destructive until you export a copy.'],
+    ['□','Crop & export','Choose an aspect ratio and output size, draw a crop on the preview, then select JPG, PNG, or PDF export.','The crop grid is a preview guide and is never burned into your export.'],
+    ['✣','Crop positioning','Zoom and pan the crop for precise framing, move the crop box, or apply the framing to all queued images.','Use Center crop to quickly return to a balanced composition.'],
+    ['◇','Perspective & flips','Correct horizontal or vertical keystone distortion and mirror the image in either direction.','Perspective correction can create empty edges, so crop afterward if necessary.'],
+    ['╱','Focus effect','Create a tilt-shift focus band by choosing its direction, position, size, and blur strength.','The effect is included in exported images.'],
+    ['▥','Rulers & print units','Overlay rulers in millimeters or inches using a configurable DPI value.','Rulers are guides only and do not appear in exported files.'],
+    ['T','Text, layers & effects','Add editable caption layers, style them with fonts, colors, shadows, outlines, labels, opacity, and rotation, then drag or resize them on the preview.','Use Copy layer and Paste layer to reuse captions across images.']
+  ];
+  let step=0,previousMobileView=null,highlighted=null;
+  const toolGroups=Array.from(document.querySelectorAll('.control-panel > .tool-group'));
+  progress.innerHTML=steps.map((_,i)=>`<span${i===0?' class="active"':''}></span>`).join('');
+  function currentGroup(){return toolGroups[step]||null;}
+  function positionCard(){const group=currentGroup();if(!group||overlay.hidden)return;group.open=true;if(highlighted&&highlighted!==group)highlighted.classList.remove('tutorial-tool-highlight');highlighted=group;group.classList.add('tutorial-tool-highlight');const groupRect=group.getBoundingClientRect(),cardRect=overlay.querySelector('.tutorial-card').getBoundingClientRect(),gap=12;let left=groupRect.left+(groupRect.width-cardRect.width)/2;left=Math.max(12,Math.min(window.innerWidth-cardRect.width-12,left));let top=groupRect.top-cardRect.height-gap;if(top<12)top=groupRect.bottom+gap;if(top+cardRect.height>window.innerHeight-12)top=Math.max(12,window.innerHeight-cardRect.height-12);const card=overlay.querySelector('.tutorial-card');card.style.left=`${Math.round(left)}px`;card.style.top=`${Math.round(top)}px`;}
+  function render(){const item=steps[step];icon.textContent=item[0];title.textContent=item[1];copy.textContent=item[2];tip.textContent=item[3];back.disabled=step===0;next.textContent=step===steps.length-1?'Done':'Next';Array.from(progress.children).forEach((bar,i)=>bar.classList.toggle('active',i<=step));if(!overlay.hidden){const group=currentGroup();if(group&&window.matchMedia('(max-width: 760px)').matches)group.scrollIntoView({block:'center',behavior:'auto'});requestAnimationFrame(positionCard);}}
+  function openTutorial(){step=0;previousMobileView=document.body.dataset.mobileView||null;if(window.matchMedia('(max-width: 760px)').matches){document.body.dataset.mobileView='editor';document.querySelectorAll('.mobile-screen').forEach(screen=>screen.hidden=true);}render();overlay.hidden=false;document.body.style.overflow='hidden';setTimeout(()=>{render();positionCard();next.focus();},40);}
+  function closeTutorial(){overlay.hidden=true;document.body.style.overflow='';if(highlighted)highlighted.classList.remove('tutorial-tool-highlight');highlighted=null;if(previousMobileView){document.body.dataset.mobileView=previousMobileView;document.querySelectorAll('.mobile-screen').forEach(screen=>screen.hidden=screen.id!==`mobile${previousMobileView[0].toUpperCase()+previousMobileView.slice(1)}`);}else if(window.matchMedia('(max-width: 760px)').matches){delete document.body.dataset.mobileView;}try{localStorage.setItem('still-image-editor-tutorial-seen','1');}catch(_){}tutorialBtn.focus();}
+  tutorialBtn.addEventListener('click',openTutorial);next.addEventListener('click',()=>{if(step<steps.length-1){step++;render();}else closeTutorial();});back.addEventListener('click',()=>{if(step>0){step--;render();}});later.addEventListener('click',closeTutorial);overlay.addEventListener('click',event=>{if(event.target===overlay)closeTutorial();});document.addEventListener('keydown',event=>{if(overlay.hidden)return;if(event.key==='Escape'){event.preventDefault();closeTutorial();}else if(event.key==='ArrowRight'){event.preventDefault();next.click();}else if(event.key==='ArrowLeft'){event.preventDefault();back.click();}});
+  window.addEventListener('resize',()=>{if(!overlay.hidden)positionCard();});
+  render();
+  let seen=false;try{seen=localStorage.getItem('still-image-editor-tutorial-seen')==='1';}catch(_){}if(!seen)setTimeout(openTutorial,650);
+})();
+</script>
+<script id="single-tool-panel-script">
+(() => {
+  const panels=Array.from(document.querySelectorAll('.control-panel > details.tool-group'));
+  panels.forEach(panel=>panel.addEventListener('toggle',()=>{
+    if(!panel.open)return;
+    panels.forEach(other=>{if(other!==panel&&other.open)other.open=false;});
+  }));
 })();
 </script>
 </body>
