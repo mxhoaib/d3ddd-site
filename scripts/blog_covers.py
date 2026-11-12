@@ -542,6 +542,76 @@ def draw_permit():
     return "".join(parts)
 
 
+def edge_section(x, y, d, label):
+    return (
+        path(d, GOLD, 2.2, GOLD, 0.08)
+        + T(x, y + 118, label, 14, GOLD2, spacing="1.1")
+    )
+
+
+def draw_edges():
+    y = 210
+    parts = [sheet(64, 96, 700, 430, "EDGE SECTIONS")]
+    parts.append(line((100, y + 86), (720, y + 86), LINE, 1.4))
+    # Eased: square edge with a small softened corner.
+    parts.append(edge_section(
+        136, y,
+        f"M 100 {y + 86} V {y} H 154 A 18 18 0 0 1 172 {y + 18} V {y + 86} Z",
+        "E1",
+    ))
+    # Chamfer, usually 45 degrees.
+    parts.append(edge_section(
+        246, y,
+        f"M 210 {y + 86} V {y} H 250 L 282 {y + 32} V {y + 86} Z",
+        "E2",
+    ))
+    parts.append(line((250, y), (282, y + 32), GOLD2, 1.2, "3 3"))
+    parts.append(T(266, y - 10, "45°", 13, GOLD2, spacing="0.4"))
+    # Full bullnose: the whole edge is a half circle.
+    parts.append(edge_section(
+        370, y,
+        f"M 330 {y + 86} V {y} H 366 A 43 43 0 0 1 366 {y + 86} Z",
+        "E3",
+    ))
+    parts.append(T(388, y + 50, "R", 14, GOLD2, spacing="0.4"))
+    # Half bullnose: only the top corner is rounded.
+    parts.append(edge_section(
+        502, y,
+        f"M 440 {y + 86} V {y} H 478 A 30 30 0 0 1 508 {y + 30} V {y + 86} Z",
+        "E4",
+    ))
+    # Ogee: an S-shaped curve.
+    parts.append(edge_section(
+        600, y,
+        f"M 548 {y + 86} V {y} H 586 "
+        f"C 630 {y}, 628 {y + 34}, 600 {y + 44} "
+        f"C 572 {y + 54}, 630 {y + 66}, 604 {y + 86} Z",
+        "E5",
+    ))
+    # Mitered waterfall: two pieces joined on a 45 degree line.
+    parts.append(rect(660, y, 78, 22, GOLD, 2.1, GOLD, 0.08))
+    parts.append(rect(716, y + 22, 22, 64, GOLD, 2.1, GOLD, 0.08))
+    parts.append(line((716, y), (738, y + 22), GOLD2, 1.5, "4 3"))
+    parts.append(T(700, y + 118, "E6", 14, GOLD2, spacing="1.1"))
+    parts.append(sheet(790, 96, 350, 430, "LEGEND"))
+    rows = [
+        ("E1", "EASED"),
+        ("E2", "CHAMFER"),
+        ("E3", "BULLNOSE"),
+        ("E4", "HALF BULL"),
+        ("E5", "OGEE"),
+        ("E6", "MITER"),
+    ]
+    for i, (code, name) in enumerate(rows):
+        yy = 176 + i * 42
+        parts.append(T(822, yy, code, 16, GOLD2, "start", "1"))
+        parts.append(T(880, yy, name, 16, INK, "start", "1.1"))
+    parts.append(line((822, 430), (1100, 430), LINE, 1.4))
+    parts.append(T(822, 464, "FINISH = FACE", 14, MUTED, "start", "1.2"))
+    parts.append(T(822, 492, "POLISHED  ·  HONED", 14, GOLD2, "start", "1"))
+    return "".join(parts)
+
+
 def draw_allocation():
     parts = [sheet(64, 96, 640, 420, "SLAB  01  ·  ALLOCATION")]
     parts.append(rect(96, 176, 250, 148, GOLD, 2.1))
@@ -716,6 +786,11 @@ COVERS = {
         "Marble slab layout with numbered pieces, a saw kerf, continuous vein matching and a book-matched pair",
         draw_allocation,
         "SLAB LAYOUT",
+    ),
+    "marble-edge-profiles-uae-projects": (
+        "Marble edge profile sections for eased, chamfer, bullnose, half bullnose, ogee and mitered edges, with a drawing legend",
+        draw_edges,
+        "EDGE PROFILE",
     ),
 }
 
