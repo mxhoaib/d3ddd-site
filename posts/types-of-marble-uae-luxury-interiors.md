@@ -11,14 +11,14 @@ author: "Shoaib Hussan, Founder of D3DDD"
 canonical: https://d3ddd.com/blog/types-of-marble-uae-luxury-interiors/
 image: /assets/img/blog/types-of-marble-uae-luxury-interiors/cover-og.jpg
 og_image: /assets/img/blog/types-of-marble-uae-luxury-interiors/cover-og.jpg
-image_alt: "A material board of six marble samples — Carrara, Calacatta, Statuario, Emperador, Crema Marfil and Verde Guatemala — beside the title What Types of Marble Are Best for Luxury Interiors in the UAE."
+image_alt: "Title card for What Types of Marble Are Best for Luxury Interiors in the UAE, with real close-up photographs of Carrara, Statuario Venato, Crema Marfil and Bardiglio."
 hero: omit
 faq_schema: true
 ---
 
 *By Shoaib Hussan, Founder of D3DDD*
 
-![A material board of six marble samples — Carrara, Calacatta, Statuario, Emperador, Crema Marfil and Verde Guatemala — beside the title What Types of Marble Are Best for Luxury Interiors in the UAE.](/assets/img/blog/types-of-marble-uae-luxury-interiors/cover.png)
+![Title card for What Types of Marble Are Best for Luxury Interiors in the UAE, with real close-up photographs of Carrara, Statuario Venato, Crema Marfil and Bardiglio.](/assets/img/blog/types-of-marble-uae-luxury-interiors/cover.png)
 
 The right marble for a UAE interior is not only a question of taste. It is also a question of light, use, maintenance, and how the stone will be cut and joined. A white Italian slab that looks calm on a small sample can dominate a sunlit living room. A dark floor that looks rich in a showroom can feel hot and dusty beside a full-height window.
 
@@ -28,7 +28,7 @@ D3DDD prepares marble shop drawings and visualisation. We do not sell or stock s
 
 ## Natural marble or engineered stone — which should you specify?
 
-![Two-panel comparison: a uniquely veined natural marble slab on the left and a more uniform engineered or cultured marble surface on the right.](/assets/img/blog/types-of-marble-uae-luxury-interiors/natural-vs-engineered.png)
+![Natural Carrara marble slabs stacked in a yard in Carrara, Italy.](/assets/img/blog/types-of-marble-uae-luxury-interiors/natural-vs-engineered.png)
 
 ### Natural marble
 
@@ -50,7 +50,7 @@ Choose engineered or cultured marble when a consistent colour, a moulded shape, 
 
 The names below come up regularly in villas, apartments and hospitality interiors. Availability, grade and exact colour shift from batch to batch, so always approve the actual slabs, not only a name in a specification.
 
-![Three sample boards of Italian white marble: Carrara with soft grey veins, Calacatta with bold gold and grey veins, and Statuario with a bright ground and graphic grey veins.](/assets/img/blog/types-of-marble-uae-luxury-interiors/italian-whites.png)
+![Three close-up photographs of Italian white marble: Carrara, Statuario Venato, and Statuarietto.](/assets/img/blog/types-of-marble-uae-luxury-interiors/italian-whites.png)
 
 ### Carrara
 
@@ -62,7 +62,7 @@ Calacatta, also from Italy, is usually a brighter white with bolder, more theatr
 
 ### Statuario
 
-Statuario is a bright white Italian marble with pronounced grey veining. Historically it was favoured for sculpture; in interiors it is used where a crisp white ground and a clear, graphic vein are required. Like Calacatta, it is typically a feature stone rather than a background one, and consecutive slabs should be selected and laid out together.
+Statuario is a bright white Italian marble with pronounced grey veining. Historically it was favoured for sculpture; in interiors it is used where a crisp white ground and a clear, graphic vein are required. Like Calacatta, it is typically a feature stone rather than a background one, and consecutive slabs should be selected and laid out together. A related commercial name is Statuarietto, a slightly quieter member of the same family. The third close-up in the photograph above is Statuarietto photographed in use, not a Calacatta slab.
 
 ### Emperador
 
@@ -84,7 +84,7 @@ For grey, designers in the UAE often look at Pietra Grey, a consistent grey lime
 
 ## How colour families affect a room in the UAE
 
-![A strip of five marble colour families used in UAE interiors: white, black, beige, grey and green.](/assets/img/blog/types-of-marble-uae-luxury-interiors/colour-families.png)
+![Three close-up photographs of marble colour families used in UAE interiors: white Carrara, beige Crema Marfil, and grey Bardiglio.](/assets/img/blog/types-of-marble-uae-luxury-interiors/colour-families.png)
 
 UAE interiors often combine large windows, bright daylight and a mix of contemporary and traditional rooms in the same home. Colour should be chosen with that in mind, not only from a sample held in a showroom.
 
@@ -151,6 +151,17 @@ Polish gives depth and a clear reflection; honed gives a softer, matte look and 
 ### Does D3DDD supply marble?
 
 No. D3DDD prepares shop drawings, fabrication drawings, slab layouts and visualisation. Stone supply is separate, and should be coordinated with your fabricator or supplier.
+
+## Photo credits
+
+The close-up photographs on this page are used under the licences named below. Scale bars on the original sample photos were cropped.
+
+- Carrara: [Carrara marble CD](https://commons.wikimedia.org/wiki/File:Carrara_marble_CD.jpg) by Lysippos, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- Statuario Venato: [Carrara Sta-ven](https://commons.wikimedia.org/wiki/File:Carrara_Sta-ven.JPG) by Lysippos, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+- Statuarietto: [Statuarietto White Marble (Carrara region, Italy)](https://commons.wikimedia.org/wiki/File:Statuarietto_White_Marble_(Apuan_Marble_Formation,_Tertiary_metamorphism_of_Jurassic_limestones;_Carrara_region,_Italy)_2_(41756462202).jpg) by James St. John, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
+- Crema Marfil: [Limestone Crema Marfil](https://commons.wikimedia.org/wiki/File:Limestone_Crema_Marfil_-_es.jpg) by Lysippos, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- Bardiglio: [BARDIGLIO](https://commons.wikimedia.org/wiki/File:BARDIGLIO.jpg) by Rolle-Stone, public domain.
+- Natural Carrara slabs: [2016 - Carrara stone samples](https://commons.wikimedia.org/wiki/File:2016_-_Carrara_stone_samples.jpg) by Jordiferrer, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ## Get the stone choice onto drawings
 
