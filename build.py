@@ -1,5 +1,6 @@
 # D3DDD static site generator (English + Arabic). Edit content here, then run: python3 build.py
 import html, json, os
+import site_search
 from contact_config import whatsapp_html, analytics_snippet, mail_link, social_links, business_node, area_served
 D = "https://d3ddd.com/"
 EMAIL = "info@d3ddd.com"
@@ -278,19 +279,19 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
         '%s\n'
         '<header class="site-header"><a class="logo" href="%s" aria-label="D3DDD – Dubai 3D Design and Draft"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></a>\n'
         '<button class="menu-toggle" aria-label="%s" aria-expanded="false" aria-controls="nav">☰</button>\n'
-        '<nav class="nav" id="nav" aria-label="Main">%s<a class="lang" href="%s" hreflang="%s" lang="%s">%s</a></nav></header>\n'
+        '<nav class="nav" id="nav" aria-label="Main">%s<a class="lang" href="%s" hreflang="%s" lang="%s">%s</a></nav>%s</header>\n'
         '<main id="main">%s</main>\n'
         '<footer><div class="grid"><div><div class="logo"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></div><p class="footer-intro">%s</p>\n'
         '<p class="mt-12">%s%s · <a href="%s">d3ddd.com</a></p>%s</div>\n'
         '<div><h2>%s</h2>%s</div><div><h2>%s</h2>%s</div><div><h2>%s</h2>%s</div>\n'
         '<div><h2>%s</h2><a href="%s">%s</a>%s%s<a href="%s">%s</a><address class="postal">%s</address></div></div>\n'
         '<div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. %s</div></footer>\n'
-        '<script src="%sassets/config.js" defer></script><script src="%sassets/site.js" defer></script>%s%s</body></html>'
+        '%s\n<script src="%sassets/config.js" defer></script><script src="%sassets/site.js" defer></script>%s%s%s</body></html>'
     ) % (
-        t["skip"], top, home_href, t["menu"], nav, sw_href, other, other, t["switch"], body,
+        t["skip"], top, home_href, t["menu"], nav, sw_href, other, other, t["switch"], site_search.header_html(lang), body,
         t["tagline"], mail_link(contact_href), whatsapp_html(lang), D, social_links(lang), t["f_services"], fs, t["f_company"], fc, t["f_industries"], fi,
         t["f_contact"], contact_href, t["cta_form"], mail_link(contact_href), whatsapp_html(lang), blog_href, blog_label, loc,
-        t["rights"], P, P, scripts, GOAT,
+        t["rights"], site_search.dialog_html(lang), P, P, scripts, site_search.script_tag(P), GOAT,
     )
 
 def cta(lang):
@@ -356,6 +357,8 @@ def build_app_pages():
 
 from content import build_pages  # page content lives in content.py
 from service_pages import build_service_pages, SERVICES as SERVICE_DEFS
+
+site_search.write_index(APPS)
 
 globals()["prefix"] = prefix
 globals()["href"] = href

@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT))
 os.chdir(ROOT)
 
 import markdown
+import site_search
 from contact_config import whatsapp_html, mail_link, social_links, business_node, analytics_snippet
 
 D = "https://d3ddd.com"
@@ -134,10 +135,12 @@ def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: lis
 {topbar(prefix)}
 <header class="site-header"><a class="logo" href="{prefix}" aria-label="D3DDD – Dubai 3D Design &amp; Draft"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></a>
 <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">☰</button>
-<nav class="nav" id="nav" aria-label="Main">{nav(prefix, current)}</nav></header>
+<nav class="nav" id="nav" aria-label="Main">{nav(prefix, current)}</nav>{site_search.header_html("en")}</header>
 <main id="main">{body}</main>
 {footer(prefix)}
+{site_search.dialog_html("en")}
 <script src="{prefix}assets/config.js" defer></script><script src="{prefix}assets/site.js" defer></script>
+{site_search.script_tag(prefix)}
 {GOAT}</body></html>'''
 
 def business_ld() -> dict:
