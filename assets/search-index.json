@@ -1,0 +1,604 @@
+{
+  "items": [
+    {
+      "title": "Still — تقويم الصور وتسويتها مجاناً عبر الإنترنت",
+      "snippet": "قوّم الصور المائلة وسوِّ الأفق في المتصفح. يعمل على جهازك ولا يُرفع أي ملف.",
+      "url": "/apps/still/",
+      "type": "app",
+      "lang": "ar",
+      "keywords": "still تطبيق تقويم الصور تسوية"
+    },
+    {
+      "title": "تطبيقات الويب",
+      "snippet": "أدوات مجانية تعمل في المتصفح، ومنها Still لتقويم الصور.",
+      "url": "/ar/apps/",
+      "type": "app",
+      "lang": "ar",
+      "keywords": "still تطبيقات ويب"
+    },
+    {
+      "title": "المدونة",
+      "snippet": "مقالات عملية عن رسومات الرخام والتنسيق والتصنيع لمشاريع الإمارات.",
+      "url": "/ar/blog/",
+      "type": "blog",
+      "lang": "ar",
+      "keywords": "مدونة"
+    },
+    {
+      "title": "أفضل ممارسات التصميم الثلاثي الأبعاد للمقاولين في دبي",
+      "snippet": "تعرّف إلى أفضل ممارسات التصميم ثلاثي الأبعاد لمقاولي دبي: نموذج دقيق، مستوى تفصيل مناسب، خامات واقعية، وتنسيق مع الرسومات التنفيذية قبل التنفيذ في الموقع.",
+      "url": "/ar/blog/3d-design-best-practices-dubai-contractors/",
+      "type": "blog",
+      "lang": "ar",
+      "keywords": "رسومات تنفيذية shop-drawings تصميم ثلاثي الأبعاد دبي، أفضل ممارسات التصميم ثلاثي الأبعاد، نمذجة ثلاثية الأبعاد، إظهار معماري دبي، 3D visualization contractors Dubai، 3D design best practices Dubai، architectural visualization UAE"
+    },
+    {
+      "title": "دليل شامل لاستخدام أوتوكاد في إعداد رسومات تنفيذية للرخام",
+      "snippet": "دليل عملي لإعداد رسومات الرخام التنفيذية في أوتوكاد: ضبط الملف والطبقات والتوزيع والمقاطع وجداول القطع والتسليم لمقاولي دبي وأبوظبي والإمارات.",
+      "url": "/ar/blog/autocad-marble-shop-drawings-guide/",
+      "type": "blog",
+      "lang": "ar",
+      "keywords": "رسومات تنفيذية shop-drawings رسومات تنفيذية للرخام، أوتوكاد، رسومات الرخام التنفيذية، طبقات أوتوكاد، جداول قص الرخام، AutoCAD marble shop drawings Dubai، marble shop drawings UAE، DWG marble drawings"
+    },
+    {
+      "title": "10 خطوات لإعداد جداول كميات دقيقة لمشاريع الرخام",
+      "snippet": "دليل من 10 خطوات لإعداد جداول كميات رخام دقيقة في دبي والإمارات: حصر المساحات والأطوال، نسبة الفاقد، استغلال الألواح، وبنود التركيب قبل الشراء والتنفيذ.",
+      "url": "/ar/blog/marble-boq-quantity-takeoff-10-steps/",
+      "type": "blog",
+      "lang": "ar",
+      "keywords": "رسومات تنفيذية shop-drawings جداول كميات الرخام، BOQ رخام، حصر كميات الرخام، نسبة فاقد الرخام، جداول قص الرخام، marble BOQ Dubai، quantity takeoff UAE، marble quantity takeoff Dubai"
+    },
+    {
+      "title": "ما هي رسومات الرخام التنفيذية ولماذا تحتاجها مشاريع الإمارات؟",
+      "snippet": "تعرّف إلى رسومات الرخام التنفيذية ومحتوياتها وخطوات مراجعتها قبل القص والتركيب، ودورها في تنسيق أعمال المقاولين والاستشاريين في دبي وأبوظبي والشارقة بالإمارات.",
+      "url": "/ar/blog/what-are-marble-shop-drawings/",
+      "type": "blog",
+      "lang": "ar",
+      "keywords": "رسومات تنفيذية shop-drawings رسومات الرخام التنفيذية، مخططات الرخام، تفاصيل تركيب الرخام، رسومات رخام دبي، رسومات رخام أبوظبي، تشطيبات الشارقة، قوائم قص الرخام"
+    },
+    {
+      "title": "الرئيسية",
+      "snippet": "رسومات تنفيذية للرخام والحجر ومخططات معمارية وتصميم ثلاثي الأبعاد وحساب كميات في دبي والإمارات.",
+      "url": "/ar/",
+      "type": "page",
+      "lang": "ar",
+      "keywords": "الرئيسية"
+    },
+    {
+      "title": "من نحن",
+      "snippet": "استوديو رسم هندسي وتصميم في دبي لرسومات الرخام التنفيذية ومخططات أوتوكاد والتصميم ثلاثي الأبعاد.",
+      "url": "/ar/about.html",
+      "type": "page",
+      "lang": "ar",
+      "keywords": "من نحن"
+    },
+    {
+      "title": "تواصل معنا",
+      "snippet": "اطلب عرض سعر للرسومات التنفيذية أو التصميم ثلاثي الأبعاد أو موقع للمقاولين.",
+      "url": "/ar/contact.html",
+      "type": "page",
+      "lang": "ar",
+      "keywords": "تواصل استفسار"
+    },
+    {
+      "title": "المشاريع",
+      "snippet": "مشاريع مختارة لرسومات الرخام التنفيذية وتوزيع الألواح وتفاصيل التبليط.",
+      "url": "/ar/projects/",
+      "type": "page",
+      "lang": "ar",
+      "keywords": "المشاريع"
+    },
+    {
+      "title": "رسومات الرخام التنفيذية",
+      "snippet": "رسومات تصنيع وقوائم قص وتوزيع ألواح وجداول كميات للرخام والحجر في دبي والإمارات.",
+      "url": "/ar/marble.html",
+      "type": "service",
+      "lang": "ar",
+      "keywords": "رسومات الرخام shop drawings"
+    },
+    {
+      "title": "الخدمات",
+      "snippet": "رسم معماري تنفيذي، تصميم، حساب كميات، تصميم ثلاثي الأبعاد وتطوير مواقع.",
+      "url": "/ar/services/",
+      "type": "service",
+      "lang": "ar",
+      "keywords": "الخدمات"
+    },
+    {
+      "title": "التصميم ثلاثي الأبعاد والنمذجة",
+      "snippet": "صور ثابتة، تصور داخلي/خارجي، نمذجة ومشاهد تجوّل.",
+      "url": "/ar/services/3d-rendering-modeling-visualization/",
+      "type": "service",
+      "lang": "ar",
+      "keywords": "تصميم ثلاثي الأبعاد ونمذجة وتصور في دبي والإمارات: صور ثابتة، تصور داخلي/خارجي، مشاهد تجوّل وتصور منتجات. 3d visualization rendering modelling modeling"
+    },
+    {
+      "title": "التصميم المعماري",
+      "snippet": "مخططات مفهومية، تخطيط مساحات، واجهات وتطوير تصميم.",
+      "url": "/ar/services/architectural-designing/",
+      "type": "service",
+      "lang": "ar",
+      "keywords": "تصميم معماري في دبي والإمارات: مخططات مفهومية، تخطيط مساحات، دعم تصميم داخلي، واجهات وقطاعات وتطوير تصميم. architectural design space planning"
+    },
+    {
+      "title": "الرسم المعماري التنفيذي",
+      "snippet": "رسومات تنفيذية، تفاصيل أوتوكاد، كما بُني، نجارة ودعم تصاريح.",
+      "url": "/ar/services/architectural-drafting/",
+      "type": "service",
+      "lang": "ar",
+      "keywords": "رسم معماري تنفيذي في دبي والإمارات: رسومات تنفيذية، تفاصيل أوتوكاد، مخططات كما بُني، رسومات نجارة وفيت آوت، رسومات رخام ودعم مخططات التصاريح. autocad shop drawings drafting"
+    },
+    {
+      "title": "حساب الكميات والتقدير",
+      "snippet": "جداول كميات، حصر، جداول مواد وباقات طرح.",
+      "url": "/ar/services/architectural-estimation/",
+      "type": "service",
+      "lang": "ar",
+      "keywords": "حساب كميات معماري في دبي والإمارات: جداول كميات، حصر، جداول مواد، خطط تكلفة وباقات طرح. estimation BOQ quantity takeoff"
+    },
+    {
+      "title": "تطوير وتصميم المواقع",
+      "snippet": "مواقع أعمال، صفحات هبوط، نماذج، محافظ، SEO وأزرار استفسار.",
+      "url": "/ar/services/website-development-designing/",
+      "type": "service",
+      "lang": "ar",
+      "keywords": "تطوير وتصميم مواقع في دبي والإمارات: مواقع أعمال، صفحات هبوط، نماذج، محافظ أعمال، أساسيات SEO وأزرار استفسار. website development web design"
+    },
+    {
+      "title": "تصميم المواقع",
+      "snippet": "تصميم مواقع للمقاولين: 5 صفحات ونموذج استفسار وأساسيات SEO.",
+      "url": "/ar/website-design.html",
+      "type": "service",
+      "lang": "ar",
+      "keywords": "موقع ويب"
+    },
+    {
+      "title": "Web apps",
+      "snippet": "Free browser tools from D3DDD, including the Still photo leveler.",
+      "url": "/apps/",
+      "type": "app",
+      "lang": "en",
+      "keywords": "web apps still"
+    },
+    {
+      "title": "Still — Free Online Image Straightener & Photo Leveler",
+      "snippet": "Straighten and level photos in the browser. It runs on your device and nothing is uploaded.",
+      "url": "/apps/still/",
+      "type": "app",
+      "lang": "en",
+      "keywords": "still app image straightener photo leveler straighten photos"
+    },
+    {
+      "title": "Blog",
+      "snippet": "Articles on marble shop drawings, drafting practice, estimation and visualization.",
+      "url": "/blog/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "blog articles"
+    },
+    {
+      "title": "AutoCAD 2026 New Features: Smart Blocks AI Assist & Faster DWG",
+      "snippet": "What’s new in AutoCAD 2026 for UAE drafters: Smart Blocks, Autodesk AI assist, Connected Support Files and faster DWG open.",
+      "url": "/blog/autocad-2026-new-features-smart-blocks-ai/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Drafting drafting"
+    },
+    {
+      "title": "AutoCAD Architecture Toolset for UAE Floor Plans & Renovation Plans",
+      "snippet": "Use AutoCAD Architecture toolset for faster UAE floor plans—walls, doors, spaces, renovation display, IFC notes.",
+      "url": "/blog/autocad-architecture-toolset-uae-floor-plans/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Drafting drafting"
+    },
+    {
+      "title": "AutoCAD Drafting Standards for Gulf Fit-Out Packages",
+      "snippet": "Practical AutoCAD drafting standards for UAE and Gulf fit-out work — layers, naming, xrefs, plot styles and revision habits that keep marble, joinery and MEP consultants…",
+      "url": "/blog/autocad-drafting-standards-gulf-fitout/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Drafting drafting"
+    },
+    {
+      "title": "Autodesk Forma Site Design: AI Site Planning for Early Concepts",
+      "snippet": "Official Autodesk Forma Site Design guide—AI layout options, sun/wind analyses, IFC export for UAE concept work.",
+      "url": "/blog/autodesk-forma-site-design-ai-planning/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Architecture architecture"
+    },
+    {
+      "title": "Build in Dubai Platform: Drawing Package Tips for Faster Permits",
+      "snippet": "Prepare cleaner drawing packages for Build in Dubai—layer hygiene, consistency checks, and AI-permit readiness tips.",
+      "url": "/blog/build-in-dubai-drawing-package-tips/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings"
+    },
+    {
+      "title": "Chaos Vantage Tutorial: Real-Time Ray Tracing for V-Ray Scenes",
+      "snippet": "Learn Chaos Vantage for real-time ray-traced walkthroughs of V-Ray scenes—official trial, viewport tips, client reviews.",
+      "url": "/blog/chaos-vantage-realtime-ray-tracing-vray/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Visualization visualization"
+    },
+    {
+      "title": "Custom Marble Tables in Dubai: Marble Coffee Table, Dining Table, Side Table & Tray Ideas Using Glaze Marble",
+      "snippet": "Custom marble coffee, dining and side tables, marble trays and glaze marble for UAE projects, plus shop drawings and 3D visualization from D3DDD.",
+      "url": "/blog/custom-marble-tables-dubai-glaze-marble/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings"
+    },
+    {
+      "title": "DraftSight for DWG Drafting: Trial Setup Limits & When to Use It",
+      "snippet": "Legal DraftSight setup for DWG shop drawings—trial, 2D limits, and when freelancers should stay on AutoCAD LT.",
+      "url": "/blog/draftsight-dwg-drafting-trial-guide/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Drafting drafting"
+    },
+    {
+      "title": "Dubai BIM Mandate 2026: Who Must Submit and What to Prepare",
+      "snippet": "Dubai Municipality BIM rules from April 2026—thresholds, modification triggers, and drawing-model prep checklist.",
+      "url": "/blog/dubai-bim-mandate-2026-submission-guide/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Architecture architecture"
+    },
+    {
+      "title": "IFC OpenBIM Workflow for Dubai Municipality BIM Submissions",
+      "snippet": "Export clean IFC for Dubai BIM submissions—units, classification, model checks before Build in Dubai upload.",
+      "url": "/blog/ifc-openbim-workflow-dubai-bim-submissions/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Architecture architecture"
+    },
+    {
+      "title": "Jeddah Tower 2026: Halfway to One Kilometre — What Drafters Should Watch",
+      "snippet": "Jeddah Tower has climbed past 470 m and Level 118. A practical look at the AS+GG design, concrete structure, and what megatall projects mean for shop drawings and 3D…",
+      "url": "/blog/jeddah-tower-halfway-to-one-kilometre/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Megaprojects megaprojects"
+    },
+    {
+      "title": "What Are the Standard Marble Edge Profiles Used in UAE Projects?",
+      "snippet": "A guide to common marble edge profiles (bullnose, chamfer, ogee and more) and how to show them correctly on shop and fabrication drawings.",
+      "url": "/blog/marble-edge-profiles-uae-projects/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings"
+    },
+    {
+      "title": "Marble Flooring & Wall Cladding Shop Drawings: How-To",
+      "snippet": "A step-by-step guide to preparing marble flooring and wall cladding shop drawings: layouts, joints, setting out and fixing details for UAE projects.",
+      "url": "/blog/marble-flooring-wall-cladding-shop-drawings/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings"
+    },
+    {
+      "title": "Marble Handling, Waterproofing & Packing Instructions: How to Prevent Breakage",
+      "snippet": "Prevent marble breakage in the factory and in transit with these 12 packing instructions, covering handling, waterproofing, pallets, strapping and a pre-dispatch check.",
+      "url": "/blog/marble-handling-waterproofing-packing-instructions/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings"
+    },
+    {
+      "title": "How to Calculate Marble Quantities and Reduce Material Waste?",
+      "snippet": "Calculate marble quantities from drawings, allow for wastage and cut loss, and build a takeoff that keeps your stone order under control.",
+      "url": "/blog/marble-quantity-calculation-reduce-waste/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings marble quantity calculation"
+    },
+    {
+      "title": "Marble Shop Drawings in the UAE: A Practical Checklist for Fabricators",
+      "snippet": "A field-tested checklist for marble and stone shop drawings in Dubai, Abu Dhabi and Sharjah — piece IDs, edge profiles, joint layouts and what to freeze before the slab…",
+      "url": "/blog/marble-shop-drawings-checklist-uae/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings"
+    },
+    {
+      "title": "What Is the Difference Between Marble Shop Drawings and Fabrication Drawings?",
+      "snippet": "Shop drawings get approval and fabrication drawings get cut. See what each one contains and when a UAE stone project needs both.",
+      "url": "/blog/marble-shop-drawings-vs-fabrication-drawings/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings"
+    },
+    {
+      "title": "How Is Marble Slab Allocation and Cutting Optimization Done?",
+      "snippet": "How slab allocation and cutting optimization work in marble projects: slab mapping, vein matching and planning cuts to use each slab well.",
+      "url": "/blog/marble-slab-allocation-cutting-optimization/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings"
+    },
+    {
+      "title": "Marble Table Design: Coffee, Dining & Side Table Guide",
+      "snippet": "Planning a marble coffee table, dining table, side table or tray? Compare finishes, support details and care, then request bespoke shop drawings from D3DDD.",
+      "url": "/blog/marble-table-design-shop-drawings/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings"
+    },
+    {
+      "title": "Navisworks Manage Clash Detection: UAE Coordination Workflow",
+      "snippet": "Run Navisworks Manage clash tests for UAE projects—federate models, set tolerances, report and close clashes.",
+      "url": "/blog/navisworks-clash-detection-uae-coordination/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Drafting drafting"
+    },
+    {
+      "title": "NEOM’s The Line, Paused Until 2030: What Drafters Can Still Learn",
+      "snippet": "The Line’s 170 km vision is on hold until at least 2030. Separating the viral render from the real briefing: scale-backs, Oxagon priority, and drafting lessons that…",
+      "url": "/blog/neom-the-line-paused-what-drafters-can-learn/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Megaprojects megaprojects"
+    },
+    {
+      "title": "Primavera P6 vs Microsoft Project for UAE Fit-Out Schedules",
+      "snippet": "Choose P6 or Microsoft Project for UAE fit-out and building schedules—when clients require each tool.",
+      "url": "/blog/primavera-p6-vs-microsoft-project-uae-fit-out/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Planning planning"
+    },
+    {
+      "title": "Sagrada Família Hits 172.5 m: Why ‘Finished Height’ Is Not a Finished Building",
+      "snippet": "In 2026 the Tower of Jesus Christ reached 172.5 m — the basilica’s final height — while construction remains about 70% complete. Lessons on long programmes, stone…",
+      "url": "/blog/sagrada-familia-final-height-2026/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Architecture architecture"
+    },
+    {
+      "title": "Slab Nesting and Cutting Lists: How Gulf Stone Yards Cut Waste",
+      "snippet": "How slab nesting and cutting lists reduce marble and granite waste for UAE fabricators — piece IDs, yield, vein direction and BOQ habits that survive real yard…",
+      "url": "/blog/slab-nesting-cutting-lists-gulf/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Estimation estimation"
+    },
+    {
+      "title": "Stone Staircase Shop Drawings: Treads Risers Stringers & Fixings",
+      "snippet": "Produce approval-ready stone stair shop drawings—dimensions, nosings, fixings, sequencing for UAE fit-outs.",
+      "url": "/blog/stone-staircase-shop-drawings-treads-risers/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings"
+    },
+    {
+      "title": "What Types of Marble Are Best for Luxury Interiors in the UAE?",
+      "snippet": "Natural and engineered marble for UAE luxury interiors: Carrara, Calacatta, Statuario, Emperador and more, plus colour, room use and shop drawings.",
+      "url": "/blog/types-of-marble-uae-luxury-interiors/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings"
+    },
+    {
+      "title": "What Are Marble Shop Drawings and Why Are They Necessary?",
+      "snippet": "Learn what marble shop drawings contain, why UAE consultants require them before fabrication, and how they prevent costly stone errors on site.",
+      "url": "/blog/what-are-marble-shop-drawings/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Shop Drawings shop-drawings"
+    },
+    {
+      "title": "Home",
+      "snippet": "Architectural drafting, marble shop drawings, fit-out detailing, estimation and 3D visualization across Dubai and the UAE.",
+      "url": "/",
+      "type": "page",
+      "lang": "en",
+      "keywords": "home drafting"
+    },
+    {
+      "title": "About",
+      "snippet": "D3DDD is a Dubai studio for marble shop drawings, AutoCAD drafting and 3D rendering.",
+      "url": "/about.html",
+      "type": "page",
+      "lang": "en",
+      "keywords": "about studio"
+    },
+    {
+      "title": "Technical Drafting Support for UAE Contractors",
+      "snippet": "Technical drafting and design support for UAE construction companies: architectural, marble, fit-out, estimation and visualization packages in DWG and PDF.",
+      "url": "/construction-companies-uae/",
+      "type": "page",
+      "lang": "en",
+      "keywords": ""
+    },
+    {
+      "title": "Contact",
+      "snippet": "Request a quote for shop drawings, drafting, estimation, 3D rendering or a contractor website.",
+      "url": "/contact.html",
+      "type": "page",
+      "lang": "en",
+      "keywords": "contact quote enquiry"
+    },
+    {
+      "title": "Interior Design & Joinery Drawings for UAE Interior Firms",
+      "snippet": "Interior renders, joinery shop drawings and material coordination for UAE interior design firms. DWG, PDF and stills, quoted per project.",
+      "url": "/interior-design-companies-uae/",
+      "type": "page",
+      "lang": "en",
+      "keywords": ""
+    },
+    {
+      "title": "Marble Shop Drawings & Slab Layouts for UAE Marble Contractors",
+      "snippet": "Marble shop drawings, slab layouts, cutting lists and stone quantities for UAE marble contractors. AutoCAD DWG and PDF, quoted per project.",
+      "url": "/marble-contractors-uae/",
+      "type": "page",
+      "lang": "en",
+      "keywords": ""
+    },
+    {
+      "title": "Projects",
+      "snippet": "Selected marble and stone shop drawings, slab layouts and tiling details from Dubai villas.",
+      "url": "/projects/",
+      "type": "page",
+      "lang": "en",
+      "keywords": "portfolio projects"
+    },
+    {
+      "title": "Villa Entrance Lobby Waterjet Marble Medallion & Flooring Layout – Dubai",
+      "snippet": "A waterjet marble rosette with brass inlay, set inside a numbered ground-floor slab layout.",
+      "url": "/projects/entrance-lobby-waterjet-marble-medallion-flooring/",
+      "type": "page",
+      "lang": "en",
+      "keywords": "Waterjet & flooring marble project"
+    },
+    {
+      "title": "Fusion Blue Marble Door Frames & Skirting Slab Layout – Dubai",
+      "snippet": "Fusion Blue door frames, lintels and skirting nested slab by slab so every piece follows the vein.",
+      "url": "/projects/fusion-blue-marble-door-frame-and-skirting-slab-layout/",
+      "type": "page",
+      "lang": "en",
+      "keywords": "Door frames & skirting marble project"
+    },
+    {
+      "title": "Luxury Bathroom Marble Wall & Floor Cladding Shop Drawings – Dubai",
+      "snippet": "Wall and floor cladding for two villa bathrooms, with mitred corners, LED grooves and fluted feature panels.",
+      "url": "/projects/luxury-bathroom-marble-cladding-shop-drawings/",
+      "type": "page",
+      "lang": "en",
+      "keywords": "Bathroom cladding marble project"
+    },
+    {
+      "title": "Marble Slab Cutting Layout & Bathroom Cladding Drawings – Dubai",
+      "snippet": "Numbered Venatino bathroom panels nested on real slab photos for low-waste, vein-matched cutting.",
+      "url": "/projects/marble-slab-cutting-layout-bathroom-cladding/",
+      "type": "page",
+      "lang": "en",
+      "keywords": "Slab nesting marble project"
+    },
+    {
+      "title": "Paonazzetto Marble Vanity Tops Shop Drawings – Residential Villa, Dubai",
+      "snippet": "Seven undermount Paonazzetto vanity tops with sink sections, edge profiles and true-scale slab previews.",
+      "url": "/projects/paonazzetto-marble-vanity-tops-shop-drawings/",
+      "type": "page",
+      "lang": "en",
+      "keywords": "Vanity tops marble project"
+    },
+    {
+      "title": "Venatino Marble Freestanding Bath Vanity Shop Drawing – Dubai",
+      "snippet": "A 2200 mm freestanding Venatino vanity: elevations, section, edge details and a slab-mapped cutting plan.",
+      "url": "/projects/venatino-marble-bath-vanity-shop-drawing/",
+      "type": "page",
+      "lang": "en",
+      "keywords": "Vanity shop drawing marble project"
+    },
+    {
+      "title": "Luxury Villa Ground Floor Marble & Stone Flooring Layout – Dubai",
+      "snippet": "A colour-zoned ground floor plan with a radial marble hall, herringbone majlis and full slab set-out.",
+      "url": "/projects/villa-ground-floor-marble-flooring-layout/",
+      "type": "page",
+      "lang": "en",
+      "keywords": "Flooring layout architectural-designing project"
+    },
+    {
+      "title": "Villa Swimming Pool & Outdoor Seating Tiling Details – Dubai",
+      "snippet": "Set-out plans, long sections and step, coping and fireplace details for a villa pool, deck and outdoor seating.",
+      "url": "/projects/villa-swimming-pool-and-outdoor-majlis-tiling-details/",
+      "type": "page",
+      "lang": "en",
+      "keywords": "Pool & external tiling architectural-drafting project"
+    },
+    {
+      "title": "3D Visualization for UAE Real Estate Developers",
+      "snippet": "3D visualization for UAE real estate project teams: presentation stills, material studies and design-coordination views, with shop drawings quoted separately.",
+      "url": "/real-estate-developers-uae/",
+      "type": "page",
+      "lang": "en",
+      "keywords": ""
+    },
+    {
+      "title": "UAE directories",
+      "snippet": "Maps, UAE business directories, and construction and design listing sites.",
+      "url": "/resources/uae-directories/",
+      "type": "page",
+      "lang": "en",
+      "keywords": "directories listings"
+    },
+    {
+      "title": "Fit-Out & Joinery Shop Drawings UAE",
+      "snippet": "Fit-out and joinery shop drawings for UAE interiors: ceilings, partitions, kitchens, wardrobes and interior elevations, issued as DWG and PDF.",
+      "url": "/fitout-shop-drawings/",
+      "type": "service",
+      "lang": "en",
+      "keywords": "fit-out joinery shop drawings"
+    },
+    {
+      "title": "Marble shop drawings",
+      "snippet": "Fabrication plans, slab layouts, cutting lists and stone quantities for UAE yards, issued as DWG and PDF.",
+      "url": "/marble.html",
+      "type": "service",
+      "lang": "en",
+      "keywords": "marble shop drawings stone fabrication cutting list"
+    },
+    {
+      "title": "Services",
+      "snippet": "Architectural drafting, designing, estimation, 3D visualization and website development for Gulf contractors.",
+      "url": "/services/",
+      "type": "service",
+      "lang": "en",
+      "keywords": "services"
+    },
+    {
+      "title": "3D rendering, modeling & visualization",
+      "snippet": "Still renders, interior/exterior viz, modeling, walkthroughs and VR-ready scenes.",
+      "url": "/services/3d-rendering-modeling-visualization/",
+      "type": "service",
+      "lang": "en",
+      "keywords": "3D architectural visualization in Dubai: interior renders, material studies and presentation images for design reviews before stone is cut. 3d visualization rendering modelling modeling"
+    },
+    {
+      "title": "Architectural designing",
+      "snippet": "Concept layouts, space planning, elevations and design development.",
+      "url": "/services/architectural-designing/",
+      "type": "service",
+      "lang": "en",
+      "keywords": "Architectural designing in Dubai and the UAE: concept layouts, space planning, interior design support, elevations/sections and design development. architectural design space planning"
+    },
+    {
+      "title": "Architectural drafting",
+      "snippet": "Shop drawings, CAD detailing, as-built, joinery and permit sets.",
+      "url": "/services/architectural-drafting/",
+      "type": "service",
+      "lang": "en",
+      "keywords": "Architectural drafting services across the UAE: shop drawings, fit-out sets, joinery elevations and as-built CAD for contractors, issued as DWG and PDF. autocad shop drawings drafting"
+    },
+    {
+      "title": "Architectural estimation",
+      "snippet": "BOQ, quantity take-offs, material schedules and tender packages.",
+      "url": "/services/architectural-estimation/",
+      "type": "service",
+      "lang": "en",
+      "keywords": "Construction estimation and BOQ services in the UAE: quantity take-offs, material schedules and tender bills measured from your project drawings. estimation BOQ quantity takeoff"
+    },
+    {
+      "title": "Website development & designing",
+      "snippet": "Business sites, landing pages, demos, portfolios, SEO basics and enquiry CTAs.",
+      "url": "/services/website-development-designing/",
+      "type": "service",
+      "lang": "en",
+      "keywords": "Website development and designing in Dubai and the UAE: business sites, landing pages, client demos, portfolios, SEO basics and WhatsApp/enquiry CTAs. website development web design"
+    },
+    {
+      "title": "Website design",
+      "snippet": "Contractor websites for the UAE: 5 pages, an enquiry form and SEO basics.",
+      "url": "/website-design.html",
+      "type": "service",
+      "lang": "en",
+      "keywords": "website web design contractor"
+    }
+  ]
+}
