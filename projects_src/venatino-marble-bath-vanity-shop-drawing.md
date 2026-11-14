@@ -31,7 +31,7 @@ The sheet includes:
 - Four enlarged details, labelled D1 to D4
 - A cutting plan with marble pieces placed on photos of the approved slabs
 
-This is a typical [marble vanity shop drawing](https://d3ddd.com/marble.html): edges, the sink junction, supports and slab mapping are shown, not only an overall size. See also the [marble shop drawings](https://d3ddd.com/marble.html) service page.
+This is a typical vanity sheet from the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/): edges, the sink junction, supports and slab mapping are shown, not only an overall size. See also the [marble shop drawings](https://d3ddd.com/marble.html) service page.
 
 ## Challenge
 

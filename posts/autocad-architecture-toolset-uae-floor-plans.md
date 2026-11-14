@@ -1,6 +1,7 @@
 ---
 title: "AutoCAD Architecture Toolset for UAE Floor Plans & Renovation Plans"
 slug: autocad-architecture-toolset-uae-floor-plans
+updated: 2026-11-14
 date: 2026-10-26
 category: drafting
 category_title: Drafting
@@ -12,7 +13,7 @@ image_alt: "Architectural floor plan with walls, a door swing and existing versu
 ---
 The **AutoCAD Architecture toolset** is for teams that still deliver UAE floor plans and renovation drawings in the AutoCAD world—but want walls, doors, spaces and schedules instead of raw lines. Included with AutoCAD subscriptions, ACA speeds villa GAs, fit-out plans and “existing / demo / new” sets without forcing a full Revit migration on day one.
 
-This tutorial shows when ACA wins, how to structure wall styles and renovation display, and how it connects to layer standards, annotative scaling and eventual BIM/IFC needs under Dubai’s evolving rules.
+This tutorial shows when ACA wins, how to structure wall styles and renovation display, and how it connects to layer standards, annotative scaling and eventual BIM/IFC needs under Dubai’s evolving rules. When the floor plan has to become a fabrication set, that measured work is [architectural drafting](/services/architectural-drafting/).
 
 **Key takeaways**
 

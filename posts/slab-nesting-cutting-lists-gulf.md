@@ -91,7 +91,7 @@ A perfect geometric nest that ignores vein flow still produces a wall the client
 
 ## How D3DDD fits in
 
-[D3DDD](/) supports fabricators with shop drawings, [estimation / cutting-list](/services/architectural-estimation/) workflows that stay tied to the same IDs from elevation to nest. When helpful, we add [3D visualisation](/services/3d-rendering-modeling-visualization/) so clients approve vein direction before the saw starts.
+[D3DDD](/) supports fabricators with the shop drawings in the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/), and with [estimation / cutting-list](/services/architectural-estimation/) workflows that stay tied to the same IDs from elevation to nest. When helpful, we add [3D visualisation](/services/3d-rendering-modeling-visualization/) so clients approve vein direction before the saw starts.
 
 Need a package nested or a messy schedule cleaned up? [Contact D3DDD](/contact.html), see updates on [Instagram @dubai3ddd](https://www.instagram.com/dubai3ddd/), or review gigs on [Fiverr (@mxhoaib)](https://www.fiverr.com/mxhoaib).
 

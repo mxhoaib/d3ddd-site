@@ -58,7 +58,7 @@ def _links(lang, here, root):
         "about": _a(here("about.html"), "about the studio" if en else "من نحن"),
         "contact": _a(here("contact.html"), "enquiry form" if en else "نموذج الاستفسار"),
         "blog": _a(root("blog/"), "blog" if en else "المدونة", en=not en),
-        "b_what": blog("what-are-marble-shop-drawings/", "What are marble shop drawings?" if en else "ما هي رسومات الرخام التنفيذية؟"),
+        "b_what": blog("what-are-marble-shop-drawings/", "Marble Shop Drawings Guide (UAE)" if en else "ما هي رسومات الرخام التنفيذية؟"),
         "b_check": blog("marble-shop-drawings-checklist-uae/", "UAE marble shop-drawing checklist" if en else "قائمة مراجعة رسومات الرخام"),
         "b_slab": blog("slab-nesting-cutting-lists-gulf/", "slab nesting and cutting lists" if en else "توزيع الألواح وقوائم القص"),
         "b_stair": blog("stone-staircase-shop-drawings-treads-risers/", "stone staircase shop drawings" if en else "رسومات درج الحجر"),
@@ -94,6 +94,15 @@ def _links(lang, here, root):
         "b_boqdiff": blog("boq-vs-estimation-vs-quotation/", "how a BOQ differs from an estimate and a quotation"),
         "b_rmodel": blog("3d-rendering-vs-3d-modeling/", "how 3D rendering differs from 3D modeling"),
         "b_vizok": blog("3d-visualization-uae-interior-approvals/", "how 3D visualization helps interior approvals"),
+        "b_ac2026": blog("autocad-2026-new-features-smart-blocks-ai/", "AutoCAD 2026 features for drafters" if en else "أوتوكاد 2026"),
+        "b_aca": blog("autocad-architecture-toolset-uae-floor-plans/", "the AutoCAD Architecture toolset for floor plans" if en else "أداة أوتوكاد المعمارية"),
+        "b_ds": blog("draftsight-dwg-drafting-trial-guide/", "DraftSight for DWG drafting" if en else "DraftSight"),
+        "b_vantage": blog("chaos-vantage-realtime-ray-tracing-vray/", "Chaos Vantage real-time ray tracing" if en else "Chaos Vantage"),
+        "b_custom": blog("custom-marble-tables-dubai-glaze-marble/", "custom marble tables in Dubai" if en else "طاولات رخام حسب الطلب"),
+        "contractors": _a(here("construction-companies-uae/"), "drafting support for construction companies" if en else "دعم المقاولين"),
+        "devs": _a(here("real-estate-developers-uae/"), "3D visualization for real estate developers" if en else "تصور للمطورين"),
+        "interiors": _a(here("interior-design-companies-uae/"), "interior renders for design firms" if en else "تصورات التصميم الداخلي"),
+        "yards": _a(here("marble-contractors-uae/"), "marble contractors" if en else "مقاولو الرخام"),
     }
 
 def home_bundle(lang, here, root):
@@ -285,6 +294,8 @@ def _service_en(slug, L):
             ("p", "%s remain a distinct deliverable: cutting lists, slab layouts and piece-tagged stone sheets. They can be quoted with a drafting set when a job has both, but they are not the primary offer of this page. %s cover ceilings, partitions, kitchens, wardrobes and interior elevations in more detail. %s measures the drafted sheets. %s can illustrate the same design; a picture does not replace the DWG." % (L["marble_cap"], L["fitout"], L["estim_boq"], L["viz_model"])),
             ("p", "An external construction-drawing example already in the portfolio is the %s." % L["pool_set"]),
             ("p", "Architectural drafting is quoted per project. Scope, fee and delivery date are confirmed in writing before work starts. There is no published day-rate or square-metre rate for this service. To ask for a quote, send the current drawings or a survey through the %s. A longer guide to %s is on the blog." % (L["contact_form"], L["b_drafting"])),
+            ("h", "AutoCAD notes that sit beside this service"),
+            ("p", "Release changes that affect a production DWG are in %s. Floor plans drawn with walls and doors rather than raw lines are in %s. When the seat is DraftSight rather than AutoCAD, the trial limits are in %s. Contractors who send a consultant set to be redrawn are on %s." % (L["b_ac2026"], L["b_aca"], L["b_ds"], L["contractors"])),
             ("h", "Review in Dubai, Abu Dhabi and Sharjah"),
             ("p", "Drafted fit-out sets in these emirates normally travel with the contractor’s submission to the project consultant. The architect or interior designer checks them against the approved design: partitions, ceiling heights, joinery lines, wet-area build-ups and the points where trades meet. Comments come back on the PDF or as a list. The next issue raises the revision and clouds the changes so the site does not build from a mixed set. Abu Dhabi jobs often ask for a transmittal; Sharjah jobs sometimes have only the designer as reviewer; Dubai jobs range from a single interior designer to a full consultant team. The drawing follows the rule you send. It is not, by itself, a permit or a BIM submission. If the project also needs those, they are a separate line in the quote. Background reading is on %s and %s." % (L["b_dubai"], L["b_bim"])),
             ("p", "External and wet-area sheets in the portfolio include %s. Floor set-out that starts as a drafting plan includes %s." % (L["p_pool"], L["p_floor"])),
@@ -352,7 +363,7 @@ def _service_en(slug, L):
             ("p", "Typical pairings already on this page include the %s, %s and %s. Early layouts can come from %s. Request a quote or a single-render booking through the %s." % (L["p_lobby"], L["p_bath"], L["p_floor"], L["design"], L["contact_form"])),
             ("h", "Where the images sit in a review"),
             ("p", "In Dubai, Abu Dhabi and Sharjah a render is often what the client approves, while the shop drawings are what the consultant approves for fabrication. Mixing those two decisions causes trouble: a vein that looked acceptable in a picture may be impossible on the slabs that arrived, and a picture with no joint lines does not tell the factory where to cut. When both are in the quote, the render is updated if the approved shop drawings change the design, and that update is described in the quote rather than assumed. The studio does not claim that a render is an authority submission. It is a decision tool."),
-            ("p", "Sheets that pair well with a material study include %s, %s and %s. If you are comparing real-time tools for your own team, the blog has a note on Chaos Vantage; the production images for a project are still scoped here." % (L["p_lobby"], L["p_bath"], L["p_floor"])),
+            ("p", "Sheets that pair well with a material study include %s, %s and %s. If you are comparing real-time tools for your own team, %s is the tool tutorial; the production images for a project are still scoped here. A Dubai furniture example that uses a still before any cut is %s. Presentation stills for project teams are on %s, and interior firms are on %s." % (L["p_lobby"], L["p_bath"], L["p_floor"], L["b_vantage"], L["b_custom"], L["devs"], L["interiors"])),
         ],
         "website-development-designing": [
             ("h", "Websites, with the prices that are actually published"),
@@ -386,7 +397,7 @@ def _service_en(slug, L):
             ("p", "A quantity take-off is the measurement itself: areas, linear metres and counts taken from the plans, elevations and schedules, with a note of which sheet each figure came from. A bill of quantities (BOQ) is the structured document those measurements are organised into, so a revision of the drawings can be compared with the previous issue and a contractor or supplier can price or order from it. Both already sit on this service. The live page also offers material schedules and, when asked, an early cost plan to compare options before tender."),
             ("p", "D3DDD does not publish a mandatory UAE bill format or a tender-law claim. If the client already has an empty template, send it with the drawings and the schedules follow that column order — that rule is already on the live page. Assumptions such as joint width or cutting waste stay in the header, not hidden in a total. The blog explains %s and %s." % (L["b_takeoff"], L["b_boqdiff"])),
             ("h", "What can be measured"),
-            ("p", "Stone quantities (areas, linear metres, piece counts, with the cutting-waste assumption written down) can sit inside a %s package or be measured from drawings you already have. A stone-specific how-to is the blog guide %s. This service page is wider than that article: joinery, flooring, wall finishes and ceiling areas are measured when those drawings exist, and the stone schedule is kept separate from a joinery schedule so a yard is not asked to price cabinet carcasses." % (L["marble_shop"], L["b_marble_qty"])),
+            ("p", "Stone quantities (areas, linear metres, piece counts, with the cutting-waste assumption written down) can sit inside a %s package or be measured from drawings you already have. A stone-specific how-to is the blog guide %s. This service page is wider than that article: joinery, flooring, wall finishes and ceiling areas are measured when those drawings exist, and the stone schedule is kept separate from a joinery schedule so a yard is not asked to price cabinet carcasses. How %s use those stone figures is on their own page." % (L["marble_shop"], L["b_marble_qty"], L["yards"])),
             ("p", "The numbers only match the build if they move with the drawing revision. When a consultant comment changes a height or a thickness, the take-off has to be updated against that issue. Large redesigns are quoted as their own step, as the live FAQ already states."),
             ("p", "Estimation is quoted per package. It is not a published square-metre or per-page rate, and it is not a website package price. Send the drawings (and a template, if you have one) through the %s. If you also need the sheets measured from, see %s." % (L["contact_form"], L["draft"])),
         ]

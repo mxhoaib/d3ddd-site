@@ -28,7 +28,7 @@ The set takes design renders through to a buildable layout for two villa bathroo
 
 The drawings also coordinate fluted marble feature panels, LED grooves, glass shower screens, niches, the vanity and the sanitary fixtures, so the stone installer, glazier and MEP trades work from one reference.
 
-Slab details show the approved block and its dimensions so vein matching can be planned across walls and floor. This is the kind of wall-and-floor cladding set described in D3DDD’s [marble shop drawings](https://d3ddd.com/marble.html) service and in the [flooring and wall cladding shop-drawings guide](https://d3ddd.com/blog/marble-flooring-wall-cladding-shop-drawings/).
+Slab details show the approved block and its dimensions so vein matching can be planned across walls and floor. This is the kind of wall-and-floor cladding set described in the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/), in D3DDD’s [marble shop drawings](https://d3ddd.com/marble.html) service and in the [flooring and wall cladding shop-drawings guide](https://d3ddd.com/blog/marble-flooring-wall-cladding-shop-drawings/).
 
 Client details have been removed.
 

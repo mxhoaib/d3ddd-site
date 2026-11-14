@@ -4,6 +4,7 @@ seo_title: "Marble Handling, Waterproofing & Packing Instructions"
 meta_description: "Prevent marble breakage in the factory and in transit with these 12 packing instructions, covering handling, waterproofing, pallets, strapping and a pre-dispatch check."
 description: "Prevent marble breakage in the factory and in transit with these 12 packing instructions, covering handling, waterproofing, pallets, strapping and a pre-dispatch check."
 slug: marble-handling-waterproofing-packing-instructions
+updated: 2026-11-14
 date: 2026-11-11
 category: shop-drawings
 category_title: Shop Drawings
@@ -20,7 +21,7 @@ faq_schema: true
 
 A marble piece can be cut to size, matched for vein and finished to a high polish, then still arrive cracked if it is lifted, packed or transported the wrong way. Breakage usually starts as a small bend, a gap in the pallet, or a jolt on the road — and by the time the crate is opened, the damage is already done.
 
-This guide sets out the factory and packing instructions that teams should follow so stone leaves the workshop intact. It is written for factory and packing teams, packing supervisors, and contractors who need a clear standard before marble is dispatched.
+This guide sets out the factory and packing instructions that teams should follow so stone leaves the workshop intact. The piece sizes being packed should already match the approved set in the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/). It is written for factory and packing teams, packing supervisors, and contractors who need a clear standard before marble is dispatched.
 
 All factory and packing teams must strictly follow the instructions below to prevent marble breakage during handling, packing and transportation.
 

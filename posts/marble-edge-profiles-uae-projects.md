@@ -4,6 +4,7 @@ seo_title: "Marble Edge Profiles Used in UAE Projects: A Guide"
 meta_description: "A guide to common marble edge profiles (bullnose, chamfer, ogee and more) and how to show them correctly on shop and fabrication drawings."
 description: "A guide to common marble edge profiles (bullnose, chamfer, ogee and more) and how to show them correctly on shop and fabrication drawings."
 slug: marble-edge-profiles-uae-projects
+updated: 2026-11-14
 date: 2026-11-12
 category: shop-drawings
 category_title: Shop Drawings
@@ -15,7 +16,7 @@ image_alt: "Marble edge profile sections for eased, chamfer, bullnose, half bull
 faq_schema: true
 ---
 
-**The most common marble edge profiles are the eased (pencil) edge, chamfer, bullnose, half bullnose, ogee and the mitered (waterfall) edge.** Each one changes how a countertop, vanity, step or threshold looks and feels, and each must be called out on the drawing so the workshop cuts it correctly.
+**The most common marble edge profiles are the eased (pencil) edge, chamfer, bullnose, half bullnose, ogee and the mitered (waterfall) edge.** Each one changes how a countertop, vanity, step or threshold looks and feels, and each must be called out on the drawing so the workshop cuts it correctly. How that callout sits with the rest of a stone package is in the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/).
 
 ## What are the common marble edge profiles?
 

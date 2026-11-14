@@ -1,6 +1,7 @@
 ---
 title: "DraftSight for DWG Drafting: Trial Setup Limits & When to Use It"
 slug: draftsight-dwg-drafting-trial-guide
+updated: 2026-11-14
 date: 2026-10-26
 category: drafting
 category_title: Drafting
@@ -12,7 +13,7 @@ image_alt: "2D DWG drafting workspace with a floor plan and a command line"
 ---
 **DraftSight DWG** drafting is a common search for freelancers who want a familiar 2D CAD seat without jumping straight to a full AutoCAD subscription. DraftSight can open and edit DWG files, but UAE shop-drawing work lives or dies on Xrefs, fonts, CTB plot styles and what the consultant’s review machine expects.
 
-This legal guide covers official trial setup, practical 2D limits, and a clear decision matrix against AutoCAD LT and BricsCAD so you spend once and avoid file-rejection loops.
+This legal guide covers official trial setup, practical 2D limits, and a clear decision matrix against AutoCAD LT and BricsCAD so you spend once and avoid file-rejection loops. When a consultant package has to be issued from a licensed AutoCAD seat, that production work is [architectural drafting](/services/architectural-drafting/).
 
 **Key takeaways**
 

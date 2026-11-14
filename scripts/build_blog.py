@@ -248,7 +248,7 @@ def article_ld(p: dict) -> dict:
         "headline": p["title"],
         "description": p["description"],
         "datePublished": p["date"],
-        "dateModified": p["date"],
+        "dateModified": p.get("updated") or p["date"],
         "image": p["og_image"],
         "author": {"@type": "Person", "name": "Shoaib Hussan", "jobTitle": "Founder, D3DDD – Dubai 3D Design & Draft", "url": f"{D}/about.html", "sameAs": [IG, LINKEDIN, FIVERR]},
         "publisher": {"@id": f"{D}/#business"},

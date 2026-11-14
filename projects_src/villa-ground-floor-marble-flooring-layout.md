@@ -20,7 +20,7 @@ A colour-zoned flooring layout for the full ground floor of a large luxury villa
 
 ## Scope
 
-Unlike most pages in this portfolio, this project is tagged as [architectural designing](https://d3ddd.com/services/architectural-designing/), not as marble shop drawings. It is a presentation-ready ground-floor flooring layout (Option 02), with material zoning and slab and tile set-out. It forms the base for the detailed marble shop drawings that follow.
+Unlike most pages in this portfolio, this project is tagged as [architectural designing](https://d3ddd.com/services/architectural-designing/), not as marble shop drawings. It is a presentation-ready ground-floor flooring layout (Option 02), with material zoning and slab and tile set-out. It forms the base for the detailed drawings described in the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/).
 
 The plan covers the full ground floor of a large luxury villa in Dubai. Each zone is drawn with its own finish:
 

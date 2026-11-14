@@ -64,7 +64,7 @@ A Dubai villa kitchen package that travels cleanly usually includes:
 - A schedule that exports cleanly to Excel for the yard
 - A nested cutting layout once slab sizes are known (see our related notes on slab nesting when you publish that workflow)
 
-That is ordinary [AutoCAD drafting](/services/architectural-drafting/) done carefully — not a marketing render. Renders still help clients approve vein direction; they do not replace the fabrication set.
+That is ordinary [AutoCAD drafting](/services/architectural-drafting/) done carefully — not a marketing render. Where this checklist sits in the wider set is the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/). Renders still help clients approve vein direction; they do not replace the fabrication set.
 
 ## Common failures we see (and how drawings prevent them)
 

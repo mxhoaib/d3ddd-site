@@ -1,18 +1,18 @@
 ---
-title: "What Are Marble Shop Drawings and Why Are They Necessary?"
-seo_title: "What Are Marble Shop Drawings? Why UAE Projects Need Them"
+title: "Marble Shop Drawings Guide (UAE)"
+seo_title: "Marble Shop Drawings Guide (UAE) | D3DDD"
 slug: what-are-marble-shop-drawings
 date: 2026-11-03
 category: shop-drawings
 category_title: Shop Drawings
-description: "Learn what marble shop drawings contain, why UAE consultants require them before fabrication, and how they prevent costly stone errors on site."
+description: "Marble shop drawings guide for the UAE: what the set contains, who approves it before fabrication, and the checklists, slab notes, project sheets and service page around it."
 image: /assets/img/blog/what-are-marble-shop-drawings.svg
 og_image: /assets/img/blog/what-are-marble-shop-drawings.jpg
 image_alt: "Annotated marble shop drawing with a slab plan, sink cut-out, dimensions and title block"
 updated: 2026-11-14
 ---
 
-Marble is expensive and heavy, and once a slab is cut it can't be uncut. That is why most UAE fit-out and construction projects won't let stone go into fabrication until **marble shop drawings** have been prepared, reviewed and approved. This guide covers what marble shop drawings are, what goes into them, who uses them, and why they matter on projects in Dubai and across the UAE.
+Marble is expensive and heavy, and once a slab is cut it can't be uncut. That is why most UAE fit-out and construction projects won't let stone go into fabrication until **marble shop drawings** have been prepared, reviewed and approved. This Marble Shop Drawings Guide (UAE) covers what the drawings are, what goes into them, who uses them, and why they matter on projects in Dubai and across the UAE. The sections further down link to every related marble and stone note, project sheet and the marble service page on this site.
 
 ## What Are Marble Shop Drawings?
 
@@ -119,6 +119,35 @@ Before work can start, the drafter usually needs:
 5. Details of fixing systems and of the trades the stone meets
 
 Checking the drawings against the actual site dimensions is important. Walls and floors on site are not always exactly as drawn, and stone needs to fit what is actually built.
+
+## Marble shop drawings guide: the rest of the set
+
+The notes below are the other marble and stone pages on this site. Each one takes a slice of the same work: a checklist, a drawing type, a material, a project sheet, or the service page you use to ask for a set.
+
+### Checklists, drawing types and details
+
+The [UAE marble shop-drawing checklist](/blog/marble-shop-drawings-checklist-uae/) is the fabricator's tick-list: piece IDs, edges, joints and what to freeze before the slab is cut. [Shop drawings versus fabrication drawings](/blog/marble-shop-drawings-vs-fabrication-drawings/) separates the approval set from the workshop set. [Flooring and wall cladding shop drawings](/blog/marble-flooring-wall-cladding-shop-drawings/) walks through layouts, joints, setting-out and fixing for floors and walls. [Marble edge profiles on UAE projects](/blog/marble-edge-profiles-uae-projects/) names the eased, chamfer, bullnose, half bullnose, ogee and mitered edges and how to call them out. [Stone staircase shop drawings](/blog/stone-staircase-shop-drawings-treads-risers/) covers treads, risers, stringers and fixings. [Marble table design](/blog/marble-table-design-shop-drawings/) and [custom marble tables in Dubai](/blog/custom-marble-tables-dubai-glaze-marble/) cover coffee, dining and side tables, including glaze marble, before a top is cut.
+
+### Materials, slabs, packing and quantities
+
+[Types of marble for UAE luxury interiors](/blog/types-of-marble-uae-luxury-interiors/) compares stones that are often specified here. D3DDD draws the stone; it does not sell or stock slabs. [Handling, waterproofing and packing](/blog/marble-handling-waterproofing-packing-instructions/) is what happens after the piece is cut, so it is not broken in the yard or in transit. [Slab allocation and cutting optimization](/blog/marble-slab-allocation-cutting-optimization/) and [slab nesting and cutting lists](/blog/slab-nesting-cutting-lists-gulf/) are how a yard decides which piece comes from which slab. [How to calculate marble quantities](/blog/marble-quantity-calculation-reduce-waste/) is the measurement side, including the difference between a takeoff and a BOQ. A full bill, rather than a stone schedule only, is the [architectural estimation service](/services/architectural-estimation/).
+
+### The service page and the yards
+
+Commissioning a set — DWG, PDF, cutting lists and, when the quote includes them, quantities — is the [marble shop drawings service](/marble.html). [Marble contractors](/marble-contractors-uae/) is the same work from the yard's side: shop drawings, slab layouts, cutting lists and stone quantities.
+
+### Project sheets
+
+These are issued examples with client marks removed:
+
+- [Entrance lobby waterjet medallion](/projects/entrance-lobby-waterjet-marble-medallion-flooring/) — a numbered lobby floor and waterjet rosette.
+- [Villa ground-floor flooring layout](/projects/villa-ground-floor-marble-flooring-layout/) — a design-stage floor set-out for a Dubai villa.
+- [Pool and outdoor majlis tiling](/projects/villa-swimming-pool-and-outdoor-majlis-tiling-details/) — pool, deck, coping and seating details.
+- [Luxury bathroom cladding](/projects/luxury-bathroom-marble-cladding-shop-drawings/) — wall and floor elevations with mitred corners.
+- [Venatino bath vanity](/projects/venatino-marble-bath-vanity-shop-drawing/) — a freestanding vanity with edge details and a slab map.
+- [Paonazzetto vanity tops](/projects/paonazzetto-marble-vanity-tops-shop-drawings/) — seven vanity tops with sink and edge details.
+- [Bathroom slab cutting layout](/projects/marble-slab-cutting-layout-bathroom-cladding/) — numbered panels nested on slab photos.
+- [Fusion Blue door frames and skirting](/projects/fusion-blue-marble-door-frame-and-skirting-slab-layout/) — frames and skirting nested to follow the vein.
 
 ## Frequently Asked Questions
 

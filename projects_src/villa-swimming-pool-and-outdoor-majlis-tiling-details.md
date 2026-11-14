@@ -28,7 +28,7 @@ This project is tagged as [architectural drafting](https://d3ddd.com/services/ar
 - A water pond
 - The entrance veranda
 
-The work starts with a fully dimensioned external plan. Every 1200×600 mm floor tile and every 1200×380 mm pool coping piece is set out from fixed grid lines. Finished floor levels and pool depths are marked throughout.
+The work starts with a fully dimensioned external plan. Every 1200×600 mm floor tile and every 1200×380 mm pool coping piece is set out from fixed grid lines. Finished floor levels and pool depths are marked throughout. The coping, steps and edges on this set are the kind of stone information collected in the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/).
 
 ## Challenge
 

@@ -1,6 +1,7 @@
 ---
 title: "AutoCAD 2026 New Features: Smart Blocks AI Assist & Faster DWG"
 slug: autocad-2026-new-features-smart-blocks-ai
+updated: 2026-11-14
 date: 2026-10-26
 category: drafting
 category_title: Drafting
@@ -12,7 +13,7 @@ image_alt: "AutoCAD Smart Block door with grip points and an AI assist spark"
 ---
 **AutoCAD 2026 new features** matter most when they cut open time, reduce block mistakes and keep every draftsman on the same fonts and plot styles. For UAE shop-drawing and fit-out teams, this release is less about flashy demos and more about production: Smart Blocks that place themselves more intelligently, Autodesk Assistant for in-product help, Connected Support Files for shared office standards, and faster DWG open on large packages.
 
-This guide translates the official Autodesk release notes into a drafter-first checklist. You will see what to test first on a live package, how Smart Blocks fit Dynamic Block workflows, and where education or trial access comes from—always through Autodesk’s official channels.
+This guide translates the official Autodesk release notes into a drafter-first checklist. Production shop drawings for those packages are [architectural drafting](/services/architectural-drafting/); this note is only the release checklist. You will see what to test first on a live package, how Smart Blocks fit Dynamic Block workflows, and where education or trial access comes from—always through Autodesk’s official channels.
 
 *Tip: before rolling any release into a consultant package, open one approved DWG from your last project, plot to PDF, and compare lineweights and Xrefs. Performance gains are useless if your CTB or support paths break.*
 

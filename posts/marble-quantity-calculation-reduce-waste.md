@@ -70,6 +70,6 @@ A D3DDD shop drawing pack is AED 1,200, with 50% paid upfront. Estimation scopes
 
 ## Get your marble quantities checked by D3DDD
 
-D3DDD (Dubai 3D Design & Draft) prepares marble shop drawings and quantity takeoffs for UAE contractors, fabricators and designers. See our [BOQ and estimation service](https://d3ddd.com/services/architectural-estimation/), the [Marble Shop Drawings service page](https://d3ddd.com/marble.html), and related posts on [slab allocation and cutting optimization](https://d3ddd.com/blog/marble-slab-allocation-cutting-optimization/) and [slab nesting and cutting lists](https://d3ddd.com/blog/slab-nesting-cutting-lists-gulf/).
+D3DDD (Dubai 3D Design & Draft) prepares the drawings described in the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/) and quantity takeoffs for UAE contractors, fabricators and designers. See our [BOQ and estimation service](https://d3ddd.com/services/architectural-estimation/), the [Marble Shop Drawings service page](https://d3ddd.com/marble.html), and related posts on [slab allocation and cutting optimization](https://d3ddd.com/blog/marble-slab-allocation-cutting-optimization/) and [slab nesting and cutting lists](https://d3ddd.com/blog/slab-nesting-cutting-lists-gulf/).
 
 **[Request a quote](https://d3ddd.com/contact).**

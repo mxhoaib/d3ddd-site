@@ -22,7 +22,7 @@ Marble flooring shop drawings for the ground floor of a luxury villa in Dubai, p
 
 The set covers [marble flooring shop drawings](https://d3ddd.com/blog/marble-flooring-wall-cladding-shop-drawings/) for the ground floor of a luxury villa in Dubai. The floor plan sets out Afyoun Sugar marble across the formal and informal living rooms, the dining room and the office. The entrance lobby holds a circular waterjet rosette, which is the visual focus of the floor.
 
-Every slab on the floor plan is tagged with a piece number in the GF-xx series and placed using real slab images, so the vein flow can be checked before cutting. That is the same method used on other D3DDD [marble shop drawings](https://d3ddd.com/marble.html) in this portfolio: the layout is not only dimensioned, it is tied to the actual stone.
+Every slab on the floor plan is tagged with a piece number in the GF-xx series and placed using real slab images, so the vein flow can be checked before cutting. What a full marble shop-drawing set contains, beyond this lobby sheet, is the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/). That is the same method used on other D3DDD [marble shop drawings](https://d3ddd.com/marble.html) in this portfolio: the layout is not only dimensioned, it is tied to the actual stone.
 
 Client details have been removed, as on the rest of the portfolio.
 
@@ -55,7 +55,7 @@ The published outcome is a coordinated floor and medallion set: Afyoun Sugar sla
 
 Need shop drawings like these for your project? [Send your design drawings and get a quote](https://d3ddd.com/contact.html).
 
-**Related on this site:** [Luxury Villa Ground Floor Marble & Stone Flooring Layout](https://d3ddd.com/projects/villa-ground-floor-marble-flooring-layout/) · [What are marble shop drawings?](https://d3ddd.com/blog/what-are-marble-shop-drawings/)
+**Related on this site:** [Luxury Villa Ground Floor Marble & Stone Flooring Layout](https://d3ddd.com/projects/villa-ground-floor-marble-flooring-layout/)
 
 ---
 

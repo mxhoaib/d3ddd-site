@@ -1,6 +1,7 @@
 ---
 title: "Stone Staircase Shop Drawings: Treads Risers Stringers & Fixings"
 slug: stone-staircase-shop-drawings-treads-risers
+updated: 2026-11-14
 date: 2026-10-26
 category: shop-drawings
 category_title: Shop Drawings
@@ -12,7 +13,7 @@ image_alt: "Stone stair section showing treads, risers, a stringer and fixing po
 ---
 **Stone staircase shop drawings** fail reviews when treads, risers and fixings are pretty but incomplete. Consultants in the UAE expect clear dimensions, nosing profiles, thicknesses, support conditions and installation sequence—especially on marble or limestone stairs in villas and lobbies.
 
-This how-to covers sheet content, detailing callouts, anchor coordination and annotative scaling so your stair package clears shop-drawing approval without endless “provide fixing detail” comments.
+This how-to covers sheet content, detailing callouts, anchor coordination and annotative scaling so your stair package clears shop-drawing approval without endless “provide fixing detail” comments. Where a stair sheet sits in the wider stone set is the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/).
 
 **Key takeaways**
 

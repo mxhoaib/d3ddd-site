@@ -1,6 +1,7 @@
 ---
 title: "Chaos Vantage Tutorial: Real-Time Ray Tracing for V-Ray Scenes"
 slug: chaos-vantage-realtime-ray-tracing-vray
+updated: 2026-11-14
 date: 2026-10-26
 category: visualization
 category_title: Visualization
@@ -12,7 +13,7 @@ image_alt: "Ray-traced 3D interior with a camera sending light rays into the roo
 ---
 A practical **Chaos Vantage tutorial** starts from one question: do you already have a V-Ray scene that clients need to walk through today? Chaos Vantage is Chaos’s real-time ray-tracing app for exploring those scenes interactively—materials, lights and cameras stay in the V-Ray ecosystem while you navigate at interactive frame rates.
 
-This guide covers legal setup from Chaos, a production workflow for architecture exteriors and interiors, and an honest comparison with Enscape, Twinmotion, Lumion and D5 so you pick the right tool for UAE client reviews—not the loudest demo reel.
+This guide covers legal setup from Chaos, a production workflow for architecture exteriors and interiors, and an honest comparison with Enscape, Twinmotion, Lumion and D5 so you pick the right tool for UAE client reviews—not the loudest demo reel. Production stills for a Dubai review, as distinct from this tool trial, are scoped on the [3D rendering in Dubai](/services/3d-rendering-modeling-visualization/) page.
 
 **Key takeaways**
 

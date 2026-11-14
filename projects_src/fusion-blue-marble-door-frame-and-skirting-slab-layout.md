@@ -20,7 +20,7 @@ Shop drawings and a slab cutting plan for Fusion Blue marble door frames, wall t
 
 ## Scope
 
-The set covers Fusion Blue door frames, lintels, wall trims and profiled skirting. Fusion Blue has a strong, flowing vein, so piece placement on the slab matters as much as the dimensions.
+The set covers Fusion Blue door frames, lintels, wall trims and profiled skirting. Fusion Blue has a strong, flowing vein, so piece placement on the slab matters as much as the dimensions. Piece marks and slab layouts of this kind are part of the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/).
 
 The elevations set out every door frame (D-01, D-02 and onward), lintel, wall return and skirting run (SK-01 onward) with exact sizes. Frame return, adhesive fixing, pencil-polish edge and skirting profile details are included.
 

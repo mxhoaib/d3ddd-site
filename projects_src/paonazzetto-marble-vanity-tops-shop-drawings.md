@@ -32,7 +32,7 @@ A shared detail sheet explains how the vanities are built. It covers:
 
 The marble faces are drawn with an image of the actual Paonazzetto slab, so the veining can be seen at true scale and the fabricator can plan cuts to keep the vein flow consistent from one bathroom to the next.
 
-This is a multi-bathroom vanity package of the kind D3DDD prepares under [marble shop drawings](https://d3ddd.com/marble.html), alongside single-unit fabrication drawings such as the [Venatino freestanding vanity](https://d3ddd.com/projects/venatino-marble-bath-vanity-shop-drawing/).
+This is a multi-bathroom vanity package of the kind described in the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/) and prepared under [marble shop drawings](https://d3ddd.com/marble.html), alongside single-unit fabrication drawings such as the [Venatino freestanding vanity](https://d3ddd.com/projects/venatino-marble-bath-vanity-shop-drawing/).
 
 ## Challenge
 

@@ -24,7 +24,7 @@ The work starts with dimensioned wall panels numbered 01 to 10. It includes casi
 
 Every piece is then nested onto photos of the real slabs from the supplier’s bundle, one sheet per slab. The fabricator gets an exact cutting map, and the client can approve vein placement before the stone is cut. Moulding, chamfer-edge and skirting strips are taken from the offcuts.
 
-This is the project-level version of the method described in D3DDD’s guides to [slab allocation and cutting optimization](https://d3ddd.com/blog/marble-slab-allocation-cutting-optimization/) and [slab nesting and cutting lists](https://d3ddd.com/blog/slab-nesting-cutting-lists-gulf/), and in the [marble shop drawings](https://d3ddd.com/marble.html) service.
+This is the project-level version of the method described in the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/), in D3DDD’s guides to [slab allocation and cutting optimization](https://d3ddd.com/blog/marble-slab-allocation-cutting-optimization/) and [slab nesting and cutting lists](https://d3ddd.com/blog/slab-nesting-cutting-lists-gulf/), and in the [marble shop drawings](https://d3ddd.com/marble.html) service.
 
 The stone is Venatino, on a first-floor bathroom of a private villa in Dubai.
 

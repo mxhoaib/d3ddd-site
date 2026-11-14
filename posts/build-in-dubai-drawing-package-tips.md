@@ -1,6 +1,7 @@
 ---
 title: "Build in Dubai Platform: Drawing Package Tips for Faster Permits"
 slug: build-in-dubai-drawing-package-tips
+updated: 2026-11-14
 date: 2026-10-26
 category: shop-drawings
 category_title: Shop Drawings
@@ -12,7 +13,7 @@ image_alt: "Permit drawing package of stacked sheets with a review check"
 ---
 The **Build in Dubai platform** is where more Dubai building and fit-out submissions are consolidating. As Dubai Municipality expands AI-assisted permit checking, messy layers, conflicting dimensions and bloated DWGs become expensive—not just untidy. Cleaner packages clear faster whether a human or an automated rule set reviews them.
 
-This guide gives drafters and consultants an AI-ready drawing checklist: layer hygiene, PURGE/AUDIT habits, title consistency, Bluebeam markup discipline, and links to official DM and Media Office sources. It complements—not replaces—the authority’s portal help text.
+This guide gives drafters and consultants an AI-ready drawing checklist: layer hygiene, PURGE/AUDIT habits, title consistency, Bluebeam markup discipline, and links to official DM and Media Office sources. It complements—not replaces—the authority’s portal help text. The measured shop-drawing and fit-out CAD that often travels with a submission is [architectural drafting](/services/architectural-drafting/).
 
 **Key takeaways**
 

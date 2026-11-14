@@ -4,6 +4,7 @@ seo_title: "Types of Marble for Luxury Interiors in the UAE"
 meta_description: "Natural and engineered marble for UAE luxury interiors: Carrara, Calacatta, Statuario, Emperador and more, plus colour, room use and shop drawings."
 description: "Natural and engineered marble for UAE luxury interiors: Carrara, Calacatta, Statuario, Emperador and more, plus colour, room use and shop drawings."
 slug: types-of-marble-uae-luxury-interiors
+updated: 2026-11-14
 date: 2026-11-12
 category: shop-drawings
 category_title: Shop Drawings
@@ -22,7 +23,7 @@ faq_schema: true
 
 The right marble for a UAE interior is not only a question of taste. It is also a question of light, use, maintenance, and how the stone will be cut and joined. A white Italian slab that looks calm on a small sample can dominate a sunlit living room. A dark floor that looks rich in a showroom can feel hot and dusty beside a full-height window.
 
-This article explains the difference between natural marble and engineered or cultured marble, then looks at the natural types most often specified in luxury homes and projects in the UAE. It also covers how colour families change a room, which stones tend to suit which surfaces, and why shop drawings, slab allocation and edge details still matter after the material is chosen.
+This article explains the difference between natural marble and engineered or cultured marble, then looks at the natural types most often specified in luxury homes and projects in the UAE. It also covers how colour families change a room, which stones tend to suit which surfaces, and why the [Marble Shop Drawings Guide (UAE)](/blog/what-are-marble-shop-drawings/), plus slab allocation and edge details, still matter after the material is chosen.
 
 D3DDD prepares marble shop drawings and visualisation. We do not sell or stock slabs.
 
