@@ -1,5 +1,6 @@
 ---
 title: "Marble Flooring & Wall Cladding Shop Drawings: How-To"
+seo_title: "Marble Flooring & Wall Cladding Shop Drawings: How-To"
 slug: "marble-flooring-wall-cladding-shop-drawings"
 date: "2026-11-08"
 category: "shop-drawings"
@@ -8,6 +9,7 @@ description: "A step-by-step guide to preparing marble flooring and wall claddin
 image: /assets/img/blog/marble-flooring-wall-cladding-shop-drawings.svg
 og_image: /assets/img/blog/marble-flooring-wall-cladding-shop-drawings.jpg
 image_alt: "Marble floor tile layout and a bookmatched wall cladding elevation"
+updated: 2026-11-14
 ---
 
 **Short answer:** marble flooring and wall cladding shop drawings are prepared by taking the approved design drawings, checking them against site dimensions, fixing a setting-out point, laying out every slab or tile with its joints, numbering each piece, and adding sections, edge and fixing details plus a piece schedule. The finished set goes to the consultant for approval before any stone is cut.

@@ -1,5 +1,6 @@
 ---
 title: "What Are Marble Shop Drawings and Why Are They Necessary?"
+seo_title: "What Are Marble Shop Drawings? Why UAE Projects Need Them"
 slug: what-are-marble-shop-drawings
 date: 2026-11-03
 category: shop-drawings
@@ -8,6 +9,7 @@ description: "Learn what marble shop drawings contain, why UAE consultants requi
 image: /assets/img/blog/what-are-marble-shop-drawings.svg
 og_image: /assets/img/blog/what-are-marble-shop-drawings.jpg
 image_alt: "Annotated marble shop drawing with a slab plan, sink cut-out, dimensions and title block"
+updated: 2026-11-14
 ---
 
 Marble is expensive and heavy, and once a slab is cut it can't be uncut. That is why most UAE fit-out and construction projects won't let stone go into fabrication until **marble shop drawings** have been prepared, reviewed and approved. This guide covers what marble shop drawings are, what goes into them, who uses them, and why they matter on projects in Dubai and across the UAE.

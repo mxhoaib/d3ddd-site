@@ -19,6 +19,11 @@ html[dir=rtl] .pj-more{letter-spacing:0;font-size:14px}
 .pj-text p{color:var(--muted);font-size:18px;line-height:1.8;margin-bottom:1.2em;max-width:720px}
 .pj-text p:first-child{color:var(--ink);font-size:21px;line-height:1.65}
 .pj-text strong{color:var(--ink)}
+.pj-text h2{font-size:clamp(24px,3vw,32px);margin:1.5em 0 .45em;max-width:720px}
+.pj-text h3{font-size:20px;margin:1.2em 0 .35em;max-width:720px}
+.pj-text ul,.pj-text ol{margin:0 0 1.2em;padding-inline-start:1.2em;color:var(--muted);max-width:720px}
+.pj-text li{margin:.35em 0}
+.pj-text a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px}
 .pj-meta{position:sticky;top:110px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px}
 .pj-meta dl{display:grid;gap:18px;margin-bottom:26px}
 .pj-meta dt{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted)}

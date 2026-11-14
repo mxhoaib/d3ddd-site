@@ -8,6 +8,7 @@ date: 2026-11-13
 category: shop-drawings
 category_title: Shop Drawings
 author: "Shoaib Hussan, Founder of D3DDD"
+updated: 2026-11-14
 canonical: https://d3ddd.com/blog/marble-quantity-calculation-reduce-waste/
 primary_keyword: marble quantity calculation
 hero: omit
@@ -17,6 +18,14 @@ image_alt: "D3DDD brand image for shop drawings and 3D design in Dubai"
 *By Shoaib Hussan, Founder of D3DDD*
 
 **To calculate marble quantities, measure the net area of every piece from the drawings, add an allowance for cuts and defects, then convert the total into slabs.** The allowance depends on the stone, the layout and the vein matching, so agree it with your fabricator instead of using a fixed number.
+
+![First-floor bathroom cladding drawing with numbered wall panels 01 to 10, casing, plinth block and dado profiles](/assets/img/projects/marble-slab-cutting-layout-bathroom-cladding/marble-slab-cutting-layout-bathroom-cladding-01.jpg)
+
+*Numbered wall panels 01 to 10 with casing, plinth and dado profiles from the Venatino bathroom cutting set. See the [marble slab cutting layout](https://d3ddd.com/projects/marble-slab-cutting-layout-bathroom-cladding/).*
+
+![Fusion Blue marble slabs 1 to 3 with door-frame and skirting pieces nested along the vein](/assets/img/projects/fusion-blue-marble-door-frame-and-skirting-slab-layout/fusion-blue-marble-door-frame-and-skirting-slab-layout-01.jpg)
+
+*Three Fusion Blue slabs with door-frame and skirting pieces nested along the vein. See the [Fusion Blue door frame slab layout](https://d3ddd.com/projects/fusion-blue-marble-door-frame-and-skirting-slab-layout/).*
 
 ## What is a marble quantity takeoff?
 

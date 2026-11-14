@@ -1,6 +1,5 @@
 # English resources page: /resources/uae-directories/
 # Official homepages only. Checked before this list was written.
-import re
 
 FN = "resources/uae-directories/index.html"
 TITLE = "UAE Business Directories | D3DDD"
@@ -20,18 +19,6 @@ def _card(href, label, follow, line):
 def _group(heading, cards):
     return '<div class="dir-group"><h2>%s</h2><div class="grid g3 dir-grid">%s</div></div>' % (
         heading, "".join(cards))
-
-
-def strip_instagram(html):
-    """This page must not link Instagram @mxhaib. The shared footer otherwise would."""
-    html = re.sub(
-        r'<a class="social-link" href="https://instagram.com/mxhaib"[^>]*>.*?</a>',
-        "",
-        html,
-    )
-    html = html.replace(', "https://www.instagram.com/mxhaib/"', "")
-    html = html.replace('"https://www.instagram.com/mxhaib/", ', "")
-    return html
 
 
 def build_directory_page(g):
@@ -106,4 +93,4 @@ def build_directory_page(g):
         "en", FN, TITLE, DESC, body, ld,
         bilingual=False, switch=P + "ar/",
     )
-    return {("en", FN): strip_instagram(html)}
+    return {("en", FN): html}

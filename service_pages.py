@@ -16,6 +16,10 @@ def related_services(g, lang, fn, slug):
             ("construction-companies-uae/", "SITE", "Construction companies", "Outsourced drawing support for contractors."),
             ("interior-design-companies-uae/", "INT", "Interior firms", "Joinery drawings and material coordination."),
             ("projects/villa-ground-floor-marble-flooring-layout/", "PLAN", "Villa floor layout", "A drafted ground-floor stone set-out."),
+            ("projects/villa-swimming-pool-and-outdoor-majlis-tiling-details/", "POOL", "Villa swimming pool and outdoor seating tiling details", "External tiling set tagged as architectural drafting."),
+        ],
+        "architectural-designing": [
+            ("projects/villa-ground-floor-marble-flooring-layout/", "PLAN", "Luxury villa ground floor flooring layout", "A design-stage flooring option tagged as architectural designing."),
         ],
         "architectural-estimation": [
             ("marble.html", "STONE", "Marble shop drawings", "The sheets stone quantities are measured from."),
@@ -24,6 +28,7 @@ def related_services(g, lang, fn, slug):
             ("marble-contractors-uae/", "YARD", "Marble contractors", "Cutting lists, slab layouts and stone quantities."),
             ("projects/marble-slab-cutting-layout-bathroom-cladding/", "SLAB", "Bathroom slab nesting", "Numbered panels a yard can price."),
             ("projects/villa-ground-floor-marble-flooring-layout/", "PLAN", "Villa floor layout", "Areas that become a flooring schedule."),
+            ("blog/marble-quantity-calculation-reduce-waste/", "QTY", "How to calculate marble quantities and reduce waste", "A take-off guide beside the estimation service."),
         ],
         "3d-rendering-modeling-visualization": [
             ("real-estate-developers-uae/", "DEV", "Real estate developers", "Presentation stills and design coordination."),
@@ -145,7 +150,7 @@ def build_service_pages(g):
         if lang == "en":
             hero = f'''<section class="page-hero"><nav class="crumbs" aria-label="Breadcrumb"><a href="{home}">Home</a> / <span>Services</span></nav>
 <p class="eyebrow">Services — Dubai &amp; UAE</p>
-<h1>Five service lines for Gulf <em>design, drafting &amp; web</em></h1>
+<h1>Drafting, design, estimation, 3D and web services in the UAE</h1>
 <p>Architectural drafting, designing, estimation, 3D visualization and website development — practical packages for Dubai, Abu Dhabi, Sharjah and the wider Gulf. Led by Shoaib Hussan / D3DDD. <span lang="ar" class="ar-touch">خدماتنا في الإمارات والخليج</span></p></section>'''
             contact = g["href"](lang, fn, "contact.html")
             more = f'''<section class="section alt" id="get-started"><div class="wrap"><p class="eyebrow">Clear paths to a quote</p><h2>Marble shop drawings, AutoCAD drafting &amp; shop drawing <em>approval</em></h2>
@@ -168,7 +173,7 @@ def build_service_pages(g):
 <a class="card" href="{interiors}"><div class="b"><h3>Interior design firms</h3><p>Joinery drawings and material coordination.</p></div></a>
 <a class="card" href="{yards}"><div class="b"><h3>Marble contractors</h3><p>Shop drawings, slab layouts and cutting lists.</p></div></a>
 </div></div></section>'''
-            title = "Services | Architectural Drafting, Design, Estimation, 3D & Web UAE – D3DDD"
+            title = "Architectural Drafting &amp; 3D Services UAE | D3DDD"
             desc = "D3DDD services in Dubai and the UAE: architectural drafting, designing, estimation, 3D rendering and website development for Gulf contractors."
             name = "Services"
             home_l = "Home"

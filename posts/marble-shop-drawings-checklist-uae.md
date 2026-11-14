@@ -5,6 +5,7 @@ date: 2026-10-25
 category: shop-drawings
 category_title: Shop Drawings
 description: "A field-tested checklist for marble and stone shop drawings in Dubai, Abu Dhabi and Sharjah — piece IDs, edge profiles, joint layouts and what to freeze before the slab is cut."
+updated: 2026-11-14
 image: /assets/img/blog/marble-shop-drawings-checklist-uae.svg
 og_image: /assets/img/blog/marble-shop-drawings-checklist-uae.jpg
 image_alt: "Marble shop-drawing checklist with piece, edge, joint and thickness items ticked"
@@ -78,7 +79,7 @@ That is ordinary [AutoCAD drafting](/services/architectural-drafting/) done care
 
 [D3DDD](/) prepares marble and stone shop drawings, cutting lists and supporting [3D visualisation](/services/3d-rendering-modeling-visualization/) for fabricators and contractors across the UAE and the wider Gulf. We work from your architect’s set and site measures, and we keep the output boring in the best way: clear IDs, clear edges, clear revisions.
 
-If you need a package reviewed or redrawn before the next slab order, [request a quote](/contact.html), follow shop-drawing notes on [Instagram @mxhaib](https://www.instagram.com/mxhaib/), or see sample gigs on [Fiverr (@mxhoaib)](https://www.fiverr.com/mxhoaib).
+If you need a package reviewed or redrawn before the next slab order, [request a quote](/contact.html), follow shop-drawing notes on [Instagram @dubai3ddd](https://www.instagram.com/dubai3ddd/), or see sample gigs on [Fiverr (@mxhoaib)](https://www.fiverr.com/mxhoaib).
 
 ## Key takeaway
 

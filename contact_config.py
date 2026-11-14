@@ -22,7 +22,7 @@ def whatsapp_html(lang="en"):
 # GA4 measurement ID (G-XXXXXXXX). No ID is stored in this repo; leave blank to skip the tag.
 ANALYTICS_ID = ""
 
-IG_URL = "https://instagram.com/mxhaib"
+IG_URL = "https://www.instagram.com/dubai3ddd/"
 LI_URL = "https://www.linkedin.com/in/mshoaib94"
 IG_ICON = ('<svg class="soc-ico" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">'
            '<path fill="currentColor" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.2 6.8a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>')
@@ -84,7 +84,7 @@ def business_node():
         "contactPoint": {"@type": "ContactPoint", "email": email, "contactType": "sales", "availableLanguage": ["English", "Arabic"]},
         "sameAs": [
             "https://www.fiverr.com/mxhoaib",
-            "https://www.instagram.com/mxhaib/",
+            "https://www.instagram.com/dubai3ddd/",
             "https://www.linkedin.com/in/mshoaib94",
         ],
         "paymentAccepted": "PayPal",

@@ -69,9 +69,17 @@ def shell(b, title, desc, url, body, ld, p=None):
     en = f"/blog/{p['translation_of']}/" if p and p.get('translation_of') else '/blog/'
     nav += f'<a class="lang" href="{en}" hreflang="en-AE" lang="en">English</a>'
     out = out.replace(b.nav('/', 'blog'), nav)
-    foot = '''<footer><div class="grid"><div><h2>D3DDD</h2><p>رسومات تنفيذية وتفاصيل رخام وإظهار ثلاثي الأبعاد لمشاريع دبي وأبوظبي والشارقة والإمارات.</p></div><div><h2>الخدمات والمشاريع</h2><a href="/ar/marble.html">رسومات الرخام</a><a href="/projects/">المشاريع</a></div><div><h2>المدونة</h2><a href="/ar/blog/">مقالات بالعربية</a><a href="/resources/uae-directories/">أدلة الإمارات</a><a href="/blog/" lang="en">English blog</a><a href="/ar/blog/feed.xml">خلاصة RSS</a></div><div><h2>تواصل معنا</h2><a href="/ar/contact.html">نموذج التواصل</a><a href="https://instagram.com/mxhaib" rel="me noopener" target="_blank">Instagram</a><a href="https://www.linkedin.com/in/mshoaib94" rel="me noopener" target="_blank">LinkedIn</a><address class="postal">Dubai, United Arab Emirates</address></div></div><div class="copy">© D3DDD. جميع الحقوق محفوظة.</div></footer>'''
+    foot = '''<footer><div class="grid"><div><h2>D3DDD</h2><p>رسومات تنفيذية وتفاصيل رخام وإظهار ثلاثي الأبعاد لمشاريع دبي وأبوظبي والشارقة والإمارات.</p></div><div><h2>الخدمات والمشاريع</h2><a href="/ar/marble.html">رسومات الرخام</a><a href="/projects/">المشاريع</a></div><div><h2>المدونة</h2><a href="/ar/blog/">مقالات بالعربية</a><a href="/resources/uae-directories/">أدلة الإمارات</a><a href="/blog/" lang="en">English blog</a><a href="/ar/blog/feed.xml">خلاصة RSS</a></div><div><h2>تواصل معنا</h2><a href="/ar/contact.html">نموذج التواصل</a><a href="https://www.instagram.com/dubai3ddd/" rel="me noopener" target="_blank">إنستغرام</a><a href="https://www.linkedin.com/in/mshoaib94" rel="me noopener" target="_blank">LinkedIn</a><address class="postal">Dubai, United Arab Emirates</address></div></div><div class="copy">© D3DDD. جميع الحقوق محفوظة.</div></footer>'''
     out = out.replace(b.footer('/'), foot)
     extras = '<link rel="stylesheet" href="/assets/ar-blog.css">'
+    if url == b.D + '/ar/blog/':
+        extras += (
+            '<link rel="alternate" hreflang="en-AE" href="https://d3ddd.com/blog/">'
+            '<link rel="alternate" hreflang="en" href="https://d3ddd.com/blog/">'
+            '<link rel="alternate" hreflang="ar-AE" href="https://d3ddd.com/ar/blog/">'
+            '<link rel="alternate" hreflang="ar" href="https://d3ddd.com/ar/blog/">'
+            '<link rel="alternate" hreflang="x-default" href="https://d3ddd.com/blog/">'
+        )
     if p:
         out = out.replace('og:image:width" content="1200', 'og:image:width" content="1600').replace('og:image:height" content="630', 'og:image:height" content="1304')
         extras += alternates(b, p)
@@ -143,7 +151,9 @@ def build_arabic(b, english_posts, include_drafts=False):
     idx.write_text(text)
     sm = b.ROOT / 'sitemap.xml'
     text = re.sub(r'\s*<url><loc>https://d3ddd\.com/ar/blog/[^<]*</loc>.*?</url>', '', sm.read_text())
-    urls = [b.D + '/ar/blog/', b.D + '/ar/blog/feed.xml'] + [f'{b.D}/ar/blog/category/{cat}/' for cat in sorted({p['category'] for p in posts})] + [p['url'] for p in posts]
-    entries = '\n'.join(f'  <url><loc>{url}</loc></url>' for url in urls)
+    dated = [(b.D + '/ar/blog/', '2026-11-14'), (b.D + '/ar/blog/feed.xml', '2026-11-14')]
+    dated += [(f'{b.D}/ar/blog/category/{cat}/', '2026-11-14') for cat in sorted({p['category'] for p in posts})]
+    dated += [(p['url'], p.get('updated') or p['date']) for p in posts]
+    entries = '\n'.join(f'  <url><loc>{url}</loc><lastmod>{last}</lastmod></url>' for url, last in dated)
     sm.write_text(text.replace('</urlset>', entries + '\n</urlset>'))
     print(f'Arabic blog: {len(posts)} posts (include_drafts={include_drafts})')
