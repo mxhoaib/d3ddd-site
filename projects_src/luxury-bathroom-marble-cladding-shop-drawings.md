@@ -1,5 +1,6 @@
 ---
 title: "Luxury Bathroom Marble Wall & Floor Cladding Shop Drawings – Dubai"
+seo_title: "Bathroom Marble Cladding Drawings Dubai | D3DDD"
 slug: luxury-bathroom-marble-cladding-shop-drawings
 meta_description: "Luxury bathroom marble cladding shop drawings in Dubai: wall and floor slab layouts, elevations, mitred zero-joint corners and LED groove details."
 author: Shoaib Hussan, Founder of D3DDD
@@ -15,22 +16,46 @@ images:
 
 *By Shoaib Hussan, Founder of D3DDD*
 
-Marble cladding shop drawings for two bathrooms in a high-end residential villa in Dubai. One bathroom is finished in Burberry Grey marble and the other in 2 cm Abstract Grey. Each sheet takes the design renders through to a buildable layout. It includes a wall plan, a floor plan with the slab set-out, and four detailed elevations with every panel joint, level and opening dimensioned.
+Marble cladding shop drawings for two bathrooms in a high-end residential villa in Dubai, prepared by Shoaib Hussan, Founder of D3DDD. One bathroom is finished in Burberry Grey marble and the other in 2 cm Abstract Grey.
 
-The drawings coordinate the fluted marble feature panels, the LED grooves, the glass shower screens, the niches, the vanity and the sanitary fixtures, so the stone installer, glazier and MEP trades work from one reference. Construction details cover 45-degree zero-joint mitred corners, the 15×5 mm LED groove, glue and L-angle fixing, and finished floor levels.
+## Scope
 
-Slab details show the approved block and its dimensions so vein matching can be planned across walls and floor.
+The set takes design renders through to a buildable layout for two villa bathrooms. Each sheet includes:
 
-Deliverables: two complete bathroom shop drawing sheets with plans, elevations, sections and slab references, issued for approval.
+- A wall plan
+- A floor plan with the slab set-out
+- Four detailed elevations with every panel joint, level and opening dimensioned
 
-**Software:** AutoCAD 2022
+The drawings also coordinate fluted marble feature panels, LED grooves, glass shower screens, niches, the vanity and the sanitary fixtures, so the stone installer, glazier and MEP trades work from one reference.
 
-![Luxury Bathroom Marble Wall & Floor Cladding Shop Drawings – Dubai – drawing 1](luxury-bathroom-marble-cladding-shop-drawings-01.jpg)
+Slab details show the approved block and its dimensions so vein matching can be planned across walls and floor. This is the kind of wall-and-floor cladding set described in D3DDD’s [marble shop drawings](https://d3ddd.com/marble.html) service and in the [flooring and wall cladding shop-drawings guide](https://d3ddd.com/blog/marble-flooring-wall-cladding-shop-drawings/).
 
-![Luxury Bathroom Marble Wall & Floor Cladding Shop Drawings – Dubai – drawing 2](luxury-bathroom-marble-cladding-shop-drawings-02.jpg)
+Client details have been removed.
 
-![Luxury Bathroom Marble Wall & Floor Cladding Shop Drawings – Dubai – drawing 3](luxury-bathroom-marble-cladding-shop-drawings-03.jpg)
+## Challenge
+
+Bathroom cladding has to close around screens, niches, a vanity, sanitary fixtures and services, not only cover flat walls. The drawings therefore coordinate stone with the glazier and MEP trades from one reference, rather than leaving those junctions to site improvisation.
+
+Construction details on this set cover 45-degree zero-joint mitred corners, a 15×5 mm LED groove, glue and L-angle fixing, and finished floor levels. Fluted feature panels have to line up with those corners and grooves. Vein matching across walls and floor depends on knowing the approved block and its dimensions — those slab details are part of the sheets.
+
+## Drawings delivered
+
+Two complete bathroom shop drawing sheets with plans, elevations, sections and slab references, issued for approval.
+
+Each bathroom sheet includes a wall plan, a floor plan with slab set-out, and four detailed elevations. Construction details as listed above are included. The gallery shows 3 sheets.
+
+## Software
+
+AutoCAD 2022, as listed on the page. This is the only project in the portfolio that names 2022 rather than 2021.
+
+## Outcome
+
+The published outcome is a pair of bathroom cladding sets — Burberry Grey and 2 cm Abstract Grey — issued for approval, with coordinated plans, elevations, mitred corners, LED grooves, fluted panels and slab references for vein matching. No installation result or consultant-approval date is on the page.
+
+Need bathroom cladding shop drawings like these? [Send your design drawings and get a quote](https://d3ddd.com/contact.html).
+
+**Related on this site:** [Venatino bath vanity](https://d3ddd.com/projects/venatino-marble-bath-vanity-shop-drawing/) · [Paonazzetto vanity tops](https://d3ddd.com/projects/paonazzetto-marble-vanity-tops-shop-drawings/) · [Marble slab cutting layout for bathroom cladding](https://d3ddd.com/projects/marble-slab-cutting-layout-bathroom-cladding/)
 
 ---
 
-**Need shop drawings like these for your project?** Send your design drawings and get a quote at [d3ddd.com/contact](https://d3ddd.com/contact).
+**Need bathroom cladding shop drawings like these?** Send your design drawings and get a quote at [d3ddd.com/contact](https://d3ddd.com/contact.html).

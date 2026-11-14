@@ -134,7 +134,7 @@ def build_pages(g):
 <div class="tags" aria-label="Emirates served"><span>Dubai</span><span>Abu Dhabi</span><span>Sharjah</span><span>Ajman</span><span>Ras Al Khaimah</span><span>Umm Al Quwain</span><span>Fujairah</span></div></div><figure class="illu uae-map">{svg_uae()}</figure></div></section>
 {home_html}{packages("en")}{faq_html(faq_en,"Frequently asked questions","FAQ")}<section class="cta-band" id="quote"><p class="eyebrow">Have a Project</p><h2>Request a Project Quotation</h2><p>Send the drawings, sketches or scope you already have. The quotation confirms the price and the delivery date in writing before drafting starts.</p><div class="actions"><a class="btn" href="contact.html">Request a Project Quotation</a>{whatsapp_html("en")}</div></section>'''
     out[(L,"index.html")] = shell(L,"index.html","D3DDD – Architectural Drafting &amp; Marble Shop Drawings UAE",
-        "Professional architectural drafting, marble shop drawings, fit-out detailing, construction estimation and 3D visualization services across Dubai and the UAE. Contact D3DDD.",
+        "Architectural drafting, marble shop drawings, fit-out details, estimation and 3D visualization for Dubai and the UAE. Request a quote from D3DDD.",
         body,[faq_ld(faq_en),{"@type":"WebSite","@id":url(L,"index.html")+"#website","url":url(L,"index.html"),"name":"D3DDD","inLanguage":"en-AE","publisher":{"@id":g["ORG_ID"]}}])
 
     name="Services"
@@ -173,7 +173,9 @@ def build_pages(g):
 <a class="card" href="marble-contractors-uae/"><div class="b"><span class="num">04</span><h3>Marble contractors</h3><p>Slab layouts, cutting lists and shop drawings for stone yards.</p></div></a>
 <a class="card" href="construction-companies-uae/"><div class="b"><span class="num">05</span><h3>Construction companies</h3><p>Outsourced drawing support for UAE contractors.</p></div></a>
 <a class="card" href="projects/marble-slab-cutting-layout-bathroom-cladding/"><div class="b"><span class="num">06</span><h3>Slab nesting project</h3><p>Numbered bathroom panels nested on slab photos.</p></div></a>
-</div></div></section>{marble_html}{faq_html(marble_faqs,"Frequently asked questions","FAQ")}{cta(L)}'''
+</div>
+<p class="mt-28">See the full set on <a href="projects/">projects</a>, including the <a href="projects/entrance-lobby-waterjet-marble-medallion-flooring/">Villa Entrance Lobby Waterjet Marble Medallion &amp; Flooring Layout</a>, the <a href="projects/luxury-bathroom-marble-cladding-shop-drawings/">Luxury Bathroom Marble Wall &amp; Floor Cladding Shop Drawings</a> and the <a href="projects/venatino-marble-bath-vanity-shop-drawing/">Venatino Marble Freestanding Bath Vanity Shop Drawing</a>.</p>
+</div></section>{marble_html}{faq_html(marble_faqs,"Frequently asked questions","FAQ")}{cta(L)}'''
     out[(L,"marble.html")] = shell(L,"marble.html","Marble Shop Drawings Dubai | D3DDD",
         "Shop drawings for marble in Dubai: fabrication plans, slab layouts, cutting lists and stone quantities for UAE yards, issued as DWG and PDF.",body,
         [bc(L,"marble.html",name),service_ld("Marble and stone shop drawings","Shop drawings, cutting lists, fabrication drawings and BOQ for marble and stone works in the UAE.",url(L,"marble.html")), faq_ld(marble_faqs)])
@@ -182,15 +184,54 @@ def build_pages(g):
     body = page_hero(L,"Website design for contractors — UAE","Contractor website design in Dubai — <em>AED 2,000</em>","A professional 5-page website that turns visitors into enquiries. <span lang=\"ar\" class=\"ar-touch\">تصميم مواقع للمقاولين</span>",name) + f'''
 <section class="section"><div class="wrap split"><div><h3 class="mt-24">How it works</h3><ol class="steps mt-14"><li>50% deposit</li><li>Send content</li><li>We build</li><li>You review</li><li>Balance &amp; go live</li></ol><p class="notice mt-24">Domain registration, hosting fees and paid stock imagery, if needed, are not included unless agreed in writing.</p></div><figure>{img(P,"web-wireframe","Website wireframe: desktop browser layout, mobile screen and HTML code")}</figure></div></section>'''
     body += packages(L) + demos(L)
-    out[(L,"website-design.html")] = shell(L,"website-design.html","Contractor Website Design Dubai | 5-Page Website AED 2,000 – D3DDD",
+    out[(L,"website-design.html")] = shell(L,"website-design.html","Contractor Website Design, AED 2,000 | D3DDD",
         "Website design for contractors in Dubai & the UAE: 5 pages, WhatsApp button, enquiry form and SEO basics for AED 2,000 (50% upfront).",body,
         [bc(L,"website-design.html",name),service_ld("Contractor website design","5-page mobile-friendly contractor website with WhatsApp button and enquiry form.",url(L,"website-design.html"),WEB_OFFER)])
 
     name="About"
-    body = page_hero(L,"About D3DDD","A Dubai design &amp; drafting studio built for <em>real projects.</em>","Dubai 3D Design &amp; Draft — technical drafting, 3D visualization and marble know-how under one roof. <span lang=\"ar\" class=\"ar-touch\">استوديو تصميم ورسم هندسي في دبي</span>",name) + f'''
-<section class="section"><div class="wrap split"><figure>{img(P,"table","Isometric line drawing of a dining table")}</figure><div><h2>Our approach</h2><p>D3DDD — Dubai 3D Design &amp; Draft — combines technical drafting with visual design and hands-on marble and fit-out knowledge.</p><p>We work with contractors, fabricators, consultants, interior designers and project teams across the UAE, preparing documentation that is clean, organized and practical to use on site.</p><ul class="check"><li>Precision: accurate dimensions and annotations</li><li>Clarity: organized sheets for easy coordination</li><li>Responsiveness: quick replies by email in English &amp; Arabic</li></ul></div></div></section>{cta(L)}'''
-    out[(L,"about.html")] = shell(L,"about.html","About D3DDD | Dubai 3D Design & Draft – Drafting & Shop Drawing Studio UAE",
-        "D3DDD is a Dubai drafting and design studio for marble shop drawings, AutoCAD drafting and 3D rendering, serving contractors across the UAE in English and Arabic.",body,[bc(L,"about.html",name)])
+    about_faqs = [
+        ("What services does D3DDD provide in Dubai and the UAE?",
+         'D3DDD prepares marble shop drawings and stone shop drawings, architectural drafting, fit-out and joinery drawings, architectural designing, quantity estimation and BOQ, 3D visualization, and contractor websites. The main technical offer is documented on the <a href="marble.html">marble shop drawings</a> and <a href="services/architectural-drafting/">architectural drafting</a> pages.'),
+        ("Who founded D3DDD, and where is the studio based?",
+         "D3DDD – Dubai 3D Design &amp; Draft was founded by Shoaib Hussan. The studio is in Dubai, United Arab Emirates. Work is delivered digitally across the emirates listed above. No street address is published."),
+        ("What file formats and languages do you work in?",
+         "Sets are issued as AutoCAD DWG and PDF. Enquiries and drawing notes can be prepared in English, Arabic, or both."),
+        ("How do I request a quote for shop drawings or drafting?",
+         'Use the <a href="contact.html">contact form</a> or email info@d3ddd.com with your drawings or requirements. Shop-drawing and render fees are quoted per project. Do not send a public phone number request as a requirement; the studio does not publish a phone number.'),
+    ]
+    about_faq_ld = [
+        ("What services does D3DDD provide in Dubai and the UAE?",
+         "D3DDD prepares marble shop drawings and stone shop drawings, architectural drafting, fit-out and joinery drawings, architectural designing, quantity estimation and BOQ, 3D visualization, and contractor websites."),
+        ("Who founded D3DDD, and where is the studio based?",
+         "D3DDD – Dubai 3D Design & Draft was founded by Shoaib Hussan. The studio is in Dubai, United Arab Emirates. Work is delivered digitally across Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Umm Al Quwain and Fujairah. No street address is published."),
+        ("What file formats and languages do you work in?",
+         "Drawing sets are issued as AutoCAD DWG and PDF. Enquiries and drawing notes can be prepared in English, Arabic, or both."),
+        ("How do I request a quote for shop drawings or drafting?",
+         "Use the contact form at https://d3ddd.com/contact.html or email info@d3ddd.com with your drawings or requirements. Shop-drawing and render fees are quoted per project."),
+    ]
+    body = page_hero(L,"About D3DDD","A Dubai studio for marble shop drawings and architectural drafting","D3DDD – Dubai 3D Design &amp; Draft is a Dubai studio that prepares marble shop drawings, stone shop drawings, architectural drafting, quantity estimation and 3D visualization for work in Dubai and across the United Arab Emirates.",name) + f'''
+<section class="section"><div class="wrap copy">
+<p>The studio was founded by Shoaib Hussan. It combines technical drafting with visual design and hands-on marble and fit-out knowledge. The aim is straightforward: documentation that is accurate, clearly organized and practical to use on site, in the workshop and in consultant review.</p>
+<h2>Who the work is for</h2>
+<p>D3DDD works with contractors, fabricators, consultants, interior designers and project teams. Typical requests include a marble or stone package that needs fabrication and installation drawings, a fit-out set that has to be coordinated before joinery is made, a quantity take-off before material is ordered, or 3D views that help a client read a design before stone is cut.</p>
+<p>Enquiries and drawing notes can be handled in English, Arabic, or both.</p>
+<h2>Marble shop drawings and stone shop drawings</h2>
+<p>A large part of the studio’s published work is <a href="marble.html">marble and stone shop drawings</a> for villas and residences in Dubai. That work covers fabrication drawings, slab layouts, cutting lists and stone quantities. Sets are prepared so a yard can review piece sizes, joints, edges, vein direction and cutting before any slab is cut.</p>
+<p>Selected examples are collected on the <a href="projects/">projects</a> page. They include waterjet medallion and flooring layouts, bathroom wall and floor cladding, vanity tops, slab-by-slab cutting plans, door-frame and skirting nesting, and external pool and terrace tiling details. Client names and identifying details have been removed from every sheet.</p>
+<p>If you need stone shop drawings for a yard or marble contractor, the same service is described for that audience on <a href="marble-contractors-uae/">shop drawings for UAE marble contractors</a>.</p>
+<h2>Architectural drafting, designing and fit-out</h2>
+<p><a href="services/architectural-drafting/">Architectural drafting</a> covers shop drawings, CAD detailing, as-built work, joinery and fit-out sets for Gulf construction and interior work. <a href="fitout-shop-drawings/">Fit-out and joinery shop drawings</a> are used for ceilings, partitions, kitchens, wardrobes and interior elevations.</p>
+<p>Where a project still needs design development rather than fabrication drawings, <a href="services/architectural-designing/">architectural designing</a> covers concept layouts, space planning, elevations and design development. One published example is a colour-zoned villa ground-floor flooring layout prepared as a design option for client approval, before detailed marble shop drawings.</p>
+<h2>Quantity estimation, 3D visualization and contractor websites</h2>
+<p><a href="services/architectural-estimation/">Architectural estimation</a> covers bills of quantities (BOQ), quantity take-offs, material schedules and tender packages measured from project drawings. This sits beside marble shop drawings when a stone order has to be quantified before cutting.</p>
+<p><a href="services/3d-rendering-modeling-visualization/">3D rendering, modeling and visualization</a> is used for still renders, material studies and presentation views — useful when a client or consultant needs to see stone, joinery or a space before fabrication. The studio also builds <a href="website-design.html">contractor and business websites</a> for Gulf firms; published package prices for websites are listed on that page. Shop-drawing and render fees for drafting work are quoted per project.</p>
+<h2>How drawings are issued</h2>
+<p>Drawing sets are issued as AutoCAD DWG and PDF. Notes can be written in English, Arabic, or both. The studio’s published approach on this page is precision (accurate dimensions and annotations), clarity (organized sheets that are easier to coordinate) and responsiveness (timely replies by email in English and Arabic).</p>
+<p>Work is delivered digitally. D3DDD is based in Dubai, United Arab Emirates. There is no published street address and no public phone number. Areas served, as listed on the site, are Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Umm Al Quwain and Fujairah.</p>
+<p>To ask for a quote, send drawings, sketches, dimensions or a short project description through the <a href="contact.html">contact form</a>. Say whether you need marble shop drawings, architectural drafting, quantity estimation, 3D visualization, or a mix.</p>
+</div></section>{faq_html(about_faqs,"Frequently asked questions","FAQ")}{cta(L)}'''
+    out[(L,"about.html")] = shell(L,"about.html","About D3DDD | Drafting Studio in Dubai, UAE",
+        "D3DDD is a Dubai studio, founded by Shoaib Hussan, for marble shop drawings, architectural drafting, quantity estimation and 3D visualization in the UAE.",body,[bc(L,"about.html",name), faq_ld(about_faq_ld)])
 
     name="Contact"
     body = page_hero(L,"Get a quote — Dubai &amp; UAE","Contact D3DDD for shop drawings, drafting &amp; <em>3D rendering</em>","Send drawings, sketches, dimensions or requirements. We reply by email, in English or Arabic. <span lang=\"ar\" class=\"ar-touch\">تواصل معنا للحصول على عرض سعر</span>",name) + f'''
@@ -204,9 +245,9 @@ def build_pages(g):
 <p class="notice mt-14">This form does not upload files. Email drawings to {mail_link("#enquiry")}. Sending opens your email app with the enquiry filled in, and you can attach the PDF or DWG there.</p>
 <div class="actions mt-18"><button class="btn" type="submit">Send enquiry by email</button></div></form></div>
 <div><h2 class="h-contact">Direct contact</h2><ul class="check"><li>{mail_link("contact.html")}</li><li>{whatsapp_html("en")}</li><li><address class="postal">Dubai, United Arab Emirates</address></li></ul>
-<p class="social-line mt-14">Shoaib Hussan on <a href="{IG_URL}" rel="me noopener" target="_blank">Instagram</a> (@mxhaib) and <a href="{LI_URL}" rel="me noopener" target="_blank">LinkedIn</a>.</p>
+<p class="social-line mt-14">D3DDD on <a href="{IG_URL}" rel="me noopener" target="_blank">Instagram</a> (@dubai3ddd). Shoaib Hussan on <a href="{LI_URL}" rel="me noopener" target="_blank">LinkedIn</a>.</p>
 </div></div></section>'''
-    out[(L,"contact.html")] = shell(L,"contact.html","Contact D3DDD | Shop Drawings & 3D Rendering Quote Dubai & UAE",
+    out[(L,"contact.html")] = shell(L,"contact.html","Contact D3DDD | Shop Drawings Quote in Dubai",
         "Get a quote for marble shop drawings, AutoCAD drafting, fit-out drawings, 3D rendering or a contractor website in Dubai and the UAE.",body,[bc(L,"contact.html",name),{"@type":"ContactPage","url":url(L,"contact.html"),"about":{"@id":g["ORG_ID"]}}])
     out[(L,"thank-you.html")] = shell(L,"thank-you.html","Thank you | D3DDD","Your enquiry has been received.",
         '<section class="page-hero hero-short"><p class="eyebrow">Received</p><h1>Thank you.</h1><p>We’ll reply shortly. If you still need to send drawings, use the <a href="contact.html">enquiry form</a>.</p><p class="mt-14">' + mail_link("contact.html") + '</p><p class="mt-24"><a class="btn" href="./">Back to home</a></p></section>',(),True,False)
@@ -322,7 +363,7 @@ def build_pages(g):
 <div class="actions mt-18"><button class="btn" type="submit">أرسل الاستفسار عبر البريد</button></div></form></div>
 <div><h2 class="h-contact">تواصل مباشر</h2><ul class="check"><li>{mail_link("contact.html")}</li><li>{whatsapp_html("ar")}</li><li><address class="postal">Dubai, United Arab Emirates</address></li></ul>
 <p class="mt-12">العنوان: دبي، الإمارات العربية المتحدة. نخدم دبي وأبوظبي والشارقة وبقية الإمارات، دون عنوان شارع وبدون رقم هاتف.</p>
-<p class="social-line mt-14">شعيب حسين على <a href="{IG_URL}" rel="me noopener" target="_blank">إنستغرام</a> (@mxhaib) و<a href="{LI_URL}" rel="me noopener" target="_blank">لينكدإن</a>.</p>
+<p class="social-line mt-14">D3DDD على <a href="{IG_URL}" rel="me noopener" target="_blank">إنستغرام</a> (@dubai3ddd). شعيب حسين على <a href="{LI_URL}" rel="me noopener" target="_blank">لينكدإن</a>.</p>
 </div></div></section>'''
     out[(L,"contact.html")] = shell(L,"contact.html","تواصل مع D3DDD | عرض سعر رسومات تنفيذية وتصميم ثلاثي الأبعاد دبي والإمارات",
         "اطلب عرض سعر لرسومات الرخام التنفيذية أو مخططات أوتوكاد أو رسومات التشطيبات أو التصميم ثلاثي الأبعاد أو موقع للمقاولين في دبي والإمارات.",body,[bc(L,"contact.html",name),{"@type":"ContactPage","url":url(L,"contact.html"),"about":{"@id":g["ORG_ID"]}}])

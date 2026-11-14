@@ -107,7 +107,16 @@ def footer(prefix: str) -> str:
 <div><h2>Contact</h2><a href="{prefix}contact.html">Send an enquiry</a>{mail_link(prefix + "contact.html")}{whatsapp_html("en")}<a href="{prefix}blog/feed.xml">RSS</a><address class="postal">Dubai, United Arab Emirates</address></div></div>
 <div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. All rights reserved.</div></footer>'''
 
-def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: list, og_type: str = "website", image: str | None = None, current: str = "blog", link_canonical: str | None = None) -> str:
+GSC = '<meta name="google-site-verification" content="5lkd8Q8BFpICgD4ixvCvKxc2GmHxE7pH7XFaXVRZG-s">'
+BLOG_HREFLANG = (
+    '<link rel="alternate" hreflang="en-AE" href="https://d3ddd.com/blog/">'
+    '<link rel="alternate" hreflang="en" href="https://d3ddd.com/blog/">'
+    '<link rel="alternate" hreflang="ar-AE" href="https://d3ddd.com/ar/blog/">'
+    '<link rel="alternate" hreflang="ar" href="https://d3ddd.com/ar/blog/">'
+    '<link rel="alternate" hreflang="x-default" href="https://d3ddd.com/blog/">'
+)
+
+def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: list, og_type: str = "website", image: str | None = None, current: str = "blog", link_canonical: str | None = None, extra_head: str = "") -> str:
     img = image or f"{D}/assets/img/og-image.png"
     # Page URL stays on og:url. Republished posts may set link_canonical to the original.
     canon_link = link_canonical or canonical
@@ -130,7 +139,8 @@ def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: lis
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="{prefix}assets/style.css" as="style"><link rel="stylesheet" href="{prefix}assets/style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" media="print" onload="this.media='all'">
-<script type="application/ld+json">{ld_json}</script>{analytics_snippet()}</head><body>
+<script type="application/ld+json">{ld_json}</script>
+{GSC}{analytics_snippet()}{extra_head}</head><body>
 <a class="skip" href="#main">Skip to content</a>
 {topbar(prefix)}
 <header class="site-header"><a class="logo" href="{prefix}" aria-label="D3DDD – Dubai 3D Design &amp; Draft"><span>D3</span><strong>DDD</strong><small>Dubai 3D Design &amp; Draft</small></a>
@@ -167,14 +177,14 @@ def crumbs_ld(items: list[tuple[str, str]]) -> dict:
         ],
     }
 
-IG = "https://www.instagram.com/mxhaib/"
+IG = "https://www.instagram.com/dubai3ddd/"
 FIVERR = "https://www.fiverr.com/mxhoaib"
 LINKEDIN = "https://www.linkedin.com/in/mshoaib94"
 # Required on every article: author byline + author box (see BLOG.md)
 AUTHOR_BYLINE = (
     '<div class="byline"><span class="av" aria-hidden="true">SH</span><span>Written by '
     '<strong>Shoaib Hussan</strong><br><small>Founder, D3DDD · '
-    f'<a href="{IG}" rel="me noopener" target="_blank">@mxhaib</a> · '
+    f'<a href="{IG}" rel="me noopener" target="_blank">@dubai3ddd</a> · '
     f'<a href="{LINKEDIN}" rel="me noopener" target="_blank">LinkedIn</a></small></span></div>'
 )
 AUTHOR_BOX = (
@@ -183,7 +193,7 @@ AUTHOR_BOX = (
     '<p>Draftsman and founder of '
     '<strong>D3DDD – Dubai 3D Design &amp; Draft</strong>. Shop drawings, marble &amp; stone detailing, '
     '3D visualisation and construction documentation for contractors and fabricators across the Gulf.</p>'
-    f'<p class="socials"><a href="{IG}" rel="me noopener" target="_blank">Instagram @mxhaib</a>'
+    f'<p class="socials"><a href="{IG}" rel="me noopener" target="_blank">Instagram @dubai3ddd</a>'
     f'<a href="{LINKEDIN}" rel="me noopener" target="_blank">LinkedIn</a>'
     f'<a href="{FIVERR}" rel="me noopener" target="_blank">Fiverr mxhoaib</a>'
     '<a href="../../contact.html">Work with D3DDD →</a></p></div></aside>'
@@ -274,7 +284,7 @@ def build_index(posts: list[dict]) -> None:
     )
     byline = AUTHOR_BYLINE.replace("../../", "../")
     body = f'''<section class="page-hero"><nav class="crumbs" aria-label="Breadcrumb"><a href="../">Home</a> / <span>Blog</span></nav>
-<p class="eyebrow">Insights</p><h1>Architecture &amp; drafting <em>notes.</em></h1>
+<p class="eyebrow">Insights</p><h1>Architecture and drafting notes from D3DDD</h1>
 <p>Researched articles on megaprojects, stone detailing and documentation habits — written for contractors, fabricators and design teams.</p>
 {byline}
 <p class="chips mt-18">{chips}<a class="chip" href="feed.xml">RSS</a></p></section>
@@ -293,6 +303,7 @@ def build_index(posts: list[dict]) -> None:
             body,
             "../",
             ld,
+            extra_head=BLOG_HREFLANG,
         ),
     )
 
@@ -423,17 +434,18 @@ def patch_sitemap(posts: list[dict]) -> None:
     # strip previous blog urls
     text = re.sub(r"\s*<url><loc>https://d3ddd\.com/blog/[^<]*</loc>.*?</url>", "", text)
     entries = [
-        f'  <url><loc>{D}/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>',
-        f'  <url><loc>{D}/blog/feed.xml</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>',
+        f'  <url><loc>{D}/blog/</loc><lastmod>2026-11-14</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>',
+        f'  <url><loc>{D}/blog/feed.xml</loc><lastmod>2026-11-14</lastmod><changefreq>weekly</changefreq><priority>0.3</priority></url>',
     ]
     cats = sorted({p["category"] for p in posts})
     for c in cats:
         entries.append(
-            f'  <url><loc>{D}/blog/category/{c}/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>'
+            f'  <url><loc>{D}/blog/category/{c}/</loc><lastmod>2026-11-14</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>'
         )
     for p in posts:
+        lastmod = p.get("updated") or p["date"]
         entries.append(
-            f'  <url><loc>{p["url"]}</loc><lastmod>{p["date"]}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>'
+            f'  <url><loc>{p["url"]}</loc><lastmod>{lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>'
         )
     if "</urlset>" not in text:
         text = text.rstrip() + "\n</urlset>\n"

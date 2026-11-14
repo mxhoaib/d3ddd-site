@@ -5,6 +5,7 @@ date: 2026-10-25
 category: estimation
 category_title: Estimation
 description: "How slab nesting and cutting lists reduce marble and granite waste for UAE fabricators — piece IDs, yield, vein direction and BOQ habits that survive real yard constraints."
+updated: 2026-11-14
 image: /assets/img/blog/slab-nesting-cutting-lists-gulf.svg
 og_image: /assets/img/blog/slab-nesting-cutting-lists-gulf.jpg
 image_alt: "Marble slab nesting layout beside a cutting-list quantity sheet"
@@ -92,7 +93,7 @@ A perfect geometric nest that ignores vein flow still produces a wall the client
 
 [D3DDD](/) supports fabricators with shop drawings, [estimation / cutting-list](/services/architectural-estimation/) workflows that stay tied to the same IDs from elevation to nest. When helpful, we add [3D visualisation](/services/3d-rendering-modeling-visualization/) so clients approve vein direction before the saw starts.
 
-Need a package nested or a messy schedule cleaned up? [Contact D3DDD](/contact.html), see updates on [Instagram @mxhaib](https://www.instagram.com/mxhaib/), or review gigs on [Fiverr (@mxhoaib)](https://www.fiverr.com/mxhoaib).
+Need a package nested or a messy schedule cleaned up? [Contact D3DDD](/contact.html), see updates on [Instagram @dubai3ddd](https://www.instagram.com/dubai3ddd/), or review gigs on [Fiverr (@mxhoaib)](https://www.fiverr.com/mxhoaib).
 
 ## Key takeaway
 

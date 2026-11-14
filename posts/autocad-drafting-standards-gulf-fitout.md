@@ -5,6 +5,7 @@ date: 2026-10-25
 category: drafting
 category_title: Drafting
 description: "Practical AutoCAD drafting standards for UAE and Gulf fit-out work — layers, naming, xrefs, plot styles and revision habits that keep marble, joinery and MEP consultants aligned."
+updated: 2026-11-14
 image: /assets/img/blog/autocad-drafting-standards-gulf-fitout.svg
 og_image: /assets/img/blog/autocad-drafting-standards-gulf-fitout.jpg
 image_alt: "CAD layer standards list beside a fit-out plan drawn on named layers"
@@ -113,7 +114,7 @@ Clean CAD is the spine for:
 
 ## How to get help
 
-If your current set is a patchwork of consultants’ files, we can rebuild a fabrication-ready AutoCAD package with consistent layers, tags and revisions. [Request a quote](/contact.html), follow drafting notes on [Instagram @mxhaib](https://www.instagram.com/mxhaib/), or see options on [Fiverr (@mxhoaib)](https://www.fiverr.com/mxhoaib).
+If your current set is a patchwork of consultants’ files, we can rebuild a fabrication-ready AutoCAD package with consistent layers, tags and revisions. [Request a quote](/contact.html), follow drafting notes on [Instagram @dubai3ddd](https://www.instagram.com/dubai3ddd/), or see options on [Fiverr (@mxhoaib)](https://www.fiverr.com/mxhoaib).
 
 ## Key takeaway
 

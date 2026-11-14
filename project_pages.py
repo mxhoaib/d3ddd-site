@@ -5,6 +5,7 @@
 from __future__ import annotations
 import html, json, re
 from pathlib import Path
+import markdown
 from PIL import Image  # only used to read image sizes for width/height attributes
 
 ROOT = Path(__file__).parent
@@ -19,8 +20,25 @@ SERVICE_PAGES = {
     "architectural-estimation": ("services/architectural-estimation/index.html", "Architectural estimation", "estimation"),
     "3d-rendering-modeling-visualization": ("services/3d-rendering-modeling-visualization/index.html", "3D rendering &amp; visualization", "3d"),
 }
-# The Instagram handle must not appear on the new project pages (owner content rule); existing pages keep it.
-_IG_SAMEAS = re.compile(r'"https://www\.instagram\.com/[^"]*", ')
+def project_body_html(main: str) -> str:
+    """Render the case-study body. Gallery images stay in the template. Owner-confirm gaps are omitted."""
+    kept = []
+    for line in main.splitlines():
+        if line.startswith("# ") or line.startswith("!["):
+            continue
+        if line.strip() == "*By Shoaib Hussan, Founder of D3DDD*":
+            continue
+        if line.startswith("**Software:**"):
+            continue
+        kept.append(line)
+    text = "\n".join(kept)
+    text = re.sub(r"[^.!?\n]*\[OWNER TO CONFIRM\][^.!?\n]*[.!?]?", "", text)
+    text = re.sub(r"[ \t]+\n", "\n", text)
+    text = re.sub(r"\n{3,}", "\n\n", text).strip()
+    rendered = markdown.markdown(text, extensions=["extra", "sane_lists"])
+    if "OWNER TO CONFIRM" in rendered:
+        raise SystemExit("OWNER TO CONFIRM leaked into a project page")
+    return rendered
 
 
 def parse_page_md(text: str) -> dict:
@@ -43,6 +61,7 @@ def parse_page_md(text: str) -> dict:
             continue
         paras.append(b)
     meta["paragraphs"] = paras
+    meta["body_html"] = project_body_html(main)
     m = re.search(r"\*\*(.+?)\*\*\s*(.*?)\s*at \[", cta, re.S)
     meta["cta_h"], meta["cta_p"] = (m.group(1).strip(), m.group(2).strip()) if m else ("Need drawings like these?", "Send your design drawings and get a quote.")
     return meta
@@ -103,11 +122,15 @@ def build_project_pages(g, out: dict) -> dict:
         cards = "".join(card(p, P, lang, "h2") for p in PROJECTS)
         if lang == "en":
             title = "Projects &amp; Portfolio | Marble Shop Drawings Dubai – D3DDD"
-            desc = "Selected D3DDD projects in Dubai: waterjet marble medallions, villa flooring layouts, vanity and bathroom cladding shop drawings, slab cutting plans and pool tiling details."
+            desc = "Selected D3DDD marble shop drawings in Dubai: waterjet medallions, villa flooring, bathroom cladding, vanities, slab cutting plans and pool tiling."
             hero = (f'<section class="page-hero pj-hero"><nav class="crumbs" aria-label="Breadcrumb"><a href="{home}">Home</a> / <span>Projects</span></nav>'
-                    f'<p class="eyebrow">Portfolio — Dubai &amp; UAE</p><h1>Selected <em>projects</em></h1>'
-                    f'<p>Marble and stone shop drawings, slab layouts and tiling details prepared by Shoaib Hussan / D3DDD for villas and residences in Dubai. '
-                    f'Client details have been removed from every sheet.</p></section>')
+                    f'<p class="eyebrow">Portfolio — Dubai &amp; UAE</p><h1>Marble shop drawings and stone projects in Dubai</h1></section>'
+                    f'<section class="section"><div class="wrap copy">'
+                    f'<p>This portfolio shows selected marble and stone shop drawings, slab layouts and tiling details prepared by Shoaib Hussan / D3DDD for villas and residences in Dubai. The set includes waterjet medallion and flooring layouts, bathroom cladding, vanity fabrication drawings, slab-by-slab cutting plans, door-frame and skirting nesting, and external pool and terrace tiling.</p>'
+                    f'<p>Each project page explains the scope, the drawings delivered and the software used. Client details have been removed from every sheet.</p>'
+                    f'<p>These sheets are typical of the <a href="{href(lang, fn, "marble.html")}">marble and stone shop drawings</a> D3DDD prepares for contractors, fabricators and designers in Dubai and the UAE: plans, elevations, sections, edge profiles, piece numbers and cutting layouts that can be reviewed before stone is cut. Two of the projects are tagged on their own pages as <a href="{href(lang, fn, "services/architectural-designing/")}">architectural designing</a> (the ground-floor flooring layout) and <a href="{href(lang, fn, "services/architectural-drafting/")}">architectural drafting</a> (the pool and outdoor tiling set), rather than as marble shop drawings.</p>'
+                    f'<p>If you have a villa or interior stone package that needs a similar set, <a href="{contact}">request a quote</a>.</p>'
+                    f'</div></section>')
             home_l, proj_l = "Home", "Projects"
         else:
             title = "المشاريع والمحفظة | رسومات الرخام التنفيذية دبي – D3DDD"
@@ -135,7 +158,7 @@ def build_project_pages(g, out: dict) -> dict:
         contact = href(lang, fn, "contact.html") + "?service=" + svc_q
         home, projects = href(lang, fn, ""), href(lang, fn, "projects/")
         t = esc(p["title"])
-        paras = "".join(f"<p>{md_inline(x)}</p>" for x in p["paragraphs"])
+        paras = p["body_html"]
         shots = []
         for n, f in enumerate(p["images"]):
             w, h = p["sizes"][f]
@@ -163,9 +186,10 @@ def build_project_pages(g, out: dict) -> dict:
               {"@type": "CreativeWork", "name": p["title"], "description": p["meta_description"], "url": url(lang, f"projects/{p['slug']}/"),
                "image": [f'{D}{IMG_DIR}/{p["slug"]}/{f}' for f in p["images"]], "creator": {"@type": "Person", "name": "Shoaib Hussan"},
                "publisher": {"@id": D + "#business"}, "locationCreated": {"@type": "Place", "name": "Dubai, United Arab Emirates"}}]
-        page = shell(lang, fn, t + " | D3DDD", esc(p["meta_description"]), body, ld, bilingual=False,
+        seo = esc(p["seo_title"]) if p.get("seo_title") else t + " | D3DDD"
+        page = shell(lang, fn, seo, esc(p["meta_description"]), body, ld, bilingual=False,
                      scripts=gal_js(P), og_image=og, extra_head=css(P), switch=P + "ar/projects/")
-        pages[(lang, fn)] = _IG_SAMEAS.sub("", page)
+        pages[(lang, fn)] = page
 
     # ---------------------------------------------------------------- related projects on service pages (EN)
     for key, (svc_fn, _, _) in SERVICE_PAGES.items():

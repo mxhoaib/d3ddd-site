@@ -1,12 +1,14 @@
 ---
 title: "Marble Table Design: Coffee, Dining & Side Table Guide"
+seo_title: "Marble Table Design: Coffee, Dining & Side Tables"
 slug: marble-table-design-shop-drawings
 date: 2026-11-09
 category: shop-drawings
 category_title: Shop Drawings
-description: "Planning a marble coffee table, dining table, side table or tray? Compare finishes, support details and care, then request bespoke shop drawings from D3DDD."
+description: "Planning a marble coffee table, dining table or side table? Compare finishes, support details and care, then request shop drawings from D3DDD."
 author: "Shoaib Hussan, Founder of D3DDD"
 status: PUBLISHED
+updated: 2026-11-14
 canonical: https://d3ddd.com/blog/marble-table-design-shop-drawings/
 hero: omit
 image_alt: "D3DDD brand image for shop drawings and 3D design in Dubai"
@@ -18,6 +20,14 @@ faq_schema: true
 Whether you are planning a marble coffee table for a living room, a dining table for a villa or a matching side table, this guide explains the decisions worth making before the stone is cut. It also clarifies what people may mean when they search for “glaze marble.”
 
 D3DDD provides drafting and design coordination—not furniture manufacturing or retail sales. If you already have a concept, [request a quote for bespoke marble furniture shop drawings](https://d3ddd.com/contact.html) to coordinate it with your chosen fabricator.
+
+![Paonazzetto vanity top shop drawing: top views and undermount front views for several Dubai villa bathrooms, with 2 cm tops, 100 mm skirting and 320 mm fascia](/assets/img/projects/paonazzetto-marble-vanity-tops-shop-drawings/paonazzetto-marble-vanity-tops-shop-drawings-01.jpg)
+
+*Paonazzetto vanity tops: top and front views with a 100 mm skirting, a 320 mm fascia and edge profiles. See the [Paonazzetto vanity tops shop drawings](https://d3ddd.com/projects/paonazzetto-marble-vanity-tops-shop-drawings/).*
+
+![Venatino freestanding bath vanity shop drawing: 2200 mm front elevation, side section, undermount top, shelf and slab pieces C-01 to C-06 and S-01 to S-04](/assets/img/projects/venatino-marble-bath-vanity-shop-drawing/venatino-marble-bath-vanity-shop-drawing-01.jpg)
+
+*A 2200 mm freestanding Venatino vanity with elevations, edge details and a slab-mapped cutting plan. See the [Venatino bath vanity shop drawing](https://d3ddd.com/projects/venatino-marble-bath-vanity-shop-drawing/).*
 
 ## Choose the Marble Furniture Around Its Use
 

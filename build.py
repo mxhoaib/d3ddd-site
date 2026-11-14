@@ -349,9 +349,6 @@ def build_app_pages():
             for i, app in enumerate(APPS, 1)]}
         ld = [crumbs_ld(lang, [(home_l, url(lang, "index.html")), (crumb, url(lang, "apps/"))]), items]
         page = shell(lang, fn, title, desc, body, ld)
-        # New pages must not point at instagram.com/mxhaib. The Still app uses dubai3ddd.
-        page = page.replace("https://instagram.com/mxhaib", "https://instagram.com/dubai3ddd")
-        page = page.replace("https://www.instagram.com/mxhaib/", "https://www.instagram.com/dubai3ddd/")
         pages[(lang, fn)] = page
     return pages
 
@@ -387,10 +384,47 @@ for lang in ("en", "ar"):
     ) % (lang_attr, target, target, json.dumps(target), label, target, label, GOAT)
     out[(lang, "services.html")] = redir
 
+# GitHub Pages has no server 301. /about and /about.html are both HTTP 200 when only
+# about.html exists, because Pages serves the .html file at the extensionless path.
+# A directory index at /about/ is a separate document: noindex, canonical, and a
+# meta refresh of 0. On hosts that prefer the directory, /about and /about/ serve
+# that stub. On hosts that still serve about.html at /about, the matching page
+# runs a same-document script that sends only the extensionless path to the .html
+# canonical, so /about.html itself is not noindexed and does not refresh.
+EXTLESS = {
+    "about.html": "/about",
+    "contact.html": "/contact",
+    "marble.html": "/marble",
+    "website-design.html": "/website-design",
+}
+
+def extless_script(path):
+    return ('<script>if(location.pathname.replace(/\\/+$/,"")==="%s")'
+            'location.replace("%s.html"+location.search+location.hash);</script>' % (path, path))
+
+def redirect_stub(target):
+    return (
+        '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">'
+        '<meta name="robots" content="noindex, follow">'
+        '<meta http-equiv="refresh" content="0;url=%s">'
+        '<link rel="canonical" href="%s">'
+        '<title>Redirecting…</title>'
+        '<script>location.replace(%s)</script></head>'
+        '<body><main id="main"><p><a href="%s">Continue</a></p></main></body></html>'
+    ) % (target, target, json.dumps(target), target)
+
 for (lang, fn), html in out.items():
+    if lang == "en" and fn in EXTLESS:
+        html = html.replace("</head>", extless_script(EXTLESS[fn]) + "</head>", 1)
     path = ("ar/" if lang == "ar" else "") + fn
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     open(path, "w", encoding="utf-8").write(html)
+
+for fn, path in EXTLESS.items():
+    target = D + fn
+    stub_dir = path.lstrip("/")
+    os.makedirs(stub_dir, exist_ok=True)
+    open(stub_dir + "/index.html", "w", encoding="utf-8").write(redirect_stub(target))
 
 ns = {}
 exec(open("portal_pages.py", encoding="utf-8").read(), ns)
@@ -405,28 +439,32 @@ BILINGUAL_PAGES = [
     "services/", "projects/", "apps/",
 ] + ["services/%s/" % s["slug"] for s in SERVICE_DEFS]
 
+# Schema, titles and case studies in this deploy. apps/still/ is not regenerated; its lastmod is the last commit that changed it.
+DEPLOY_LASTMOD = "2026-11-14"
+STILL_LASTMOD = "2026-11-12"
+
 x = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
 for fn in BILINGUAL_PAGES:
     for lang in ("en", "ar"):
         pr = "1.0" if fn == "index.html" else ("0.9" if fn.startswith("services") else "0.8")
         x.append(
-            '  <url><loc>%s</loc><changefreq>monthly</changefreq><priority>%s</priority>'
+            '  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>%s</priority>'
             '<xhtml:link rel="alternate" hreflang="en-AE" href="%s"/><xhtml:link rel="alternate" hreflang="ar-AE" href="%s"/>'
             '<xhtml:link rel="alternate" hreflang="x-default" href="%s"/></url>'
-            % (url(lang, fn), pr, url("en", fn), url("ar", fn), url("en", fn))
+            % (url(lang, fn), DEPLOY_LASTMOD, pr, url("en", fn), url("ar", fn), url("en", fn))
         )
-x.append('  <url><loc>%s</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>' % url("en", "apps/still/"))
+x.append('  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>' % (url("en", "apps/still/"), STILL_LASTMOD))
 for pr in PROJECTS:  # project pages are English only (no hreflang alternates)
-    x.append('  <url><loc>%s</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>' % url("en", "projects/%s/" % pr["slug"]))
-for fn in (
-    "fitout-shop-drawings/",
-    "construction-companies-uae/",
-    "real-estate-developers-uae/",
-    "interior-design-companies-uae/",
-    "marble-contractors-uae/",
-    "resources/uae-directories/",
+    x.append('  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>' % (url("en", "projects/%s/" % pr["slug"]), DEPLOY_LASTMOD))
+for fn, pr in (
+    ("fitout-shop-drawings/", "0.8"),
+    ("construction-companies-uae/", "0.8"),
+    ("real-estate-developers-uae/", "0.8"),
+    ("interior-design-companies-uae/", "0.8"),
+    ("marble-contractors-uae/", "0.8"),
+    ("resources/uae-directories/", "0.5"),
 ):
-    x.append('  <url><loc>%s</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>' % url("en", fn))
+    x.append('  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>%s</priority></url>' % (url("en", fn), DEPLOY_LASTMOD, pr))
 x.append("</urlset>")
 open("sitemap.xml", "w", encoding="utf-8").write("\n".join(x) + "\n")
 open("robots.txt", "w", encoding="utf-8").write(
@@ -503,7 +541,7 @@ def write_llms():
         "- Email: info@d3ddd.com",
         "- [Enquiry form](https://d3ddd.com/contact.html): Preferred way to send drawings and ask for a quote.",
         "- [Arabic enquiry form](https://d3ddd.com/ar/contact.html): The same form in Arabic.",
-        "- Instagram: https://instagram.com/mxhaib",
+        "- Instagram: https://www.instagram.com/dubai3ddd/",
         "- LinkedIn: https://www.linkedin.com/in/mshoaib94",
         "- WhatsApp username (no phone number published): @mxhoaib",
         "",
@@ -520,7 +558,7 @@ def write_llms():
     sm = open("sitemap.xml", encoding="utf-8").read()
     loc = D + "llms.txt"
     if loc not in sm:
-        sm = sm.replace("</urlset>", '  <url><loc>%s</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>\n</urlset>' % loc)
+        sm = sm.replace("</urlset>", '  <url><loc>%s</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>\n</urlset>' % loc)
         open("sitemap.xml", "w", encoding="utf-8").write(sm)
     print("wrote llms.txt")
 
