@@ -1,5 +1,5 @@
 # D3DDD static site generator (English + Arabic). Edit content here, then run: python3 build.py
-import html, json, os
+import html, json, os, re
 import site_search
 from contact_config import whatsapp_html, analytics_snippet, mail_link, social_links, business_node, area_served
 D = "https://d3ddd.com/"
@@ -78,14 +78,22 @@ HOME_CATALOG = {}
 def crumbs_ld(lang, items):
     return {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(items)]}
 
-def service_ld(name, desc, u, offers=None):
+def service_ld(name, desc, u, offers=None, service_type=None):
     s = {"@type": "Service", "name": name, "description": desc, "url": u, "provider": {"@id": ORG_ID},
          "areaServed": area_served()}
-    if offers: s["offers"] = offers
+    if service_type:
+        # Insert beside name so the rest of the node stays in the existing order.
+        s = {"@type": "Service", "name": name, "serviceType": service_type, "description": desc, "url": u,
+             "provider": {"@id": ORG_ID}, "areaServed": area_served()}
+    if offers:
+        s["offers"] = offers
     return s
 
+def _faq_plain(text):
+    return html.unescape(re.sub(r"<[^>]+>", "", text))
+
 def faq_ld(faqs):
-    return {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
+    return {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": _faq_plain(a)}} for q, a in faqs]}
 
 def faq_html(faqs, title, eyebrow):
     items = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in faqs)

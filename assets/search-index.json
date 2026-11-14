@@ -177,6 +177,30 @@
       "keywords": "blog articles"
     },
     {
+      "title": "3D Rendering vs 3D Modeling: What’s the Difference?",
+      "snippet": "How 3D modeling differs from 3D rendering, when you need each one, and how visualization supports approvals before fabrication in Dubai.",
+      "url": "/blog/3d-rendering-vs-3d-modeling/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Visualization visualization 3D rendering vs 3D modeling"
+    },
+    {
+      "title": "How 3D Visualization Helps Clients Approve Interiors in the UAE",
+      "snippet": "How 3D architectural visualization helps clients read interiors before work starts, and what a single 3D render from D3DDD in Dubai includes.",
+      "url": "/blog/3d-visualization-uae-interior-approvals/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Visualization visualization 3D architectural visualization Dubai"
+    },
+    {
+      "title": "What Are Architectural Drafting Services and Why UAE Projects Need Them?",
+      "snippet": "What architectural drafting includes on UAE projects, how AutoCAD construction drawings are used, and when to request a drafting quote in Dubai.",
+      "url": "/blog/architectural-drafting-services-uae/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Drafting drafting architectural drafting services UAE"
+    },
+    {
       "title": "AutoCAD 2026 New Features: Smart Blocks AI Assist & Faster DWG",
       "snippet": "What’s new in AutoCAD 2026 for UAE drafters: Smart Blocks, Autodesk AI assist, Connected Support Files and faster DWG open.",
       "url": "/blog/autocad-2026-new-features-smart-blocks-ai/",
@@ -209,6 +233,14 @@
       "keywords": "Architecture architecture"
     },
     {
+      "title": "What Is the Difference Between a BOQ, an Estimate and a Quotation?",
+      "snippet": "The difference between a bill of quantities, an estimate and a quotation, and how each is used on UAE construction and fit-out projects.",
+      "url": "/blog/boq-vs-estimation-vs-quotation/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Estimation estimation BOQ vs estimation vs quotation"
+    },
+    {
       "title": "Build in Dubai Platform: Drawing Package Tips for Faster Permits",
       "snippet": "Prepare cleaner drawing packages for Build in Dubai—layer hygiene, consistency checks, and AI-permit readiness tips.",
       "url": "/blog/build-in-dubai-drawing-package-tips/",
@@ -223,6 +255,14 @@
       "type": "blog",
       "lang": "en",
       "keywords": "Visualization visualization"
+    },
+    {
+      "title": "Concept Drawings vs Construction Drawings: What’s the Difference?",
+      "snippet": "How concept drawings differ from construction drawings, when each is needed on a UAE project, and how the approved design becomes a CAD set.",
+      "url": "/blog/concept-drawings-vs-construction-drawings/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Drafting drafting construction drawings vs concept drawings"
     },
     {
       "title": "Custom Marble Tables in Dubai: Marble Coffee Table, Dining Table, Side Table & Tray Ideas Using Glaze Marble",
@@ -393,6 +433,14 @@
       "keywords": "Shop Drawings shop-drawings"
     },
     {
+      "title": "What Is a Quantity Takeoff in Construction?",
+      "snippet": "A clear explanation of quantity take-off: how drawings are measured, how a takeoff differs from a BOQ, and how UAE contractors use the figures.",
+      "url": "/blog/what-is-a-quantity-takeoff/",
+      "type": "blog",
+      "lang": "en",
+      "keywords": "Estimation estimation quantity takeoff UAE"
+    },
+    {
       "title": "Home",
       "snippet": "Architectural drafting, marble shop drawings, fit-out detailing, estimation and 3D visualization across Dubai and the UAE.",
       "url": "/",
@@ -558,7 +606,7 @@
       "url": "/services/3d-rendering-modeling-visualization/",
       "type": "service",
       "lang": "en",
-      "keywords": "3D architectural visualization in Dubai: interior renders, material studies and presentation images for design reviews before stone is cut. 3d visualization rendering modelling modeling"
+      "keywords": "3D modeling and architectural visualization in Dubai. A single still render is 650 AED (50% upfront). Extra views, models and walkthroughs are quoted. 3d visualization rendering modelling modeling"
     },
     {
       "title": "Architectural designing",
@@ -566,7 +614,7 @@
       "url": "/services/architectural-designing/",
       "type": "service",
       "lang": "en",
-      "keywords": "Architectural designing in Dubai and the UAE: concept layouts, space planning, interior design support, elevations/sections and design development. architectural design space planning"
+      "keywords": "Architectural designing in Dubai and the UAE: concept layouts, space planning, elevations and design development that can move into CAD drawings. architectural design space planning"
     },
     {
       "title": "Architectural drafting",
@@ -574,7 +622,7 @@
       "url": "/services/architectural-drafting/",
       "type": "service",
       "lang": "en",
-      "keywords": "Architectural drafting services across the UAE: shop drawings, fit-out sets, joinery elevations and as-built CAD for contractors, issued as DWG and PDF. autocad shop drawings drafting"
+      "keywords": "Architectural drafting and AutoCAD 2D construction drawings in Dubai and the UAE: shop drawings, fit-out sets and as-built CAD, issued as DWG and PDF. autocad shop drawings drafting"
     },
     {
       "title": "Architectural estimation",
@@ -582,7 +630,7 @@
       "url": "/services/architectural-estimation/",
       "type": "service",
       "lang": "en",
-      "keywords": "Construction estimation and BOQ services in the UAE: quantity take-offs, material schedules and tender bills measured from your project drawings. estimation BOQ quantity takeoff"
+      "keywords": "Quantity take-off and BOQ services in the UAE: measured bills, material schedules and tender packages from your drawings, quoted per project. estimation BOQ quantity takeoff"
     },
     {
       "title": "Website development & designing",

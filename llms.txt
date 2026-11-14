@@ -45,16 +45,21 @@ D3DDD prepares fabrication and installation drawings that contractors, fabricato
 
 ## Blog
 
+- [3D Rendering vs 3D Modeling: What’s the Difference?](https://d3ddd.com/blog/3d-rendering-vs-3d-modeling/)
+- [How 3D Visualization Helps Clients Approve Interiors in the UAE](https://d3ddd.com/blog/3d-visualization-uae-interior-approvals/)
 - [أفضل ممارسات التصميم الثلاثي الأبعاد للمقاولين في دبي](https://d3ddd.com/ar/blog/3d-design-best-practices-dubai-contractors/)
 - [دليل شامل لاستخدام أوتوكاد في إعداد رسومات تنفيذية للرخام](https://d3ddd.com/ar/blog/autocad-marble-shop-drawings-guide/)
 - [10 خطوات لإعداد جداول كميات دقيقة لمشاريع الرخام](https://d3ddd.com/ar/blog/marble-boq-quantity-takeoff-10-steps/)
 - [ما هي رسومات الرخام التنفيذية ولماذا تحتاجها مشاريع الإمارات؟](https://d3ddd.com/ar/blog/what-are-marble-shop-drawings/)
+- [What Are Architectural Drafting Services and Why UAE Projects Need Them?](https://d3ddd.com/blog/architectural-drafting-services-uae/)
 - [AutoCAD 2026 New Features: Smart Blocks AI Assist & Faster DWG](https://d3ddd.com/blog/autocad-2026-new-features-smart-blocks-ai/)
 - [AutoCAD Architecture Toolset for UAE Floor Plans & Renovation Plans](https://d3ddd.com/blog/autocad-architecture-toolset-uae-floor-plans/)
 - [AutoCAD Drafting Standards for Gulf Fit-Out Packages](https://d3ddd.com/blog/autocad-drafting-standards-gulf-fitout/)
 - [Autodesk Forma Site Design: AI Site Planning for Early Concepts](https://d3ddd.com/blog/autodesk-forma-site-design-ai-planning/)
+- [What Is the Difference Between a BOQ, an Estimate and a Quotation?](https://d3ddd.com/blog/boq-vs-estimation-vs-quotation/)
 - [Build in Dubai Platform: Drawing Package Tips for Faster Permits](https://d3ddd.com/blog/build-in-dubai-drawing-package-tips/)
 - [Chaos Vantage Tutorial: Real-Time Ray Tracing for V-Ray Scenes](https://d3ddd.com/blog/chaos-vantage-realtime-ray-tracing-vray/)
+- [Concept Drawings vs Construction Drawings: What’s the Difference?](https://d3ddd.com/blog/concept-drawings-vs-construction-drawings/)
 - [Custom Marble Tables in Dubai: Marble Coffee Table, Dining Table, Side Table & Tray Ideas Using Glaze Marble](https://d3ddd.com/blog/custom-marble-tables-dubai-glaze-marble/)
 - [DraftSight for DWG Drafting: Trial Setup Limits & When to Use It](https://d3ddd.com/blog/draftsight-dwg-drafting-trial-guide/)
 - [Dubai BIM Mandate 2026: Who Must Submit and What to Prepare](https://d3ddd.com/blog/dubai-bim-mandate-2026-submission-guide/)
@@ -76,6 +81,7 @@ D3DDD prepares fabrication and installation drawings that contractors, fabricato
 - [Stone Staircase Shop Drawings: Treads Risers Stringers & Fixings](https://d3ddd.com/blog/stone-staircase-shop-drawings-treads-risers/)
 - [What Types of Marble Are Best for Luxury Interiors in the UAE?](https://d3ddd.com/blog/types-of-marble-uae-luxury-interiors/)
 - [What Are Marble Shop Drawings and Why Are They Necessary?](https://d3ddd.com/blog/what-are-marble-shop-drawings/)
+- [What Is a Quantity Takeoff in Construction?](https://d3ddd.com/blog/what-is-a-quantity-takeoff/)
 
 ## Contact
 

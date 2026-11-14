@@ -6,6 +6,64 @@ from longform import hub_bundle, service_bundle
 
 SERVICES = json.loads((Path(__file__).parent / "services_data.json").read_text(encoding="utf-8"))
 
+# English Service nodes for the pages this expansion covers. areaServed and provider
+# stay on the shared helper. No numeric price except the owner-approved single still.
+EN_SERVICE_SCHEMA = {
+    "architectural-drafting": {
+        "name": "Architectural drafting",
+        "serviceType": "Architectural drafting and AutoCAD 2D construction drawings",
+        "description": "Architectural drafting and AutoCAD 2D construction drawings in Dubai and the UAE: shop drawings, fit-out sets, joinery elevations and as-built CAD for contractors, issued as DWG and PDF. Quoted per project.",
+        "offers": {
+            "@type": "Offer",
+            "name": "Architectural drafting",
+            "description": "Quote on request. Scope, fee and delivery date are confirmed in writing before work starts.",
+            "priceCurrency": "AED",
+        },
+    },
+    "architectural-estimation": {
+        "name": "Quantity estimation / BOQ",
+        "serviceType": "Quantity take-off, bill of quantities and material schedules",
+        "description": "Quantity take-off and BOQ services in the UAE: measured bills, material schedules and tender packages from your drawings, quoted per project.",
+        "offers": {
+            "@type": "Offer",
+            "name": "Quantity estimation / BOQ",
+            "description": "Quote on request. Quoted per package. Scope, fee and delivery date are confirmed in writing before work starts.",
+            "priceCurrency": "AED",
+        },
+    },
+    "3d-rendering-modeling-visualization": {
+        "name": "3D rendering, modeling & visualization",
+        "serviceType": "3D modeling, 3D rendering and architectural visualization",
+        "description": "3D modeling and architectural visualization in Dubai: still renders, material studies, models and walkthroughs. A single still render is 650 AED (50% upfront); additional views and modeling packages are quoted per project.",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Single 3D render",
+                "description": "One still render as agreed in the quote, PNG or JPG, 50% upfront. Additional views, modeling-only packages and walkthroughs are quoted separately.",
+                "price": "650",
+                "priceCurrency": "AED",
+            },
+            {
+                "@type": "Offer",
+                "name": "Additional 3D visualization",
+                "description": "Quote on request for extra views, material options, 3D modeling packages, walkthroughs and related visualization work. Scope, fee and delivery date are confirmed in writing before work starts.",
+                "priceCurrency": "AED",
+            },
+        ],
+    },
+    "architectural-designing": {
+        "name": "Architectural designing",
+        "serviceType": "Architectural concept design, space planning and design development",
+        "description": "Architectural designing in Dubai and the UAE: concept layouts, space planning, elevations and design development that can move into CAD drawings. Quoted per project.",
+        "offers": {
+            "@type": "Offer",
+            "name": "Architectural designing",
+            "description": "Quote on request. Scope, fee and delivery date are confirmed in writing before work starts.",
+            "priceCurrency": "AED",
+        },
+    },
+}
+
 
 def related_services(g, lang, fn, slug):
     groups = {
@@ -122,9 +180,20 @@ def build_service_pages(g):
         if lang == "en":
             body += related_services(g, lang, fn, s["slug"])
         body += cta(lang).replace('href="contact.html"', f'href="{contact}"')
+        page_url = url(lang, f"services/{s['slug']}/")
+        schema = EN_SERVICE_SCHEMA.get(s["slug"]) if lang == "en" else None
+        if schema:
+            offers = schema["offers"]
+            if isinstance(offers, list):
+                offers = [{**offer, "url": page_url} for offer in offers]
+            else:
+                offers = {**offers, "url": page_url}
+            svc_node = service_ld(schema["name"], schema["description"], page_url, offers=offers, service_type=schema["serviceType"])
+        else:
+            svc_node = service_ld(t["name"].replace("&amp;", "&"), t["desc"], page_url)
         ld = [
             crumbs_ld(lang, [(home_l, url(lang, "index.html")), (svc_l, url(lang, "services/")), (t["name"], url(lang, f"services/{s['slug']}/"))]),
-            service_ld(t["name"].replace("&amp;", "&"), t["desc"], url(lang, f"services/{s['slug']}/")),
+            svc_node,
             g["faq_ld"](faqs),
         ]
         out[(lang, fn)] = shell(lang, fn, t["title"], t["desc"], body, ld, preload=s["img"])
