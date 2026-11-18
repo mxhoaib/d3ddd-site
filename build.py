@@ -1,7 +1,7 @@
 # D3DDD static site generator (English + Arabic). Edit content here, then run: python3 build.py
 import html, json, os, re
 import site_search
-from contact_config import whatsapp_html, analytics_snippet, mail_link, social_links, business_node, area_served
+from contact_config import whatsapp_html, analytics_snippet, mail_link, social_links, business_node, area_served, sales_chat_css, sales_chat_js
 D = "https://d3ddd.com/"
 EMAIL = "info@d3ddd.com"
 BILINGUAL = ["index.html", "services.html", "marble.html", "website-design.html", "about.html", "contact.html"]
@@ -137,6 +137,7 @@ def head(lang, fn, title, desc, ld_nodes, noindex=False, bilingual=True, preload
     og_src, og_w, og_h, og_a = og_image or (D + "assets/img/og-image.png", 1200, 630, "D3DDD – architectural line drawing of a marble kitchen island")
     og_tags = ('<meta property="og:image" content="%s"><meta property="og:image:width" content="%s"><meta property="og:image:height" content="%s"><meta property="og:image:alt" content="%s">'
                % (og_src, og_w, og_h, og_a))
+    extra_head = sales_chat_css(P) + (extra_head or "")
     return (
         '<!DOCTYPE html>\n'
         '<html lang="%s" dir="%s"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">\n'
@@ -294,12 +295,12 @@ def shell(lang, fn, title, desc, body, ld_nodes=(), noindex=False, bilingual=Tru
         '<div><h2>%s</h2>%s</div><div><h2>%s</h2>%s</div><div><h2>%s</h2>%s</div>\n'
         '<div><h2>%s</h2><a href="%s">%s</a>%s%s<a href="%s">%s</a><address class="postal">%s</address></div></div>\n'
         '<div class="copy">© <span data-year>2026</span> D3DDD – Dubai 3D Design &amp; Draft. %s</div></footer>\n'
-        '%s\n<script src="%sassets/config.js" defer></script><script src="%sassets/site.js" defer></script>%s%s%s</body></html>'
+        '%s\n<script src="%sassets/config.js" defer></script><script src="%sassets/site.js" defer></script>%s%s%s%s</body></html>'
     ) % (
         t["skip"], top, home_href, t["menu"], nav, sw_href, other, other, t["switch"], site_search.header_html(lang), body,
         t["tagline"], mail_link(contact_href), whatsapp_html(lang), D, social_links(lang), t["f_services"], fs, t["f_company"], fc, t["f_industries"], fi,
         t["f_contact"], contact_href, t["cta_form"], mail_link(contact_href), whatsapp_html(lang), blog_href, blog_label, loc,
-        t["rights"], site_search.dialog_html(lang), P, P, scripts, site_search.script_tag(P), GOAT,
+        t["rights"], site_search.dialog_html(lang), P, P, scripts, site_search.script_tag(P), sales_chat_js(P), GOAT,
     )
 
 def cta(lang):

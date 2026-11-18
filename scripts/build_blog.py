@@ -12,7 +12,7 @@ os.chdir(ROOT)
 
 import markdown
 import site_search
-from contact_config import whatsapp_html, mail_link, social_links, business_node, analytics_snippet
+from contact_config import whatsapp_html, mail_link, social_links, business_node, analytics_snippet, sales_chat_css, sales_chat_js
 
 D = "https://d3ddd.com"
 EMAIL = "info@d3ddd.com"
@@ -137,7 +137,7 @@ def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: lis
 <meta name="theme-color" content="#0e0e0c"><meta name="format-detection" content="telephone=no">
 <link rel="icon" href="{prefix}assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="{prefix}assets/style.css" as="style"><link rel="stylesheet" href="{prefix}assets/style.css">
+<link rel="preload" href="{prefix}assets/style.css" as="style"><link rel="stylesheet" href="{prefix}assets/style.css">{sales_chat_css(prefix)}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" media="print" onload="this.media='all'">
 <script type="application/ld+json">{ld_json}</script>
 {GSC}{analytics_snippet()}{extra_head}</head><body>
@@ -151,6 +151,7 @@ def shell(title: str, desc: str, canonical: str, body: str, prefix: str, ld: lis
 {site_search.dialog_html("en")}
 <script src="{prefix}assets/config.js" defer></script><script src="{prefix}assets/site.js" defer></script>
 {site_search.script_tag(prefix)}
+{sales_chat_js(prefix)}
 {GOAT}</body></html>'''
 
 def business_ld() -> dict:

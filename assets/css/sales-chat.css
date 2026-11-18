@@ -1,0 +1,46 @@
+/* Sales chat. Theme matches the site: #0e0e0c, gold, DM Sans. */
+.d3-chat{font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+.d3-chat-launcher{position:fixed;z-index:40;right:max(18px,env(safe-area-inset-right));bottom:calc(18px + var(--d3-chat-lift,0px) + env(safe-area-inset-bottom));width:56px;height:56px;border-radius:50%;border:1px solid #c9a96e;background:#0e0e0c;color:#e2c99a;box-shadow:0 10px 28px rgba(0,0,0,.4);cursor:pointer;display:grid;place-items:center;padding:0}
+.d3-chat-launcher:hover{background:#161613;color:#c9a96e}
+.d3-chat-launcher svg{display:block}
+.d3-chat-panel{position:fixed;z-index:40;right:max(18px,env(safe-area-inset-right));bottom:calc(86px + var(--d3-chat-lift,0px) + env(safe-area-inset-bottom));width:min(380px,calc(100vw - 24px));height:min(560px,calc(100dvh - 130px - var(--d3-chat-lift,0px)));max-height:calc(100dvh - 120px);display:flex;flex-direction:column;background:#0e0e0c;color:#ece6da;border:1px solid #2e2b25;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.48);overflow:hidden}
+.d3-chat-panel[hidden]{display:none}
+.d3-chat-panel[lang="ur"]{font-family:"Noto Naskh Arabic","Tajawal","Geeza Pro","DM Sans",sans-serif}
+.d3-chat-panel[lang="ur"] .d3-chat-msg{line-height:1.85}
+.d3-chat-head{display:flex;align-items:center;gap:8px;padding:12px 12px 12px 14px;background:#161613;border-bottom:1px solid #2e2b25}
+.d3-chat-id{flex:1;min-width:0}
+.d3-chat-id strong{display:block;color:#e2c99a;font-size:15px;letter-spacing:.02em;font-weight:700}
+.d3-chat-sub{display:block;color:#a9a296;font-size:12px;font-weight:400}
+.d3-chat-lang,.d3-chat-x{background:transparent;color:#e2c99a;border:1px solid #3a362e;border-radius:999px;cursor:pointer;font-size:12px;line-height:1.2}
+.d3-chat-lang{padding:7px 10px;white-space:nowrap}
+.d3-chat-x{width:32px;height:32px;padding:0;font-size:18px;line-height:1}
+.d3-chat-lang:hover,.d3-chat-x:hover{border-color:#c9a96e;color:#e2c99a}
+.d3-chat-log{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:8px}
+.d3-chat-msg{max-width:92%;padding:10px 12px;border-radius:14px;font-size:14px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word}
+.d3-chat-msg-bot{align-self:flex-start;margin-inline-end:28px;background:#1b1a17;border:1px solid #2e2b25;color:#ece6da}
+.d3-chat-msg-user{align-self:flex-end;margin-inline-start:28px;background:#2a241a;border:1px solid #4a3d24;color:#e2c99a}
+.d3-chat-summary{margin:0;font:inherit;font-size:13px;line-height:1.45;white-space:pre-wrap;word-break:break-word}
+.d3-chat-replies{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 10px}
+.d3-chat-replies:empty{display:none}
+.d3-chat-replies button{background:transparent;color:#e2c99a;border:1px solid #c9a96e;border-radius:999px;padding:7px 11px;font-size:12.5px;line-height:1.35;cursor:pointer;text-align:start;max-width:100%}
+.d3-chat-replies button:hover,.d3-chat-replies .d3-chat-primary{background:#c9a96e;color:#14120e}
+.d3-chat-replies .d3-chat-skip{border-style:dashed;color:#a9a296;background:transparent}
+.d3-chat-replies .d3-chat-skip:hover{color:#14120e}
+.d3-chat-form{display:flex;gap:8px;padding:10px 12px 12px;border-top:1px solid #2e2b25}
+.d3-chat-form[hidden]{display:none}
+.d3-chat-input{flex:1;min-width:0;background:#11110f;color:#ece6da;border:1px solid #3a362e;border-radius:999px;padding:10px 14px;font-size:16px;color-scheme:dark}
+.d3-chat-input:focus{outline:2px solid #c9a96e;border-color:transparent}
+.d3-chat-send{background:#c9a96e;color:#14120e;border:0;border-radius:999px;padding:10px 14px;font-weight:700;cursor:pointer;font-size:14px}
+.d3-chat-send:hover{background:#e2c99a}
+.d3-chat-launcher:focus-visible,.d3-chat-panel button:focus-visible,.d3-chat-input:focus-visible{outline:2px solid #e2c99a;outline-offset:2px}
+.d3-chat-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media(max-width:640px){
+.d3-chat-panel{left:12px;right:12px;width:auto;height:min(70dvh,560px)}
+.d3-chat-launcher{width:52px;height:52px}
+}
+@media(prefers-reduced-motion:reduce){
+.d3-chat-launcher,.d3-chat-panel{transition:none}
+}
+@media print{
+.d3-chat{display:none!important}
+}
