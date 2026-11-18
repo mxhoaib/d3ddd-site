@@ -29,6 +29,18 @@ IG_ICON = ('<svg class="soc-ico" viewBox="0 0 24 24" width="16" height="16" aria
 LI_ICON = ('<svg class="soc-ico" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">'
            '<path fill="currentColor" d="M6.5 9H4V20h2.5zM5.2 4A1.6 1.6 0 1 0 5.2 7.2 1.6 1.6 0 0 0 5.2 4zM20 20h-2.5v-5.6c0-1.8-.8-2.4-1.8-2.4s-2 .9-2 2.5V20H11V9h2.4v1.5c.5-.8 1.6-1.8 3.3-1.8 2.2 0 3.3 1.4 3.3 4.1z"/></svg>')
 
+def sales_chat_css(prefix):
+    """Non-blocking stylesheet for the sales chat. Same pattern as the font link."""
+    href = prefix + "assets/css/sales-chat.css"
+    return (
+        '<link rel="stylesheet" href="%s" media="print" onload="this.media=\'all\'">'
+        '<noscript><link rel="stylesheet" href="%s"></noscript>'
+    ) % (href, href)
+
+def sales_chat_js(prefix):
+    """Deferred, no third-party script."""
+    return '<script src="%sassets/js/sales-chat.js" defer></script>' % prefix
+
 def analytics_snippet():
     """gtag snippet, or empty when ANALYTICS_ID is blank."""
     aid = (ANALYTICS_ID or "").strip()
